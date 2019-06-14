@@ -10,7 +10,7 @@ Create User
     <h1>Add User</h1>
   </div>
   <div class="section-body">
-      <adduser-component></adduser-component>
+       <adduser-component></adduser-component>
   </div>
 </section>
 @endsection
