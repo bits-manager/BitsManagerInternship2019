@@ -15,7 +15,10 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
         'names' => [
             'index' => 'users'
         ]
+   
+    
     ]);
+    
 });
 
 Route::middleware('auth')->get('logout', function() {
