@@ -11,9 +11,8 @@ class StatesTableSeeder extends Seeder
      */
     public function run()
     {
-    	\DB::table('states')->insert([
+        \DB::table('states')->insert([
             'state_name' => 'Mandalay',
-        ]);
-        //
+        ]);//
     }
 }
