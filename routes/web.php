@@ -15,7 +15,10 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
         'names' => [
             'index' => 'users'
         ]
+   
+    
     ]);
+<<<<<<< HEAD
 
     Route::resource('event', 'EventTypeController', [
         'names' => [
@@ -27,6 +30,9 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
        Route::get('admin/event/store','EventTypeController@create')->name('admin.event.store');
 
        Route::get('admin/event/index','EventTypeController@create')->name('admin.event.index');
+=======
+    
+>>>>>>> 870472dbde9e56641c2bed778e156c18ff99013c
 });
 
 Route::middleware('auth')->get('logout', function() {
@@ -44,3 +50,5 @@ Route::name('js.')->group(function() {
 Route::get('users/auth', function() {
     return response()->json(['user' => Auth::check() ? Auth::user() : false]);
 });
+
+
