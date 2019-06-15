@@ -1,15 +1,22 @@
 @extends('layouts.admin-master')
 
+@section('title')
+Edit State
+@endsection
+
 @section('content')
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-</style>
-<div class="card uper">
-  <div class="card-header">
-    Edit State
+<section class="section">
+  <div class="section-header">
+    <h1>Edit State</h1>
   </div>
+  <div class="section-body">
+
+    <div class="card">
+      <!-- card header -->
+      <div class="card-header">
+        <!-- card title -->
+        <h4>Edit Form</h4>
+      </div>
   <div class="card-body">
 
 

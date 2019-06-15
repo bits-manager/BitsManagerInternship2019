@@ -1,31 +1,33 @@
 @extends('layouts.admin-master')
 
 @section('content')
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-  .h4 {
-  color: green;
-}
-</style>
-  @if(session()->get('success'))
-    <div class="alert alert-success">
-      {{ session()->get('success') }}  
-    </div><br />
-  @endif
-<div class="uper">
+<section class="section">
+  <div class="section-header">
+    <h1>Manage States</h1>
+  </div>
+ 
+      <div class="card-header">
+        <!-- card title -->
+        <h4>State List</h4>
+      </div>
+       <div class="card-body">
+        @if(session()->get('success'))
+        <div class="alert alert-success">
+        {{ session()->get('success') }}  
+      </div><br />
+      @endif
+      
 
-  <table class="table table-striped">
-    <thead>
+      <table class="table table-striped">
+      <thead>
         <tr>
           <td>ID</td>
           <td>State Name</td>
           
           <td colspan="2">Action</td>
         </tr>
-    </thead>
-    <tbody>
+      </thead>
+      <tbody>
         @foreach($states as $state)
         <tr>
             <td>{{$state->id}}</td>
@@ -41,8 +43,8 @@
         @endforeach
 
     </tbody>
-  </table>
-</div>
+    </table>
+
   <div id="DeleteModal" class="modal fade text-danger" role="dialog">
    <div class="modal-dialog ">
      <!-- Modal content-->
@@ -63,8 +65,8 @@
                      <input type="hidden" name="state_id" id="state_id" >
                      <button type="submit" name="" class="btn btn-danger" data-dismiss="modal" onclick="formSubmit()">Yes, Delete</button>
                  </center>
-             
-         </div>
+             </div>
+          </div>
      </form>
    </div>
   </div>
@@ -84,4 +86,5 @@
          $("#deleteForm").submit();
      }
   </script>
+</section>
 @endsection

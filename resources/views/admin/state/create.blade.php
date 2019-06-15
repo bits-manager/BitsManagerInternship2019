@@ -1,8 +1,8 @@
 @extends('layouts.admin-master')
 
-@section('title')
-Manage Users
-@endsection
+ @section('title')
+Manage States
+@endsection 
 
 @section('content')
 <section class="section">
@@ -51,12 +51,11 @@ Manage Users
 			    <div class="form-group">
             @csrf
 			      <label for="name">State Name:</label>
-			      <input type="text" class="form-control" id="state_
-            name" placeholder="Enter State Name" name="state_name">
+			      <input type="text" class="form-control" id="state_name" placeholder="Enter State Name" name="state_name">
 			    </div>
 			    
 			    <button  type="submit"  class="btn btn-primary">Save</button>
-          <input type="button" value="Cancle" class="btn btn-primary" onclick="clearText()"/>
+          <input type="button" value="Cancel" class="btn btn-primary" onclick="clearText()"/>
           <a href="{{route('admin.state.index')}}" class="btn btn-primary">List</a>
 
 			  </form>
