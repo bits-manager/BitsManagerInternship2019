@@ -16,6 +16,17 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
             'index' => 'users'
         ]
     ]);
+
+    Route::resource('event', 'EventTypeController', [
+        'names' => [
+            'create' => 'event'
+        ]
+    });
+       Route::get('admin/event/create','EventTypeController@create')->name('admin.event.create');
+      
+       Route::get('admin/event/store','EventTypeController@create')->name('admin.event.store');
+
+       Route::get('admin/event/index','EventTypeController@create')->name('admin.event.index');
 });
 
 Route::middleware('auth')->get('logout', function() {
