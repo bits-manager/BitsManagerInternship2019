@@ -1,14 +1,19 @@
 @extends('layouts.admin-master')
 
 @section('content')
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-  .h4 {
-  color: green;
-}
-</style>
+
+<section class="section">
+  <div class="section-header">
+    <h1>Manage States</h1>
+  </div>
+  
+
+    
+      <!-- card header -->
+      <div class="card-header">
+        <!-- card title -->
+        <h4>State List</h4>
+      </div>
   @if(session()->get('success'))
     <div class="alert alert-success">
       {{ session()->get('success') }}  
@@ -42,14 +47,15 @@
 
     </tbody>
   </table>
-</div>
-  <div id="DeleteModal" class="modal fade text-danger" role="dialog">
+</div></div>
+  <div id="DeleteModal" class="modal fade " role="dialog">
    <div class="modal-dialog ">
      <!-- Modal content-->
      <form  id="deleteForm" method="post">
          <div class="modal-content">
+          <div class="modal-header bg-danger">
           <h4 class="modal-title text-center">DELETE CONFIRMATION</h4>
-             <div class="modal-header bg-danger">
+             
                  <button type="button" class="close" data-dismiss="modal">&times;</button>
              </div>
              <div class="modal-body">
@@ -63,7 +69,7 @@
                      <input type="hidden" name="state_id" id="state_id" >
                      <button type="submit" name="" class="btn btn-danger" data-dismiss="modal" onclick="formSubmit()">Yes, Delete</button>
                  </center>
-             
+             </div>
          </div>
      </form>
    </div>
@@ -83,5 +89,5 @@
      {
          $("#deleteForm").submit();
      }
-  </script>
+  </script></section>
 @endsection

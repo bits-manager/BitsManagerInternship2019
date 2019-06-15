@@ -5,6 +5,14 @@ Manage Users
 @endsection
 
 @section('content')
+<style>
+  .uper {
+    margin-top: 40px;
+  }
+  .h4 {
+  color: green;
+}
+</style>
 <section class="section">
   <div class="section-header">
     <h1>Manage States</h1>
@@ -51,8 +59,7 @@ Manage Users
 			    <div class="form-group">
             @csrf
 			      <label for="name">State Name:</label>
-			      <input type="text" class="form-control" id="state_
-            name" placeholder="Enter State Name" name="state_name">
+			      <input type="text" class="form-control" id="state_name" placeholder="Enter State Name" name="state_name">
 			    </div>
 			    
 			    <button  type="submit"  class="btn btn-primary">Save</button>
