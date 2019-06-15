@@ -8,6 +8,7 @@ Route::get('home', function() {
 });
 
 Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
+
     Route::get('dashboard', 'DashboardController')->name('dashboard');
 
     Route::get('users/roles', 'UserController@roles')->name('users.roles');
@@ -15,20 +16,25 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
         'names' => [
             'index' => 'users'
         ]
+   
+    
     ]);
-    
 
-    
-    Route::resource('state', 'StateController', [
+   Route::resource('state', 'StateController', [
         'names' => [
-            'index' => 'state'
+            'create' => 'state'
         ]
-    ]);
-    Route::get('admin/state/create', 'StateController@create')->name('admin.state.create');
-    Route::get('admin/state/store', 'StateController@store')->name('admin.state.store');
+   //Route::get('users/roles', 'UserController@roles')->name('users.roles');
     
+    ]);
 
+
+
+
+
+    
 });
+
 
 Route::middleware('auth')->get('logout', function() {
     Auth::logout();

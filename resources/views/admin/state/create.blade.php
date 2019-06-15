@@ -47,13 +47,18 @@ Manage Users
     		@endif
 
 	        <div class="container">
-			  <form action="{{route('admin.users.edit')}}">
+			  <form method="post" action="{{route('admin.state.store')}}">
 			    <div class="form-group">
+            @csrf
 			      <label for="name">State Name:</label>
-			      <input type="text" class="form-control" id="name" placeholder="Enter State Name" name="state_name">
+			      <input type="text" class="form-control" id="state_
+            name" placeholder="Enter State Name" name="state_name">
 			    </div>
 			    
 			    <button  type="submit"  class="btn btn-primary">Save</button>
+          <input type="button" value="Cancle" class="btn btn-primary" onclick="clearText()"/>
+          <a href="{{route('admin.state.index')}}" class="btn btn-primary">List</a>
+
 			  </form>
 			</div>
 	    </div>
@@ -63,5 +68,12 @@ Manage Users
 	</div>
       <!-- <users-component></users-component> -->
   </div>
+  <script>
+  function clearText(){
+    document.getElementById('state_name').value="";
+
+  }</script>
+
+
 </section>
 @endsection
