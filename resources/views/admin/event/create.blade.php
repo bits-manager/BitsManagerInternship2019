@@ -1,15 +1,22 @@
 @extends('layouts.admin-master')
 
+@section('title')
+Manage Users
+@endsection
+
 @section('content')
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-</style>
-<div class="card uper">
-  <div class="card-header">
-   <h1> Manage Event Name</h1>
+<section class="section">
+  <div class="section-header">
+    <h1>Manage Event name</h1>
   </div>
+  <div class="section-body">
+
+    <div class="card">
+      <!-- card header -->
+      <div class="card-header">
+        <!-- card title -->
+        <h4>Event Form</h4>
+      </div>
   <div class="card-body">
 
     @if($message=Session::get('info'))
@@ -29,26 +36,24 @@
     @endif
       
 
-      <form method="post" action="{{ route('admin.event.store') }}">
-          <div class="form-group">
-              @csrf
-              <label for="name">Event Name:</label>
-              <input type="text" id="event_name" class="form-control" name="event_name"/>
-         </div><button type="submit" class="btn btn-primary">Save</button>
-               
-               <input type="button" value="Cancle" class="btn btn-primary" onclick="clearText()" /> 
-              <a href="{{route('admin.event.index')}}" class="btn btn-primary">List </a>
-              </div>
-              <div>
-              </form>
-       
-         
-         </div>
-         </div>
-         <script>
-          function clearText() {
-            document.getElementById('event_name').value="";
+  <form method="post" action="{{ route('admin.event.store') }}">
+  <div class="form-group">
+  @csrf
+  <label for="name">Event Name:</label>
+  <input type="text" class="form-control" id="event_name" placeholder="Enter Event Name" name="event_name">
+</div>
+  <button type="submit" class="btn btn-primary">Save</button>
+  <input type="button" value="Cancle" class="btn btn-primary" onclick="clearText()" /> 
+  <a href="{{route('admin.event.index')}}" class="btn btn-primary">List </a>
+  </div>
+  <div>
+  </form>
+  </div>
+  </div>
+  <script>
+  function clearText() {
+  document.getElementById('event_name').value="";
             // body...
-          }
-        </script>
+   }
+  </script>
 @endsection

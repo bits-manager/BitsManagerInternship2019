@@ -5,6 +5,7 @@
   .uper {
     margin-top: 40px;
   }
+
 </style>
 <div class="uper">
 @if($message=Session::get('info'))
@@ -29,7 +30,7 @@
         </tr>
     </thead>
     <tbody>
-       @foreach($admin.event as $event)
+       @foreach($event as $event)
         <tr>
             <td>{{$event->id}}</td>
             <td>{{$event->event_name}}</td>
@@ -46,14 +47,15 @@ data-target="#DeleteModal" class=" btn btn-danger"><i class="fa fa-trash"></i> D
 </tbody>
 </table> 
 </div>
-      <div id="DeleteModal" class="modal fade text-danger" role="dialog">
+      <div id="DeleteModal" class="modal fade " role="dialog">
    <div class="modal-dialog">
      <!-- Modal content-->
      <form action="" id="deleteForm" method="post">
          <div class="modal-content">
              <div class="modal-header bg-danger">
+              <h4 class="modal-title text-center">DELETE CONFIRMATION</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                 <h4 class="modal-title text-center">DELETE CONFIRMATION</h4>
+                 
              </div>
              <div class="modal-body">
                  {{ csrf_field() }}
@@ -77,7 +79,7 @@ data-target="#DeleteModal" class=" btn btn-danger"><i class="fa fa-trash"></i> D
      function deleteData(id)
      {
          var id = id;
-         var url = '{{ route("events.delete",":event_id") }}';
+         var url = '{{ route("admin.event.destroy",":event_id") }}';
          url = url.replace(':event_id', id);
          $("#deleteForm").attr('action', url);
          document.getElementById('event_id').vaule =id;

@@ -51,8 +51,7 @@ Manage Users
 			    <div class="form-group">
             @csrf
 			      <label for="name">State Name:</label>
-			      <input type="text" class="form-control" id="state_
-            name" placeholder="Enter State Name" name="state_name">
+			      <input type="text" class="form-control" id="state_name" placeholder="Enter State Name" name="state_name">
 			    </div>
 			    
 			    <button  type="submit"  class="btn btn-primary">Save</button>

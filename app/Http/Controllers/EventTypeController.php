@@ -33,7 +33,7 @@ class EventTypeController extends Controller
       public function index()
     	   {
     	    	$event=$this->eventRepo->getAll();
-    	    	return view('admin.event.index',compact('$event'));
+    	    	return view('admin.event.index',compact('event'));
     	   }
       public function edit($id)
            {
@@ -48,21 +48,7 @@ class EventTypeController extends Controller
            return redirect()->back()->withInput();
            }
 
-
-      // public function update(Request $request)
-      //      {
-      
-      //       $id = $request->id;
-      //       $data = $request->all();
-      //       $data=array_except($data,['id']);
-      //       $this->eventRepo->update($data,$id);
-      //      return redirect()->back()->with('info','Event name  is successfully updated');
-      //       return redirect()->back()->withInput();
-      //      }
-
-
-         
-     public function destroy($event_id)
+      public function destroy($event_id)
         {
         
         $this->eventRepo->delete($event_id);

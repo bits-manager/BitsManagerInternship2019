@@ -15,5 +15,9 @@
      
       <li class="menu-header">Event Type</li>
       <li class="{{ Request::route()->getName() == 'admin.event' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.event') }}"><i class="fa fa-columns"></i> <span>EventType</span></a></li>
-    </ul>
+
+      <li class="menu-header">State</li>
+      <li class="{{ Request::route()->getName() == 'admin.state' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.state') }}"><i class="fa fa-columns"></i> <span>State</span></a></li>
+
+</ul>
 </aside>

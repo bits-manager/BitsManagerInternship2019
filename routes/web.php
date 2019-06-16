@@ -20,19 +20,19 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
     
     ]);
 
-<<<<<<< HEAD
+
 
     Route::resource('event', 'EventTypeController', [
         'names' => [
-            'index' => 'event'
+            'create' => 'event'
         ]
     ]);
-=======
+
    Route::resource('state', 'StateController', [
         'names' => [
             'create' => 'state'
         ]
-   //Route::get('users/roles', 'UserController@roles')->name('users.roles');
+   
     
     ]);
 
@@ -40,9 +40,7 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
 
 
 
-    
->>>>>>> 15b4a99f8a3941cf37596f3cffe862f4bebe03da
-});
+    });
 
 
 Route::middleware('auth')->get('logout', function() {
