@@ -32,11 +32,13 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
         'names' => [
             'create' => 'state'
         ]
-   
-    
     ]);
 
-
+    Route::resource('city', 'CityController', [
+        'names' => [
+            'create' => 'city'
+        ]
+    ]);
 
 
 
