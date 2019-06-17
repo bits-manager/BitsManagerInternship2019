@@ -16,23 +16,22 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
         'names' => [
             'index' => 'users'
         ]
-   
-    
-    ]);
-
-
+   ]);
 
     Route::resource('event', 'EventTypeController', [
         'names' => [
-            'create' => 'event'
+            'index' => 'event'
         ]
     ]);
 
    Route::resource('state', 'StateController', [
         'names' => [
-            'create' => 'state'
+            'index' => 'state'
         ]
+<<<<<<< HEAD
     
+=======
+>>>>>>> b1a733149b8466e666669307a1ffed72d3a6b3c2
     ]);
    Route::resource('townships', 'TownshipController', [
         'names' => [
@@ -41,10 +40,17 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
     
     ]);
 
+    Route::resource('city', 'CityController', [
+        'names' => [
+            'index' => 'city'
+        ]
+    ]);
 
 
 
     });
+
+
 
 
 Route::middleware('auth')->get('logout', function() {
