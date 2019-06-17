@@ -1,9 +1,4 @@
 @extends('layouts.admin-master')
-
-@section('title')
-Manage Users
-@endsection
-
 @section('content')
 <section class="section">
   <div class="section-header">
@@ -44,7 +39,7 @@ Manage Users
 </div>
   <button type="submit" class="btn btn-primary">Save</button>
   <input type="button" value="Cancle" class="btn btn-primary" onclick="clearText()" /> 
-  <a href="{{route('admin.event.index')}}" class="btn btn-primary">List </a>
+  
   </div>
   <div>
   </form>

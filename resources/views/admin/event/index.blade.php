@@ -1,13 +1,23 @@
 @extends('layouts.admin-master')
-
 @section('content')
-<style>
-  .uper {
-    margin-top: 40px;
-  }
 
-</style>
-<div class="uper">
+ <section class="section">
+  <div class="section-header">
+    <h1>Manage Event name</h1>
+  </div>
+ 
+
+    <div class="card">
+      <!-- card header -->
+      <div class="card-header">
+        <!-- card title -->
+        <h4>Event Form</h4>
+
+        <div class="card-header-action">
+<a href="{{ route('admin.event.create')}}" class="btn btn-primary">Add<i class="fa fa-plus"></i></a>
+</div>
+      </div></div>
+ 
 @if($message=Session::get('info'))
     <div class="alert alert-info alert-block">
     <button type ="button" class="close" data-dismiss="alert">x</button>
@@ -20,8 +30,8 @@
       {{ session()->get('success') }}  
     </div><br />
   @endif
-
-  <table class="table table-striped">
+<div class="container">
+   <table class="table">
     <thead>
         <tr>
           <td>ID</td>
@@ -35,11 +45,9 @@
             <td>{{$event->id}}</td>
             <td>{{$event->event_name}}</td>
            
-            <td><a href="{{ route('admin.event.edit',$event->id)}}" class="btn btn-primary">Edit</a></td>
-            <td>
-                
-        <a href="javascript:;" data-toggle="modal" onclick="deleteData({{$event->id}})" 
-data-target="#DeleteModal" class=" btn btn-danger"><i class="fa fa-trash"></i> Dlete</a>
+  <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$event->id}})" 
+data-target="#DeleteModal" class=" btn btn-danger"><i class="fa fa-trash"></i> </a>
+<a href="{{ route('admin.event.edit',$event->id)}}" class="btn btn-primary"><i class="fa fa-edit"></i>
 </td>
 </tr>
 @endforeach

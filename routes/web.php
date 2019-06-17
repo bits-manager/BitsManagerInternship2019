@@ -24,7 +24,7 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
 
     Route::resource('event', 'EventTypeController', [
         'names' => [
-            'create' => 'event'
+            'index' => 'event'
         ]
     ]);
 
