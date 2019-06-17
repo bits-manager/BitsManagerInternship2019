@@ -3,12 +3,19 @@
 @extends('layouts.admin-master')
 
 @section('content')
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-</style>
-<div class="uper">
+<section class="section">
+  <div class="section-header">
+    <h1>Manage Cities</h1>
+  </div>
+ <div class="card">
+      <!-- card header -->
+      <div class="card-header">
+        <!-- card title -->
+        <h4>City List</h4>
+        <div class="card-header-action">
+          <a href="{{ route('admin.city.create')}}" class="btn btn-primary">Add<i class="fas fa-plus"></i></a></div>
+      </div>
+<div class="card-body">
   @if($message = Session::get('info'))
     <div class = "alert alert-info alert-block">
       <button type = "button" class="close" data-dismiss = "alert">x</button>
@@ -33,10 +40,12 @@
   <table class="table table-striped">
     <thead>
         <tr>
-          <td>ID</td>
+          
           <td>State Name</td>
           <td>City Name</td>
-         
+          <td>Created Time</td>
+          <td>Updated Time</td>
+          <td colspan="2">Action</td>
         </tr>
     </thead>
     <tbody>
@@ -44,26 +53,27 @@
         
         <tr>
 
-            <td>{{$city->id}}</td>
+           
             <td>{{$city->state_name}}</td>
             <td>{{$city->city_name}}</td>
-            <td><a href="{{ route('admin.city.edit',['id'=>$city->id])}}" class="btn btn-primary">Edit</a></td>
-            <td>
-                <a href="javascript:;" data-toggle="modal" onclick="deleteData({{$city->id}})" 
-data-target="#DeleteModal" class=" btn btn-danger"><i class="fa fa-trash"></i> Dlete</a>
+            <td>{{$city->created_at}}</td>
+            <td>{{$city->updated_at}}</td>
+            <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$city->id}})" 
+              data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a>
+              <a href="{{ route('admin.city.edit',$city->id)}}" class="btn btn-primary"><i class='fas fa-edit'></i></a>  
 </td>
 </tr>
 @endforeach
             
         
     </tbody>
-  </table>
-<div>
+  </table></section>
+
 
 <div id="DeleteModal" class="modal fade " role="dialog">
    <div class="modal-dialog">
      <!-- Modal content-->
-     <form action="" id="deleteForm" method="delete">
+     <form action="" id="deleteForm" method="post">
          <div class="modal-content">
              <div class="modal-header bg-danger">
               <h4 class="modal-title text-center">DELETE CONFIRMATION</h4>

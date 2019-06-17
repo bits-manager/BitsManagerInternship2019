@@ -4,19 +4,21 @@
 Manage Users
 @endsection
 @section('content')
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-  input {
-  width: 50%;
-}
-</style>
-<div class="card uper">
-  <div class="card-header">
-    Add City
+<section class="section">
+  <div class="section-header">
+    <h1>Manage States</h1>
   </div>
-  <div class="card-body">
+  <div class="section-body">
+
+    <div class="card">
+      <!-- card header -->
+      <div class="card-header">
+
+        <!-- card title -->
+        <h4>State Form</h4>
+      </div>
+      <!-- card body -->
+      <div class="card-body">
 
     @if(Session::has('toasts'))
   @foreach(Session::get('toasts') as $toast)
@@ -68,7 +70,7 @@ Manage Users
          
             <button type="submit" class="btn btn-primary">Save</button>
             <input type="button" value="Cancel" class="btn btn-primary" onclick="clearText()"/>
-             <a href="{{route('admin.city.index')}}" class="btn btn-primary">List</a>
+             
         
       </form>
   </div>

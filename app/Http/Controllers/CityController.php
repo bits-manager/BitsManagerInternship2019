@@ -27,6 +27,15 @@ class CityController extends Controller
     }
     public function store(Request $request)
     {
+    	
+        
+    	$validatedData=$request->validate([
+    'states.state_name' => 'required|unique:posts|max:255',
+    'cities.city_name' => 'required',
+    
+]);
+         
+
     	$data = $request->all();
         $this->cityRepo->create($data);
        
@@ -41,7 +50,7 @@ class CityController extends Controller
     	
         $data = DB::table('cities')
        ->join('states', 'states.id', '=', 'cities.state_id')
-       ->select('cities.id','states.state_name', 'cities.city_name')
+       ->select('cities.id','states.state_name', 'cities.city_name','cities.created_at','cities.updated_at')
        ->get();
         
         return view('admin.city.index',compact('data'));

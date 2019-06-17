@@ -3,17 +3,17 @@
 @extends('layouts.admin-master')
 
 @section('content')
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-</style>
-<div class="card uper">
-  <div class="card-header">
-    Edit City
+<section class="section">
+  <div class="section-header">
+    <h1>Manage City Name</h1>
   </div>
-  <div class="card-body">
-
+ <div class="card">
+      <!-- card header -->
+      <div class="card-header">
+        <!-- card title -->
+        <h4>Edit Form</h4>
+      </div>
+      <div class="card-body">
      @if(Session::has('toasts'))
   @foreach(Session::get('toasts') as $toast)
     <div class="alert alert-{{ $toast['level'] }}">
