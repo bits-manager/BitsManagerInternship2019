@@ -13,7 +13,8 @@
         <h4>State List</h4>
         <div class="card-header-action">
           <a href="{{ route('admin.state.create')}}" class="btn btn-primary">Add<i class="fas fa-plus"></i></a></div>
-      </div></div>
+      </div>
+      <div class="card-body>">
   @if(session()->get('success'))
     <div class="alert alert-success">
       {{ session()->get('success') }}  
@@ -24,7 +25,8 @@
         <tr>
           <td>ID</td>
           <td>State Name</td>
-          
+          <td>Created Time</td>
+          <td>Updated Time</td>
           <td colspan="2">Action</td>
         </tr>
     </thead>
@@ -33,7 +35,8 @@
         <tr>
             <td>{{$state->id}}</td>
             <td>{{$state->state_name}}</td>
-            
+            <td>{{$state->created_at}}</td>
+            <td>{{$state->updated_at}}</td>
             <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$state->id}})" 
               data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a>
               <a href="{{ route('admin.state.edit',$state->id)}}" class="btn btn-primary"><i class='fas fa-edit'></i></a>   
@@ -42,7 +45,7 @@
         @endforeach
 </tbody>
   </table>
-</div>
+</div></div></div>
   <div id="DeleteModal" class="modal fade " role="dialog">
    <div class="modal-dialog ">
      <!-- Modal content-->

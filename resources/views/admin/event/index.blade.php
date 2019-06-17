@@ -11,10 +11,8 @@
       <h4>Event List</h4>
       <div class="card-header-action">
           <a href="{{ route('admin.event.create')}}" class="btn btn-primary">Add<i class="fas fa-plus"></i></a></div>
-
-  </div></div>
-
-
+  </div>
+  <div class="card-body">
 @if($message=Session::get('info'))
     <div class="alert alert-info alert-block">
        <button type ="button" class="close" data-dismiss="alert">x</button>
@@ -33,6 +31,8 @@
         <tr>
           <td>ID</td>
           <td>Event Type</td>
+          <td>Created Time</td>
+          <td>Updated Time</td>
           <td colspan="2">Action</td>
         </tr>
     </thead>
@@ -41,6 +41,8 @@
         <tr>
             <td>{{$event->id}}</td>
             <td>{{$event->event_name}}</td>
+            <td>{{$event->created_at}}</td>
+            <td>{{$event->updated_at}}</td>
            
             <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$event->id}})" data-target="#DeleteModal" class=" btn btn-danger">
               <i class="fa fa-trash"></i></a>
@@ -51,7 +53,7 @@
 
 </tbody>
 </table> 
-</div>
+</div></div></div>
   <div id="DeleteModal" class="modal fade " role="dialog">
    <div class="modal-dialog">
      <!-- Modal content-->
