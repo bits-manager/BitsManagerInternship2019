@@ -20,8 +20,6 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
     
     ]);
 
-
-
     Route::resource('event', 'EventTypeController', [
         'names' => [
             'index' => 'event'
@@ -30,17 +28,13 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
 
    Route::resource('state', 'StateController', [
         'names' => [
-            'create' => 'state'
+            'index' => 'state'
         ]
    
     
     ]);
 
-
-
-
-
-    });
+});
 
 
 Route::middleware('auth')->get('logout', function() {
