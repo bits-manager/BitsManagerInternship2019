@@ -5,71 +5,87 @@
   <div class="section-header">
     <h1>Manage States</h1>
   </div>
- 
+  
+    <div class="card">
+
       <div class="card-header">
         <!-- card title -->
         <h4>State List</h4>
+        <div class="card-header-action" >
+        <a href="{{route('admin.state.create')}}" class="btn btn-primary">Add State <i class="fas fa-plus"></i></a>
+        </div>
       </div>
-       <div class="card-body">
+      <div class="card-body"> 
         @if(session()->get('success'))
-        <div class="alert alert-success">
-        {{ session()->get('success') }}  
-      </div><br />
-      @endif
+          <div class="alert alert-success">
+          {{ session()->get('success') }}  
+          </div><br />
+        @endif
       
 
-      <table class="table table-striped">
-      <thead>
+        <table class="table table-striped">
+        <thead>
         <tr>
-          <td>ID</td>
+         
           <td>State Name</td>
-          
+          <td>Created Time</td>
+          <td>Updated Time</td>
           <td colspan="2">Action</td>
         </tr>
-      </thead>
-      <tbody>
+        </thead>
+        <tbody>
         @foreach($states as $state)
         <tr>
-            <td>{{$state->id}}</td>
-            <td>{{$state->state_name}}</td>
             
-            <td><a href="{{ route('admin.state.edit',$state->id)}}" class="btn btn-primary">Edit</a></td>
+            <td>{{$state->state_name}}</td>
+            <td>{{$state->created_at}}</td>
+            <td>{{$state->updated_at}}</td>
             <td>
               <a href="javascript:;" data-toggle="modal" onclick="deleteData({{$state->id}})" 
-              data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a>
-                
+              data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+              <a href="{{ route('admin.state.edit',$state->id)}}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
             </td>
         </tr>
         @endforeach
 
-    </tbody>
-    </table>
+        </tbody>
+        </table>
+      </div>
+    </div>
+ </section>     
+      
 
-  <div id="DeleteModal" class="modal fade text-danger" role="dialog">
-   <div class="modal-dialog ">
+  
+
+  
+
+  <div id="DeleteModal" class="modal fade " role="dialog">
+   <div class="modal-dialog">
      <!-- Modal content-->
-     <form  id="deleteForm" method="post">
+     <form action="" id="deleteForm" method="post">
          <div class="modal-content">
-          <h4 class="modal-title text-center">DELETE CONFIRMATION</h4>
              <div class="modal-header bg-danger">
-                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title text-center">DELETE CONFIRMATION</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 
              </div>
              <div class="modal-body">
                  {{ csrf_field() }}
                  {{ method_field('DELETE') }}
-                 <p class="text-center">Are You Sure Want To Delete ? </p>
+                 <p class="text-center"><h5>Are You Sure Want To Delete ?</h5></p>
              </div>
              <div class="modal-footer">
                  <center>
                      <button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
-                     <input type="hidden" name="state_id" id="state_id" >
-                     <button type="submit" name="" class="btn btn-danger" data-dismiss="modal" onclick="formSubmit()">Yes, Delete</button>
+                     <input type="hidden" name="event_id" id="event_id">
+                     <button type="submit" name="" class="btn btn-danger" data-dismiss="modal" onclick="formSubmit()">OK</button>
                  </center>
              </div>
-          </div>
+         </div>
      </form>
    </div>
-  </div>
+ </div>
+
 
     <script type="text/javascript">
      function deleteData(id)
@@ -85,6 +101,6 @@
      {
          $("#deleteForm").submit();
      }
-  </script>
-</section>
+    </script>
+
 @endsection

@@ -7,7 +7,7 @@ Manage States
 @section('content')
 <section class="section">
   <div class="section-header">
-    <h1>Manage States</h1>
+    <h1>State Form</h1>
   </div>
   <div class="section-body">
 
@@ -15,7 +15,7 @@ Manage States
 	    <!-- card header -->
 	    <div class="card-header">
 	      <!-- card title -->
-	      <h4>State Form</h4>
+	      <h4>Add New State</h4>
 	    </div>
 	    <!-- card body -->
 	    <div class="card-body">
@@ -56,7 +56,7 @@ Manage States
 			    
 			    <button  type="submit"  class="btn btn-primary">Save</button>
           <input type="button" value="Cancel" class="btn btn-primary" onclick="clearText()"/>
-          <a href="{{route('admin.state.index')}}" class="btn btn-primary">List</a>
+          
 
 			  </form>
 			</div>
@@ -65,7 +65,6 @@ Manage States
 	    <div class="card-footer">
 	    </div>
 	</div>
-      <!-- <users-component></users-component> -->
   </div>
   <script>
   function clearText(){
