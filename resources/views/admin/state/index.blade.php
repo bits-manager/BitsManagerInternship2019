@@ -6,22 +6,20 @@
   <div class="section-header">
     <h1>Manage States</h1>
   </div>
-  
-
-    
+ <div class="card">
       <!-- card header -->
       <div class="card-header">
         <!-- card title -->
         <h4>State List</h4>
-      </div>
+        <div class="card-header-action">
+          <a href="{{ route('admin.state.create')}}" class="btn btn-primary">Add<i class="fas fa-plus"></i></a></div>
+      </div></div>
   @if(session()->get('success'))
     <div class="alert alert-success">
       {{ session()->get('success') }}  
     </div><br />
   @endif
-<div class="uper">
-
-  <table class="table table-striped">
+<table class="table table-striped">
     <thead>
         <tr>
           <td>ID</td>
@@ -36,18 +34,15 @@
             <td>{{$state->id}}</td>
             <td>{{$state->state_name}}</td>
             
-            <td><a href="{{ route('admin.state.edit',$state->id)}}" class="btn btn-primary">Edit</a></td>
-            <td>
-              <a href="javascript:;" data-toggle="modal" onclick="deleteData({{$state->id}})" 
-              data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a>
-                
+            <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$state->id}})" 
+              data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a>
+              <a href="{{ route('admin.state.edit',$state->id)}}" class="btn btn-primary"><i class='fas fa-edit'></i></a>   
             </td>
         </tr>
         @endforeach
-
-    </tbody>
+</tbody>
   </table>
-</div></div>
+</div>
   <div id="DeleteModal" class="modal fade " role="dialog">
    <div class="modal-dialog ">
      <!-- Modal content-->
@@ -65,9 +60,9 @@
              </div>
              <div class="modal-footer">
                  <center>
-                     <button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
                      <input type="hidden" name="state_id" id="state_id" >
                      <button type="submit" name="" class="btn btn-danger" data-dismiss="modal" onclick="formSubmit()">Yes, Delete</button>
+                     <button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
                  </center>
              </div>
          </div>

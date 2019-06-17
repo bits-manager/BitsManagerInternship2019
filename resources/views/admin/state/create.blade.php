@@ -5,14 +5,7 @@ Manage Users
 @endsection
 
 @section('content')
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-  .h4 {
-  color: green;
-}
-</style>
+
 <section class="section">
   <div class="section-header">
     <h1>Manage States</h1>
@@ -22,6 +15,7 @@ Manage Users
   	<div class="card">
 	    <!-- card header -->
 	    <div class="card-header">
+
 	      <!-- card title -->
 	      <h4>State Form</h4>
 	    </div>
@@ -64,7 +58,7 @@ Manage Users
 			    
 			    <button  type="submit"  class="btn btn-primary">Save</button>
           <input type="button" value="Cancle" class="btn btn-primary" onclick="clearText()"/>
-          <a href="{{route('admin.state.index')}}" class="btn btn-primary">List</a>
+          
 
 			  </form>
 			</div>
