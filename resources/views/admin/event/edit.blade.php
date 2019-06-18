@@ -4,6 +4,7 @@
 
 <section class="section">
   <div class="section-header">
+<<<<<<< HEAD
     <h1>Edit Event list</h1>
   </div>
  <div class="card">
@@ -13,22 +14,37 @@
           <a href="{{ route('admin.event')}}" class="btn btn-primary">List<i class="fas fa-plus"></i></a></div>
       </div>
     <div class="card-body">
+=======
+    <h1>Manage Event Name</h1>
+  </div>
+  <div class="section-body">
+
+    <div class="card">
+      <!-- card header -->
+      <div class="card-header">
+        <!-- card title -->
+        <h4>Edit Event</h4>
+      </div>
+ 
+  <div class="card-body">
+    
+>>>>>>> 739c5cefb4258be9f3928156339b2583f14aa46a
     @if(Session::has('toasts'))
-  @foreach(Session::get('toasts') as $toast)
+    @foreach(Session::get('toasts') as $toast)
     <div class="alert alert-{{ $toast['level'] }}">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 
       {{ $toast['message'] }}
     </div>
-  @endforeach
-@endif
+    @endforeach
+    @endif
 
      @if($message=Session::get('info'))
     <div class="alert alert-info alert-block">
     <button type ="button" class="close" data-dismiss="alert">x</button>
     <strong>{{$message}}</strong>
-  </div>
-  @endif 
+    </div>
+    @endif 
 
   
     @if ($errors->any())

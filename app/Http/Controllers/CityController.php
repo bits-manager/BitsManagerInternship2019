@@ -30,9 +30,8 @@ class CityController extends Controller
     	
         
     	$validatedData=$request->validate([
-    'states.state_name' => 'required|unique:posts|max:255',
-    'cities.city_name' => 'required',
-    
+    'city_name' => 'required|unique:cities|max:255',
+        
 ]);
          
 
