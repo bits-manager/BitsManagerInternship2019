@@ -79,14 +79,16 @@ class TownshipController extends Controller
         
 
     }
-    public function edit(Request $request)
+    public function edit($townships_id)
     {
         $statedata = [];
         $citydata = [];
        $statedata =$this->stateRepo->getAll();
        $citydata =$this->cityRepo->getAll();
-       $edit_states=$this->cityRepo->getById($city_id);
-        $edit_cities=$this->townshipRepo->getById($id);
+
+
+       //$edit_states=$this->cityRepo->getById($city_id);
+       $edit_townships=$this->townshipRepo->getById($townships_id);
         return view('admin.township.edit',compact('edit_townships','statedata','citydata'));
         
     }

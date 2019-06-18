@@ -46,7 +46,7 @@
                <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
                  <option value="">Select State :</option>
                @foreach($statedata as $state)
-                <option value="{{$state->id}}" {{ $state->id === $edit_states->state_id ? 'selected' : '' }} >
+                <option value="{{$state->id}}" {{ $state->id === $edit_townships->state_id ? 'selected' : '' }} >
                   {{$state->state_name}}
                 </option>
                 @endforeach
@@ -54,11 +54,11 @@
             </div>
 
            <div class="form-group">
-             <select name="cities-id" id="cities" class="form-control input-log dynamic" data-dependent="cities">
+             <select name="city_id" id="city" class="form-control input-log dynamic" data-dependent="city">
                <option value="">Select City :
                  </option> 
                  @foreach($citydata as $cities)
-                <option value="{{$cities->id}}" {{ $cities->id === $edit_cities->cities_id ? 'selected' : '' }} >
+                <option value="{{$cities->id}}" {{ $cities->id === $edit_townships->city_id ? 'selected' : '' }} >
                   {{$cities->city_name}}
                  @endforeach
              </select>
