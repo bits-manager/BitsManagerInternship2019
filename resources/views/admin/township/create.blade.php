@@ -55,24 +55,22 @@ Manage Townships
                          </select>
             
                      </div>
-                     <div class="form-group">
-                         <select name="city_id" id="city" class="form-control input-log dynamic" data-dependent="city">
-                             <option value="">Select City :</option>
-                               @foreach($data as $cities)
-
-                               <option id="city" value="{{$cities->edit_id}}" selected="selected">{{$cities->city_name}}</option>
-
-                               @endforeach
-                            
-                            
-                          </select>
+                   <div class="form-group">
+                          <select name="city-id" id="city" class="form-control input-log dynamic" data-dependent="state">
+                           <option value="">Select City :
+                           </option> 
+                             @foreach($citydata as $cities)
+                            <option value="{{$cities->id}}">{{$cities->city_name}}</option>
+                             @endforeach
+                         </select>
             
-                     </div>
+                     </div> 
                      <div class="form-group">
                          @csrf
                          <label for="name">Township Name:</label>
                       <input type="text" class="form-control" name="township_name"/>
                      </div>
+                     
                      <div class="has-clear">
                         <button type="submit" class="btn btn-primary">Save</button>
                          <button type="submit" class="btn btn-primary">Cancel</button>

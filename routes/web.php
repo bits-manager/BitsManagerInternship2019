@@ -28,10 +28,7 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
         'names' => [
             'index' => 'state'
         ]
-<<<<<<< HEAD
-    
-=======
->>>>>>> b1a733149b8466e666669307a1ffed72d3a6b3c2
+
     ]);
    Route::resource('townships', 'TownshipController', [
         'names' => [

@@ -1,20 +1,25 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\Controller;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use App\Mylibs\Repositories\TownshipRepository;
 use App\Mylibs\Repositories\StateRepository;
-use DB;
+use App\Mylibs\Repositories\CityRepository;
+use Grimthorr\LaravelToast\Toast;
+use Illuminate\Support\Facades\DB;
+
 
 
 
 class TownshipController extends Controller
 {
-    public function __construct(TownshipRepository $townshipRepo,StateRepository $stateRepo)
+    public function __construct(TownshipRepository $townshipRepo,StateRepository $stateRepo,CityRepository $cityRepo)
 {
     $this->townshipRepo=$townshipRepo;
     $this->stateRepo=$stateRepo;
+     $this->cityRepo=$cityRepo;
     
 }
     /**
@@ -26,7 +31,7 @@ class TownshipController extends Controller
     {   $data = DB::table('townships')
                 ->join('states','states.id','=','townships.state_id')
                 ->join('cities','cities.id','=','townships.city_id')
-                ->select('townships.*','states.state_name','cities.city_name','townships.township_name')
+                ->select('townships.id','states.state_name','cities.city_name','townships.township_name')
                 
                 ->get();
 
@@ -42,10 +47,13 @@ class TownshipController extends Controller
      */
     public function create()
     {   $statedata = [];
-        $data = [];
+        $citydata=[];
+        $citydata=$this->cityRepo->getAll();
         $statedata=$this->stateRepo->getAll();
-        return view('admin.township.create',compact('statedata'));
-        return view('admin.township.create',compact('data'));
+        return view('admin.township.create',compact('statedata','citydata'));
+        
+        
+
         
     }
 
@@ -56,7 +64,13 @@ class TownshipController extends Controller
      * @return \Illuminate\Http\Response
      */
    public function store(Request $request)
-    {
+    {    
+        $validatedData=$request->validate([
+    'states.state_name' => 'required|unique:posts|max:255',
+    'cities.city_name' => 'required',
+    'townships.township_name'=>'required',
+    
+]);
         
         $data = $request->all();
         $this->townshipRepo->create($data);
@@ -68,9 +82,13 @@ class TownshipController extends Controller
     }
     public function edit(Request $request)
     {
-        $id=$request->id;
-        $edit_townships=$this->townshipRepo->getById($id);
-        return view('admin.township.edit',compact('edit_townships'));
+        $statedata = [];
+        $citydata = [];
+       $statedata =$this->stateRepo->getAll();
+       $citydata =$this->cityRepo->getAll();
+       $edit_states=$this->cityRepo->getById($city_id);
+        $edit_cities=$this->townshipRepo->getById($id);
+        return view('admin.township.edit',compact('edit_townships','statedata','citydata'));
         
     }
 
