@@ -12,6 +12,8 @@
       <div class="card-header">
         <!-- card title -->
         <h4>Edit Form</h4>
+        <div class="card-header-action">
+          <a href="{{ route('admin.city')}}" class="btn btn-primary">List<i class="fas fa-plus"></i></a></div>
       </div>
       <div class="card-body">
      @if(Session::has('toasts'))
@@ -45,7 +47,7 @@
             <div class="form-group">
               @csrf
               <label for="name">State Name:</label>
-              <select name="state_id">
+              <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
                 @foreach($statedata as $state)
                 <option value="{{$state->id}}" {{ $state->id === $edit_states->state_id ? 'selected' : '' }} >
                   {{$state->state_name}}
