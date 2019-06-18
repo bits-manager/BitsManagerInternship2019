@@ -14,22 +14,7 @@ Manage States
 
     <div class="card">
       <!-- card header -->
-      <div class="card-header">
-        <!-- card title -->
-        <h4>State Form</h4>
-      </div>
-  <div class="card-body">
-    <h1>State Form</h1>
-  </div>
-  <div class="section-body">
-
-  	<div class="card">
-	    <!-- card header -->
-	    <div class="card-header">
-
-	      <!-- card title -->
-	      <h4>Add New State</h4>
-	    </div>
+     
 	    <!-- card body -->
 	    <div class="card-body">
 	    	@if(Session::has('toasts'))
@@ -41,12 +26,6 @@ Manage States
     		</div>
   			@endforeach
 			  @endif
-     		@if($message = Session::get('info'))
-    		<div class="alert alert-info alert-block">
-      			<button type="button" class="close" data-dismiss="alert">x</button>
-      			<strong>{{$message}}</strong>
-    		</div>
-    		@endif  
 
     @if($message=Session::get('info'))
     <div class="alert alert-info alert-block">
@@ -80,26 +59,7 @@ Manage States
         </form>
       </div>
       </div>
-      <!-- card footer -->
-      <div class="card-footer">
-      </div>
-  </div>
-      <!-- <users-component></users-component> -->
-			      <label for="name">State Name:</label>
-			      <input type="text" class="form-control" id="state_name" placeholder="Enter State Name" name="state_name">
-			    </div>
-			    
-			    <button  type="submit"  class="btn btn-primary">Save</button>
-
-          <input type="button" value="Cancel" class="btn btn-primary" onclick="clearText()"/>
-
-
-			  </form>
-			</div>
-	    </div>
-	    <!-- card footer -->
-	    <div class="card-footer">
-	    </div>
+      
 	</div>
 
   </div>

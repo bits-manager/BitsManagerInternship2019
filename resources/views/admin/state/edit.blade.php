@@ -2,7 +2,7 @@
 
 
 @section('title')
-Manage Users
+Manage State
 @endsection
 
 @section('content')
@@ -20,6 +20,7 @@ Manage Users
           <div class="card-header-action">
            <a href="{{ route('admin.state')}}" class="btn btn-primary">List</a></div>
         </div>
+        <div class="card-body">
 
 
  @if(Session::has('toasts'))
