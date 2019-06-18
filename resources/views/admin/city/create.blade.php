@@ -50,7 +50,7 @@ Manage Users
           <div class="form-group">
               @csrf
               <label for="name">State Name:</label>
-              <select name="state_id">
+              <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
                 @foreach($statedata as $state)
                 <option value ="{{$state->id}}">
                   {{$state->state_name}}
