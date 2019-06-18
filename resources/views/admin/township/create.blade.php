@@ -56,7 +56,7 @@ Manage Townships
             
                      </div>
                    <div class="form-group">
-                          <select name="city-id" id="city" class="form-control input-log dynamic" data-dependent="state">
+                          <select name="cities-id" id="cities" class="form-control input-log dynamic" data-dependent="cities">
                            <option value="">Select City :
                            </option> 
                              @foreach($citydata as $cities)
@@ -71,12 +71,9 @@ Manage Townships
                       <input type="text" class="form-control" name="township_name"/>
                      </div>
                      
-                     <div class="has-clear">
-                        <button type="submit" class="btn btn-primary">Save</button>
-                         <button type="submit" class="btn btn-primary">Cancel</button>
-                           <a href="{{route('admin.townships.index')}}" class="btn btn-primary">List</a>
-                     </div>
-        
+                     <button type="submit" class="btn btn-primary">Save</button>
+                       <input type="button" value="Cancel" class="btn btn-primary" onclick="clearText()"/>
+             
                   </form>
              </div>
           <!-- card footer -->
@@ -85,4 +82,9 @@ Manage Townships
   </div>
  </div>
 </section>
+<script>
+  function clearText(){
+    document.getElementById('city_name').value="";
+  }
+</script>
 @endsection

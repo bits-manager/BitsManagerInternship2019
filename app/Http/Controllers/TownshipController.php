@@ -48,8 +48,9 @@ class TownshipController extends Controller
     public function create()
     {   $statedata = [];
         $citydata=[];
-        $citydata=$this->cityRepo->getAll();
+     
         $statedata=$this->stateRepo->getAll();
+         $citydata=$this->cityRepo->getAll();
         return view('admin.township.create',compact('statedata','citydata'));
         
         
@@ -66,10 +67,9 @@ class TownshipController extends Controller
    public function store(Request $request)
     {    
         $validatedData=$request->validate([
-    'states.state_name' => 'required|unique:posts|max:255',
-    'cities.city_name' => 'required',
-    'townships.township_name'=>'required',
-    
+    'city_name' => 'required|unique:cities|max:255',
+     'township_name' => 'required|unique:townships|max:255',
+        
 ]);
         
         $data = $request->all();
@@ -92,20 +92,24 @@ class TownshipController extends Controller
         
     }
 
-    public function update(Request $request)
+    public function show($townships_id,Request $request)
     {
-        $id=$request->id;
-        $data = $request->all();
-         $data=array_except($data,['id']);
-        $this->townshipRepo->update($data,$id);
-         return back()->with('info','Township is successfully update!');
+        
+      
+           $data=$request->all();
+          
+           $data=array_except($data,['$townships_id']);
+            $this->townshipRepo->update($data,$townships_id);
+           
+        
+        return back()->with('info','Township is successfully update!');
         return redirect()->back()->withInput();
     }
 
-    public function delete(Request $request)
+    public function delete($townships_id)
     {
         $id=$request->id;
-        $this->townshipRepo->delete($id);
+        $this->townshipRepo->delete($townships_id);
  
         return back()->with('info','Store is successfully delete!');
         return redirect()->back()->withInput();
