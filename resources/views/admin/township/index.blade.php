@@ -44,8 +44,7 @@
           <td>State Name</td>
           <td>City Name</td>
           <td>Township Name</td>
-          <td>Created Time</td>
-          <td>Updated Time</td>
+         
           <td colspan="3">Action</td>
         </tr>
     </thead>
@@ -58,8 +57,8 @@
             <td>{{$townships->state_name}}</td>
             <td>{{$townships->city_name}}</td>
             <td>{{$townships->township_name}}</td>
-            <td>{{$townships->created_at}}</td>
-            <td>{{$townships->updated_at}}</td>
+
+           
             <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$townships->id}})" 
               data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a>
               <a href="{{ route('admin.townships.edit',$townships->id)}}" class="btn btn-primary"><i class='fas fa-edit'></i></a>  

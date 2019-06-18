@@ -67,7 +67,6 @@ class TownshipController extends Controller
    public function store(Request $request)
     {    
         $validatedData=$request->validate([
-
      'township_name' => 'required|unique:townships|max:255',
         
 ]);
@@ -106,12 +105,11 @@ class TownshipController extends Controller
         return redirect()->back()->withInput();
     }
 
-    public function delete($townships_id)
+    public function destroy($townships_id)
     {
-        $id=$request->id;
         $this->townshipRepo->delete($townships_id);
  
-        return back()->with('info','Store is successfully delete!');
+        return back()->with('info','Township is successfully delete!');
         return redirect()->back()->withInput();
     }
 

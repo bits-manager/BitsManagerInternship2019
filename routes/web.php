@@ -32,7 +32,7 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
     ]);
    Route::resource('townships', 'TownshipController', [
         'names' => [
-            'create' => 'townships'
+            'index' => 'townships'
         ]
     
     ]);

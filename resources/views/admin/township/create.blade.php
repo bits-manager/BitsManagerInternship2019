@@ -56,7 +56,7 @@ Manage Townships
             
                      </div>
                    <div class="form-group">
-                          <select name="cities-id" id="cities" class="form-control input-log dynamic" data-dependent="cities">
+                          <select name="city_id" id="city" class="form-control input-log dynamic" data-dependent="city">
                            <option value="">Select City :
                            </option> 
                              @foreach($citydata as $cities)
@@ -68,7 +68,7 @@ Manage Townships
                      <div class="form-group">
                          @csrf
                          <label for="name">Township Name:</label>
-                      <input type="text" class="form-control" name="township_name"/>
+                      <input type="text" class="form-control" id="township_name" placeholder="Enter Township Name" name="township_name">
                      </div>
                      
                      <button type="submit" class="btn btn-primary">Save</button>
@@ -84,7 +84,7 @@ Manage Townships
 </section>
 <script>
   function clearText(){
-    document.getElementById('city_name').value="";
+    document.getElementById('township_name').value="";
   }
 </script>
 @endsection
