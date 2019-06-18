@@ -30,7 +30,18 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
         ]
     ]);
 
-});
+
+    Route::resource('city', 'CityController', [
+        'names' => [
+            'index' => 'city'
+        ]
+    ]);
+
+
+
+    });
+
+
 
 
 Route::middleware('auth')->get('logout', function() {

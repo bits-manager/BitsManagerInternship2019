@@ -1,31 +1,29 @@
+<!-- index.blade.php -->
+
 @extends('layouts.admin-master')
 
 @section('content')
-
 <section class="section">
   <div class="section-header">
-    <h1>Manage Events</h1>
+    <h1>Manage Cities</h1>
   </div>
-
-  
-    <div class="card">
+ <div class="card">
       <!-- card header -->
       <div class="card-header">
-        <h4>Event List</h4>
-        <div class="card-header-action" >
-        <a href="{{route('admin.event.create')}}" class="btn btn-primary">Add Event <i class="fas fa-plus"></i></a>
-        </div>
+        <!-- card title -->
+        <h4>City List</h4>
+        <div class="card-header-action">
+          <a href="{{ route('admin.city.create')}}" class="btn btn-primary">Add<i class="fas fa-plus"></i></a></div>
       </div>
 <div class="card-body">
+  @if($message = Session::get('info'))
+    <div class = "alert alert-info alert-block">
+      <button type = "button" class="close" data-dismiss = "alert">x</button>
+      <strong>{{$message}}</strong>
+      </div>
+      @endif  
 
-@if($message=Session::get('info'))
-    <div class="alert alert-info alert-block">
-       <button type ="button" class="close" data-dismiss="alert">x</button>
-       <strong>{{$message}}</strong>
-  </div>
-  @endif
-
-@if(Session::has('toasts'))
+       @if(Session::has('toasts'))
   @foreach(Session::get('toasts') as $toast)
     <div class="alert alert-{{ $toast['level'] }}">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -34,46 +32,45 @@
     </div>
   @endforeach
 @endif 
-
   @if(session()->get('success'))
     <div class="alert alert-success">
       {{ session()->get('success') }}  
     </div><br />
   @endif
-
   <table class="table table-striped">
     <thead>
         <tr>
-          <td>Event Type</td>
+          
+          <td>State Name</td>
+          <td>City Name</td>
           <td>Created Time</td>
           <td>Updated Time</td>
           <td colspan="2">Action</td>
         </tr>
     </thead>
     <tbody>
-       @foreach($event as $event)
+       @foreach($data as $city)
+        
         <tr>
-            <td>{{$event->event_name}}</td>
-            <td>{{$event->created_at}}</td>
-            <td>{{$event->updated_at}}</td>
-            <td>
-                
-            <a href="javascript:;" data-toggle="modal" onclick="deleteData({{$event->id}})" 
-              data-target="#DeleteModal" class=" btn btn-danger"><i class="fa fa-trash"></i></a>
-            <a href="{{ route('admin.event.edit',$event->id)}}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
-            </td>
-        </tr>
-        @endforeach
 
-    </tbody>
-    </table> 
-  </div>
-</div>
-</section>
-
+           
+            <td>{{$city->state_name}}</td>
+            <td>{{$city->city_name}}</td>
+            <td>{{$city->created_at}}</td>
+            <td>{{$city->updated_at}}</td>
+            <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$city->id}})" 
+              data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a>
+              <a href="{{ route('admin.city.edit',$city->id)}}" class="btn btn-primary"><i class='fas fa-edit'></i></a>  
+</td>
+</tr>
+@endforeach
             
+        
+    </tbody>
+  </table></section>
 
-  <div id="DeleteModal" class="modal fade " role="dialog">
+
+<div id="DeleteModal" class="modal fade " role="dialog">
    <div class="modal-dialog">
      <!-- Modal content-->
      <form action="" id="deleteForm" method="post">
@@ -81,18 +78,18 @@
              <div class="modal-header bg-danger">
               <h4 class="modal-title text-center">DELETE CONFIRMATION</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
+                 
+             </div>
              <div class="modal-body">
                  {{ csrf_field() }}
                  {{ method_field('DELETE') }}
-                 <p class="text-center"><h5>Are you sure want to delete ?</h5></p>
+                 <p class="text-center">Are you sure want to delete ?</p>
              </div>
              <div class="modal-footer">
                  <center>
-                     <input type="hidden" name="event_id" id="event_id">
+                     <input type="hidden" name="city_id" id="city_id">
                      <button type="submit" name="" class="btn btn-danger" data-dismiss="modal" onclick="formSubmit()">OK</button>
                      <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
-
                  </center>
              </div>
          </div>
@@ -105,10 +102,10 @@
      function deleteData(id)
      {
          var id = id;
-         var url = '{{ route("admin.event.destroy",":event_id") }}';
-         url = url.replace(':event_id', id);
+         var url = '{{ route("admin.city.destroy",":city_id") }}';
+         url = url.replace(':city_id', id);
          $("#deleteForm").attr('action', url);
-         document.getElementById('event_id').vaule =id;
+         document.getElementById('city_id').vaule =id;
      }
 
      function formSubmit()
@@ -116,4 +113,5 @@
          $("#deleteForm").submit();
      }
   </script>
+
 @endsection

@@ -1,5 +1,6 @@
 @extends('layouts.admin-master')
 
+<<<<<<< HEAD
 
 @section('title')
 Manage Users
@@ -21,6 +22,26 @@ Manage Users
            <a href="{{ route('admin.state')}}" class="btn btn-primary">List</a></div>
         </div>
         <div class="card-body">
+=======
+@section('title')
+Edit State
+@endsection
+
+@section('content')
+<section class="section">
+  <div class="section-header">
+    <h1>Edit State</h1>
+  </div>
+  <div class="section-body">
+
+    <div class="card">
+      <!-- card header -->
+      <div class="card-header">
+        <!-- card title -->
+        <h4>Edit Form</h4>
+      </div>
+  <div class="card-body">
+>>>>>>> 739c5cefb4258be9f3928156339b2583f14aa46a
 
 
  @if(Session::has('toasts'))
