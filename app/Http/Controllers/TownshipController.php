@@ -67,7 +67,7 @@ class TownshipController extends Controller
    public function store(Request $request)
     {    
         $validatedData=$request->validate([
-    'city_name' => 'required|unique:cities|max:255',
+
      'township_name' => 'required|unique:townships|max:255',
         
 ]);

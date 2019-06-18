@@ -6,7 +6,7 @@
   <div class="section-header">
     <h1>Manage Event</h1>
   </div>
-<<<<<<< HEAD
+
  <div class="card">
       <div class="card-header">
         <h4>Event List</h4>
@@ -14,7 +14,7 @@
           <a href="{{ route('admin.event.create')}}" class="btn btn-primary">Add<i class="fas fa-plus"></i></a></div>
       </div>
     <div class="card-body">
-=======
+
 
   
     <div class="card">
@@ -44,7 +44,7 @@
   @endforeach
 @endif 
 
->>>>>>> 739c5cefb4258be9f3928156339b2583f14aa46a
+
   @if(session()->get('success'))
     <div class="alert alert-success">
       {{ session()->get('success') }}  
@@ -53,23 +53,23 @@
 <table class="table table-striped">
     <thead>
         <tr>
-<<<<<<< HEAD
+
           <!-- <td>ID</td> -->
           <td><p class="text-dark">Event Name</p></td>
           
           <td colspan="2"><p class="text-dark">Action</p></td>
-=======
+
           <td>Event Type</td>
           <td>Created Time</td>
           <td>Updated Time</td>
           <td colspan="2">Action</td>
->>>>>>> 739c5cefb4258be9f3928156339b2583f14aa46a
+
         </tr>
     </thead>
     <tbody>
         @foreach($event as $event)
         <tr>
-<<<<<<< HEAD
+
             <!-- <td>{{$event->id}}</td> -->
             <td>{{$event->event_name}}</td>
             
@@ -82,7 +82,7 @@
 </tbody>
   </table>
 </div></div></div>
-=======
+
             <td>{{$event->event_name}}</td>
             <td>{{$event->created_at}}</td>
             <td>{{$event->updated_at}}</td>
@@ -103,7 +103,7 @@
 
             
 
->>>>>>> 739c5cefb4258be9f3928156339b2583f14aa46a
+
   <div id="DeleteModal" class="modal fade " role="dialog">
    <div class="modal-dialog ">
      <!-- Modal content-->
@@ -117,7 +117,7 @@
              <div class="modal-body">
                  {{ csrf_field() }}
                  {{ method_field('DELETE') }}
-<<<<<<< HEAD
+
                  <p class="text-center">Are You Sure Want To Delete ? </p>
              </div>
              <div class="modal-footer">
@@ -125,7 +125,7 @@
                      <input type="hidden" name="state_id" id="event_id" >
                      <button type="submit" name="" class="btn btn-danger" data-dismiss="modal" onclick="formSubmit()">Yes, Delete</button>
                      <button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
-=======
+
                  <p class="text-center"><h5>Are you sure want to delete ?</h5></p>
              </div>
              <div class="modal-footer">
@@ -134,7 +134,7 @@
                      <button type="submit" name="" class="btn btn-danger" data-dismiss="modal" onclick="formSubmit()">OK</button>
                      <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
 
->>>>>>> 739c5cefb4258be9f3928156339b2583f14aa46a
+
                  </center>
              </div>
          </div>
