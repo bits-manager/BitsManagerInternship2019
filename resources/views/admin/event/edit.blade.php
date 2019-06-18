@@ -46,13 +46,17 @@
       </div><br />
     @endif
     <form method="put" action="{{route('admin.event.update',['id'=>$edit_event->id])}}">
-          <div class="form-group">
-              @csrf
-              <label for="name"> Event Name:</label>
-              <input type="text" class="form-control" name="event_name" value="{{$edit_event->event_name}}"/>
-          </div>
-         
+       @csrf
+         <div class="form-group row mb-4">
+            
+         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Event Name</label><div class="col-sm-12 col-md-7">
+         <input type="text" class="form-control" name="event_name" value="{{$edit_event->event_name}}"/></div></div>
+         <div class="form-group row mb-4">
+         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+         <div class="col-sm-12 col-md-7">
           <button type="submit" class="btn btn-primary">Update Event Name</button>
+        </div>
+      </div>
       </form>
   </div>
 </div>
