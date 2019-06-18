@@ -7,7 +7,7 @@ Manage States
 @section('content')
 <section class="section">
   <div class="section-header">
-<<<<<<< HEAD
+
     <h1>Manage State name</h1>
   </div>
   <div class="section-body">
@@ -19,7 +19,6 @@ Manage States
         <h4>State Form</h4>
       </div>
   <div class="card-body">
-=======
     <h1>State Form</h1>
   </div>
   <div class="section-body">
@@ -48,7 +47,6 @@ Manage States
       			<strong>{{$message}}</strong>
     		</div>
     		@endif  
->>>>>>> 739c5cefb4258be9f3928156339b2583f14aa46a
 
     @if($message=Session::get('info'))
     <div class="alert alert-info alert-block">
@@ -70,7 +68,7 @@ Manage States
   <form method="post" action="{{route('admin.state.store')}}">
           <div class="form-group">
             @csrf
-<<<<<<< HEAD
+
             <label for="name">State Name:</label>
             <input type="text" class="form-control" id="state_name" placeholder="Enter State Name" name="state_name">
           </div>
@@ -87,7 +85,6 @@ Manage States
       </div>
   </div>
       <!-- <users-component></users-component> -->
-=======
 			      <label for="name">State Name:</label>
 			      <input type="text" class="form-control" id="state_name" placeholder="Enter State Name" name="state_name">
 			    </div>
@@ -104,7 +101,7 @@ Manage States
 	    <div class="card-footer">
 	    </div>
 	</div>
->>>>>>> 739c5cefb4258be9f3928156339b2583f14aa46a
+
   </div>
   <script>
   function clearText(){
