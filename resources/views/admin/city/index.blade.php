@@ -83,13 +83,13 @@
              <div class="modal-body">
                  {{ csrf_field() }}
                  {{ method_field('DELETE') }}
-                 <p class="text-center">Are You Sure Want To Delete ?</p>
+                 <p class="text-center">Are you sure want to delete ?</p>
              </div>
              <div class="modal-footer">
                  <center>
-                     <button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
                      <input type="hidden" name="city_id" id="city_id">
-                     <button type="submit" name="" class="btn btn-danger" data-dismiss="modal" onclick="formSubmit()">Yes, Delete</button>
+                     <button type="submit" name="" class="btn btn-danger" data-dismiss="modal" onclick="formSubmit()">OK</button>
+                     <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
                  </center>
              </div>
          </div>

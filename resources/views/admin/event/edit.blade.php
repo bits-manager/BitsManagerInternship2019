@@ -1,33 +1,38 @@
 @extends('layouts.admin-master')
 
 @section('content')
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-</style>
-<div class="card uper">
-  <div class="card-header">
-    Edit event
+
+<section class="section">
+  <div class="section-header">
+    <h1>Manage Event Name</h1>
   </div>
+  <div class="section-body">
+
+    <div class="card">
+      <!-- card header -->
+      <div class="card-header">
+        <!-- card title -->
+        <h4>Edit Event</h4>
+      </div>
+ 
   <div class="card-body">
     
     @if(Session::has('toasts'))
-  @foreach(Session::get('toasts') as $toast)
+    @foreach(Session::get('toasts') as $toast)
     <div class="alert alert-{{ $toast['level'] }}">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 
       {{ $toast['message'] }}
     </div>
-  @endforeach
-@endif
+    @endforeach
+    @endif
 
      @if($message=Session::get('info'))
     <div class="alert alert-info alert-block">
     <button type ="button" class="close" data-dismiss="alert">x</button>
     <strong>{{$message}}</strong>
-  </div>
-  @endif 
+    </div>
+    @endif 
 
   
     @if ($errors->any())

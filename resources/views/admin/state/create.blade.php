@@ -1,14 +1,14 @@
 @extends('layouts.admin-master')
 
-@section('title')
-Manage Users
-@endsection
+ @section('title')
+Manage States
+@endsection 
 
 @section('content')
 
 <section class="section">
   <div class="section-header">
-    <h1>Manage States</h1>
+    <h1>State Form</h1>
   </div>
   <div class="section-body">
 
@@ -17,7 +17,7 @@ Manage Users
 	    <div class="card-header">
 
 	      <!-- card title -->
-	      <h4>State Form</h4>
+	      <h4>Add New State</h4>
 	    </div>
 	    <!-- card body -->
 	    <div class="card-body">
@@ -29,7 +29,7 @@ Manage Users
       			{{ $toast['message'] }}
     		</div>
   			@endforeach
-			@endif
+			  @endif
      		@if($message = Session::get('info'))
     		<div class="alert alert-info alert-block">
       			<button type="button" class="close" data-dismiss="alert">x</button>
@@ -57,8 +57,9 @@ Manage Users
 			    </div>
 			    
 			    <button  type="submit"  class="btn btn-primary">Save</button>
-          <input type="button" value="Cancle" class="btn btn-primary" onclick="clearText()"/>
-          
+
+          <input type="button" value="Cancel" class="btn btn-primary" onclick="clearText()"/>
+
 
 			  </form>
 			</div>
@@ -67,7 +68,6 @@ Manage Users
 	    <div class="card-footer">
 	    </div>
 	</div>
-      <!-- <users-component></users-component> -->
   </div>
   <script>
   function clearText(){
