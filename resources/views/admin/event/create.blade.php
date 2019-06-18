@@ -12,8 +12,15 @@
         <!-- card title -->
 
         <h4>Add Event </h4>
+<<<<<<< HEAD
         <h4>Add New Event</h4>
 
+=======
+
+        <h4>Add New Event</h4>
+
+      </div>
+>>>>>>> 7a33e9893be932a9ad0c36c686fa243909a27270
   <div class="card-body">
     
  @if(Session::has('toasts'))

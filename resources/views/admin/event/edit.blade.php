@@ -13,20 +13,9 @@
         <div class="card-header-action">
           <a href="{{ route('admin.event')}}" class="btn btn-primary">List<i class="fas fa-plus"></i></a></div>
       </div>
-    <div class="card-body">
-
-    <h1>Manage Event Name</h1>
-  </div>
   <div class="section-body">
-
-    <div class="card">
-      <!-- card header -->
-      <div class="card-header">
-        <!-- card title -->
-        <h4>Edit Event</h4>
-      </div>
- 
-  <div class="card-body">
+   <div class="card">
+    <div class="card-body">
     
 
     @if(Session::has('toasts'))
