@@ -9,10 +9,6 @@
     <div class="card">
       <!-- card header -->
       <div class="card-header">
-        <!-- card title -->
-
-        <h4>Add Event </h4>
-
         <h4>Add New Event</h4>
 
       </div>
