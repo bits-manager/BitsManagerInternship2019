@@ -1,9 +1,4 @@
 @extends('layouts.admin-master')
-
-@section('title')
-Manage Users
-@endsection
-
 @section('content')
 <section class="section">
   <div class="section-header">
@@ -15,7 +10,11 @@ Manage Users
       <!-- card header -->
       <div class="card-header">
         <!-- card title -->
+<<<<<<< HEAD
+        <h4>Add Event </h4>
+=======
         <h4>Add New Event</h4>
+>>>>>>> 739c5cefb4258be9f3928156339b2583f14aa46a
       </div>
   <div class="card-body">
     

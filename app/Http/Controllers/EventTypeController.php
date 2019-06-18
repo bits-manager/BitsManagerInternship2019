@@ -39,6 +39,7 @@ class EventTypeController extends Controller
            {
                $edit_event=$this->eventRepo->getById($id);
                return view('admin.event.edit',compact('edit_event'));
+               return view ('admin.event.index') ;
 	       }
          public function show($id,Request $request)
            {
