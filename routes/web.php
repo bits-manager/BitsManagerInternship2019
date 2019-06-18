@@ -16,11 +16,7 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
         'names' => [
             'index' => 'users'
         ]
-   
-    
-    ]);
-
-
+   ]);
 
     Route::resource('event', 'EventTypeController', [
         'names' => [
@@ -32,15 +28,20 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
         'names' => [
             'index' => 'state'
         ]
-   
-    
+    ]);
+
+
+    Route::resource('city', 'CityController', [
+        'names' => [
+            'index' => 'city'
+        ]
     ]);
 
 
 
-
-
     });
+
+
 
 
 Route::middleware('auth')->get('logout', function() {

@@ -51,7 +51,6 @@ Edit State
               <label for="name">State Name:</label>
               <input type="text" class="form-control" name="state_name" value="{{$edit_states->state_name}}"/>
           </div>
-          
           <button type="submit" class="btn btn-primary">Update State</button>
       </form>
   </div>

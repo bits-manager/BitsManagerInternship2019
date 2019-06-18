@@ -5,6 +5,7 @@
   <div class="section-header">
     <h1>Manage States</h1>
   </div>
+
   
     <div class="card">
 
@@ -26,7 +27,6 @@
         <table class="table table-striped">
         <thead>
         <tr>
-         
           <td>State Name</td>
           <td>Created Time</td>
           <td>Updated Time</td>
@@ -54,31 +54,25 @@
     </div>
  </section>     
       
-
-  
-
-  
-
   <div id="DeleteModal" class="modal fade " role="dialog">
-   <div class="modal-dialog">
+   <div class="modal-dialog ">
      <!-- Modal content-->
      <form action="" id="deleteForm" method="post">
          <div class="modal-content">
              <div class="modal-header bg-danger">
               <h4 class="modal-title text-center">DELETE CONFIRMATION</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                 
              </div>
              <div class="modal-body">
                  {{ csrf_field() }}
                  {{ method_field('DELETE') }}
-                 <p class="text-center"><h5>Are You Sure Want To Delete ?</h5></p>
+                 <p class="text-center"><h5>Are you sure want to delete ?</h5></p>
              </div>
              <div class="modal-footer">
                  <center>
-                     <button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
                      <input type="hidden" name="event_id" id="event_id">
                      <button type="submit" name="" class="btn btn-danger" data-dismiss="modal" onclick="formSubmit()">OK</button>
+                     <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
                  </center>
              </div>
          </div>
@@ -102,5 +96,4 @@
          $("#deleteForm").submit();
      }
     </script>
-
 @endsection
