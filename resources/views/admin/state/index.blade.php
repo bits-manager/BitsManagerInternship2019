@@ -23,7 +23,6 @@
 <table class="table table-striped">
     <thead>
         <tr>
-          <td>ID</td>
           <td>State Name</td>
           <td>Created Time</td>
           <td>Updated Time</td>
@@ -33,7 +32,6 @@
     <tbody>
         @foreach($states as $state)
         <tr>
-            <td>{{$state->id}}</td>
             <td>{{$state->state_name}}</td>
             <td>{{$state->created_at}}</td>
             <td>{{$state->updated_at}}</td>
@@ -46,25 +44,29 @@
 </tbody>
   </table>
 </div></div></div>
+ <!-- The Modal -->
   <div id="DeleteModal" class="modal fade " role="dialog">
    <div class="modal-dialog ">
      <!-- Modal content-->
      <form  id="deleteForm" method="post">
          <div class="modal-content">
+             <!-- Modal Header -->
           <div class="modal-header bg-danger">
-          <h4 class="modal-title text-center">DELETE CONFIRMATION</h4>
+          <h5 class="modal-title text-center">DELETE CONFIRMATION</h4>
              
                  <button type="button" class="close" data-dismiss="modal">&times;</button>
              </div>
+             <!-- Modal body -->
              <div class="modal-body">
                  {{ csrf_field() }}
                  {{ method_field('DELETE') }}
                  <p class="text-center">Are You Sure Want To Delete ? </p>
              </div>
+             <!-- Modal footer -->
              <div class="modal-footer">
                  <center>
                      <input type="hidden" name="state_id" id="state_id" >
-                     <button type="submit" name="" class="btn btn-danger" data-dismiss="modal" onclick="formSubmit()">Yes, Delete</button>
+                     <button type="submit" name="" class="btn btn-danger" data-dismiss="modal" onclick="formSubmit()">Delete</button>
                      <button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
                  </center>
              </div>
