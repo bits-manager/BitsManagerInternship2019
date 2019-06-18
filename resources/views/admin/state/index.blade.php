@@ -14,11 +14,11 @@
         <div class="card-header-action">
           <a href="{{ route('admin.state.create')}}" class="btn btn-primary">Add<i class="fas fa-plus"></i></a></div>
       </div>
-<<<<<<< HEAD
+
       <div class="card-body">
-=======
+
       <div class="card-body>">
->>>>>>> b1a733149b8466e666669307a1ffed72d3a6b3c2
+
   @if(session()->get('success'))
     <div class="alert alert-success">
       {{ session()->get('success') }}  
@@ -27,11 +27,10 @@
 <table class="table table-striped">
     <thead>
         <tr>
-<<<<<<< HEAD
+
          <!--  <td>ID</td> -->
           <td>State Name</td>
-=======
->>>>>>> b1a733149b8466e666669307a1ffed72d3a6b3c2
+
           
           <td>State Name</td>
           <td>Created Time</td>
@@ -42,11 +41,10 @@
     <tbody>
         @foreach($states as $state)
         <tr>
-<<<<<<< HEAD
+
             <!-- <td>{{$state->id}}</td> -->
             <td>{{$state->state_name}}</td>
-=======
->>>>>>> b1a733149b8466e666669307a1ffed72d3a6b3c2
+
             
             <td>{{$state->state_name}}</td>
             <td>{{$state->created_at}}</td>
