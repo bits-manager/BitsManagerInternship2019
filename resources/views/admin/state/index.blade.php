@@ -7,13 +7,14 @@
     <h1>Manage States</h1>
   </div>
  <div class="card">
-      <!-- card header -->
+      
       <div class="card-header">
         <!-- card title -->
         <h4>State List</h4>
         <div class="card-header-action">
           <a href="{{ route('admin.state.create')}}" class="btn btn-primary">Add<i class="fas fa-plus"></i></a></div>
-      </div></div>
+      </div>
+      <div class="card-body">
   @if(session()->get('success'))
     <div class="alert alert-success">
       {{ session()->get('success') }}  
@@ -22,7 +23,7 @@
 <table class="table table-striped">
     <thead>
         <tr>
-          <td>ID</td>
+         <!--  <td>ID</td> -->
           <td>State Name</td>
           
           <td colspan="2">Action</td>
@@ -31,7 +32,7 @@
     <tbody>
         @foreach($states as $state)
         <tr>
-            <td>{{$state->id}}</td>
+            <!-- <td>{{$state->id}}</td> -->
             <td>{{$state->state_name}}</td>
             
             <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$state->id}})" 
@@ -42,7 +43,7 @@
         @endforeach
 </tbody>
   </table>
-</div>
+</div></div></div>
   <div id="DeleteModal" class="modal fade " role="dialog">
    <div class="modal-dialog ">
      <!-- Modal content-->

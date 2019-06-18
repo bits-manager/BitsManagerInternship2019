@@ -10,7 +10,7 @@
       <!-- card header -->
       <div class="card-header">
         <!-- card title -->
-        <h4>Event Form</h4>
+        <h4>Add Event </h4>
       </div>
   <div class="card-body">
 
