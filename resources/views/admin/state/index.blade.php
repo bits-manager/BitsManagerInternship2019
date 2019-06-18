@@ -24,8 +24,6 @@
     <thead>
         <tr>
           <td>State Name</td>
-          <td>Created Time</td>
-          <td>Updated Time</td>
           <td colspan="2">Action</td>
         </tr>
     </thead>
@@ -33,8 +31,6 @@
         @foreach($states as $state)
         <tr>
             <td>{{$state->state_name}}</td>
-            <td>{{$state->created_at}}</td>
-            <td>{{$state->updated_at}}</td>
             <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$state->id}})" 
               data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a>
               <a href="{{ route('admin.state.edit',$state->id)}}" class="btn btn-primary"><i class='fas fa-edit'></i></a>   

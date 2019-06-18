@@ -1,16 +1,26 @@
 @extends('layouts.admin-master')
 
+
+@section('title')
+Manage Users
+@endsection
+
 @section('content')
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-</style>
-<div class="card uper">
-  <div class="card-header">
-    Edit State
+
+<section class="section">
+  <div class="section-header">
+    <h1>Manage State name</h1>
   </div>
-  <div class="card-body">
+  <div class="section-body">
+
+    <div class="card">      
+
+        <div class="card-header">
+         <H4>Edit State</H4> 
+          <div class="card-header-action">
+           <a href="{{ route('admin.state')}}" class="btn btn-primary">List</a></div>
+        </div>
+        <div class="card-body">
 
 
  @if(Session::has('toasts'))
@@ -48,4 +58,5 @@
       </form>
   </div>
 </div>
+</div></section>
 @endsection
