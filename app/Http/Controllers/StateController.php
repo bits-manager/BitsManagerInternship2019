@@ -34,6 +34,11 @@ class StateController extends Controller
 
     public function store(Request $request){
 
+      $validatedData = $request->validate([
+            'state_name' => 'required|unique:states||max:255',
+
+         ]);
+
       	$data=$request->all();
     	  $this->stateRepo->create($data);
      	  return back()->with('info','State is successfully save!');

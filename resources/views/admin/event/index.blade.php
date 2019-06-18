@@ -11,8 +11,20 @@
         <h4>Event List</h4>
         <div class="card-header-action">
           <a href="{{ route('admin.event.create')}}" class="btn btn-primary">Add<i class="fas fa-plus"></i></a></div>
+<<<<<<< HEAD
       </div>
     <div class="card-body">
+=======
+  </div>
+  <div class="card-body">
+@if($message=Session::get('info'))
+    <div class="alert alert-info alert-block">
+       <button type ="button" class="close" data-dismiss="alert">x</button>
+       <strong>{{$message}}</strong>
+  </div>
+  @endif
+
+>>>>>>> b1a733149b8466e666669307a1ffed72d3a6b3c2
   @if(session()->get('success'))
     <div class="alert alert-success">
       {{ session()->get('success') }}  
@@ -21,15 +33,24 @@
 <table class="table table-striped">
     <thead>
         <tr>
+<<<<<<< HEAD
           <!-- <td>ID</td> -->
           <td><p class="text-dark">Event Name</p></td>
           
           <td colspan="2"><p class="text-dark">Action</p></td>
+=======
+          
+          <td>Event Type</td>
+          <td>Created Time</td>
+          <td>Updated Time</td>
+          <td colspan="2">Action</td>
+>>>>>>> b1a733149b8466e666669307a1ffed72d3a6b3c2
         </tr>
     </thead>
     <tbody>
         @foreach($event as $event)
         <tr>
+<<<<<<< HEAD
             <!-- <td>{{$event->id}}</td> -->
             <td>{{$event->event_name}}</td>
             
@@ -41,6 +62,22 @@
         @endforeach
 </tbody>
   </table>
+=======
+            
+            <td>{{$event->event_name}}</td>
+            <td>{{$event->created_at}}</td>
+            <td>{{$event->updated_at}}</td>
+           
+            <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$event->id}})" data-target="#DeleteModal" class=" btn btn-danger">
+              <i class="fa fa-trash"></i></a>
+              <a href="{{ route('admin.event.edit',$event->id)}}" class="btn btn-primary"><i class='fas fa-edit'></i></a>
+           </td>
+      </tr>
+@endforeach
+
+</tbody>
+</table> 
+>>>>>>> b1a733149b8466e666669307a1ffed72d3a6b3c2
 </div></div></div>
   <div id="DeleteModal" class="modal fade " role="dialog">
    <div class="modal-dialog ">

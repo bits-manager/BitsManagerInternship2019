@@ -19,5 +19,8 @@
       <li class="menu-header">State</li>
       <li class="{{ Request::route()->getName() == 'admin.state' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.state') }}"><i class="fa fa-columns"></i> <span>State</span></a></li>
 
+      <li class="menu-header">City</li>
+      <li class="{{ Request::route()->getName() == 'admin.city' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.city') }}"><i class="fa fa-columns"></i> <span>City</span></a></li>
+
 </ul>
 </aside>
