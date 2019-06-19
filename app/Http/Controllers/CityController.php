@@ -22,28 +22,23 @@ class CityController extends Controller
     {
         $statedata = [];
         $statedata =$this->stateRepo->getAll();
-    	return view('admin.city.create',compact('statedata'));
+    	 return view('admin.city.create',compact('statedata'));
         
     }
     public function store(Request $request)
-    {
-    	
-        
+    {  
     	$validatedData=$request->validate([
-    'city_name' => 'required|unique:cities|max:255',
-        
-]);
-         
-
+    'city_name' => 'required|unique:cities|max:255',  
+      ]);
     	$data = $request->all();
-        $this->cityRepo->create($data);
-       
-        
+      $this->cityRepo->create($data);
+  
        return back()->with('info','City is successfully save!');
        return redirect()->back()->withInput();
     
     //return back()->with('info','Store is successfully save:');
     }
+    
     public function index(Request $request)
     {
     	

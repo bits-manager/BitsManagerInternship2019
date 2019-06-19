@@ -19,10 +19,11 @@
       <li class="menu-header">Event Type</li>
       <li class="{{ Request::route()->getName() == 'admin.event' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.event') }}"><i class="fa fa-columns"></i> <span>EventType</span></a></li>
 
-      
-
       <li class="menu-header">City</li>
       <li class="{{ Request::route()->getName() == 'admin.city' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.city') }}"><i class="fa fa-columns"></i> <span>City</span></a></li>
+
+      <li class="menu-header">Hall</li>
+      <li class="{{ Request::route()->getName() == 'admin.hall' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.hall') }}"><i class="fa fa-columns"></i> <span>Hall</span></a></li>
 
 </ul>
 </aside>

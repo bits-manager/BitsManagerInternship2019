@@ -37,9 +37,13 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
         ]
     ]);
 
+    Route::resource('hall', 'HallController', [
+        'names' => [
+            'index' => 'hall'
+        ]
+    ]);
 
-
-    });
+ });
 
 
 
