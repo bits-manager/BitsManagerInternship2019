@@ -47,10 +47,10 @@ Manage Townships
                @endif
                   <form method="post" action="{{ route('admin.townships.store') }}">
                      <div class="form-group row mb-4">
-                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select State :</label>
                        <div class="col-sm-12 col-md-7">
                           <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
-                            <option value="">Select State :</option>
+                            
                              @foreach($statedata as $state)
                             <option value="{{$state->id}}">{{$state->state_name}}</option>
                              @endforeach
@@ -58,11 +58,10 @@ Manage Townships
                        </div>
                      </div>
                    <div class="form-group row mb-4">
-                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select City :</label>
                       <div class="col-sm-12 col-md-7">
                           <select name="city_id" id="city" class="form-control input-log dynamic" data-dependent="city">
-                           <option value="">Select City :
-                           </option> 
+                           
                              @foreach($citydata as $cities)
                             <option value="{{$cities->id}}">{{$cities->city_name}}</option>
                              @endforeach
