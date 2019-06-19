@@ -46,16 +46,20 @@ Manage Townships
                  </div><br />
                @endif
                   <form method="post" action="{{ route('admin.townships.store') }}">
-                     <div class="form-group">
+                     <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                       <div class="col-sm-12 col-md-7">
                           <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
                             <option value="">Select State :</option>
                              @foreach($statedata as $state)
                             <option value="{{$state->id}}">{{$state->state_name}}</option>
                              @endforeach
                          </select>
-            
+                       </div>
                      </div>
-                   <div class="form-group">
+                   <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                      <div class="col-sm-12 col-md-7">
                           <select name="city_id" id="city" class="form-control input-log dynamic" data-dependent="city">
                            <option value="">Select City :
                            </option> 
@@ -63,17 +67,24 @@ Manage Townships
                             <option value="{{$cities->id}}">{{$cities->city_name}}</option>
                              @endforeach
                          </select>
-            
-                     </div> 
-                     <div class="form-group">
+                      </div>
+                   </div> 
+                     <div class="form-group row mb-4">
                          @csrf
-                         <label for="name">Township Name:</label>
+                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Township Name:</label>
+
+                      <div class="col-sm-12 col-md-7">
                       <input type="text" class="form-control" id="township_name" placeholder="Enter Township Name" name="township_name">
-                     </div>
-                     
+                      </div>
+                    </div>
+
+                  <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                     <div class="col-sm-12 col-md-7">
                      <button type="submit" class="btn btn-primary">Save</button>
                        <input type="button" value="Cancel" class="btn btn-primary" onclick="clearText()"/>
-             
+                     </div>
+                 </div>
                   </form>
              </div>
           <!-- card footer -->
