@@ -40,8 +40,14 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
         'names' => [
             'index' => 'state'
         ]
-    ]);
 
+    ]);
+   Route::resource('townships', 'TownshipController', [
+        'names' => [
+            'index' => 'townships'
+        ]
+    
+    ]);
 
     Route::resource('city', 'CityController', [
         'names' => [
