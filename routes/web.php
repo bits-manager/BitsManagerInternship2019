@@ -12,8 +12,10 @@ Route::name('frontend.')->prefix('frontend')->group(function() {
     Route::get('frontendhome', 'FrontendhomeController')->name('frontendhome');
     
 
-   
-       });
+
+
+    
+});
 
 Route::get('home', function() {
     return redirect(route('admin.dashboard'));
