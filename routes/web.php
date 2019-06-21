@@ -1,21 +1,19 @@
 <?php
 Route::get('/', function() {
-    return redirect(route('frontend.frontendhome'));
+    return redirect(route('frontend.homes'));
 });
 
 Route::get('/frontend', function() {
-    return redirect(route('frontend.frontendhome'));
+    return redirect(route('frontend.homes'));
 });
 
 Route::name('frontend.')->prefix('frontend')->group(function() {
 
-    Route::get('frontendhome', 'FrontendhomeController')->name('frontendhome');
-    
-
-
-
+    Route::get('homes', 'frontend\HomesController')->name('homes');
+    Route::get('contact', 'frontend\ContactController@index')->name('contact');
     
 });
+
 
 Route::get('home', function() {
     return redirect(route('admin.dashboard'));

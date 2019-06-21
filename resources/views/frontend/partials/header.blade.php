@@ -8,11 +8,11 @@
 						</div>
 						<nav class="main_nav">
 							<ul>
-								<li class="active"><a>Home</a></li>
+								<li class="active"><a href="homes">Home</a></li>
 								<li><a>About us</a></li>
 								<li><a>Properties</a></li>
 								<li><a>News</a></li>
-								<li><a>Contact</a></li>
+								<li><a href="contact">Contact</a></li>
 							</ul>
 						</nav>
 						<div class="phone_num ml-auto">
