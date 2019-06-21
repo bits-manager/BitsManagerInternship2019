@@ -1,4 +1,5 @@
-<header class="header">
+ 
+  <header class="header">
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -11,8 +12,15 @@
 								<li class="active"><a>Home</a></li>
 								<li><a>About us</a></li>
 								<li><a>Properties</a></li>
-								<li><a>News</a></li>
 								<li><a>Contact</a></li>
+								<li class="upper-links dropdown" data-toggle="dropdown">
+									<a class="links" href="#"><i class="fa fa-user-circle-o">
+									</i> Account</a>
+                                     <ul class="dropdown-menu">
+                                      <li class="dropdown-item"><a><i class="fa fa-user"></i>Login</a></li>
+                                      <li class="dropdown-item"><a><i class="fa fa-address-card-o"></i>Register</a></li>
+                                     </ul>
+                                </li>
 							</ul>
 						</nav>
 						<div class="phone_num ml-auto">

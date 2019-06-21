@@ -15,8 +15,8 @@
 				<li class="menu_item"><a>About us</a></li>
 				<li class="menu_item"><a>Speakers</a></li>
 				<li class="menu_item"><a>Tickets</a></li>
-				<li class="menu_item"><a>News</a></li>
 				<li class="menu_item"><a>Contact</a></li>
+				<li class="menu_item"><a>Account</a></li>
 			</ul>
 		</div>
 		<div class="menu_phone"><span>call us: </span>652 345 3222 11</div>
