@@ -3,6 +3,7 @@
 @extends('layouts.admin-master')
 
 @section('content')
+
 <section class="section">
   <div class="section-header">
     <h1>Manage Cities</h1>
@@ -37,8 +38,14 @@
       {{ session()->get('success') }}  
     </div><br />
   @endif
-  <table class="table table-striped">
+
+  
+
+<div style="width:100%;height:100%;overflow-x: scroll;overflow-y:hidden";>
+  
+ <table class="table table-striped table-bordered" >
     <thead>
+      
         <tr>
           
           <td>State Name</td>
@@ -46,29 +53,35 @@
           <td>Township Name</td>
          
           <td colspan="3">Action</td>
+          
         </tr>
+    
     </thead>
     <tbody>
        @foreach($data as $townships)
         
-        <tr>
-
-           
+       <div class="row"> 
+        <tr> 
+             
             <td>{{$townships->state_name}}</td>
             <td>{{$townships->city_name}}</td>
             <td>{{$townships->township_name}}</td>
 
            
-            <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$townships->id}})" 
-              data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a>
-              <a href="{{ route('admin.townships.edit',$townships->id)}}" class="btn btn-primary"><i class='fas fa-edit'></i></a>  
-</td>
-</tr>
-@endforeach
-            
-        
+            <td><div class="btn-group"><div><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$townships->id}})" 
+              data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash" ></i></a></div><div>
+              <a href="{{ route('admin.townships.edit',$townships->id)}}" class="btn btn-primary"><i class='fas fa-edit' ></i></a></div>
+           </td></div>
+        </tr>
+       @endforeach
+       </div> 
     </tbody>
-  </table></section>
+  </table>
+
+</div>
+  
+</section>
+
 
 
 <div id="DeleteModal" class="modal fade " role="dialog">

@@ -9,9 +9,10 @@
 						</div>
 						<nav class="main_nav">
 							<ul>
-								<li class="active"><a>Home</a></li>
+								<li class="active"><a href="homes">Home</a></li>
 								<li><a>About us</a></li>
 								<li><a>Properties</a></li>
+<<<<<<< HEAD
 								<li><a>Contact</a></li>
 								<li class="upper-links dropdown" data-toggle="dropdown">
 									<a class="links" href="#"><i class="fa fa-user-circle-o">
@@ -21,6 +22,10 @@
                                       <li class="dropdown-item"><a><i class="fa fa-address-card-o"></i>Register</a></li>
                                      </ul>
                                 </li>
+=======
+								<li><a>News</a></li>
+								<li><a href="contact">Contact</a></li>
+>>>>>>> 2a15a0bfc2c7f1a36905efe407657bfc7cfd98f8
 							</ul>
 						</nav>
 						<div class="phone_num ml-auto">
