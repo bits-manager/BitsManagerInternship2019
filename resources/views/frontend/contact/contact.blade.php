@@ -115,7 +115,7 @@
 				<!-- Contact Form -->
 				<div class="col-lg-8">
 					<div class="contact_form_container">
-						<form action="#" class="contact_form" id="contact_form">
+						<form method="POST" action="/contactsaction" class="contact_form" id="contact_form">
 							<div class="row">
 								<!-- Name -->
 								<div class="col-lg-6 contact_name_col">

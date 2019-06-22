@@ -11,8 +11,15 @@ Route::name('frontend.')->prefix('frontend')->group(function() {
 
     Route::get('homes', 'frontend\HomesController')->name('homes');
     Route::get('contact', 'frontend\ContactController@index')->name('contact');
-    
 });
+
+
+Route::get('/contacts','frontend\ContactControllerController@index');
+ 
+Route::get('/contacts/create','frontend\ContactController@create');
+ 
+Route::post('/contactsaction','frontend\ContactController@storeDevice');
+
 
 
 Route::get('home', function() {
@@ -82,5 +89,4 @@ Route::name('js.')->group(function() {
 Route::get('users/auth', function() {
     return response()->json(['user' => Auth::check() ? Auth::user() : false]);
 });
-
 

@@ -34,7 +34,16 @@ class ContactController extends Controller
 
     public function store(Request $request)
     {
-    	      
+    	   $validatedData = $request->validate([
+            'name' => 'required:contacts||max:255',
+
+         ]);
+
+      
+
+        $data=$request->all();
+        $this->stateRepo->create($data);
+    
     }
   
     
