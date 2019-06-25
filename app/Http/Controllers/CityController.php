@@ -28,18 +28,53 @@ class CityController extends Controller
     public function store(Request $request)
     {
     	
-        
+     /*   
     	$validatedData=$request->validate([
     'city_name' => 'required|unique:cities|max:255',
         
 ]);
-         
-
-    	$data = $request->all();
-        $this->cityRepo->create($data);
        
+
+    	
+    /*dd($data);*/
+    $data = $request->all();
+    
+    $cities=explode(',', $data['city_name']);
+
+    foreach ($cities as $key => $value) {
         
-       return back()->with('info','City is successfully save!');
+        $city['state_id'] =$data['state_id'];
+        dd($city);
+        $city['city_name'] =$value;
+        dd($city);
+        $ans = DB::table('cities')->where('cities.state_id','=',$city['state_id']                         AND 'cities.city_name','=',$city['city_name']);
+
+        dd($ans);
+        //if($ans==)
+                                 
+                                    return back()->with('error','Data is duplicated');
+                                    return redirect()->back()->withInput();
+
+
+        /*where(function ($query) {
+                return $query->where('state_id','=',$city['state_id'] AND 
+                  'city_name','=',$city['city_name']);});*/
+
+
+             
+    }
+    foreach ($cities as $key => $value) {
+        
+        $city['state_id'] =$data['state_id'];
+        $city['city_name'] =$value;
+       $this->cityRepo->create($city);
+    }
+    
+
+
+
+        
+      return back()->with('info','City is successfully save!');
        return redirect()->back()->withInput();
     
     //return back()->with('info','Store is successfully save:');

@@ -38,9 +38,15 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
     ]);
 
 
+/*Route::post('admin.city.store', function(){
+
+    dd(request()->city_name);
+    $info= Textarea::get('city_name');  
+
+
+})->name('admin.city.store');*/
 
     });
-
 
 
 
