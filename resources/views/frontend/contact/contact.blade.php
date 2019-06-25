@@ -115,20 +115,22 @@
 				<!-- Contact Form -->
 				<div class="col-lg-8">
 					<div class="contact_form_container">
-						<form method="POST" action="/contactsaction" class="contact_form" id="contact_form">
+						<form method="post" action="{{ route('admin.contact.store') }}" class="contact_form" id="contact_form">
+
+						 {{ csrf_field() }}
 							<div class="row">
 								<!-- Name -->
-								<div class="col-lg-6 contact_name_col">
-									<input type="text" class="contact_input" placeholder="Name" required="required">
+	                               <div class="col-lg-6 contact_name_col">
+									<input type="text" name="contact_name" class="contact_input" placeholder="Name" required="required">
 								</div>
 								<!-- Email -->
 								<div class="col-lg-6">
-									<input type="email" class="contact_input" placeholder="E-mail" required="required">
+									<input type="email" name="email" class="contact_input" placeholder="E-mail" required="required">
 								</div>
 							</div>
-							<div><input type="text" class="contact_input" placeholder="Subject"></div>
-							<div><textarea class="contact_textarea contact_input" placeholder="Message" required="required"></textarea></div>
-							<button class="contact_button button">send</button>
+							<div><input type="text" name="subject" class="contact_input" placeholder="Subject"></div>
+							<div><textarea name="message" class="contact_textarea contact_input" placeholder="Message" required="required"></textarea></div>
+							<button type="submit" name="btnSubmit" class="contact_button button">send</button>
 						</form>
 					</div>
 				</div>
