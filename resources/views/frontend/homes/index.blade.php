@@ -1,3 +1,9 @@
+<style>
+#a{
+	width: 25%;
+}
+</style>
+
 @extends('layouts.frontend-master')
 
 @section('content')
@@ -125,47 +131,34 @@
 							<form action="#" class="search_form d-flex flex-row align-items-start justfy-content-start">
 								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
 									<div>
-										<select class="search_form_select">
-											<option disabled selected>For rent</option>
-											<option>Yes</option>
-											<option>No</option>
+										<select class="search_form_select" ng-model="selectedEvent" name="event_id" value="selectedEvent" ng-options="event_id as EventType.event_name for  event in event" 
+										id="event">
+										<option disabled selected>Event</optin>
 										</select>
 									</div>
-									<div>
-										<select class="search_form_select">
-											<option disabled selected>All types</option>
-											<option>Type 1</option>
-											<option>Type 2</option>
-											<option>Type 3</option>
-											<option>Type 4</option>
+									<div id="a">
+										<select class="search_form_select" ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state_id as state.state_name for state in states" id="state">
+										<option disabled selected>State</option>
 										</select>
 									</div>
-									<div>
-										<select class="search_form_select">
-											<option disabled selected>City</option>
-											<option>New York</option>
-											<option>Paris</option>
-											<option>Amsterdam</option>
-											<option>Rome</option>
+									<div id="a">
+										<select class="search_form_select" ng-model="selectedCity" name="city_id" value="selectedCity" ng-options="city_id as city.city_name for  city in city" 
+										id="city">
+										<option disabled selected>City</optin>
 										</select>
-									</div>
-									<div>
+									</div id="a">
+									
+									<div id="a">
 										<select class="search_form_select">
-											<option disabled selected>Bedrooms</option>
+											<option disabled selected>Township</option>
 											<option>1</option>
 											<option>2</option>
 											<option>3</option>
 											<option>4</option>
 										</select>
 									</div>
-									<div>
-										<select class="search_form_select">
-											<option disabled selected>Bathrooms</option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-										</select>
-									</div>
+									
+								
 								</div>
 								<button class="search_form_button ml-auto">search</button>
 							</form>

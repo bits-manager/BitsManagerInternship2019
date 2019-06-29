@@ -26,7 +26,7 @@
 								<li class="active"><a href="homes"><i class="fa fa-home"></i> Home</a></li>
 								<li><a>About us</a></li>
 								<li><a>Properties</a></li>
-								<li><a href="contact">Contact</a></li>
+								<li><a href="contact"><i class="fa fa-address-card-o"></i> Contact</a></li>
 								<li class="upper-links dropdown show-on-hover"><a class="links dropdown-toggle" 
 									data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o"></i> Account</a>
 								  <ul class="dropdown-menu" role="menu" id="ul">
@@ -41,7 +41,6 @@
                                         </a></li>
                                     @else
                                         <li ><a href="{{route('admin.dashboard')}}" style="color: #000"><i class="fa fa-user"></i> Login</a></li>
-            					        <li ><a href="#" style="color: #000"><i class="fa fa-address-card-o"></i> Register</a></li>
                                     @endif 
           						  </ul> 
 								</li>

@@ -14,7 +14,7 @@
 				<li class="active"><a href="homes" style="color: #fff"><i class="fa fa-home"></i> Home</a></li>
                 <li><a>About us</a></li>
 				<li><a>Properties</a></li>
-				<li><a href="contact" style="color: #fff">Contact</a></li>
+				<li><a href="contact" style="color: #fff"><i class="fa fa-address-card-o"></i> Contact</a></li>
 				                <li class="upper-links dropdown show-on-hover"><a class="links dropdown-toggle" 
 									data-toggle="dropdown" href="#"style="color: #fff"><i class="fa fa-user-circle-o"></i> Account</a>
 								  <ul class="dropdown-menu" role="menu" id="ul">

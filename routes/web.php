@@ -12,6 +12,8 @@ Route::name('frontend.')->prefix('frontend')->group(function() {
     Route::get('homes', 'frontend\HomesController')->name('homes');
     Route::get('contact', 'frontend\ContactController@index')->name('contact');
     Route::get('frontend/admin/dashboard', 'DashboardController@index')->middleware('auth')->name('admin.dashboard');
+
+    
        });
 
 
@@ -55,9 +57,9 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
             'index' => 'city'
         ]
     ]);
-    Route::resource('contacts','ContactController', [
+    Route::resource('contact','ContactController', [
         'names' => [
-            'index' => 'contacts'
+            'index' => 'contact'
         ]
     ]);
 
