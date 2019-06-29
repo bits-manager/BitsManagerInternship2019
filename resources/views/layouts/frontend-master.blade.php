@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="/frontendassets/styles/bootstrap4/bootstrap.min.css">
 <link href="../frontendassets/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
  
 <link rel="stylesheet" type="text/css" href="/frontendassets/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
 <link rel="stylesheet" type="text/css" href="/frontendassets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
@@ -32,38 +32,16 @@
 	    @include('frontend.partials.footer')
     </div>
 <script src="/frontendassets/js/jquery-3.2.1.min.js"></script>
-<script>
-	function toggleDropdown (e) {
-  const _d = $(e.target).closest('.dropdown'),
-    _m = $('.dropdown-menu', _d);
-  setTimeout(function(){
-    const shouldOpen = e.type !== 'click' && _d.is(':hover');
-    _m.toggleClass('show', shouldOpen);
-    _d.toggleClass('show', shouldOpen);
-    $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
-  }, e.type === 'mouseleave' ? 300 : 0);
-}
 
-$('body')
-  .on('mouseenter mouseleave','.dropdown',toggleDropdown)
-  .on('click', '.dropdown-menu a', toggleDropdown);
-</script>
 <script src="/frontendassets/styles/bootstrap4/popper.js"></script>
 <script src="/frontendassets/styles/bootstrap4/bootstrap.min.js"></script>
 <script src="/frontendassets/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="/frontendassets/plugins/easing/easing.js"></script>
 <script src="/frontendassets/plugins/parallax-js-master/parallax.min.js"></script>
 <script src="/frontendassets/js/custom.js"></script>
-<<<<<<< HEAD
-
-
-  
-=======
 <script src="/frontendassets/plugins/rangeslider.js-2.3.0/rangeslider.min.js"></script>
 <script src="/frontendassets/plugins/parallax-js-master/parallax.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
 <script src="/frontendassets/js/contact.js"></script>
-
->>>>>>> 2a15a0bfc2c7f1a36905efe407657bfc7cfd98f8
 </body>
 </html>

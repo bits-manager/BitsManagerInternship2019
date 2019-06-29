@@ -1,6 +1,6 @@
 <aside id="sidebar-wrapper">
   <div class="sidebar-brand">
-    <a href="{{ route('admin.dashboard') }}">{{ env('APP_NAME') }}</a>
+    <a href="{{ route('frontend.homes') }}">hall</a>
   </div>
   <div class="sidebar-brand sidebar-brand-sm">
     <a href="index.html">St</a>
