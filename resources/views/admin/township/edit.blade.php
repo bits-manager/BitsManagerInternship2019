@@ -3,6 +3,7 @@
 @extends('layouts.admin-master')
 
 @section('content')
+<div ng-app="myApp" ng-controller="myCtrl">
 <section class="section">
   <div class="section-header">
     <h1>Manage City Name</h1>
@@ -40,39 +41,58 @@
       </div><br />
     @endif
 
-      <form method="post" action="{{ route('admin.townships.update', ['id'=>$edit_townships->id]) }}">
+      <form method="get" action="{{ route('admin.townships.update', ['id'=>$edit_townships->id]) }}">
         
              <div class="form-group row mb-4">
+
                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">State Name</label>
               <div class="col-sm-12 col-md-7">
                <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
+
+                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select State :</label>
+              <div class="col-sm-12 col-md-7">
+              <!--  <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
+                
+
                @foreach($statedata as $state)
                 <option value="{{$state->id}} {{$state->id === $edit_townships->state_id ? 'selected' : '' }}">
                   {{$state->state_name}}
                 </option>
                 @endforeach
+               </select> -->
+               <select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control" >
                </select>
               </div>
             </div>
 
            <div class="form-group row mb-4">
+
               <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">City Name</label>
             <div class="col-sm-12 col-md-7">
              <select name="city_id" id="city" class="form-control input-log dynamic" data-dependent="city">
+              <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select City :</label>
+            <div class="col-sm-12 col-md-7">
+            <!--  <select name="city_id" id="city" class="form-control input-log dynamic" data-dependent="city">
+               
                  @foreach($citydata as $cities)
                 <option value="{{$cities->id}}" {{ $cities->id === $edit_townships->city_id ? 'selected' : '' }} >
                   {{$cities->city_name}}
                  @endforeach
                </option>
-             </select>
+             </select> -->
+              <select ng-model="selectedCity" name="city_id" value="selectedCity"  ng-options="city.id as city.city_name for city in cities" class="form-control" >
+              </select>
            </div> 
            </div> 
 
 
 
            <div class="form-group row mb-4">
+
               @csrf
               <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Township Name:</label>
+               @csrf
+                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Township Name:</label>
 
             <div class="col-sm-12 col-md-7">
               <input type="text" class="form-control" name="township_name" value="{{$edit_townships->township_name}}"/>
@@ -88,5 +108,60 @@
       </form>
   </div>
 </div>
+</section>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script>
+var states={!! json_encode($statedata) !!};
+var cities={!! json_encode($citydata) !!};
+var edit_townships = {!! json_encode($edit_townships) !!};
+
+var app = angular.module('myApp', []);
+app.config(function($interpolateProvider){
+  $interpolateProvider.startSymbol('<%').endSymbol('%>');
+});
+
+app.controller('myCtrl', function($scope, $http) {
+
+$scope.states= states;
+$scope.cities = cities;
+$scope.edit_townships = edit_townships;
+console.log($scope.edit_townships);
+$scope.selectedState = $scope.edit_townships.states[0].id;
+$scope.selectedCity = $scope.edit_townships.cities[0].id;
+
+$http({
+          method : "GET",
+          url : "/api/v1/get_city?state_id="+$scope.selectedState,
+        }).then(function mySuccess(response) {
+           $scope.cities = response.data.data;
+          }, function myError(response) {
+
+            $scope.cities = [];
+
+        });
+
+  $scope.selectChange = function(){
+
+    $http({
+          method : "GET",
+          url : "/api/v1/get_city?state_id="+$scope.selectedState,
+        }).then(function mySuccess(response) {
+           console.log(response.data.data);
+           $scope.cities = response.data.data;
+           $scope.selectedCity = $scope.cities[0].id;
+          }, function myError(response) {
+
+            $scope.cities = [];
+
+        });
+
+  }
+  
+
+
+});
+
+</script>
 @endsection
 

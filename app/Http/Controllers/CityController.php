@@ -38,8 +38,8 @@ class CityController extends Controller
     
     //return back()->with('info','Store is successfully save:');
     }
-    
-    public function index(Request $request)
+
+    public function  index(Request $request)
     {
     	
         $data = DB::table('cities')

@@ -3,6 +3,7 @@
 @extends('layouts.admin-master')
 
 @section('content')
+
 <section class="section">
   <div class="section-header">
     <h1>Manage Cities</h1>
@@ -16,59 +17,74 @@
           <a href="{{ route('admin.townships.create')}}" class="btn btn-primary">Add<i class="fas fa-plus"></i></a></div>
       </div>
 <div class="card-body">
-  @if($message = Session::get('info'))
-    <div class = "alert alert-info alert-block">
+     @if($message = Session::get('info'))
+      <div class = "alert alert-info alert-block">
       <button type = "button" class="close" data-dismiss = "alert">x</button>
       <strong>{{$message}}</strong>
       </div>
       @endif  
 
        @if(Session::has('toasts'))
-  @foreach(Session::get('toasts') as $toast)
-    <div class="alert alert-{{ $toast['level'] }}">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+         @foreach(Session::get('toasts') as $toast)
+            <div class="alert alert-{{ $toast['level'] }}">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 
-      {{ $toast['message'] }}
-    </div>
-  @endforeach
-@endif 
-  @if(session()->get('success'))
-    <div class="alert alert-success">
-      {{ session()->get('success') }}  
-    </div><br />
-  @endif
-  <table class="table table-striped">
-    <thead>
-        <tr>
+           {{ $toast['message'] }}
+            </div>
+      @endforeach
+        @endif 
+        @if(session()->get('success'))
+        <div class="alert alert-success">
+         {{ session()->get('success') }}  
+          </div><br />
+        @endif
+
+  
+
+        <div style="width:100%;height:100%;overflow-x: scroll;overflow-y:hidden";>
+  
+            <table class="table table-striped table-bordered" >
+                 <thead>
+      
+                            <tr>
           
-          <td>State Name</td>
-          <td>City Name</td>
-          <td>Township Name</td>
+                                      <td>State Name</td>
+                                      <td>City Name</td>
+                                    <td>Township Name</td>
          
-          <td colspan="3">Action</td>
-        </tr>
-    </thead>
-    <tbody>
-       @foreach($data as $townships)
+                                    <td colspan="3">Action</td>
+          
+                              </tr>
+    
+                    </thead>
+               <tbody>
+               @foreach($data as $townships)
         
-        <tr>
+                      <div class="row">
+                       <tr> 
+             
+                       <td>{{$townships->state_name}}</td>
+                      <td>{{$townships->city_name}}</td>
+                      <td>{{$townships->township_name}}</td>
 
            
-            <td>{{$townships->state_name}}</td>
-            <td>{{$townships->city_name}}</td>
-            <td>{{$townships->township_name}}</td>
+                    <td><div class="btn-group">
 
-           
-            <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$townships->id}})" 
-              data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a>
-              <a href="{{ route('admin.townships.edit',$townships->id)}}" class="btn btn-primary"><i class='fas fa-edit'></i></a>  
-</td>
-</tr>
-@endforeach
-            
-        
+                    <div><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$townships->id}})" 
+                     data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash" ></i></a>
+                   </div><div>
+                    <a href="{{ route('admin.townships.edit',$townships->id)}}" class="btn btn-primary"><i class='fas fa-edit' ></i></a></div>
+                   </td></div>
+                      </tr>
+              @endforeach
+       </div> 
     </tbody>
-  </table></section>
+  </table>
+
+</div>
+  
+</section>
+
 
 
 <div id="DeleteModal" class="modal fade " role="dialog">
