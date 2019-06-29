@@ -37,7 +37,8 @@
             
             <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$state->id}})" 
               data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a>
-              <a href="{{ route('admin.state.edit',$state->id)}}" class="btn btn-primary"><i class='fas fa-edit'></i></a>   
+              <a href="{{ route('admin.state.edit',$state->id)}}" class="btn btn-primary"><i class='fas fa-edit'></i></a> 
+             
             </td>
         </tr>
         @endforeach

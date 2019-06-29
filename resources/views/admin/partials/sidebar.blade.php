@@ -16,6 +16,9 @@
      <li class="menu-header">Contact</li>
       <li class="{{ Request::route()->getName() == 'admin.contacts' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.contacts') }}"><i class="fa fa-columns"></i> <span>Contact</span></a></li>
 
+       <li class="menu-header">Address</li>
+      <li class="{{ Request::route()->getName() == 'admin.address' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.address') }}"><i class="fa fa-columns"></i> <span>Address</span></a></li>
+
      
      <li class="menu-header">State</li>
       <li class="{{ Request::route()->getName() == 'admin.state' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.state') }}"><i class="fa fa-columns"></i> <span>State</span></a></li>
