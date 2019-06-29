@@ -58,7 +58,8 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
         
         ]
     ]);
- });
+
+});
 Route::middleware('auth')->get('logout', function() {
     Auth::logout();
     return redirect(route('login'))->withInfo('You have successfully logged out!');
