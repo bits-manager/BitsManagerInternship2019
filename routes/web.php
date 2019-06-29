@@ -11,8 +11,11 @@ Route::name('frontend.')->prefix('frontend')->group(function() {
 
     Route::get('homes', 'frontend\HomesController')->name('homes');
     Route::get('contact', 'frontend\ContactController@index')->name('contact');
-  
-});
+    Route::get('frontend/admin/dashboard', 'DashboardController@index')->middleware('auth')->name('admin.dashboard');
+       });
+
+
+
 Route::get('home', function() {
     return redirect(route('admin.dashboard'));
 });
@@ -52,14 +55,29 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
             'index' => 'city'
         ]
     ]);
-    Route::resource('contact', 'ContactController', [
+    Route::resource('contacts','ContactController', [
         'names' => [
-            'index' => 'contact'
-        
+            'index' => 'contacts'
         ]
     ]);
 
+
 });
+
+    Route::resource('address', 'AddressController', [
+        'names' => [
+            'index' => 'address'
+             
+        ]
+    ]);
+
+
+
+    });
+
+
+
+
 Route::middleware('auth')->get('logout', function() {
     Auth::logout();
     return redirect(route('login'))->withInfo('You have successfully logged out!');
@@ -75,4 +93,5 @@ Route::name('js.')->group(function() {
 Route::get('users/auth', function() {
     return response()->json(['user' => Auth::check() ? Auth::user() : false]);
 });
+
 

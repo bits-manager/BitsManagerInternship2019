@@ -11,12 +11,30 @@
 				</a>
 			</div>
 			<ul>
-				<li class="menu_item"><a>Home</a></li>
-				<li class="menu_item"><a>About us</a></li>
-				<li class="menu_item"><a>Speakers</a></li>
-				<li class="menu_item"><a>Tickets</a></li>
-				<li class="menu_item"><a>News</a></li>
-				<li class="menu_item"><a>Contact</a></li>
+				<li class="active"><a href="homes" style="color: #fff"><i class="fa fa-home"></i> Home</a></li>
+                <li><a>About us</a></li>
+				<li><a>Properties</a></li>
+				<li><a href="contact" style="color: #fff">Contact</a></li>
+				                <li class="upper-links dropdown show-on-hover"><a class="links dropdown-toggle" 
+									data-toggle="dropdown" href="#"style="color: #fff"><i class="fa fa-user-circle-o"></i> Account</a>
+								  <ul class="dropdown-menu" role="menu" id="ul">
+
+								  	@if(Auth::check())
+								  	
+                                    <li>Hi, {{ Auth::user()->name }}</li>
+                                        <li><a href="{{route('admin.dashboard')}}" class="dropdown-item has-icon text-primary" >
+                                          <i class="fa fa-user"></i> Dashboard</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger"></i> Logout
+                                        </a></li>
+                                    @else
+                                        <li ><a href="{{route('admin.dashboard')}}" style="color: #000"><i class="fa fa-user"></i> Login</a></li>
+            					        <li ><a href="#" style="color: #000"><i class="fa fa-address-card-o"></i> Register</a></li>
+                                    @endif 
+          						  </ul> 
+								</li>
+							</ul>
+							
 			</ul>
 		</div>
 		<div class="menu_phone"><span>call us: </span>652 345 3222 11</div>
