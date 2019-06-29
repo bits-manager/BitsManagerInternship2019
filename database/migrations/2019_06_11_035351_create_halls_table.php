@@ -15,11 +15,12 @@ class CreateHallsTable extends Migration
     {
         Schema::create('halls', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('image')->nullable();
             $table->string('hall_name');
             $table->string('address');
             $table->string('phone_no');
-            $table->time('open_time')->nullable();
-            $table->time('close_time')->nullable();
+            $table->string('open_time')->nullable();
+            $table->string('close_time')->nullable();
             $table->unsignedBigInteger('city_id');
             $table->unsignedBigInteger('state_id');
             $table->unsignedBigInteger('township_id');

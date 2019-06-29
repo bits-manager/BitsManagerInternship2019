@@ -4,19 +4,20 @@
 
 <section class="section">
   <div class="section-header">
-    <h1>Manage Event Name</h1>
-  </div>
-  <div class="section-body">
 
-    <div class="card">
-      <!-- card header -->
+    <h1>Edit Event list</h1>
+  </div>
+ <div class="card">
       <div class="card-header">
-        <!-- card title -->
-        <h4>Edit Event</h4>
+        <h4>Event List</h4>
+        <div class="card-header-action">
+          <a href="{{ route('admin.event')}}" class="btn btn-primary">List<i class="fas fa-plus"></i></a></div>
       </div>
- 
-  <div class="card-body">
+  <div class="section-body">
+   <div class="card">
+    <div class="card-body">
     
+
     @if(Session::has('toasts'))
     @foreach(Session::get('toasts') as $toast)
     <div class="alert alert-{{ $toast['level'] }}">
@@ -45,13 +46,21 @@
       </div><br />
     @endif
     <form method="put" action="{{route('admin.event.update',['id'=>$edit_event->id])}}">
-          <div class="form-group">
-              @csrf
-              <label for="name"> Event Name:</label>
-              <input type="text" class="form-control" name="event_name" value="{{$edit_event->event_name}}"/>
-          </div>
-         
+       @csrf
+     <div class="form-group row mb-4">
+            
+         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Event Name</label>
+         <div class="col-sm-12 col-md-7">
+         <input type="text" class="form-control" name="event_name" value="{{$edit_event->event_name}}"/>
+       </div>
+     </div>
+
+       <div class="form-group row mb-4">
+         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+         <div class="col-sm-12 col-md-7">
           <button type="submit" class="btn btn-primary">Update Event Name</button>
+        </div>
+      </div>
       </form>
   </div>
 </div>

@@ -1,7 +1,9 @@
 @extends('layouts.admin-master')
 
 @section('content')
+
 <section class="section">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <div class="section-header">
     <h1>Manage Halls</h1>
   </div>
@@ -23,38 +25,43 @@
           </div><br />
         @endif
       
-
+        <div class="table-responsive" >
         <table class="table table-striped">
         <thead>
         <tr>
-          <td>Hall Name</td>
-          <td>Phone No</td>
-          <td>Open Time</td>
-          <td>Close Time</td>
-          <td>State Name</td>
-          <td>City Name</td>
-          <td>Township Name</td>
-          <td>Address</td>
-          <td colspan="2">Action</td>
+          <th>Hall  Image</th>
+          <th>Hall Name</th>
+          <th>State Name</th>
+          <th>City Name</th>
+          <th>Township Name</th>
+          <th>Phone No</th>
+          <th>Open Time</th>
+          <th>Close Time</th>
+          
+          <th>Address</th>
+          <th colspan="2">Action</th>
         </tr>
         </thead>
         <tbody>
         @foreach($data as $hall)
+        
         <tr>
+            <td><img src="{{URL::to('/')}}/images/{{$hall->image}}" class="img-thumbnail"/></td>
             <td>{{$hall->hall_name}}</td>
-            <td>{{$hall->phone_no}}</td>
-            <td>{{$hall->open_time}}</td>
-            <td>{{$hall->close_time}}</td>
             <td>{{$hall->state_name}}</td>
             <td>{{$hall->city_name}}</td>
             <td>{{$hall->township_name}}</td>
+            <td>{{$hall->phone_no}}</td>
+            <td>{{$hall->open_time}}</td>
+            <td>{{$hall->close_time}}</td>
             <td>{{$hall->address}}</td>
-            <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$hall->id}})" data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a>
-              <a href="{{ route('admin.hall.edit',$hall->id)}}" class="btn btn-primary"><i class='fas fa-edit'></i></a> </td>
+            <td>
+            <a href="javascript:;" data-toggle="modal" onclick="deleteData({{$hall->id}})" data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
+            <td><a href="{{ route('admin.hall.edit',$hall->id)}}" class="btn btn-primary"><i class='fas fa-edit'></i></a></td>
         </tr>
         @endforeach
         </tbody>
-        </table></div></div></section> 
+        </table></div></div></div></section> 
 <div id="DeleteModal" class="modal fade " role="dialog">
    <div class="modal-dialog">
      <!-- Modal content-->
@@ -82,7 +89,7 @@
       </div>
     </div>
 
-    <script type="text/javascript">
+    <script type="application/javascript">
      function deleteData(id)
      {
          var id = id;
@@ -98,9 +105,4 @@
      }
     </script>
 
-
-
-     
-      
-  <!--  -->
 @endsection

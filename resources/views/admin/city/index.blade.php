@@ -43,7 +43,6 @@
           
           <td>State Name</td>
           <td>City Name</td>
-          
           <td colspan="2">Action</td>
         </tr>
     </thead>
@@ -51,11 +50,9 @@
        @foreach($data as $city)
         
         <tr>
-
-           
             <td>{{$city->state_name}}</td>
             <td>{{$city->city_name}}</td>
-            
+
             <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$city->id}})" 
               data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a>
               <a href="{{ route('admin.city.edit',$city->id)}}" class="btn btn-primary"><i class='fas fa-edit'></i></a>  

@@ -64,7 +64,7 @@ class CityController extends Controller
     	
       
            $data=$request->all();
-          
+          dd($data);
            $data=array_except($data,['$city_id']);
             $this->cityRepo->update($data,$city_id);
            
