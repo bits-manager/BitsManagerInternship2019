@@ -14,7 +14,7 @@ class AddressTableSeeder extends Seeder
     	\DB::table('addresses')->insert([
             'address' => '1481 Creekside Lane Avila Beach, CA 93424',
             'phone'=>'+53 345 7953 32453',
-            'email'='you@gmail.com',
+            'email'=>'you@gmail.com',
             
           ]);  
         //
