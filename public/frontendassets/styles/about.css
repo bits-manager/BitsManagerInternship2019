@@ -96,12 +96,12 @@ a, a:hover, a:visited, a:active, a:link
 p a:active
 {
 	position: relative;
-	color: #FF6347;
+	color: #2cd983;
 }
 p a:hover
 {
-	color: #FFFFFF;
-	background: #ffa07f;
+	color: #2cd983;
+	background: #2cd983;
 }
 p a:hover::after
 {
@@ -342,14 +342,17 @@ section
 {
 	font-size: 16px;
 	font-weight: 500;
-	color: #FFFFFF;
+	color: #2cd983;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
-.main_nav ul li.active a,
+.main_nav ul li.active a
+{
+	color: #2cd983;
+}
 .main_nav ul li a:hover
 {
 	color: #2cd983;
@@ -430,7 +433,7 @@ section
 }
 .menu_item:last-child
 {
-	margin-bottom: 0px;
+	margin-bottom: 3px;
 }
 .menu_logo
 {
@@ -443,14 +446,14 @@ section
 .menu_logo .logo_text,
 .menu_logo .logo_sub
 {
-	color: #FFFFFF;
+	color: #2cd983;
 }
 .menu_item a
 {
 	display: inline-block;
 	position: relative;
 	font-size: 30px;
-	color: #FFFFFF;
+	color: #2cd983;
 	font-weight: 500;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;

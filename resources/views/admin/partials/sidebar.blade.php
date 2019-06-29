@@ -1,6 +1,6 @@
 <aside id="sidebar-wrapper">
   <div class="sidebar-brand">
-    <a href="{{ route('admin.dashboard') }}">{{ env('APP_NAME') }}</a>
+    <a href="{{ route('frontend.homes') }}">hall</a>
   </div>
   <div class="sidebar-brand sidebar-brand-sm">
     <a href="index.html">St</a>
@@ -14,7 +14,7 @@
       @endif
 
      <li class="menu-header">Contact</li>
-      <li class="{{ Request::route()->getName() == 'admin.contacts' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.contacts') }}"><i class="fa fa-columns"></i> <span>Contact</span></a></li>
+      <li class="{{ Request::route()->getName() == 'admin.contact' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.contact') }}"><i class="fa fa-columns"></i> <span>Contact</span></a></li>
 
        <li class="menu-header">Address</li>
       <li class="{{ Request::route()->getName() == 'admin.address' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.address') }}"><i class="fa fa-columns"></i> <span>Address</span></a></li>

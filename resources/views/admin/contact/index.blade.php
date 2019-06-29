@@ -34,7 +34,7 @@
         <tr>
 
            
-            <td>{{$contact->name}}</td>
+            <td>{{$contact->contact_name}}</td>
             <td>{{$contact->email}}</td>
             <td>{{$contact->subject}}</td>
             <td>{{$contact->message}}</td>
