@@ -12,25 +12,35 @@
       <li class="menu-header">Users</li>
       <li class="{{ Request::route()->getName() == 'admin.users' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.users') }}"><i class="fa fa-users"></i> <span>Users</span></a></li>
       @endif
+
+     <li class="menu-header">Contact</li>
+      <li class="{{ Request::route()->getName() == 'admin.contact' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.contact') }}"><i class="fa fa-columns"></i> <span>Contact</span></a></li>
+
      
      <li class="menu-header">State</li>
       <li class="{{ Request::route()->getName() == 'admin.state' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.state') }}"><i class="fa fa-columns"></i> <span>State</span></a></li>
+
+     <li class="menu-header">City</li>
+      <li class="{{ Request::route()->getName() == 'admin.city' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.city') }}"><i class="fa fa-columns"></i> <span>City</span></a></li>
+
+    <li class="menu-header">Township</li>
+      <li class="{{ Request::route()->getName() == 'admin.townships' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.townships') }}"><i class="fa fa-columns"></i> <span>Township</span></a></li>
+
+
       
       <li class="menu-header">Event Type</li>
       <li class="{{ Request::route()->getName() == 'admin.event' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.event') }}"><i class="fa fa-columns"></i> <span>EventType</span></a></li>
+        
+
+
+      
 
       
 
 
-      <li class="menu-header">Township</li>
-      <li class="{{ Request::route()->getName() == 'admin.townships' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.townships') }}"><i class="fa fa-columns"></i> <span>Township</span></a></li>
-
-      <li class="menu-header">City</li>
-      <li class="{{ Request::route()->getName() == 'admin.city' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.city') }}"><i class="fa fa-columns"></i> <span>City</span></a></li>
-
-      <li class="menu-header">Contact</li>
-      <li class="{{ Request::route()->getName() == 'admin.contacts' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.contacts') }}"><i class="fa fa-columns"></i> <span>Contact</span></a></li>
-
+     
+      
+      
 
       
 

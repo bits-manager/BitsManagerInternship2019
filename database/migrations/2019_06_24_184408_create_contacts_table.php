@@ -15,7 +15,7 @@ class CreateContactsTable extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
+            $table->string('contact_name');
             $table->string('email')->unique();
              $table->string('subject');
               $table->string('message');
@@ -33,3 +33,4 @@ class CreateContactsTable extends Migration
         Schema::dropIfExists('contacts');
     }
 }
+
