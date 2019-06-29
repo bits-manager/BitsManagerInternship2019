@@ -13,5 +13,14 @@ class  CityRepository extends BaseRepository {
 		$this->model = $model;
 	}
 
+	public function getcities($id)
+	{
+		$sql = "SELECT * FROM `cities` WHERE state_id=?";
+		$res = \DB::select($sql,[$id]);
+		return $res;
+
+		
+	}
+
 }
      

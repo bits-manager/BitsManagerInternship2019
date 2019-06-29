@@ -11,12 +11,12 @@ Route::name('frontend.')->prefix('frontend')->group(function() {
 
     Route::get('homes', 'frontend\HomesController')->name('homes');
     Route::get('contact', 'frontend\ContactController@index')->name('contact');
+
     Route::get('frontend/admin/dashboard', 'DashboardController@index')->middleware('auth')->name('admin.dashboard');
 
     
-       });
-
-
+      
+});
 
 Route::get('home', function() {
     return redirect(route('admin.dashboard'));
@@ -57,6 +57,7 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
             'index' => 'city'
         ]
     ]);
+
     Route::resource('contact','ContactController', [
         'names' => [
             'index' => 'contact'
@@ -64,7 +65,25 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
     ]);
 
 
-    });
+
+    Route::resource('address', 'AddressController', [
+        'names' => [
+            'index' => 'address'
+                
+        ]
+    ]);
+        
+
+    Route::resource('hall', 'HallController', [
+        'names' => [
+            'index' => 'hall'
+        ]
+    ]);
+    Route::post('hall_update', 'HallController@update')->name('hall_update.update');
+
+    
+
+ });
 
 
 
@@ -84,5 +103,4 @@ Route::name('js.')->group(function() {
 Route::get('users/auth', function() {
     return response()->json(['user' => Auth::check() ? Auth::user() : false]);
 });
-
 

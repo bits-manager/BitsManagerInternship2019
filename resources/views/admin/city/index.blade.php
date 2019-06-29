@@ -37,7 +37,7 @@
       {{ session()->get('success') }}  
     </div><br />
   @endif
-  <table class="table table-striped">
+  <table class="table table-striped table-bordered" >
     <thead>
         <tr>
           
@@ -50,14 +50,13 @@
        @foreach($data as $city)
         
         <tr>
-
-           
             <td>{{$city->state_name}}</td>
             <td>{{$city->city_name}}</td>
-            <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$city->id}})" 
-              data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a>
+
+            <td><div class="btn-group"><div><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$city->id}})" 
+              data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a></div><div>
               <a href="{{ route('admin.city.edit',$city->id)}}" class="btn btn-primary"><i class='fas fa-edit'></i></a>  
-</td>
+            </td></div></div>
 </tr>
 @endforeach
             

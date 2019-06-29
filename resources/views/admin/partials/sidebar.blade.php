@@ -1,3 +1,4 @@
+
 <aside id="sidebar-wrapper">
   <div class="sidebar-brand">
     <a href="{{ route('frontend.homes') }}">hall</a>
@@ -8,6 +9,7 @@
   <ul class="sidebar-menu">
       <li class="menu-header">Dashboard</li>
       <li class="{{ Request::route()->getName() == 'admin.dashboard' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.dashboard') }}"><i class="fa fa-columns"></i> <span>Dashboard</span></a></li>
+      
       @if(Auth::user()->can('manage-users'))
       <li class="menu-header">Users</li>
       <li class="{{ Request::route()->getName() == 'admin.users' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.users') }}"><i class="fa fa-users"></i> <span>Users</span></a></li>
@@ -15,6 +17,9 @@
 
      <li class="menu-header">Contact</li>
       <li class="{{ Request::route()->getName() == 'admin.contact' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.contact') }}"><i class="fa fa-columns"></i> <span>Contact</span></a></li>
+
+       <li class="menu-header">Address</li>
+      <li class="{{ Request::route()->getName() == 'admin.address' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.address') }}"><i class="fa fa-columns"></i> <span>Address</span></a></li>
 
      
      <li class="menu-header">State</li>
@@ -33,16 +38,9 @@
         
 
 
-      
+      <li class="menu-header">Hall</li>
+      <li class="{{ Request::route()->getName() == 'admin.hall' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.hall') }}"><i class="fa fa-columns"></i> <span>Hall</span></a></li>
 
-      
-
-
-     
-      
-      
-
-      
 
 </ul>
 </aside>

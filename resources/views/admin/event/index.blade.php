@@ -65,6 +65,11 @@
 
                  <p class="text-center">Are You Sure Want To Delete ? </p>
              </div>
+             <div class="modal-footer">
+                 <center>
+                     <input type="hidden" name="event_id" id="event_id" >
+                     <button type="submit" name="" class="btn btn-danger" data-dismiss="modal" onclick="formSubmit()">Yes, Delete</button>
+                     <button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
 
                  </center>
              </div>

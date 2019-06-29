@@ -149,12 +149,10 @@
 									</div id="a">
 									
 									<div id="a">
-										<select class="search_form_select">
-											<option disabled selected>Township</option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
+										<select class="search_form_select" ng-model="selectedState" 
+										name="township_id" value="selectedTownship" ng-change="selectChange()" ng-options="township_id as township.township_name for state in states" 
+										id="township">
+										<option disabled selected>Township</option>
 										</select>
 									</div>
 									

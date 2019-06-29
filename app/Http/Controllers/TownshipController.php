@@ -46,16 +46,11 @@ class TownshipController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {   $statedata = [];
-        $citydata=[];
-     
-        $statedata=$this->stateRepo->getAll();
+    {    $statedata = [];
+         $citydata=[];
+         $statedata=$this->stateRepo->getAll();
          $citydata=$this->cityRepo->getAll();
         return view('admin.township.create',compact('statedata','citydata'));
-        
-        
-
-        
     }
 
     /**
@@ -70,8 +65,14 @@ class TownshipController extends Controller
      'township_name' => 'required|unique:townships|max:255',
         
 ]);
-        
+
         $data = $request->all();
+        $state_id= explode(':',$data['state_id']);
+        $city_id= explode(':',$data['city_id']);
+        $data['state_id'] = $state_id[1];
+        $data['city_id'] = $city_id[1];
+        
+
         $this->townshipRepo->create($data);
         
         return back()->with('info','Township is successfully save!');
@@ -98,7 +99,7 @@ class TownshipController extends Controller
         
       
            $data=$request->all();
-          
+           dd($data);
            $data=array_except($data,['$townships_id']);
             $this->townshipRepo->update($data,$townships_id);
            

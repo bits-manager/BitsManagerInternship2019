@@ -69,8 +69,10 @@
 
            
                     <td><div class="btn-group">
+
                     <div><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$townships->id}})" 
-                     data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash" ></i></a></div><div>
+                     data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash" ></i></a>
+                   </div><div>
                     <a href="{{ route('admin.townships.edit',$townships->id)}}" class="btn btn-primary"><i class='fas fa-edit' ></i></a></div>
                    </td></div>
                       </tr>

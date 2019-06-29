@@ -28,10 +28,22 @@ return [
         'key' => env('AWS_ACCESS_KEY_ID'),
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
+         'options' => [
+        'ConfigurationSetName' => 'MyConfigurationSet',
+        'Tags' => [
+            [
+                'Name' => 'foo',
+                'Value' => 'bar',
+            ],
+         ],
+      ],
     ],
 
     'sparkpost' => [
         'secret' => env('SPARKPOST_SECRET'),
+         'options' => [
+        'endpoint' => 'https://api.eu.sparkpost.com/api/v1/transmissions',
+          ],
     ],
 
     'stripe' => [
