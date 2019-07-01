@@ -14,7 +14,8 @@ Route::name('frontend.')->prefix('frontend')->group(function() {
 
     Route::get('frontend/admin/dashboard', 'DashboardController@index')->middleware('auth')->name('admin.dashboard');
 
-    
+    Route::get('about', 'frontend\AboutController@index')->name('about');
+    Route::get('properties', 'frontend\PropertiesController@index')->name('properties');
       
 });
 
