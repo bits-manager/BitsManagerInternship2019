@@ -39,7 +39,7 @@ class ApiController extends Controller
 
 	public function respond($data, $headers = [])
 	{
-		return \Response::json($data, $this->statusCode, $headers);
+		return \Response::json($data, $this->statusCode, $hea ders);
 	}
 
 	public function respondWithMessageButNoData($message)

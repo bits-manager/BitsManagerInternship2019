@@ -21,6 +21,9 @@
        <li class="menu-header">Address</li>
       <li class="{{ Request::route()->getName() == 'admin.address' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.address') }}"><i class="fa fa-columns"></i> <span>Address</span></a></li>
 
+      <li class="menu-header">Hall_Event</li>
+      <li class="{{ Request::route()->getName() == 'admin.eventhall' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.eventhall') }}"><i class="fa fa-columns"></i> <span>Hall_Event</span></a></li>
+
      
      <li class="menu-header">State</li>
       <li class="{{ Request::route()->getName() == 'admin.state' ? ' active' : '' }}"><a class="nav-link" href="{{ route('admin.state') }}"><i class="fa fa-columns"></i> <span>State</span></a></li>

@@ -174,8 +174,14 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Kryptonit3\Counter\CounterServiceProvider::class,
+
 
     ],
+
+
+    'Counter' => Kryptonit3\Counter\Facades\CounterFacade::class,
+
 
     /*
     |--------------------------------------------------------------------------

@@ -49,7 +49,8 @@
 </div></div></div>
 </section>
 
-  
+  <script src="{{ asset('js/app.js') }}?{{ uniqid() }}"></script>
+
 
   <div id="DeleteModal" class="modal fade " role="dialog">
 

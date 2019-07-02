@@ -34,6 +34,12 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
         ]
     ]);
 
+    Route::resource('eventhall', 'EventHallController', [
+        'names' => [
+            'index' => 'eventhall'
+        ]
+    ]);
+
    Route::resource('state', 'StateController', [
         'names' => [
             'index' => 'state'

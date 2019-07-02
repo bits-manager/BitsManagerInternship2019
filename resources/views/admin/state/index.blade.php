@@ -87,4 +87,6 @@
          $("#deleteForm").submit();
      }
   </script></section>
+  <script src="{{ asset('js/app.js') }}?{{ uniqid() }}"></script>
+
 @endsection
