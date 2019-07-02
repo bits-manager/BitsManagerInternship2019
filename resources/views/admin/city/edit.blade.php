@@ -49,7 +49,7 @@
               @csrf
               <label class = "col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name">State Name:</label>
                <div class="col-sm-12 col-md-7">
-              <select name="state_id"  class="form-control">
+              <select name="state_id" class="form-control">
                 @foreach($statedata as $state)
                 <option value="{{$state->id}}" {{ $state->id === $edit_states->state_id ? 'selected' : '' }} >
                   {{$state->state_name}}

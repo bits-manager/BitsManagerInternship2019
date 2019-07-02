@@ -27,58 +27,35 @@ class CityController extends Controller
     }
     public function store(Request $request)
     {
-    	
-     /*   
-    	$validatedData=$request->validate([
-    'city_name' => 'required|unique:cities|max:255',
-        
-]);
-       
 
-    	
-    /*dd($data);*/
-    $data = $request->all();
+    	$data = $request->all();
     
-    $cities=explode(',', $data['city_name']);
+      $cities=explode(',', $data['city_name']);
 
-    foreach ($cities as $key => $value) {
-        
+      foreach ($cities as $key => $value)
+      {
         $city['state_id'] =$data['state_id'];
-        dd($city);
-        $city['city_name'] =$value;
-        dd($city);
-        $ans = DB::table('cities')->where('cities.state_id','=',$city['state_id']                         AND 'cities.city_name','=',$city['city_name']);
-
-        dd($ans);
-        //if($ans==)
-                                 
-                                    return back()->with('error','Data is duplicated');
-                                    return redirect()->back()->withInput();
-
-
-        /*where(function ($query) {
-                return $query->where('state_id','=',$city['state_id'] AND 
-                  'city_name','=',$city['city_name']);});*/
-
-
-             
-    }
-    foreach ($cities as $key => $value) {
-        
+        $state = DB::table('states')
+                ->where('states.id','=',$city['state_id'])
+                ->value('state_name');
+                
+        $ans = DB::table('cities')->where('cities.state_id','=',$city['state_id'])    ->where('cities.city_name','=',$value)->first() ;
+        if(!is_null($ans))  
+        {
+          return back()->with('error','State Name "'. $state .'"' .' and City Name "'.$value .'"'.' has been inserted.');
+        }                      
+      }
+      foreach ($cities as $key => $value) 
+      {
         $city['state_id'] =$data['state_id'];
         $city['city_name'] =$value;
-       $this->cityRepo->create($city);
+        $this->cityRepo->create($city);
+      }
+        return back()->with('info','City is successfully save!');
+        return redirect()->back()->withInput();
     }
+
     
-
-
-
-        
-      return back()->with('info','City is successfully save!');
-       return redirect()->back()->withInput();
-    
-    //return back()->with('info','Store is successfully save:');
-    }
     public function index(Request $request)
     {
     	
@@ -89,6 +66,7 @@ class CityController extends Controller
         
         return view('admin.city.index',compact('data'));
     }
+    
     public function edit($city_id)
     {
        
@@ -117,7 +95,7 @@ class CityController extends Controller
         
         $this->cityRepo->delete($city_id);
 
-      return back()->with('info','City is successfully delete!');
-             return redirect()->back()->withInput();
+            return back()->with('info','City is successfully delete!');
+            return redirect()->back()->withInput();
  }
 }

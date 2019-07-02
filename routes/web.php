@@ -1,8 +1,18 @@
 <?php
 Route::get('/', function() {
-    return redirect(route('admin.dashboard'));
+    return redirect(route('frontend.homes'));
 });
 
+Route::get('/frontend', function() {
+    return redirect(route('frontend.homes'));
+});
+
+Route::name('frontend.')->prefix('frontend')->group(function() {
+
+    Route::get('homes', 'frontend\HomesController')->name('homes');
+    Route::get('contact', 'frontend\ContactController@index')->name('contact');
+  
+});
 Route::get('home', function() {
     return redirect(route('admin.dashboard'));
 });
@@ -28,27 +38,29 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
         'names' => [
             'index' => 'state'
         ]
-    ]);
 
+    ]);
+   Route::resource('townships', 'TownshipController', [
+        'names' => [
+            'index' => 'townships'
+        ]
+    
+    ]);
 
     Route::resource('city', 'CityController', [
         'names' => [
             'index' => 'city'
         ]
     ]);
+ 
 
-
-/*Route::post('admin.city.store', function(){
-
-    dd(request()->city_name);
-    $info= Textarea::get('city_name');  
-
-
-})->name('admin.city.store');*/
-
-    });
-
-
+     Route::resource('contact', 'ContactController', [
+        'names' => [
+            'index' => 'contact'
+        
+        ]
+    ]);
+ });
 
 Route::middleware('auth')->get('logout', function() {
     Auth::logout();
@@ -65,5 +77,4 @@ Route::name('js.')->group(function() {
 Route::get('users/auth', function() {
     return response()->json(['user' => Auth::check() ? Auth::user() : false]);
 });
-
 

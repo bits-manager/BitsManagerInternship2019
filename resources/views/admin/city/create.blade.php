@@ -6,7 +6,7 @@ Manage Users
 @section('content')
 <section class="section">
   <div class="section-header">
-    <h1>Manage States</h1>
+    <h1>Manage Cities</h1>
   </div>
   <div class="section-body">
 
@@ -15,8 +15,11 @@ Manage Users
       <div class="card-header">
 
         <!-- card title -->
-        <h4>State Form</h4>
+        <h4>City Form</h4>
+        <div class="card-header-action">
+          <a href="{{ route('admin.city')}}" class="btn btn-primary">List</a></div>
       </div>
+      
       <!-- card body -->
      
 
@@ -59,7 +62,7 @@ Manage Users
               @csrf
               <label class = "col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name">State Name:</label>
               <div class="col-sm-12 col-md-7">
-              <select name="state_id"  class="form-control">
+              <select name="state_id" class="form-control">
                 @foreach($statedata as $state)
                 <option value ="{{$state->id}}">
                   {{$state->state_name}}

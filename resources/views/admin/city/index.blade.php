@@ -37,6 +37,7 @@
       {{ session()->get('success') }}  
     </div><br />
   @endif
+   <div style="width:100%;height:100%;overflow-x: scroll;overflow-y:hidden";>
   <table class="table table-striped">
     <thead>
         <tr>
@@ -63,7 +64,9 @@
             
         
     </tbody>
-  </table></section>
+  </table>
+</div>
+</section>
 
 
 <div id="DeleteModal" class="modal fade " role="dialog">

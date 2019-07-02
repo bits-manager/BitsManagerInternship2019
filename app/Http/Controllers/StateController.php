@@ -38,10 +38,7 @@ class StateController extends Controller
 
          ]);
 
-      $validatedData = $request->validate([
-            'state_name' => 'required|unique:states||max:255',
-
-         ]);
+      
 
       	$data=$request->all();
     	  $this->stateRepo->create($data);
@@ -74,6 +71,8 @@ class StateController extends Controller
           return back()->with('info','State is successfully delete!');
           return redirect()->back()->withInput();
         }
+
+        
 
 }
 
