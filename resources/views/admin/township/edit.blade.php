@@ -91,8 +91,6 @@
 
               @csrf
               <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Township Name:</label>
-               @csrf
-                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Township Name:</label>
 
             <div class="col-sm-12 col-md-7">
               <input type="text" class="form-control" name="township_name" value="{{$edit_townships->township_name}}"/>

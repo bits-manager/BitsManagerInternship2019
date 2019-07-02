@@ -49,20 +49,17 @@ Manage Townships
                   <form method="post" action="{{ route('admin.townships.store') }}">
                      <div class="form-group row mb-4">
 
-                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">State Name</label>
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">State Name</label>
                        <div class="col-sm-12 col-md-7">
-                          <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
-
-                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select State :</label>
+                        <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select State :</label>
                        <div class="col-sm-12 col-md-7">
                           <!-- <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
->>>>>>> 26377ddc6ea13efd4a0e45d083e5d1faf87c5496
-                            
                              @foreach($statedata as $state)
                             <option value="{{$state->id}}">{{$state->state_name}}</option>
                              @endforeach
                          </select> -->
-                    <select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control" >
+                    <select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control">
                     </select>
                 
                        </div>
@@ -76,8 +73,7 @@ Manage Townships
                           <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select City :</label>
                       <div class="col-sm-12 col-md-7">
                          <!--  <select name="city_id" id="city" class="form-control input-log dynamic" data-dependent="city">
-                           
->>>>>>> 26377ddc6ea13efd4a0e45d083e5d1faf87c5496
+                  
                              @foreach($citydata as $cities)
                             <option value="{{$cities->id}}">{{$cities->city_name}}</option>
                              @endforeach
@@ -132,6 +128,7 @@ $http({
           method : "GET",
           url : "/api/v1/get_city?state_id="+$scope.selectedState,
         }).then(function mySuccess(response) {
+
            $scope.cities = response.data.data;
           }, function myError(response) {
 

@@ -16,12 +16,12 @@ use Illuminate\Support\Facades\DB;
 class TownshipController extends Controller
 {
     public function __construct(TownshipRepository $townshipRepo,StateRepository $stateRepo,CityRepository $cityRepo)
-{
-    $this->townshipRepo=$townshipRepo;
-    $this->stateRepo=$stateRepo;
-     $this->cityRepo=$cityRepo;
+    {
+        $this->townshipRepo=$townshipRepo;
+        $this->stateRepo=$stateRepo;
+        $this->cityRepo=$cityRepo;
     
-}
+    }
     /**
      * Display a listing of the resource.
      *
@@ -62,19 +62,15 @@ class TownshipController extends Controller
    public function store(Request $request)
     {    
         $validatedData=$request->validate([
-     'township_name' => 'required|unique:townships|max:255',
-        
-]);
+     'township_name' => 'required|unique:townships|max:255',  
+    ]);
 
         $data = $request->all();
         $state_id= explode(':',$data['state_id']);
         $city_id= explode(':',$data['city_id']);
         $data['state_id'] = $state_id[1];
         $data['city_id'] = $city_id[1];
-        
-
         $this->townshipRepo->create($data);
-        
         return back()->with('info','Township is successfully save!');
         return redirect()->back()->withInput();
         
@@ -84,26 +80,19 @@ class TownshipController extends Controller
     {
         $statedata = [];
         $citydata = [];
-       $statedata =$this->stateRepo->getAll();
-       $citydata =$this->cityRepo->getAll();
-
-
-       //$edit_states=$this->cityRepo->getById($city_id);
-       $edit_townships=$this->townshipRepo->getById($townships_id);
+        $statedata =$this->stateRepo->getAll();
+        $citydata =$this->cityRepo->getAll();
+        $edit_townships=$this->townshipRepo->getById($townships_id);
         return view('admin.township.edit',compact('edit_townships','statedata','citydata'));
         
     }
 
     public function show($townships_id,Request $request)
     {
-        
-      
-           $data=$request->all();
-           dd($data);
-           $data=array_except($data,['$townships_id']);
-            $this->townshipRepo->update($data,$townships_id);
-           
-        
+        $data=$request->all();
+        dd($data);
+        $data=array_except($data,['$townships_id']);
+        $this->townshipRepo->update($data,$townships_id);
         return back()->with('info','Township is successfully update!');
         return redirect()->back()->withInput();
     }
@@ -111,7 +100,6 @@ class TownshipController extends Controller
     public function destroy($townships_id)
     {
         $this->townshipRepo->delete($townships_id);
- 
         return back()->with('info','Township is successfully delete!');
         return redirect()->back()->withInput();
     }

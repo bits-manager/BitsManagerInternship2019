@@ -1,8 +1,9 @@
-edit.blade.php -->
 
-@extends('layouts.admin-master')
+
+@extends('layouts.hall-master')
 
 @section('content')
+<!-- <div ng-app="myApp" ng-controller="myCtrl"> -->
 <section class="section">
   <div class="section-header">
     <h1>Edit Hall</h1>
@@ -157,7 +158,60 @@ edit.blade.php -->
           </div></div>     
       </form>
   </div>
-</div>
+</div></section></div>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script>
+var states={!! json_encode($statedata) !!};
+var cities={!! json_encode($citydata) !!};
+var townships = {!! json_encode(townships) !!};
+
+var app = angular.module('myApp', []);
+app.config(function($interpolateProvider){
+  $interpolateProvider.startSymbol('<%').endSymbol('%>');
+});
+
+app.controller('myCtrl', function($scope, $http) {
+
+$scope.states= states;
+$scope.cities = cities;
+$scope.edit_townships = edit_townships;
+console.log($scope.edit_townships);
+$scope.selectedState = $scope.edit_townships.states[0].id;
+$scope.selectedCity = $scope.edit_townships.cities[0].id;
+
+$http({
+          method : "GET",
+          url : "/api/v1/get_city?state_id="+$scope.selectedState,
+        }).then(function mySuccess(response) {
+           $scope.cities = response.data.data;
+          }, function myError(response) {
+
+            $scope.cities = [];
+
+        });
+
+  $scope.selectChange = function(){
+
+    $http({
+          method : "GET",
+          url : "/api/v1/get_city?state_id="+$scope.selectedState,
+        }).then(function mySuccess(response) {
+           console.log(response.data.data);
+           $scope.cities = response.data.data;
+           $scope.selectedCity = $scope.cities[0].id;
+          }, function myError(response) {
+
+            $scope.cities = [];
+
+        });
+
+  }
+  
+
+
+});
+
+</script> -->
 <script type="application/javascript">
             $(function () {
                 $('#example1').datetimepicker({
@@ -176,31 +230,3 @@ edit.blade.php -->
 
 @endsection
 
-<!-- <div class="form-group row mb-4">
-              @csrf
-            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="open">Open Time</label>
-            <div class="col-sm-12 col-md-7">
-            <input class="form-control" type="time" id="open_time" name="open_time" value="{{$edit_halls->open_time}}" >
-          </div></div> -->
-
-          <!-- <div class="form-group row mb-4">
-              @csrf
-            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="close">Close Time</label>
-            <div class="col-sm-12 col-md-7">
-            <input class="form-control" type="time" id="close_time" name="close_time" value="{{$edit_halls->close_time}}">
-          </div></div>  -->
-
-          <!-- <div class="container">
-  <br><br><br>
-  <div class='col-sm-6'>
-      <div class="form-group">
-        <label for="">Open Time</label>
-          <div class='input-group date' id='example1'>
-              <input type='text' id="open_time" name="open_time" value="{{$edit_halls->open_time}}" class="form-control" />
-              <span class="input-group-addon">
-                  <span class="glyphicon glyphicon-calendar"></span>
-              </span>
-          </div>
-      </div>
-  </div>
-</div>

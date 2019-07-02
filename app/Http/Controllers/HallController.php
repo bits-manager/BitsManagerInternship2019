@@ -42,14 +42,13 @@ class HallController extends Controller
           $townshipdata = [];
           $townshipdata =$this->townshipRepo->getAll();
 
-
           return view('admin.hall.create',compact('statedata','citydata','townshipdata'));
           
     }
 
     public function store(Request $request)
        {
-          dd($request->all());
+          
           $image = $request->file('image');
           $new_name=rand() . '.' . $image->getClientOriginalExtension();
           $image->move(public_path('images'),$new_name);
@@ -64,18 +63,13 @@ class HallController extends Controller
             'address'=>$request->address,
             'image'=>$new_name
             );
-          
-           
           $this->hallRepo->create($form_data);
-          
-
-          
           return back()->with('info','Hall is sucessfully save!');
           return redirect()->back()->withInput();
        }
 
 
-       public function edit($hall_id)
+      public function edit($hall_id)
       {
        
        $statedata = [];
@@ -89,21 +83,22 @@ class HallController extends Controller
           
 
        $edit_halls=$this->hallRepo->getById($hall_id);
-
+       
        return view('admin.hall.edit',compact('edit_halls','statedata','citydata','townshipdata'));
          
       }
 
-    public function show($hall_id,Request $request)
+  
+
+    public function update(Request $request)
     {
-        
-        $image_name=$request->hidden_image;
-        $image=$request->file('image');
-        if($image!=''){
+      $hall_id=$request->id;
+      $image_name=$request->hidden_image;
+      $image=$request->file('image');
+      if($image!=''){
           $image_name=rand().'.'.$image->getClientOriginalExtension();
           $image->move(public_path('images'),$image_name);
         }
-        
         $form_data=array(
             'hall_name'=>$request->hall_name,
             'phone_no'=>$request->phone_no,
@@ -115,16 +110,11 @@ class HallController extends Controller
             'address'=>$request->address,
             'image'=>$image_name
             );
-      $form_data=array_except($form_data,['$hall_id']);
-      $this->hallRepo->update($form_data,$hall_id); 
-      return back()->with('info','Hall is successfully update!');
-      return redirect()->back()->withInput();
-    
-    }
-
-    public function update(Request $request)
-    {
-      dd($request->all());
+        $form_data=array_except($form_data,['$hall_id']);
+        $this->hallRepo->update($form_data,$hall_id);
+        
+        return back()->with('info','Hall is successfully update!');
+        return redirect()->back()->withInput();
     }
 
     public function destroy($hall_id)
@@ -134,16 +124,4 @@ class HallController extends Controller
       return back()->with('info','Hall is successfully delete!');
       return redirect()->back()->withInput();
     }
- 
-
-
-
-
-
-
-
-
-
-
-
 }
