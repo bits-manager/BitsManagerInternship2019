@@ -22,14 +22,14 @@ class CityController extends Controller
     {
         $statedata = [];
         $statedata =$this->stateRepo->getAll();
-    	return view('admin.city.create',compact('statedata'));
+    	 return view('admin.city.create',compact('statedata'));
         
     }
     public function store(Request $request)
+
     {
 
     	$data = $request->all();
-    
       $cities=explode(',', $data['city_name']);
 
       foreach ($cities as $key => $value)
@@ -55,8 +55,12 @@ class CityController extends Controller
         return redirect()->back()->withInput();
     }
 
+
     
-    public function index(Request $request)
+   
+
+    public function  index(Request $request)
+
     {
     	
         $data = DB::table('cities')
@@ -82,7 +86,7 @@ class CityController extends Controller
     	
       
            $data=$request->all();
-          
+         
            $data=array_except($data,['$city_id']);
             $this->cityRepo->update($data,$city_id);
            

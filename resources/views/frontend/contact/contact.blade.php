@@ -21,7 +21,10 @@
 		</div>
 	</div>
 
+
 	
+
+ @include('frontend.partials.homesearch')
 
 
 <div class="contact">
@@ -54,7 +57,16 @@
 				</div>
 
 				<!-- Contact Form -->
-				<div class="col-lg-8">
+				
+
+                 <div class="card-body">
+               @if($message=Session::get('info'))
+                 <div class="alert alert-info alert-block">
+                 <button type ="button" class="close" data-dismiss="alert">x</button>
+                 <strong>{{$message}}</strong>
+                 </div>
+               @endif
+                     <div class="col-lg-8">
 					<div class="contact_form_container">
 						<form method="post" action="{{ route('admin.contact.store') }}" class="contact_form" id="contact_form">
 

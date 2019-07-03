@@ -16,8 +16,11 @@ Manage Users
 
         <!-- card title -->
         <h4>City Form</h4>
+
         <div class="card-header-action">
           <a href="{{ route('admin.city')}}" class="btn btn-primary">List</a></div>
+
+
       </div>
       
       <!-- card body -->
@@ -83,7 +86,7 @@ Manage Users
           
             <div class="form-group row mb-4">
               <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name"></label>
-            <div class ="col-sm-12 col-md-2">
+            <div class ="col-sm-12 col-md-3">
 
             <button type="submit" class="btn btn-primary">Save</button>
             <input type="button" value="Cancel" class="btn btn-primary" onclick="clearText()"/>
