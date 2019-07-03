@@ -3,7 +3,7 @@
 @extends('layouts.hall-master')
 
 @section('content')
-<!-- <div ng-app="myApp" ng-controller="myCtrl"> -->
+
 <section class="section">
   <div class="section-header">
     <h1>Edit Hall</h1>
@@ -158,60 +158,8 @@
           </div></div>     
       </form>
   </div>
-</div></section></div>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-<script>
-var states={!! json_encode($statedata) !!};
-var cities={!! json_encode($citydata) !!};
-var townships = {!! json_encode(townships) !!};
+</div></section>
 
-var app = angular.module('myApp', []);
-app.config(function($interpolateProvider){
-  $interpolateProvider.startSymbol('<%').endSymbol('%>');
-});
-
-app.controller('myCtrl', function($scope, $http) {
-
-$scope.states= states;
-$scope.cities = cities;
-$scope.edit_townships = edit_townships;
-console.log($scope.edit_townships);
-$scope.selectedState = $scope.edit_townships.states[0].id;
-$scope.selectedCity = $scope.edit_townships.cities[0].id;
-
-$http({
-          method : "GET",
-          url : "/api/v1/get_city?state_id="+$scope.selectedState,
-        }).then(function mySuccess(response) {
-           $scope.cities = response.data.data;
-          }, function myError(response) {
-
-            $scope.cities = [];
-
-        });
-
-  $scope.selectChange = function(){
-
-    $http({
-          method : "GET",
-          url : "/api/v1/get_city?state_id="+$scope.selectedState,
-        }).then(function mySuccess(response) {
-           console.log(response.data.data);
-           $scope.cities = response.data.data;
-           $scope.selectedCity = $scope.cities[0].id;
-          }, function myError(response) {
-
-            $scope.cities = [];
-
-        });
-
-  }
-  
-
-
-});
-
-</script> -->
 <script type="application/javascript">
             $(function () {
                 $('#example1').datetimepicker({

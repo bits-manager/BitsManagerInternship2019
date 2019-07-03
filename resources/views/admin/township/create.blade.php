@@ -48,37 +48,25 @@ Manage Townships
                @endif
                   <form method="post" action="{{ route('admin.townships.store') }}">
                      <div class="form-group row mb-4">
-
-                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">State Name</label>
-                       <div class="col-sm-12 col-md-7">
-                        <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
-                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select State :</label>
-                       <div class="col-sm-12 col-md-7">
-   
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">State Name</label>
+                      <div class="col-sm-12 col-md-7">
                     <select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control">
                     </select>
                 
                        </div>
                      </div>
                    <div class="form-group row mb-4">
-
-                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">City Name</label>
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">City Name</label>
                       <div class="col-sm-12 col-md-7">
-                          <select name="city_id" id="city" class="form-control input-log dynamic" data-dependent="city">
-
-                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select City :</label>
-                      <div class="col-sm-12 col-md-7">
-                        
-                          <select ng-model="selectedCity" name="city_id" value="selectedCity"  ng-options="city.id as city.city_name for city in cities" class="form-control" >
+                        <select ng-model="selectedCity" name="city_id" value="selectedCity"  ng-options="city.id as city.city_name for city in cities" class="form-control" >
                     </select>
                       </div>
                    </div> 
                      <div class="form-group row mb-4">
                          @csrf
-                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Township Name:</label>
-
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Township Name:</label>
                       <div class="col-sm-12 col-md-7">
-                      <input type="text" class="form-control" id="township_name" placeholder="Enter Township Name" name="township_name">
+                        <input type="text" class="form-control" id="township_name" placeholder="Enter Township Name" name="township_name">
                       </div>
                     </div>
 

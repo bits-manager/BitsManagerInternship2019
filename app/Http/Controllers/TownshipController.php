@@ -83,14 +83,13 @@ class TownshipController extends Controller
         $statedata =$this->stateRepo->getAll();
         $citydata =$this->cityRepo->getAll();
         $edit_townships=$this->townshipRepo->getById($townships_id);
-        return view('admin.township.edit',compact('edit_townships','statedata','citydata'));
+    return view('admin.township.edit',compact('edit_townships','statedata','citydata'));
         
     }
 
     public function show($townships_id,Request $request)
     {
         $data=$request->all();
-        dd($data);
         $data=array_except($data,['$townships_id']);
         $this->townshipRepo->update($data,$townships_id);
         return back()->with('info','Township is successfully update!');

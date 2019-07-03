@@ -47,10 +47,10 @@
 
                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">State Name</label>
               <div class="col-sm-12 col-md-7">
-               <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
+               <!-- <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
 
                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select State :</label>
-              <div class="col-sm-12 col-md-7">
+              <div class="col-sm-12 col-md-7"> -->
               <!--  <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
                 
 
@@ -69,9 +69,9 @@
 
               <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">City Name</label>
             <div class="col-sm-12 col-md-7">
-             <select name="city_id" id="city" class="form-control input-log dynamic" data-dependent="city">
+             <!-- <select name="city_id" id="city" class="form-control input-log dynamic" data-dependent="city">
               <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select City :</label>
-            <div class="col-sm-12 col-md-7">
+            <div class="col-sm-12 col-md-7"> -->
             <!--  <select name="city_id" id="city" class="form-control input-log dynamic" data-dependent="city">
                
                  @foreach($citydata as $cities)

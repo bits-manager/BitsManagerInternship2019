@@ -30,15 +30,17 @@ class DataController extends ApiController
       return $this->respondError('error');
     }
 
-    /*public function getTownship(Request $request)
+    public function getTownship(Request $request)
     {
         try {
-            $townships = $this->townshipRepo->gettownships($request->state_id);             
+            $townships = $this->townshipRepo->gettownships($request->city_id);             
               if(count($townships)>0)
                 return $this->respondSuccess('success',$townships);    
         } catch (\Exception $e) {
             \Log::error($e->getMessage());
         }
       return $this->respondError('error');
-    }*/
+    }
+
+    
 }
