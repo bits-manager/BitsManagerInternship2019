@@ -165,8 +165,8 @@ p, ul:not(.list-unstyled), ol {
     border-color: #95a0f4; }
 
 .input-group-text,
-select.form-control:not([size]):not([multiple]),
-.form-control:not(.form-control-sm):not(.form-control-lg) {
+select.form-control:([size]):([multiple]),
+.form-control:(.form-control-sm):(.form-control-lg) {
   font-size: 14px;
   padding: 10px 15px;
   height: 42px; }
@@ -182,7 +182,7 @@ textarea.form-control {
 .custom-select,
 .custom-file-label:after,
 .form-control[type="color"],
-select.form-control:not([size]):not([multiple]) {
+select.form-control:([size]):([multiple]) {
   height: calc(2.25rem + 6px); }
 
 .form-control.creditcard {

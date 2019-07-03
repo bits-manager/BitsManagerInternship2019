@@ -7,9 +7,13 @@
 <meta name="description" content="Bluesky template project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="/frontendassets/styles/bootstrap4/bootstrap.min.css">
-<link href="../frontendassets/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="/frontendassets/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+<link rel="stylesheet" type="text/css" href="/frontendassets/styles/about.css">
+<link rel="stylesheet" type="text/css" href="/frontendassets/styles/about_responsive.css">
 
+<link rel="stylesheet" type="text/css" href="/frontendassets/styles/properties.css">
+<link rel="stylesheet" type="text/css" href="/frontendassets/styles/properties_responsive.css">
  
 <link rel="stylesheet" type="text/css" href="/frontendassets/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
 <link rel="stylesheet" type="text/css" href="/frontendassets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
@@ -32,6 +36,20 @@
 	    @include('frontend.partials.footer')
     </div>
 <script src="/frontendassets/js/jquery-3.2.1.min.js"></script>
+
+
+
+<script src="/frontendassets/plugins/greensock/TweenMax.min.js"></script>
+<script src="/frontendassets/plugins/greensock/TimelineMax.min.js"></script>
+<script src="/frontendassets/plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="/frontendassets/plugins/greensock/animation.gsap.min.js"></script>
+<script src="/frontendassets/plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="/frontendassets/js/about.js"></script>
+
+
+
+
+<script src="/frontendassets/js/properties.js"></script>
 
 <script src="/frontendassets/styles/bootstrap4/popper.js"></script>
 <script src="/frontendassets/styles/bootstrap4/bootstrap.min.js"></script>
