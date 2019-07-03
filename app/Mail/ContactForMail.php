@@ -30,7 +30,7 @@ class ContactForMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('frontend.emails.contact.contact-form');
+        return $this->from('admin@example.com')->subject('New Customer Equiry')->view('frontend.emails.contact.contact-form')->with('data',$this->data);
                       
     }
 }
