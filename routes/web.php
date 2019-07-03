@@ -55,9 +55,9 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
             'index' => 'city'
         ]
     ]);
-    Route::resource('contacts','ContactController', [
+    Route::resource('contact','ContactController', [
         'names' => [
-            'index' => 'contacts'
+            'index' => 'contact'
         ]
     ]);
     Route::resource('address', 'AddressController', [
@@ -67,10 +67,7 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
         ]
     ]);
 
-<<<<<<< HEAD
-    
-=======
->>>>>>> 35add1d5ec89fe7a5ab5340f4ee31dea57039c27
+
 
     });
 

@@ -76,7 +76,7 @@
       <div class="form-group row mb-4">
        <lable class="col-form-label text-md-right col-12 col-md-3 col-lg-3" from="">Status</lable>
          <div class="col-sm-12 col-md-7">
-            <input type="checkbox" class="" name="status" value="1" >
+            <input type="checkbox" class="" name="status" value="{{$edit_address->status}}" >
         </div> 
       </div> 
 

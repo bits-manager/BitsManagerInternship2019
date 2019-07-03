@@ -63,7 +63,9 @@
                  <i align="center" style="text-align:center; font-size:150%; font-weight:bold; color:green;" class="fas fa-check"></i>
                 @else 
                  <i align="center" style="text-align:center; font-size:150%; font-weight:bold; color:red;" class="fas fa-times"></i>
-                @endif  
+                @endif
+                
+                      
             </td>
            <td><div class="btn-group"><div><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$address->id}})" data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a></div><div>
               <a href="{{ route('admin.address.edit',$address->id)}}" class="btn btn-primary"><i class='fas fa-edit'></i></a>   
