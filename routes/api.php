@@ -20,11 +20,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['prefix' => 'v1'], function() {
 
   Route::get('/get_city','Api\DataController@getCity');
-
-});
-
-Route::group(['prefix' => 'v1'], function() {
-
   Route::get('/get_township','Api\DataController@getTownship');
+  
 
 });
+

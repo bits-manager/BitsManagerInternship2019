@@ -49,30 +49,25 @@ Manage Townships
                   <form method="post" action="{{ route('admin.townships.store') }}">
                      <div class="form-group row mb-4">
 
-                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">State Name</label>
-          
-                       <div class="col-sm-12 col-md-7">
-                          
-                        <select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control" >
-                        </select>
-                
-                       </div>
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">State Name</label>
+                      <div class="col-sm-12 col-md-7">
+                    <select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control">
+                    </select>
+
                      </div>
                    <div class="form-group row mb-4">
 
-                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">City Name</label>
-                    
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">City Name</label>
                       <div class="col-sm-12 col-md-7">
-                          <select ng-model="selectedCity" name="city_id" value="selectedCity"  ng-options="city.id as city.city_name for city in cities" class="form-control" >
-                          </select>
+                        <select ng-model="selectedCity" name="city_id" value="selectedCity"  ng-options="city.id as city.city_name for city in cities" class="form-control" >
+                    </select>
                       </div>
                    </div> 
                      <div class="form-group row mb-4">
                          @csrf
-                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Township Name:</label>
-
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Township Name:</label>
                       <div class="col-sm-12 col-md-7">
-                      <input type="text" class="form-control" id="township_name" placeholder="Enter Township Name" name="township_name">
+                        <input type="text" class="form-control" id="township_name" placeholder="Enter Township Name" name="township_name">
                       </div>
                     </div>
 
@@ -113,6 +108,7 @@ $http({
           method : "GET",
           url : "/api/v1/get_city?state_id="+$scope.selectedState,
         }).then(function mySuccess(response) {
+
            $scope.cities = response.data.data;
           }, function myError(response) {
 

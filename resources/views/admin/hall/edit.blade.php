@@ -1,8 +1,9 @@
-edit.blade.php -->
 
-@extends('layouts.admin-master')
+
+@extends('layouts.hall-master')
 
 @section('content')
+
 <section class="section">
   <div class="section-header">
     <h1>Edit Hall</h1>
@@ -157,7 +158,8 @@ edit.blade.php -->
           </div></div>     
       </form>
   </div>
-</div>
+</div></section>
+
 <script type="application/javascript">
             $(function () {
                 $('#example1').datetimepicker({
@@ -176,31 +178,3 @@ edit.blade.php -->
 
 @endsection
 
-<!-- <div class="form-group row mb-4">
-              @csrf
-            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="open">Open Time</label>
-            <div class="col-sm-12 col-md-7">
-            <input class="form-control" type="time" id="open_time" name="open_time" value="{{$edit_halls->open_time}}" >
-          </div></div> -->
-
-          <!-- <div class="form-group row mb-4">
-              @csrf
-            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="close">Close Time</label>
-            <div class="col-sm-12 col-md-7">
-            <input class="form-control" type="time" id="close_time" name="close_time" value="{{$edit_halls->close_time}}">
-          </div></div>  -->
-
-          <!-- <div class="container">
-  <br><br><br>
-  <div class='col-sm-6'>
-      <div class="form-group">
-        <label for="">Open Time</label>
-          <div class='input-group date' id='example1'>
-              <input type='text' id="open_time" name="open_time" value="{{$edit_halls->open_time}}" class="form-control" />
-              <span class="input-group-addon">
-                  <span class="glyphicon glyphicon-calendar"></span>
-              </span>
-          </div>
-      </div>
-  </div>
-</div>
