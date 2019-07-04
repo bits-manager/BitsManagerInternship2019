@@ -43,7 +43,7 @@
     |
     */
 
-    'port' => env('MAIL_PORT', 587),
+    'port' => env('MAIL_PORT',465),
 
     /*
     |--------------------------------------------------------------------------
@@ -73,7 +73,7 @@
     |
     */
 
-    'encryption' => env('MAIL_ENCRYPTION', 'smtpout.secureserver.net'),
+    'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
 
     /*
     |--------------------------------------------------------------------------

@@ -1,9 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use App\MyLibs\Repositories\EventTypeRepository;
+use Illuminate\Support\Facades\DB;
+use App\MyLibs\Models;
+
 
 
 class EventTypeController extends Controller
@@ -19,16 +22,18 @@ class EventTypeController extends Controller
         }
     	public function store(Request $request)
        {
-         $validatedData = $request->validate([
-            'event_name' => 'required|unique:event_types||max:255',
 
-         ]);
-        	$data = $request->all();
-    	   
-    	    $this->eventRepo->create($data);
-    	   	
-    	    return back()->with('info','Event is sucessfully save!');
-           return redirect()->back()->withInput();
+          $image = $request->file('image');
+          $new_name=rand() . '.' . $image->getClientOriginalExtension();
+          $image->move(public_path('images'),$new_name);
+          $form_data=array(
+            'event_name'=>$request->event_name,
+            'image'=>$new_name
+            );
+         
+         $this->eventRepo->create($form_data);
+          return back()->with('info','Event is sucessfully save!');
+          return redirect()->back()->withInput();
        }
       public function index()
     	   {
@@ -40,11 +45,23 @@ class EventTypeController extends Controller
                $edit_event=$this->eventRepo->getById($id);
                return view('admin.event.edit',compact('edit_event'));
 	       }
-         public function show($id,Request $request)
-           {
-            $data = $request->all();
-           $this->eventRepo->update($data,$id);
-           return redirect()->back()->with('info','Event name  is successfully updated');
+         public function update(Request $request)
+           { 
+      $event_id=$request->id;
+      $image_name=$request->hidden_image;
+      $image=$request->file('image');
+      if($image!=''){
+          $image_name=rand().'.'.$image->getClientOriginalExtension();
+          $image->move(public_path('images'),$image_name);
+        }
+        $form_data=array(
+            'event_name'=>$request->event_name,
+               'image'=>$image_name
+            );
+        $form_data=array_except($form_data,['$event_id']);
+        $this->eventRepo->update($form_data,$event_id);
+        
+           return back()->with('info','Event name  is successfully updated');
            return redirect()->back()->withInput();
            }
 
