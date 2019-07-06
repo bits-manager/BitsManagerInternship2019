@@ -1,3 +1,13 @@
- <p>Hi,this is{{ $data['contact_name'] }} </p>
- <p>I have some query like{{ $data['message'] }}</p>
- <p>It would be appriciative,if you gone through this feedback.</p>
+@component('mail::message')
+
+
+#Thank you for your message
+<strong>Name:</strong>{{$data['contact_name']}}
+
+<strong>Email:</strong>{{$data['email']}}
+
+<strong>Subject:</strong>{{$data['subject']}}
+
+<strong>Message:</strong>{{$data['message']}}
+
+@endcomponent

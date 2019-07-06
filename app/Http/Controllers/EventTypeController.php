@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 use App\MyLibs\Repositories\EventTypeRepository;
 use Illuminate\Support\Facades\DB;
 use App\MyLibs\Models;
@@ -49,6 +51,8 @@ class EventTypeController extends Controller
            { 
       $event_id=$request->id;
       $image_name=$request->hidden_image;
+       $image_path = public_path().'/images/'.$image_name;
+         unlink($image_path);
       $image=$request->file('image');
       if($image!=''){
           $image_name=rand().'.'.$image->getClientOriginalExtension();
@@ -67,8 +71,12 @@ class EventTypeController extends Controller
 
       public function destroy($event_id)
         {
-        
-        $this->eventRepo->delete($event_id);
+        $data=$this->eventRepo->getById($event_id);
+        $image_name=$data->image;
+       $image_path = public_path().'/images/'.$image_name;
+         unlink($image_path);;
+ $this->eventRepo->delete($event_id,$image_name);
+     
         return back()->with('info','info is sucessfully delete!');
          return redirect()->back()->withInput();
             
