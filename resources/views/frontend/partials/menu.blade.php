@@ -11,12 +11,12 @@
 				</a>
 			</div>
 			<ul>
-				<li class="active"><a href="homes" style="color: #fff"><i class="fa fa-home"></i> Home</a></li>
-                <li><a href="about" style="color: #fff">About us</a></li>
+				<li class="active"><a href="homes" ><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="about">About us</a></li>
 				<li><a>Properties</a></li>
-				<li><a href="contact" style="color: #fff">Contact</a></li>
+				<li><a href="contact" >Contact</a></li>
 				                <li class="upper-links dropdown show-on-hover"><a class="links dropdown-toggle" 
-									data-toggle="dropdown" href="#"style="color: #fff"><i class="fa fa-user-circle-o"></i> Account</a>
+									data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o"></i> Account</a>
 								  <ul class="dropdown-menu" role="menu" id="ul">
 
 								  	@if(Auth::check())
@@ -28,7 +28,7 @@
                                         <li><a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger"></i> Logout
                                         </a></li>
                                     @else
-                                        <li ><a href="{{route('admin.dashboard')}}" style="color: #000"><i class="fa fa-user"></i> Login</a></li>
+                                        <li ><a href="{{route('admin.dashboard')}}"><i class="fa fa-user"></i> Login</a></li>
             					        
                                     @endif 
           						  </ul> 

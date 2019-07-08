@@ -14,15 +14,15 @@ class TownshipRepository extends BaseRepository {
 	{
 		$this->model = $model;
 	}
-	public function gettownships($id)
+	public function gettownships($state_id,$city_id)
 	{
-		$sql = "SELECT * FROM `townships` WHERE city_id=?";
-		$res = \DB::select($sql,[$id]);
+		$sql = "SELECT * FROM `townships` WHERE state_id=? AND city_id=?";
+		$res = \DB::select($sql,[$state_id,$city_id]);
+
 		return $res;
 
 		
 	}
-
 }
      
 

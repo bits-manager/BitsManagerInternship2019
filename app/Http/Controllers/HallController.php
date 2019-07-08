@@ -48,7 +48,16 @@ class HallController extends Controller
 
     public function store(Request $request)
        {
-          
+          $validatedData=$request->validate([
+          'hall_name' => 'required|unique:halls|max:255',
+          'phone_no' => 'required|unique:halls',
+          'open_time' => 'required',
+          'close_time' => 'required',
+          'address' => 'required',
+          'image' => 'required|image',
+
+
+      ]);
           $image = $request->file('image');
           $new_name=rand() . '.' . $image->getClientOriginalExtension();
           $image->move(public_path('images'),$new_name);
@@ -94,6 +103,9 @@ class HallController extends Controller
     {
       $hall_id=$request->id;
       $image_name=$request->hidden_image;
+      $image_path = public_path().'/images/'.$image_name;
+      unlink($image_path);
+      $this->hallRepo->delete($image_name);
       $image=$request->file('image');
       if($image!=''){
           $image_name=rand().'.'.$image->getClientOriginalExtension();
@@ -111,16 +123,21 @@ class HallController extends Controller
             'image'=>$image_name
             );
         $form_data=array_except($form_data,['$hall_id']);
+
         $this->hallRepo->update($form_data,$hall_id);
-        
+
         return back()->with('info','Hall is successfully update!');
         return redirect()->back()->withInput();
     }
 
     public function destroy($hall_id)
     {
-        
-      $this->hallRepo->delete($hall_id);
+
+      $data=$this->hallRepo->getById($hall_id);
+      $image_name=$data->image;
+      $image_path = public_path().'/images/'.$image_name;
+      unlink($image_path);
+      $this->hallRepo->delete($hall_id,$image_name);
       return back()->with('info','Hall is successfully delete!');
       return redirect()->back()->withInput();
     }
