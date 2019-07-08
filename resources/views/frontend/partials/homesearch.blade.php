@@ -4,41 +4,55 @@
 }
 </style>
 <!-- Home Search -->
+<div ng-app="myApp" ng-controller="myCtrl">
 	<div class="home_search">
 		<div class="container">
 			<div class="row">
 				<div class="col">
 					<div class="home_search_container">
 						<div class="home_search_content">
-							<form action="#" class="search_form d-flex flex-row align-items-start justfy-content-start">
+							<form action="{{route('hall_search')}}" class="search_form d-flex flex-row align-items-start justfy-content-start" method="post">
+                @csrf
 								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
+<<<<<<< HEAD
 									<div id="a">
 										<select class="search_form_select" ng-model="selectedEvent" name="event_id" value="selectedEvent" ng-options="event_id as EventType.event_name for  event in event" 
 										id="event">
 										<option disabled selected>Event</optin>
+=======
+									<div>
+										<select class="search_form_select" name="eventType_id">
+											<option >Event</option>
+											@foreach($event as $event)
+            								<option value="{{$event->id}}">{{$event->event_name}}</option>
+            								@endforeach
+>>>>>>> 836ad75f01181abab252929b2e69b686e8b127b4
 										</select>
 									</div>
-									<div id="a">
-										<select class="search_form_select" ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state_id as state.state_name for state in states" id="state">
-										<option disabled selected>State</option>
+									<div>
+										<select class="search_form_select" name="state_id">
+											<option>State</option>
+											@foreach($state as $state)
+            								<option value="{{$state->id}}">{{$state->state_name}}</option>
+            								@endforeach
 										</select>
 									</div>
-									<div id="a">
-										<select class="search_form_select" ng-model="selectedCity" name="city_id" value="selectedCity" ng-options="city_id as city.city_name for  city in city" 
-										id="city">
-										<option disabled selected>City</optin>
-										</select>
-									</div id="a">
-									
-									<div id="a">
-										<select class="search_form_select" ng-model="selectedState" 
-										name="township_id" value="selectedTownship" ng-change="selectChange()" ng-options="township_id as township.township_name for state in states" 
-										id="township">
-										<option disabled selected>Township</option>
+									<div>
+										<select class="search_form_select" name="city_id">
+											<option>City</option>
+											@foreach($city as $city)
+            								<option value="{{$city->id}}">{{$city->city_name}}</option>
+            								@endforeach
 										</select>
 									</div>
-									
-								
+									<div>
+										<select class="search_form_select" name="township_id">>
+											<option> Township</option>
+											@foreach($township as $township)
+            								<option value="{{$township->id}}">{{$township->township_name}}</option>
+            								@endforeach
+										</select>
+									</div>
 								</div>
 								<button class="search_form_button ml-auto">search</button>
 							</form>
@@ -47,4 +61,87 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+<script>
+var states={!! json_encode($state) !!};
+var cities={!! json_encode($city) !!};
+var townships={!! json_encode($township) !!};
+
+var app = angular.module('myApp', []);
+app.config(function($interpolateProvider){
+  $interpolateProvider.startSymbol('<%').endSymbol('%>');
+});
+
+app.controller('myCtrl', function($scope, $http) {
+
+$scope.states= states;
+$scope.cities = cities;
+$scope.townships = townships;
+$scope.selectedState = $scope.states[0].id;
+$scope.selectedCity = $scope.cities[0].id;
+$scope.selectedTownship = $scope.townships[0].id;
+
+$http({
+          method : "GET",
+          url : "/api/v1/get_city?state_id="+$scope.selectedState,
+        }).then(function mySuccess(response) {
+           $scope.cities = response.data.data;
+          }, function myError(response) {
+
+            $scope.cities = [];
+
+        });
+
+  $scope.selectChange = function(){
+
+    $http({
+          method : "GET",
+          url : "/api/v1/get_city?state_id="+$scope.selectedState,
+        }).then(function mySuccess(response) {
+           console.log(response.data.data);
+           $scope.cities = response.data.data;
+           $scope.selectedCity = $scope.cities[0].id;
+          }, function myError(response) {
+
+            $scope.cities = [];
+
+        });
+
+  }
+
+
+$http({
+          method : "GET",
+          url : "/api/v1/get_township?city_id="+$scope.selectedCity,
+        }).then(function mySuccess(response) {
+           $scope.townships = response.data.data;
+          }, function myError(response) {
+
+            $scope.townships = [];
+
+        });
+
+  $scope.selectChange = function(){
+
+    $http({
+          method : "GET",
+          url : "/api/v1/get_township?city_id="+$scope.selectedCity,
+        }).then(function mySuccess(response) {
+           console.log(response.data.data);
+           $scope.townships = response.data.data;
+           $scope.selectedTownship = $scope.townships[0].id;
+          }, function myError(response) {
+
+            $scope.townships = [];
+
+        });
+
+  }
+
+
+});
+
+</script>
