@@ -37,7 +37,7 @@ class ContactController extends Controller
              $data=$request->all();
            $this->contactRepo->create($data);
 
-          Mail::to($request->user())->send(new ContactForMail($data));
+        Mail::to('nithupoudel554@gmail.com')->send(new ContactForMail($data));
           
   
     return back()->with('info','Thanks for contacting us!.We will respond as soon as possible.');

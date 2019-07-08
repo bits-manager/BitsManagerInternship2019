@@ -27,7 +27,7 @@ class EventTypeController extends Controller
 
           $image = $request->file('image');
           $new_name=rand() . '.' . $image->getClientOriginalExtension();
-          $image->move(public_path('images'),$new_name);
+          $image->move(public_path('image'),$new_name);
           $form_data=array(
             'event_name'=>$request->event_name,
             'image'=>$new_name
@@ -51,12 +51,12 @@ class EventTypeController extends Controller
            { 
       $event_id=$request->id;
       $image_name=$request->hidden_image;
-       $image_path = public_path().'/images/'.$image_name;
+       $image_path = public_path().'/image/'.$image_name;
          unlink($image_path);
       $image=$request->file('image');
       if($image!=''){
           $image_name=rand().'.'.$image->getClientOriginalExtension();
-          $image->move(public_path('images'),$image_name);
+          $image->move(public_path('image'),$image_name);
         }
         $form_data=array(
             'event_name'=>$request->event_name,
@@ -73,7 +73,7 @@ class EventTypeController extends Controller
         {
         $data=$this->eventRepo->getById($event_id);
         $image_name=$data->image;
-       $image_path = public_path().'/images/'.$image_name;
+       $image_path = public_path().'/image/'.$image_name;
          unlink($image_path);;
  $this->eventRepo->delete($event_id,$image_name);
      
