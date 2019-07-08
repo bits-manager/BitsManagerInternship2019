@@ -10,7 +10,7 @@
 							<div class="home_title">Contact</div>
 							<div class="breadcrumbs ml-auto">
 								<ul>
-									<li><a href="index.htmo">Home</a></li>
+									<li><a href="homes">Home</a></li>
 									<li>Contact</li>
 								</ul>
 							</div>

@@ -12,7 +12,7 @@
 						<div class="home_search_content">
 							<form action="#" class="search_form d-flex flex-row align-items-start justfy-content-start">
 								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
-									<div>
+									<div id="a">
 										<select class="search_form_select" ng-model="selectedEvent" name="event_id" value="selectedEvent" ng-options="event_id as EventType.event_name for  event in event" 
 										id="event">
 										<option disabled selected>Event</optin>
