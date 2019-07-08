@@ -53,7 +53,7 @@ Manage Townships
                       <div class="col-sm-12 col-md-7">
                     <select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control">
                     </select>
-
+                      </div>
                      </div>
                    <div class="form-group row mb-4">
 
