@@ -19,7 +19,7 @@ class HallsTableSeeder extends Seeder
             'city_id'=>1,
             'state_id'=>1,
             'township_id'=>1,
-        ]);//
-        //
+        ]);
+        
     }
 }

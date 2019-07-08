@@ -13,7 +13,7 @@ class DataController extends ApiController
 	{
 
      $this->cityRepo=$cityRepo;
-    
+
 	}
     public function getCity(Request $request)
     {
@@ -26,4 +26,6 @@ class DataController extends ApiController
     	}
       return $this->respondError('error');
     }
+
 }
+   

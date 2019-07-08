@@ -122,8 +122,10 @@
 
 	
 
-	 @include('frontend.partials.homesearch')
 
+	<!-- Home Search -->
+
+	 @include('frontend.partials.homesearch')
 
 
 	<!-- Recent -->
@@ -372,6 +374,4 @@
 			</div>
 		</div>
 	</div>
-	
-	
-@endsection
+

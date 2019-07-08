@@ -9,9 +9,9 @@ use Grimthorr\LaravelToast\Toast;
 use Illuminate\Support\Facades\DB;
 use App\MyLibs\Repositories\CityRepository;
 
-
 class HomesController extends Controller
 {
+
 
 	 
     public function __invoke(Request $request){
@@ -22,6 +22,7 @@ class HomesController extends Controller
         $township = DB::table('townships')->get();
 
         return view('frontend.homes.index',compact('event','state','city','township'));
+
 
     }
      

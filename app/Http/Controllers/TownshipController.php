@@ -10,9 +10,6 @@ use App\Mylibs\Repositories\CityRepository;
 use Grimthorr\LaravelToast\Toast;
 use Illuminate\Support\Facades\DB;
 
-
-
-
 class TownshipController extends Controller
 {
     public function __construct(TownshipRepository $townshipRepo,StateRepository $stateRepo,CityRepository $cityRepo)

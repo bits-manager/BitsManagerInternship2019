@@ -15,7 +15,7 @@ class CreateEventTypeHallsTable extends Migration
     {
         Schema::create('event_type_halls', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('description');
+            $table->longText('description');
             $table->unsignedBigInteger('hall_id');
             $table->unsignedBigInteger('eventType_id');
             $table->foreign('hall_id')->references('id')->on('halls')->onDelete('cascade');
