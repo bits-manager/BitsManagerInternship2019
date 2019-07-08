@@ -19,7 +19,7 @@ Dashboard
 	    </div>
 	    <!-- card body -->
 	    <div class="card-body">
-	        {{$count}}
+	        
 	    </div>
 	    <!-- card footer -->
 	    <div class="card-footer">

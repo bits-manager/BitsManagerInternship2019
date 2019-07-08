@@ -19,9 +19,9 @@
 				<div class="col">
 					
 					<div class="header_content d-flex flex-row align-items-center justify-content-start">
-						<div class="logo">
+						<!-- <div class="logo">
 							<a href="#"><img src="../frontendassets/images/logo.png" alt=""></a>
-						</div>
+						</div> -->
 						<nav class="main_nav">
 							<ul>
 								<li><a href="homes"><i class="fa fa-home"></i> Home</a></li>
@@ -48,11 +48,7 @@
 							</ul>
 							
 						</nav>
-						<div class="phone_num ml-auto">
-							<div class="phone_num_inner">
-								<img src="../frontendassets/images/phone.png" alt=""><span>652-345 3222 11</span>
-							</div>
-						</div>
+						
 						<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
 					</div>
 				</div>
