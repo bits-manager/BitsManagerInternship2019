@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Mail;
 //use Grimthorr\LaravelToast\Toast;
 
 
-class ContactController extends Controller
+class ContactController extends Controller 
 {
 
   public function __construct(ContactRepository $contactRepo){
@@ -37,10 +37,10 @@ class ContactController extends Controller
              $data=$request->all();
            $this->contactRepo->create($data);
 
-        Mail::to('nithupoudel554@gmail.com')->send(new ContactForMail($data));
-   
+          Mail::to($request->user())->send(new ContactForMail($data));
+          
   
-    return back()->with('info','Thanks for contacting us!');
+    return back()->with('info','Thanks for contacting us!.We will respond as soon as possible.');
 
       return redirect()->back()->withInput();
    }
@@ -72,7 +72,7 @@ class ContactController extends Controller
         
         $this->contactRepo->delete($contact_id);
         return back()->with('info','info is sucessfully delete!');
-         return redirect()->back()->withInput();
+        return redirect()->back()->withInput();
             
       }
       

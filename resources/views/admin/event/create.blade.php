@@ -1,4 +1,5 @@
 @extends('layouts.admin-master')
+
 @section('content')
 <section class="section">
   <div class="section-header">
@@ -42,17 +43,26 @@
     @endif
       
 
-  <form method="post" action="{{ route('admin.event.store') }}">
-     @csrf
-
- <div class="form-group row mb-4"><label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Name</label><div class="col-sm-12 col-md-7">
-  <input type="text" class="form-control" id="event_name" placeholder="Enter Event Name" name="event_name"></div></div>
-<div class="form-group row mb-4">
+  <form method="post" action="{{ route('admin.event.store') }}" enctype="multipart/form-data">
+    
+  <div class="form-group row mb-4">
+    @csrf
+ 
+  <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Name</label><div class="col-sm-12 col-md-7">
+  <input type="text" class="form-control" id="event_name" placeholder="Enter Event Name" name="event_name">
+  </div></div>
+  <div class="form-group row mb-4">
+  @csrf
+  <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name">Image:</label>
+  <div class="col-sm-12 col-md-7">
+  <input type="file" name="image"/>
+  </div></div>
+  <div class="form-group row mb-4">
+  @csrf
   <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
   <div class="col-sm-12 col-md-7"><button type="submit" class="btn btn-primary">Save</button>
   <input type="button" value="Cancle" class="btn btn-primary" onclick="clearText()" /> 
-</div>
-</dv>
+</div></dv>
 
   </div>
 
@@ -62,6 +72,7 @@
 </div>
   <script>
   function clearText() {
+  document.getElementById('image').value="";
   document.getElementById('event_name').value="";
    }
   </script>

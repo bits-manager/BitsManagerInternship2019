@@ -3,6 +3,7 @@
 @section('content')
 
 <section class="section">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <div class="section-header">
     <h1>Manage Event</h1>
   </div>
@@ -20,21 +21,22 @@
       {{ session()->get('success') }}  
     </div><br />
   @endif
+  <div class="table-responsive" >
 <table class="table table-striped">
     <thead>
         <tr>
-
-          <!-- <td>ID</td> -->
-          <td><p class="text-dark">Event Name</p></td>
+          <th>Hall  Image</th>
+     
+          <th><p class="text-dark">Event Name</p></th>
           
 
-          <td colspan="2"><p class="text-dark">Action</p></td>
+          <th colspan="2"><p class="text-dark">Action</p></th>
 
         </tr>
     </thead>
     <tbody>
         @foreach($event as $event)
-
+            <td><img src="{{URL::to('/')}}/images/{{$event->image}}" class="img-thumbnail" width="100"/></td>
             <td>{{$event->event_name}}</td>
             <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$event->id}})" 
               data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a>

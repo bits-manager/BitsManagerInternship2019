@@ -48,6 +48,7 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
             'index' => 'event'
         ]
     ]);
+     Route::post('event_update', 'EventTypeController@update')->name('event_update.update');
 
     Route::resource('eventhall', 'EventHallController', [
         'names' => [
@@ -95,6 +96,7 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
             'index' => 'hall'
         ]
     ]);
+    
     Route::post('hall_update', 'HallController@update')->name('hall_update.update');
 
     

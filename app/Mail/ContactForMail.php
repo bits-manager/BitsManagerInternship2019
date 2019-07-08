@@ -31,6 +31,5 @@ class ContactForMail extends Mailable
     public function build()
     {
         return $this->markdown('frontend.emails.contact.contact-form');
-                      
     }
 }
