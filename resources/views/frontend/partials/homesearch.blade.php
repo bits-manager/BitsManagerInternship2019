@@ -11,42 +11,45 @@
 				<div class="col">
 					<div class="home_search_container">
 						<div class="home_search_content">
-							<form action="#" class="search_form d-flex flex-row align-items-start justfy-content-start">
+							<form action="{{route('hall_search')}}" class="search_form d-flex flex-row align-items-start justfy-content-start" method="post">
+                @csrf
 								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
-									<div>
-										<select class="search_form_select">
-											<option disabled selected>Event</option>
+
+									<div id="a">
+									
+										<select class="search_form_select" name="eventType_id">
+											<option >Event</option>
 											@foreach($event as $event)
-            								<option>{{$event->event_name}}</option>
+            								<option value="{{$event->id}}">{{$event->event_name}}</option>
             								@endforeach
 										</select>
 									</div>
-									<div>
-										<select class="search_form_select">
-											<option disabled selected>State</option>
+									<div id="a">
+										<select class="search_form_select" name="state_id">
+											<option>State</option>
 											@foreach($state as $state)
-            								<option>{{$state->state_name}}</option>
+            								<option value="{{$state->id}}">{{$state->state_name}}</option>
             								@endforeach
 										</select>
 									</div>
-									<div>
-										<select class="search_form_select">
-											<option disabled selected>City</option>
+									<div id="a">
+										<select class="search_form_select" name="city_id">
+											<option>City</option>
 											@foreach($city as $city)
-            								<option>{{$city->city_name}}</option>
+            								<option value="{{$city->id}}">{{$city->city_name}}</option>
             								@endforeach
 										</select>
 									</div>
-									<div>
-										<select class="search_form_select">
-											<option disabled selected>Township</option>
+									<div id="a">
+										<select class="search_form_select" name="township_id">>
+											<option> Township</option>
 											@foreach($township as $township)
-            								<option>{{$township->township_name}}</option>
+            								<option value="{{$township->id}}">{{$township->township_name}}</option>
             								@endforeach
 										</select>
 									</div>
 								</div>
-								<button class="search_form_button ml-auto">search</button>
+								<button  id="a" class="search_form_button ml-auto">search</button>
 							</form>
 						</div>
 					</div>

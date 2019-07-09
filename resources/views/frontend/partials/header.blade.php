@@ -19,15 +19,16 @@
 				<div class="col">
 					
 					<div class="header_content d-flex flex-row align-items-center justify-content-start">
-						<div class="logo">
+						<!-- <div class="logo">
 							<a href="#"><img src="../frontendassets/images/logo.png" alt=""></a>
-						</div>
+						</div> -->
 						<nav class="main_nav">
 							<ul>
-								<li><a href="homes"><i class="fa fa-home"></i> Home</a></li>
-								<li><a href="about">About us</a></li>
-								<li><a href="properties">Properties</a></li>
-								<li><a href="contact">Contact</a></li>
+								<li class="{{active('homes')}}"><a href="homes"><i class="fa fa-home"></i> Home</a>
+								</li>
+								<li class="{{ active('about') }}"><a href="about">About us</a></li>
+								<li class="{{ active('properties')}}"><a href="properties">Properties</a></li>
+								<li class="{{active('contact')}}"><a href="contact">Contact</a></li>
 								<li class="upper-links dropdown show-on-hover"><a class="links dropdown-toggle" 
 									data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o"></i> Account</a>
 								  <ul class="dropdown-menu" role="menu" id="ul">
@@ -48,11 +49,7 @@
 							</ul>
 							
 						</nav>
-						<div class="phone_num ml-auto">
-							<div class="phone_num_inner">
-								<img src="../frontendassets/images/phone.png" alt=""><span>652-345 3222 11</span>
-							</div>
-						</div>
+						
 						<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
 					</div>
 				</div>

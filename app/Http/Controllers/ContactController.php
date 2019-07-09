@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Mail;
 //use Grimthorr\LaravelToast\Toast;
 
 
-class ContactController extends Controller
+class ContactController extends Controller 
 {
 
   public function __construct(ContactRepository $contactRepo){
