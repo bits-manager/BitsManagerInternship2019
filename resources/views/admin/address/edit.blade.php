@@ -81,7 +81,7 @@
             <input type="checkbox" name="status" value="1"{{isset($address['status'])&&$address['status']=='1' ? 'checked' : ''}}  checked>
           @else
             <input type="checkbox" name="status" value="0"{{isset($address['status'])&&$address['status']=='0' ? '' : 'notchecked'}} >
-
+                    
           @endif
              
         </div> 
