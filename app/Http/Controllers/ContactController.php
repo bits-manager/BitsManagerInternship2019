@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Mail\ContactForMail;
 use App\MyLibs\Repositories\ContactRepository;
+use Illuminate\Support\Facades\Mail;
+
 
 //use Grimthorr\LaravelToast\Toast;
 
@@ -31,15 +33,16 @@ class ContactController extends Controller
          'email' => 'required|max:255',
          'subject' => 'required|max:255',
          'message' => 'required|max:255',
-         
-     ]);
-    
-       $data=$request->all();
-    $this->contactRepo->create($data);
-    
-     return back()->with('info','Contact is successfully save!');
+       ]);
+             $data=$request->all();
+           $this->contactRepo->create($data);
 
-     return redirect()->back()->withInput();
+        Mail::to('nithupoudel554@gmail.com')->send(new ContactForMail($data));
+          
+  
+    return back()->with('info','Thanks for contacting us!.We will respond as soon as possible.');
+
+      return redirect()->back()->withInput();
    }
      
 
@@ -63,10 +66,17 @@ class ContactController extends Controller
         }
 
 
-        public function destroy($state_id)
+       
+      public function destroy($contact_id)
         {
-          
-        }
+        
+        $this->contactRepo->delete($contact_id);
+        return back()->with('info','info is sucessfully delete!');
+        return redirect()->back()->withInput();
+            
+      }
+      
+
 
 }
 

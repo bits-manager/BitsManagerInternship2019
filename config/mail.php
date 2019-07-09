@@ -1,6 +1,7 @@
 <?php
+ return [
+   
 
-return [
 
     /*
     |--------------------------------------------------------------------------
@@ -29,7 +30,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+   'host' => env('MAIL_HOST', 'smtp.gmail.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,9 +57,10 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'nithupoudel554@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'hnin'),
     ],
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -71,7 +73,7 @@ return [
     |
     */
 
-    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+    'encryption' => env('MAIL_ENCRYPTION', 'smtpout.secureserver.net'),
 
     /*
     |--------------------------------------------------------------------------
@@ -84,9 +86,9 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
+    'username' => env('nithupoudel554@gmail.com'),
 
-    'password' => env('MAIL_PASSWORD'),
+    'password' => env('nawrajkochori'),
 
     /*
     |--------------------------------------------------------------------------
@@ -100,6 +102,7 @@ return [
     */
 
     'sendmail' => '/usr/sbin/sendmail -bs',
+  
 
     /*
     |--------------------------------------------------------------------------

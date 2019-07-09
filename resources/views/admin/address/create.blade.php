@@ -66,7 +66,9 @@
 <div class="form-group row mb-4">
   <lable class="col-form-label text-md-right col-12 col-md-3 col-lg-3" from="">Status</lable>
   <div class="col-sm-12 col-md-7">
-  <input type="checkbox" name="status" value="1" onclick="checkOnly(this)">
+   <input type="checkbox" name="status" value="1" 
+
+{{isset($address['status'])&&$address['status']=='1' ? 'checked' : ''}}> 
  </div> 
 </div>  
 
@@ -89,7 +91,7 @@
   document.getElementById('address').value="";
   document.getElementById('phone').value="";
   document.getElementById('email').value="";
-  
+    document.getElementById('status').value="";
    }
   </script>
 </section>

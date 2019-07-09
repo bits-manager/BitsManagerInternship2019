@@ -48,11 +48,11 @@
       
                             <tr>
           
-                                      <td>State Name</td>
-                                      <td>City Name</td>
-                                    <td>Township Name</td>
+                                      <th>State Name</th>
+                                      <th>City Name</th>
+                                    <th>Township Name</th>
          
-                                    <td colspan="3">Action</td>
+                                    <th colspan="3">Action</th>
           
                               </tr>
     
@@ -130,5 +130,6 @@
          $("#deleteForm").submit();
      }
   </script>
+<script src="{{ asset('js/app.js') }}?{{ uniqid() }}"></script>
 
 @endsection

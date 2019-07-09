@@ -44,12 +44,18 @@
       <form method="get" action="{{ route('admin.townships.update', ['id'=>$edit_townships->id]) }}">
         
              <div class="form-group row mb-4">
-                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select State :</label>
+
+                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">State Name</label>
               <div class="col-sm-12 col-md-7">
+               <!-- <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
+
+                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select State :</label>
+              <div class="col-sm-12 col-md-7"> -->
               <!--  <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
                 
+
                @foreach($statedata as $state)
-                <option value="{{$state->id}}" {{ $state->id === $edit_townships->state_id ? 'selected' : '' }} >
+                <option value="{{$state->id}} {{$state->id === $edit_townships->state_id ? 'selected' : '' }}">
                   {{$state->state_name}}
                 </option>
                 @endforeach
@@ -60,8 +66,12 @@
             </div>
 
            <div class="form-group row mb-4">
-              <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select City :</label>
+
+              <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">City Name</label>
             <div class="col-sm-12 col-md-7">
+             <!-- <select name="city_id" id="city" class="form-control input-log dynamic" data-dependent="city">
+              <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select City :</label>
+            <div class="col-sm-12 col-md-7"> -->
             <!--  <select name="city_id" id="city" class="form-control input-log dynamic" data-dependent="city">
                
                  @foreach($citydata as $cities)
@@ -78,8 +88,9 @@
 
 
            <div class="form-group row mb-4">
-               @csrf
-                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Township Name:</label>
+
+              @csrf
+              <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Township Name:</label>
 
             <div class="col-sm-12 col-md-7">
               <input type="text" class="form-control" name="township_name" value="{{$edit_townships->township_name}}"/>

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Http\Request;
 use App\MyLibs\Repositories\AddressRepository;
@@ -23,11 +24,19 @@ class AddressController extends Controller
               'address' => 'required|max:255',
               'phone' => 'required|numeric|unique:addresses|min:11',
               'email' => 'required|email|unique:addresses|max:20',
-              'status'=> 'boolean',
+              'status'=> 'required|boolean',
            
         ]);
-          
+
+           if($request->get('status') == null){
+            $status = 0;
+        }
+        else{
+            $status = 1;
+        }
+           
         
+
         	$data = $request->all();
     	   
     	    $this->addressRepo->create($data);
@@ -40,13 +49,19 @@ class AddressController extends Controller
     	    	$address=$this->addressRepo->getAll();
     	    	return view('admin.address.index',compact('address'));
     	   }
-      public function edit($id)
-           {
+      public function edit(Request $request,$id)
+         {      
+ 
                $edit_address=$this->addressRepo->getById($id);
                return view('admin.address.edit',compact('edit_address'));
 	       }
+         
+
          public function show($id,Request $request)
-           {
+           { 
+        
+            $request['status'] = isset($request['status']) ? "1":"0";
+
             $data = $request->all();
            $this->addressRepo->update($data,$id);
            return redirect()->back()->with('info','Address  is successfully updated');
