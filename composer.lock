@@ -5,21 +5,7 @@
         "This file is @generated automatically"
     ],
 
-    "content-hash": "104dc7bcae14f642d33f12a46e3986e2",
-    "packages": [
-        {
-            "name": "aws/aws-sdk-php",
-            "version": "3.104.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "9feac27d183fa08f210f38c8cb6d449cf2411d29"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/9feac27d183fa08f210f38c8cb6d449cf2411d29",
-                "reference": "9feac27d183fa08f210f38c8cb6d449cf2411d29",
-
+    
     "content-hash": "8578a97b0dbabb3d680471f2214bb5cf",
     "packages": [
         {
@@ -106,7 +92,7 @@
             ],
             "time": "2019-07-02T18:21:12+00:00"
             "time": "2019-07-03T18:08:50+00:00"
- f4eac30b65525e945d6c27ced09ed3246f65edbf
+ 
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
