@@ -14,7 +14,7 @@
 							<div class="home_title">About</div>
 							<div class="breadcrumbs ml-auto">
 								<ul>
-									<li><a href="index.htmo">Home</a></li>
+									<li><a href="homes">Home</a></li>
 									<li>About us</li>
 								</ul>
 							</div>
@@ -115,9 +115,9 @@
 				<div class="col-lg-2 col-md-6">
 					<div class="realtor_outer">
 						<div class="realtor">
-							<div class="realtor_image"><img src="/frontendassets/images/realtor_1.jpg" alt=""></div>
+							<div class="realtor_image"><img src="/frontendassets/images/hninwai.jpg" alt=""></div>
 							<div class="realtor_body">
-								<div class="realtor_title">Maria Williams</div>
+								<div class="realtor_title">Hnin Wai Wai</div>
 								<div class="realtor_subtitle">Senior Realtor</div>
 							</div>
 							<div class="realtor_link"><a href="#">+</a></div>
@@ -132,9 +132,9 @@
 				<div class="col-lg-2 col-md-6">
 					<div class="realtor_outer">
 						<div class="realtor">
-							<div class="realtor_image"><img src="/frontendassets/images/realtor_2.jpg" alt=""></div>
+							<div class="realtor_image"><img src="/frontendassets/images/htayhtay.jpeg" alt=""></div>
 							<div class="realtor_body">
-								<div class="realtor_title">Christian Smith</div>
+								<div class="realtor_title">Htay Htay Aung</div>
 								<div class="realtor_subtitle">Senior Realtor</div>
 							</div>
 							<div class="realtor_link"><a href="#">+</a></div>
@@ -149,9 +149,9 @@
 				<div class="col-lg-2  col-md-6">
 					<div class="realtor_outer">
 						<div class="realtor">
-							<div class="realtor_image"><img src="/frontendassets/images/realtor_3.jpg" alt=""></div>
+							<div class="realtor_image"><img src="/frontendassets/images/waimi.jpg" alt=""></div>
 							<div class="realtor_body">
-								<div class="realtor_title">Steve G. Brown</div>
+								<div class="realtor_title">Wai Mi Aung</div>
 								<div class="realtor_subtitle">Senior Realtor</div>
 							</div>
 							<div class="realtor_link"><a href="#">+</a></div>
@@ -165,9 +165,9 @@
 				<div class="col-lg-2  col-md-6">
 					<div class="realtor_outer">
 						<div class="realtor">
-							<div class="realtor_image"><img src="/frontendassets/images/realtor_3.jpg" alt=""></div>
+							<div class="realtor_image"><img src="/frontendassets/images/khaing.jpg" alt=""></div>
 							<div class="realtor_body">
-								<div class="realtor_title">Steve G. Brown</div>
+								<div class="realtor_title">Khaing Zin Tun</div>
 								<div class="realtor_subtitle">Senior Realtor</div>
 							</div>
 							<div class="realtor_link"><a href="#">+</a></div>
@@ -181,9 +181,9 @@
 				<div class="col-lg-2  col-md-6">
 					<div class="realtor_outer">
 						<div class="realtor">
-							<div class="realtor_image"><img src="/frontendassets/images/realtor_3.jpg" alt=""></div>
+							<div class="realtor_image"><img src="/frontendassets/images/hmn.jpg" alt=""></div>
 							<div class="realtor_body">
-								<div class="realtor_title">Steve G. Brown</div>
+								<div class="realtor_title">Htet Myat Noe</div>
 								<div class="realtor_subtitle">Senior Realtor</div>
 							</div>
 							<div class="realtor_link"><a href="#">+</a></div>
@@ -197,9 +197,9 @@
 				<div class="col-lg-2  col-md-6">
 					<div class="realtor_outer">
 						<div class="realtor">
-							<div class="realtor_image"><img src="/frontendassets/images/realtor_4.jpg" alt=""></div>
+							<div class="realtor_image"><img src="/frontendassets/images/hninthu.jpg" alt=""></div>
 							<div class="realtor_body">
-								<div class="realtor_title">Jessica Walsh</div>
+								<div class="realtor_title">Hnin Thu</div>
 								<div class="realtor_subtitle">Senior Realtor</div>
 							</div>
 							<div class="realtor_link"><a href="#">+</a></div>
