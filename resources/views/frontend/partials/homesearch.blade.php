@@ -11,7 +11,7 @@
 				<div class="col">
 					<div class="home_search_container">
 						<div class="home_search_content">
-							<form action="{{route('hall_search')}}" class="search_form d-flex flex-row align-items-start justfy-content-start" method="post">
+							<form class="search_form d-flex flex-row align-items-start justfy-content-start" method="post">
                 @csrf
 								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
 

@@ -21,7 +21,7 @@
 				
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(../frontendassets/images/balloon.jpg)"></div>
+					<div class="home_slider_background" style="background-image:url(../frontendassets/images/hallshome.jpg)"></div>
 					<div class="slide_container">
 						<div class="container">
 							<div class="row">

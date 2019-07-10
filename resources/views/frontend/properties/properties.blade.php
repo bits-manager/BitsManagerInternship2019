@@ -42,7 +42,7 @@
 				<div class="col-xl-4 col-lg-6 property_col">
 					<div class="property">
 						<div class="property_image">
-							<img src="/frontendassets/images/property_1.jpg" alt="">
+							<img src="../frontendassets/images/wedding3.jpg" alt="" width="600" height="350">
 							<div class="tag_featured property_tag"><a href="#">Featured</a></div>
 						</div>
 						<div class="property_body text-center">
@@ -62,7 +62,7 @@
 				<div class="col-xl-4 col-lg-6 property_col">
 					<div class="property">
 						<div class="property_image">
-							<img src="/frontendassets/images/property_2.jpg" alt="">
+							<img src="../frontendassets/images/party1.jpg" alt="" width="600" height="350">
 							<div class="tag_offer property_tag"><a href="#">Offer</a></div>
 						</div>
 						<div class="property_body text-center">
@@ -82,7 +82,7 @@
 				<div class="col-xl-4 col-lg-6 property_col">
 					<div class="property">
 						<div class="property_image">
-							<img src="/frontendassets/images/property_3.jpg" alt="">
+							<img src="../frontendassets/images/seminar.jpg" alt="" width="600" height="350">
 							<div class="tag_featured property_tag"><a href="#">Featured</a></div>
 						</div>
 						<div class="property_body text-center">
