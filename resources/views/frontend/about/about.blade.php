@@ -25,7 +25,7 @@
 		</div>
 	</div>
 
-	 @include('frontend.partials.homesearch')
+	 
 	<!-- About -->
 
 	<div class="about">

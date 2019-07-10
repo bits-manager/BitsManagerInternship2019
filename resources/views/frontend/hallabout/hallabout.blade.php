@@ -2,77 +2,9 @@
 
 @section('content')
 <style>
-.icon{
-	color: #E74C3C;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-img{
-
-	width: 100%;
-	height: 100%;
-}
-
-body {
-  background-color: #f1f1f1;
-  padding: 20px;
-  color: #17202A;
-  font-family: Arial;
-}
-
-/* Center website */
-.main {
-  max-width: 1000px;
-  margin: auto;
-}
-
-.row {
-  margin: 8px -16px;
-}
-
-/* Add padding BETWEEN each column */
-.row,
-.row > .column {
-  padding: 8px;
-}
-
-/* Create four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-}
-
-/* Clear floats after rows */ 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Content */
-.content {
-  background-color: white;
-  padding: 10px;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
-  .column {
-    width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-
-
+	.icon{
+		color: #3399FF;
+	}
 </style>
 	
 	<!-- About -->
@@ -84,7 +16,7 @@ body {
 
 				<!-- About Image -->
 				<div class="col-lg-5">
-					<div class="about_image"><img src="/frontendassets/images/wedding1.jpg" class="rounded" alt="" width="700" height="450"></div>
+					<div class="about_image"><img src="/frontendassets/images/wedding1.jpg" class="rounded" alt="" width="800" height="450"></div>
 				</div>
 
 				<!-- About Content -->
@@ -115,46 +47,104 @@ body {
 
 
 	<!-- Event -->
-
-	<div class="main">
-
-		<h2>Events</h2>
-		<p>Resize the browser window to see the responsive effect.</p>
-
-		<!-- Portfolio Gallery Grid -->
-		<div class="row">
-  			<div class="column">
-    			<div class="content">
-      			<a href="eventdetail"><img src="/frontendassets/images/wedding1.jpg" alt=""></a>
-      			<p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
-    			</div>
+<div class="recent">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title">Events</div>
+				</div>
 			</div>
-  			<div class="column">
-    			<div class="content">
-    			<a href="eventdetail"><img src="/frontendassets/images/birthday.jpg" alt=""></a>
-      			
-      			<p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
-    			</div>
-  			</div>
-  			<div class="column">
-				<div class="content">
-				<a href="eventdetail"><img src="/frontendassets/images/party.jpg" alt=""></a>
-      			
-      			<p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
-    			</div>
-  			</div>
-  			<div class="column">
-				<div class="content">
-				<a href="eventdetail"><img src="/frontendassets/images/party.jpg" alt=""></a>
-      			
-      			<p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
-    			</div>
-  			</div>
-  			
-		<!-- END GRID -->
-		</div>
+			<div class="row recent_row">
+				<div class="col">
+					<div class="recent_slider_container">
+						<div class="owl-carousel owl-theme recent_slider">
+							
+							<!-- Slide -->
+							<div class="owl-item">
+								<div class="recent_item">
+									<div class="recent_item_inner">
+										<div class="recent_item_image">
+											<a href="eventdetail" ><img src="../frontendassets/images/wedding3.jpg" alt="" width="600" height="350"></a>
+											<div class="centered">Wedding</div>
 
-	<!-- END MAIN -->
+										</div>
+										
+										<div class="recent_item_body">
+											
+												<div class="recent_item_title text-center"><a href="eventdetail" >View Event Detail</a></div>
+												
+										</div>
+										
+										
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide -->
+							<div class="owl-item">
+								<div class="recent_item">
+									<div class="recent_item_inner">
+										<div class="recent_item_image">
+											<a href="eventdetail"><img src="../frontendassets/images/party1.jpg" alt="" width="600" height="350"></a>
+											<div class="centered">Party</div>
+										</div>
+										<div class="recent_item_body">
+											<div class="recent_item_title text-center"><a href="eventdetail" >View Event Detail</a></div>
+											
+											
+										</div>
+										
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide -->
+							<div class="owl-item">
+								<div class="recent_item">
+									<div class="recent_item_inner">
+										<div class="recent_item_image">
+											<a href="eventdetail" ><img src="../frontendassets/images/seminar.jpg" alt="" width="600" height="350"></a>
+											<div class="centered">Seminar</div>
+										</div>
+										<div class="recent_item_body">
+											<div class="recent_item_title text-center"><a href="eventdetail" >View Event Detail</a></div>
+											
+											
+										</div>
+										
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide -->
+							<div class="owl-item">
+								<div class="recent_item">
+									<div class="recent_item_inner">
+										<div class="recent_item_image">
+											<a href="eventdetail" ><img src="../frontendassets/images/birthday.jpg" alt="" width="600" height="350"></a>
+											<div class="centered">Birthday</div>
+										</div>
+										<div class="recent_item_body">
+											<div class="recent_item_title text-center"><a href="eventdetail" >View Event Detail</a></div>
+											
+										</div>
+										
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="recent_slider_nav_container d-flex flex-row align-items-start justify-content-start">
+							<div class="recent_slider_nav recent_slider_prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+							<div class="recent_slider_nav recent_slider_next"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+						</div>
+					</div>
+					<!-- <div class="button recent_button"><a href="#">see more</a></div>
+				</div> -->
+			</div>
+		</div>
 	</div>
+	
 		
 @endsection

@@ -21,7 +21,7 @@
 		</div>
 	</div>
 
- @include('frontend.partials.homesearch')
+ 
 
 <div class="contact">
 		<div class="container">
