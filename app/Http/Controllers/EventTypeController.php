@@ -24,10 +24,14 @@ class EventTypeController extends Controller
         }
     	public function store(Request $request)
        {
+         $validatedData = $request->validate([
+         'event_name' => 'required|max:255',
+     'image' => 'required|dimensions:max_width=600,max_height=350',]);
 
           $image = $request->file('image');
           $new_name=rand() . '.' . $image->getClientOriginalExtension();
           $image->move(public_path('image'),$new_name);
+
           $form_data=array(
             'event_name'=>$request->event_name,
             'image'=>$new_name
