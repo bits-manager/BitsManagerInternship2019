@@ -14,7 +14,9 @@
 							<form action="{{route('hall_search')}}" class="search_form d-flex flex-row align-items-start justfy-content-start" method="post">
                 @csrf
 								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
-									<div>
+
+									<div id="a">
+									
 										<select class="search_form_select" name="eventType_id">
 											<option >Event</option>
 											@foreach($event as $event)
@@ -22,7 +24,7 @@
             								@endforeach
 										</select>
 									</div>
-									<div>
+									<div id="a">
 										<select class="search_form_select" name="state_id">
 											<option>State</option>
 											@foreach($state as $state)
@@ -30,7 +32,7 @@
             								@endforeach
 										</select>
 									</div>
-									<div>
+									<div id="a">
 										<select class="search_form_select" name="city_id">
 											<option>City</option>
 											@foreach($city as $city)
@@ -38,7 +40,7 @@
             								@endforeach
 										</select>
 									</div>
-									<div>
+									<div id="a">
 										<select class="search_form_select" name="township_id">>
 											<option> Township</option>
 											@foreach($township as $township)
@@ -47,7 +49,7 @@
 										</select>
 									</div>
 								</div>
-								<button class="search_form_button ml-auto">search</button>
+								<button  id="a" class="search_form_button ml-auto">search</button>
 							</form>
 						</div>
 					</div>
