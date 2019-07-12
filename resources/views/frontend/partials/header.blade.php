@@ -18,8 +18,8 @@
 			<div class="row">
 				<div class="col">
 					
-					<div class="d-flex flex-row align-items-center justify-content-start">
-						
+
+					<div class="header_content d-flex flex-row align-items-center justify-content-start">
 						<nav class="main_nav">
 							<ul>
 								<li><a href="homes"><i class="fa fa-home"></i> Home</a></li>

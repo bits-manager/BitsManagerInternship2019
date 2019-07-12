@@ -16,6 +16,6 @@ class ContactTableSeeder extends Seeder
             'subject' => Str::random(10),
             'message' => Str::random(10),
         ]);
-        //
+        
     }
 }

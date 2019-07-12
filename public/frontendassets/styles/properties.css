@@ -291,9 +291,7 @@ section
 	width: 100%;
 	background: rgba(255,255,255,0.33);
 	z-index: 200;
-	border-bottom: solid 1px transparent;
-    border-image: linear-gradient(to right, #487fee, #32fa95);
-    border-image-slice: 1;
+	
     -webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -311,7 +309,7 @@ section
 }
 .header.scrolled
 {
-	background: rgba(63,111,206,0.85);
+	background: rgba(255,255,255,0.33);
 }
 .header.scrolled .header_content
 {
@@ -346,17 +344,12 @@ section
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
 	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
 }
-.main_nav ul li.active a,
 .main_nav ul li a:hover
 {
-	color: #2cd983;
 }
 .phone_num
 {
-	height: 43px;
-    border-radius: 22px;
     background: linear-gradient(to right, #487fee, #32fa95);
     padding: 2px;
     overflow: hidden;

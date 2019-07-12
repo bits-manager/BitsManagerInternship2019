@@ -290,11 +290,13 @@ section
 	top: 0;
 	left: 0;
 	width: 100%;
+<<<<<<< HEAD
 	background:rgba(255,255,255,0.33);
+=======
+	background: rgba(255,255,255,0.33);
+>>>>>>> 7500b5a34e45466e91d1ffe66dd273e06a169ab0
 	z-index: 200;
-	border-bottom: solid 1px transparent;
-    border-image: linear-gradient(to right, #487fee, #32fa95);
-    border-image-slice: 1;
+	
     -webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -312,7 +314,7 @@ section
 }
 .header.scrolled
 {
-	background: rgba(63,111,206,0.85);
+	background: rgba(255,255,255,0.33);
 }
 .header.scrolled .header_content
 {

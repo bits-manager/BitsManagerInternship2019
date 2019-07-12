@@ -18,7 +18,7 @@ Manage Townships
         <h4>Township form</h4>
       </div>
       <!-- card body -->
-            <div class="card-body">
+            <div class="card-body"> 
 
                  @if(Session::has('toasts'))
                    @foreach(Session::get('toasts') as $toast)
@@ -48,14 +48,15 @@ Manage Townships
                @endif
                   <form method="post" action="{{ route('admin.townships.store') }}">
                      <div class="form-group row mb-4">
+
                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">State Name</label>
                       <div class="col-sm-12 col-md-7">
                     <select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control">
                     </select>
-                
-                       </div>
+                      </div>
                      </div>
                    <div class="form-group row mb-4">
+
                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">City Name</label>
                       <div class="col-sm-12 col-md-7">
                         <select ng-model="selectedCity" name="city_id" value="selectedCity"  ng-options="city.id as city.city_name for city in cities" class="form-control" >

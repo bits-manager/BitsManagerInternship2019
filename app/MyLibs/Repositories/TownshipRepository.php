@@ -20,8 +20,14 @@ class TownshipRepository extends BaseRepository {
 		$res = \DB::select($sql,[$state_id,$city_id]);
 
 		return $res;
+	}
+	
+	public function gettownship($state_id)
+	{
+		$sql = "SELECT * FROM `townships` WHERE state_id=?";
+		$res = \DB::select($sql,[$state_id]);
 
-		
+		return $res;
 	}
 }
      

@@ -46,7 +46,7 @@
         @foreach($data as $hall)
         
         <tr>
-            <td><img src="{{URL::to('/')}}/images/{{$hall->image}}" class="img-thumbnail"/></td>
+            <td><img src="{{URL::to('/')}}/image/{{$hall->image}}" class="img-thumbnail"/></td>
             <td>{{$hall->hall_name}}</td>
             <td>{{$hall->state_name}}</td>
             <td>{{$hall->city_name}}</td>
@@ -104,5 +104,7 @@
          $("#deleteForm").submit();
      }
     </script>
+    <script src="{{ asset('js/app.js') }}?{{ uniqid() }}"></script>
+
 
 @endsection
