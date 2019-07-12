@@ -290,11 +290,8 @@ section
 	top: 0;
 	left: 0;
 	width: 100%;
-<<<<<<< HEAD
-	background:rgba(255,255,255,0.33);
-=======
 	background: rgba(255,255,255,0.33);
->>>>>>> 7500b5a34e45466e91d1ffe66dd273e06a169ab0
+	background: #fff;
 	z-index: 200;
 	
     -webkit-transition: all 200ms ease;
@@ -305,7 +302,7 @@ section
 }
 .header_content
 {
-	height: 101px;
+	height: 60px;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -314,15 +311,15 @@ section
 }
 .header.scrolled
 {
-	background: rgba(255,255,255,0.33);
+	background: #fff;
 }
 .header.scrolled .header_content
 {
-	height: 80px;
+	height: 60px;
 }
 .logo
 {
-	width: 110px;
+	width: 35px;
 }
 .logo img
 {
@@ -1397,7 +1394,7 @@ section
 {
 	font-size: 14px;
 	font-weight: 500;
-	color: #828282;
+	color:#000;
 }
 .footer_nav
 {
@@ -1428,8 +1425,8 @@ section
 }
 .footer_phone
 {
-	font-size: 14px;
-	color: #828282;
+	font-size: 12px;
+	color: #000;
 	font-weight: 500;
 }
 .footer_phone span

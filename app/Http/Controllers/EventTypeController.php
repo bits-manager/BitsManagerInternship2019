@@ -24,6 +24,9 @@ class EventTypeController extends Controller
         }
     	public function store(Request $request)
        {
+         $validatedData = $request->validate([
+         'event_name' => 'required|max:255',
+          'image' => 'required|dimensions:max_width=600,max_height=350',]);
 
           $image = $request->file('image');
           $new_name=rand() . '.' . $image->getClientOriginalExtension();
@@ -49,21 +52,21 @@ class EventTypeController extends Controller
 	       }
          public function update(Request $request)
            { 
-      $event_id=$request->id;
-      $image_name=$request->hidden_image;
-       $image_path = public_path().'/image/'.$image_name;
-         unlink($image_path);
-      $image=$request->file('image');
-      if($image!=''){
-          $image_name=rand().'.'.$image->getClientOriginalExtension();
-          $image->move(public_path('image'),$image_name);
-        }
-        $form_data=array(
-            'event_name'=>$request->event_name,
+              $event_id=$request->id;
+              $image_name=$request->hidden_image;
+              $image_path = public_path().'/image/'.$image_name;
+              unlink($image_path);
+              $image=$request->file('image');
+              if($image!=''){
+                $image_name=rand().'.'.$image->getClientOriginalExtension();
+                $image->move(public_path('image'),$image_name);
+                }
+              $form_data=array(
+                'event_name'=>$request->event_name,
                'image'=>$image_name
-            );
-        $form_data=array_except($form_data,['$event_id']);
-        $this->eventRepo->update($form_data,$event_id);
+                  );
+              $form_data=array_except($form_data,['$event_id']);
+              $this->eventRepo->update($form_data,$event_id);
         
            return back()->with('info','Event name  is successfully updated');
            return redirect()->back()->withInput();
@@ -74,9 +77,8 @@ class EventTypeController extends Controller
         $data=$this->eventRepo->getById($event_id);
         $image_name=$data->image;
         $image_path = public_path().'/image/'.$image_name;
-         unlink($image_path);
-         $this->eventRepo->delete($event_id,$image_name);
-     
+         unlink($image_path);;
+        $this->eventRepo->delete($event_id,$image_name);
         return back()->with('info','info is sucessfully delete!');
          return redirect()->back()->withInput();
             
