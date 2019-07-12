@@ -60,6 +60,7 @@ Manage Townships
                          </select> -->
                     <select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control" >
                     </select>
+
                     </div>
                     </div>
 
@@ -70,6 +71,11 @@ Manage Townships
                           
                          <!--  <select name="city_id" id="city" class="form-control input-log dynamic" data-dependent="city">
                            
+=======
+                      </div>
+                     </div>
+                   <div class="form-group row mb-4">
+>>>>>>> 7500b5a34e45466e91d1ffe66dd273e06a169ab0
 
                              @foreach($citydata as $cities)
                             <option value="{{$cities->id}}">{{$cities->city_name}}</option>

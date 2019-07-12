@@ -2,41 +2,26 @@
 #a{
 	width: 25%;
 }
- 
- select {
-    -webkit-appearance: none;
-    -moz-appearance : none;
-    border:1px solid #ccc;
-    border-radius:3px;
-    padding:5px 3px;
-}
 </style>
 <!-- Home Search -->
-
-@section('content')
-
 <div ng-app="myApp" ng-controller="myCtrl">
 	<div class="home_search">
 		<div class="container">
 			<div class="row">
 				<div class="col">
-
 					<div class="home_search_container">
-
-						
-
-							 <form action="#" class="search_form d-flex flex-row align-items-start justfy-content-start"> 
+							<form action="#" class="search_form d-flex flex-row align-items-start justfy-content-start"> 
 								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
 									<div>
-										<select name="event_id" class="form-control" 
-										ng-options = "event.id as event.event_name for event in events"
-										>
-										<!-- <option disabled selected>Event</option>
-										@foreach($event as $event)
-										<option>{{$event->event_name}}</option>
-										@endforeach -->
+										 <select ng-model="event" name="event_id" value="event"  ng-options="event.id as event.event_name for event in events" class="form-control">
+										 
+									
+										
 										</select>
+										
 									</div>
+											
+										
 									
 									<div>
 										<select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control" >
@@ -44,7 +29,7 @@
 									</div>
 
 									<div>
-										 <select ng-model="selectedCity" name="city_id" value="selectedCity"  ng-options="city.id as city.city_name for city in cities" class="form-control" >
+										 <select ng-model="selectedCity"  value="selectedCity"  ng-options="city.id as city.city_name for city in cities" class="form-control" >
 										 </select>
 									</div>
 									
@@ -60,19 +45,19 @@
 								</div>
 								<button class="search_form_button ml-auto">search</button>
 							</form>
-						
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script>
 
 var states = {!! json_encode($state) !!};
 var cities = {!! json_encode($city) !!};
-
+var events= {!! json_encode($event) !!};
 
 
 var app = angular.module('myApp', []);
@@ -82,10 +67,19 @@ app.config(function($interpolateProvider){
 
 app.controller('myCtrl', function($scope, $http) {
 
+
 $scope.states = states;
 $scope.cities = cities;
+$scope.events = events;
+
+
 $scope.selectedState = $scope.states[0].id;
 $scope.selectedCity = $scope.cities[0].id;
+//$scope.event = $scope.events[0].id;
+
+//console.log($scope.selectedEvent);
+
+
 
 
 
@@ -101,7 +95,7 @@ $http({
 		});
 
 
-  $scope.selectChange = function(){
+$scope.selectChange = function(){
 
 	$http({
 		  method : "GET",
@@ -117,5 +111,4 @@ $http({
 		});
 	}
 });
-
-</script>
+</script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

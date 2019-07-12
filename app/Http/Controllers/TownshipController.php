@@ -16,7 +16,7 @@ class TownshipController extends Controller
 {
     $this->townshipRepo=$townshipRepo;
     $this->stateRepo=$stateRepo;
-     $this->cityRepo=$cityRepo;
+    3$this->cityRepo=$cityRepo;
     
 }
     /**

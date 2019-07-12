@@ -1,5 +1,6 @@
 <?php
  return [
+   
 
 
     /*
@@ -29,7 +30,7 @@
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+   'host' => env('MAIL_HOST', 'smtp.gmail.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -42,7 +43,7 @@
     |
     */
 
-    'port' => env('MAIL_PORT', 587),
+    'port' => env('MAIL_PORT',587),
 
     /*
     |--------------------------------------------------------------------------
@@ -55,7 +56,10 @@
     |
     */
 
-   
+    'from' => [
+        'address' => env('MAIL_FROM_ADDRESS', 'nithupoudel554@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'hnin'),
+    ],
     
 
     /*
@@ -82,9 +86,9 @@
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
+    'username' => env('nithupoudel554@gmail.com'),
 
-    'password' => env('MAIL_PASSWORD'),
+    'password' => env('nawrajkochori'),
 
     /*
     |--------------------------------------------------------------------------
@@ -98,6 +102,7 @@
     */
 
     'sendmail' => '/usr/sbin/sendmail -bs',
+   
 
     /*
     |--------------------------------------------------------------------------

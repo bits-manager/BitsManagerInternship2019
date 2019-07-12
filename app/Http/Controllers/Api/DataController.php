@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Mylibs\Repositories\CityRepository;
 
+
 class DataController extends ApiController
 {
 
@@ -13,7 +14,7 @@ class DataController extends ApiController
 	{
 
      $this->cityRepo=$cityRepo;
-
+     
 	}
     public function getCity(Request $request)
     {
@@ -26,6 +27,5 @@ class DataController extends ApiController
     	}
       return $this->respondError('error');
     }
-
-}
+  }
    

@@ -12,14 +12,12 @@ use App\MyLibs\Repositories\CityRepository;
 class HomesController extends Controller
 {
 
-
-	 
-    public function __invoke(Request $request){
-
-      $event = DB::table('event_types')->get();
-        $state = DB::table('states')->get();
-        $city = DB::table('cities')->get();
-        $township = DB::table('townships')->get();
+      public function __invoke(Request $request)
+    {
+    	$event = DB::table('event_types')->get();
+    	$state = DB::table('states')->get();
+    	$city = DB::table('cities')->get();
+    	$township = DB::table('townships')->get();
 
         return view('frontend.homes.index',compact('event','state','city','township'));
 
@@ -27,3 +25,4 @@ class HomesController extends Controller
     }
      
 }
+
