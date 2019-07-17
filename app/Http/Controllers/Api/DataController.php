@@ -39,7 +39,6 @@ class DataController extends ApiController
     {
 
     	try{
-
     		$cities = $this->cityRepo->getcities($request->state_id);
         $city=$cities[0]->id;
         $townships=$this->townshipRepo->gettownships($request->state_id,$city);      
@@ -57,7 +56,7 @@ class DataController extends ApiController
     {
       
         try {
-            $townships =$this->townshipRepo->gettownships($request->state_id,$request->city_id);
+          $townships =$this->townshipRepo->gettownships($request->state_id,$request->city_id);
 
               if(count($townships)>0)
                 return $this->respondSuccess('success',$townships);    

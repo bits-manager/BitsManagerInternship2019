@@ -151,8 +151,7 @@
           <input type="hidden" name="hidden_image" value="{{$edit_halls->image}}"/>
         </div></div>
 
-          
-
+        
           <div class="form-group row mb-4">
               @csrf
             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
@@ -171,7 +170,7 @@ var edit_halls={!! json_encode($edit_halls) !!};
 var app = angular.module('myApp', []);
 app.config(function($interpolateProvider){
   $interpolateProvider.startSymbol('<%').endSymbol('%>');
-});
+}); 
 
 app.controller('myCtrl', function($scope, $http) {
 
@@ -180,9 +179,10 @@ $scope.cities = cities;
 $scope.townships=townships;
 $scope.edit_halls=edit_halls;
 
-$scope.selectedState = $scope.edit_halls.states[0].id;
-$scope.selectedCity = $scope.edit_halls.cities[0].id;
-$scope.selectedTownship = $scope.edit_halls.townships[0].id;
+$scope.selectedState = $scope.edit_halls.state_id;
+$scope.selectedCity = $scope.edit_halls.city_id;
+$scope.selectedTownship = $scope.edit_halls.township_id;
+
 $http({
           method : "GET",
           url : "/api/v1/get_cities?state_id="+$scope.selectedState,
@@ -215,7 +215,7 @@ $scope.selectChange = function(){
 
   }
   
-  $http({
+ $http({
           method : "GET",
           url : "/api/v1/get_township?state_id="+$scope.selectedState+"&city_id="+$scope.selectedCity,
         }).then(function mySuccess(response) {

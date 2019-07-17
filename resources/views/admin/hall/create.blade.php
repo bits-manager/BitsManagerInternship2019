@@ -75,14 +75,14 @@ Manage States
               <select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control">
               </select>
           </div></div>
-
           <div class="form-group row mb-4">
               @csrf
               <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name">City Name:</label>
               <!-- <div class="col-sm-12 col-md-7">
               <select class="form-control" name="city_id">
                 @foreach($citydata as $city)
-                <option value ="{{$city->id}}">
+                <option value ="{{$city->id}}">>
+
                   {{$city->city_name}}
                 </option>
                 @endforeach

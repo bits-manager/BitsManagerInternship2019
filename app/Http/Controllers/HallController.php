@@ -53,11 +53,9 @@ class HallController extends Controller
           'phone_no' => 'required|unique:halls',
           'open_time' => 'required',
           'close_time' => 'required',
-          'address' => 'required',
-          'image' => 'required|image',
+          'address' => 'required',]);
+          
 
-
-      ]);
           $image = $request->file('image');
           $new_name=rand() . '.' . $image->getClientOriginalExtension();
           $image->move(public_path('image'),$new_name);
@@ -75,9 +73,11 @@ class HallController extends Controller
           $state_id= explode(':',$form_data['state_id']);
           $city_id= explode(':',$form_data['city_id']);
           $township_id=explode(':',$form_data['township_id']);
+
           $form_data['state_id'] = $state_id[1];
           $form_data['city_id'] = $city_id[1];
           $form_data['township_id'] = $township_id[1];
+
           $this->hallRepo->create($form_data);
           return back()->with('info','Hall is sucessfully save!');
           return redirect()->back()->withInput();
@@ -109,13 +109,13 @@ class HallController extends Controller
     {
       $hall_id=$request->id;
       $image_name=$request->hidden_image;
-      $image_path = public_path().'/image/'.$image_name;
-      unlink($image_path);
-      $this->hallRepo->delete($image_name);
       $image=$request->file('image');
       if($image!=''){
           $image_name=rand().'.'.$image->getClientOriginalExtension();
           $image->move(public_path('image'),$image_name);
+          $image_path = public_path().'/image/'.$image_name;
+          unlink($image_path);
+          $this->hallRepo->delete($image_name);
         }
         $form_data=array(
             'hall_name'=>$request->hall_name,
@@ -128,9 +128,16 @@ class HallController extends Controller
             'address'=>$request->address,
             'image'=>$image_name
             );
-        $form_data=array_except($form_data,['$hall_id']);
+          $state_id= explode(':',$form_data['state_id']);
+          $city_id= explode(':',$form_data['city_id']);
+          $township_id=explode(':',$form_data['township_id']);
 
-        $this->hallRepo->update($form_data,$hall_id);
+          $form_data['state_id'] = $state_id[1];
+          $form_data['city_id'] = $city_id[1];
+          $form_data['township_id'] = $township_id[1];
+
+          $form_data=array_except($form_data,['$hall_id']);
+          $this->hallRepo->update($form_data,$hall_id);
 
         return back()->with('info','Hall is successfully update!');
         return redirect()->back()->withInput();
@@ -143,7 +150,7 @@ class HallController extends Controller
       $image_name=$data->image;
       $image_path = public_path().'/image/'.$image_name;
       unlink($image_path);
-      $this->hallRepo->delete($hall_id,$image_name);
+      $this->hallRepo->delete($hall_id);
       return back()->with('info','Hall is successfully delete!');
       return redirect()->back()->withInput();
     }
