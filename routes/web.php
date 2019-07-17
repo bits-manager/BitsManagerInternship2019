@@ -19,7 +19,7 @@ Route::name('frontend.')->prefix('frontend')->group(function() {
 
     Route::get('contact', 'frontend\ContactController@index')->name('contact');
 
-    Route::get('admin/dashboard', 'DashboardController@index')->middleware('auth')->name('admin.dashboard');
+    Route::get('frontend/admin/dashboard', 'DashboardController@index')->middleware('auth')->name('admin.dashboard');
 
     Route::get('about', 'frontend\AboutController@index')->name('about');
     Route::get('properties', 'frontend\PropertiesController@index')->name('properties');
@@ -80,8 +80,9 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
             'index' => 'contact'
         ]
     ]);
+Route::get('googlemap', 'ContactController@map');
 
-
+Route::get('googlemap/direction', 'ContactController@direction');
 
     Route::resource('address', 'AddressController', [
         'names' => [

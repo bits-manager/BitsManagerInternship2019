@@ -27,9 +27,9 @@ class CityController extends Controller
     }
     public function store(Request $request)
     {  
-    	$validatedData=$request->validate([
-    'city_name' => 'required|unique:cities|max:255',  
-      ]);
+    	/*$validatedData=$request->validate([
+        'city_name' => 'required|unique:cities|max:255',  
+      ]);*/
     	$data = $request->all();
       $this->cityRepo->create($data);
   

@@ -319,7 +319,7 @@ section
 }
 .logo
 {
-	width: 35px;
+	width: 30px;
 }
 .logo img
 {
@@ -577,7 +577,7 @@ section
 {
 	font-size: 60px;
 	font-weight: 600;
-	color: #FFFFFF;
+	color: #000;
 	line-height: 1.2;
 	margin-top: 11px;
 }

@@ -30,7 +30,7 @@
     |
     */
 
-   'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+ 'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
 
     /*
     |--------------------------------------------------------------------------
@@ -43,7 +43,9 @@
     |
     */
 
-    'port' => env('MAIL_PORT',587),
+
+    'port' => env('MAIL_PORT',465),
+
 
     /*
     |--------------------------------------------------------------------------
@@ -57,8 +59,10 @@
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'nithupoudel554@gmail.com'),
+
+        'address' => env('MAIL_FROM_ADDRESS', 'hninwaiwai51986@gmail.com'),
         'name' => env('MAIL_FROM_NAME', 'hnin'),
+
     ],
     
 
@@ -73,7 +77,7 @@
     |
     */
 
-    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+    'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
 
     /*
     |--------------------------------------------------------------------------
@@ -86,9 +90,11 @@
     |
     */
 
-    'username' => env('nithupoudel554@gmail.com'),
 
-    'password' => env('nawrajkochori'),
+    'username' => env('hninwaiwai51986@gmail.com'),
+
+
+    'password' => env('htet123456'),
 
     /*
     |--------------------------------------------------------------------------
@@ -102,6 +108,17 @@
     */
 
     'sendmail' => '/usr/sbin/sendmail -bs',
+
+
+
+    'pretend' => false,
+    'stream' => [
+    'ssl' => [
+        'allow_self_signed' => true,
+        'verify_peer' => false,
+        'verify_peer_name' => false,
+    ],
+    ],
    
 
     /*
@@ -115,25 +132,26 @@
     |
     */
 
-    'markdown' => [
-        'theme' => 'default',
+     'markdown' => [
+       'theme' => 'default',
 
-        'paths' => [
+       'paths' => [
             resource_path('views/vendor/mail'),
         ],
-    ],
+     ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Log Channel
-    |--------------------------------------------------------------------------
-    |
-    | If you are using the "log" driver, you may specify the logging channel
-    | if you prefer to keep mail messages separate from other log entries
-    | for simpler reading. Otherwise, the default channel will be used.
-    |
-    */
+    
+    // |--------------------------------------------------------------------------
+    // | Log Channel
+    // |--------------------------------------------------------------------------
+    // |
+    // | If you are using the "log" driver, you may specify the logging channel
+    // | if you prefer to keep mail messages separate from other log entries
+    // | for simpler reading. Otherwise, the default channel will be used.
+    // |
+    
 
     'log_channel' => env('MAIL_LOG_CHANNEL'),
+    
 
 ];

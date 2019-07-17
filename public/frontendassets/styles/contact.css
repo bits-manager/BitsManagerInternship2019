@@ -290,9 +290,8 @@ section
 	top: 0;
 	left: 0;
 	width: 100%;
-	background:#fff;
+	background: #fff;
 	z-index: 200;
-	
     -webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -314,11 +313,11 @@ section
 }
 .header.scrolled .header_content
 {
-	height: 60px;
+	height: 80px;
 }
 .logo
 {
-	width: 35px;
+	width: 30px;
 }
 .logo img
 {
@@ -690,7 +689,7 @@ section
 {
 	width: 100%;
 	background: #FFFFFF;
-	padding-top: 119px;
+	padding-top: 80px;
 	padding-bottom: 105px;
 }
 .contact .section_title
@@ -1029,7 +1028,7 @@ section
 {
 	font-size: 14px;
 	font-weight: 500;
-	color: #000;
+	color: #828282;
 }
 .footer_nav
 {
@@ -1060,8 +1059,8 @@ section
 }
 .footer_phone
 {
-	font-size: 12px;
-	color: #000;
+	font-size: 14px;
+	color: #828282;
 	font-weight: 500;
 }
 .footer_phone span
