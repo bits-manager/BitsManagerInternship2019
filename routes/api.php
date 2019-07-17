@@ -21,7 +21,7 @@ Route::group(['prefix' => 'v1'], function() {
 
   Route::get('/get_city','Api\DataController@getCity');
   Route::get('/get_township','Api\DataController@getTownship');
+  Route::get('/get_event_hall','Api\DataController@getEventHall');
   
-
 });
 

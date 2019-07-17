@@ -25,7 +25,7 @@
 	</div>
 
 
-	 @include('frontend.partials.homesearch')
+	 
 	<!-- Properties -->
 
 	<div class="properties">
