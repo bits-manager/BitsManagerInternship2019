@@ -54,6 +54,7 @@ class CityController extends Controller
       }
         return back()->with('info','City is successfully save!');
         return redirect()->back()->withInput();
+
     }
 
 

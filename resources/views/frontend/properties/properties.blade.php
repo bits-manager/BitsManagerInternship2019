@@ -13,7 +13,7 @@
 							<div class="home_title">Search Results</div>
 							<div class="breadcrumbs ml-auto">
 								<ul>
-									<li><a href="index.htmo">Home</a></li>
+									<li><a href="homes">Home</a></li>
 									<li>Search Results</li>
 								</ul>
 							</div>
@@ -25,7 +25,7 @@
 	</div>
 
 
-	 @include('frontend.partials.homesearch')
+	 
 	<!-- Properties -->
 
 	<div class="properties">

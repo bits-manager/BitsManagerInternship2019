@@ -6,24 +6,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <style>
-	.image{
-  		margin-top: 100px;
-  		margin-bottom: : 100px;
-		margin-right: 100px;
-		margin-left: 100px;
-		position: relative;
-		width: 1200px;
-	}
 
 	.section_title_service{
 	font-style: italic;
 	text-align: center;
 }
 </style>
-
-<div>
-	<img class="image" src="/frontendassets/images/wedding.jpg">
-</div>
 
 <div class="about">
 		<div class="container">
@@ -45,15 +33,15 @@
     					<div class="carousel-inner">
 
 	      					<div class="item active">
-	        					<img src="/frontendassets/images/wedding1.jpg" alt="" style="width:100%;height: 50%;">
+	        					<img src="/frontendassets/images/wedding1.jpg" alt="" style="width:100%;">
 	        				</div>
 
 	      					<div class="item">
-	        					<img src="/frontendassets/images/wedding2.jpg" alt="" style="width:100%; height: 50%;">
+	        					<img src="/frontendassets/images/wedding4.jpg" alt="" style="width:100%;">
 	        				</div>
 	    
 	      					<div class="item">
-	        					<img src="/frontendassets/images/wedding3.jpg" alt="" style="width:100%;height: 50%;">
+	        					<img src="/frontendassets/images/wedding5.jpg" alt="" style="width:100%;">
 	        				</div>
   
     					</div>
@@ -84,4 +72,5 @@
 		
 		</div>
 	</div>
+
 @endsection

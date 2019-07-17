@@ -10,9 +10,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 class ContactForMail extends Mailable
 {
     use Queueable, SerializesModels;
-
-    public $data;
-
+     public $data;
     /**
      * Create a new message instance.
      *

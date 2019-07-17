@@ -18,13 +18,17 @@
 			<div class="row">
 				<div class="col">
 					
+
 					<div class="header_content d-flex flex-row align-items-center justify-content-start">
-						<!-- <div class="logo">
-							<a href="#"><img src="../frontendassets/images/logo.png" alt=""></a>
-						</div> -->
+
+						 <div class="logo">
+							<a href="#"><img src="../frontendassets/images/halllogo.jpg" alt=""></a>
+						</div> 
+
 						<nav class="main_nav">
 							<ul>
-								<li><a href="homes"><i class="fa fa-home"></i> Home</a></li>
+								<li><a href="homes"><i class="fa fa-home"></i> Home</a>
+								</li>
 								<li><a href="about">About us</a></li>
 								<li><a href="properties">Properties</a></li>
 								<li><a href="contact">Contact</a></li>

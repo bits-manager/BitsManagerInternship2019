@@ -18,11 +18,11 @@ class HomesController extends Controller
     	$state = DB::table('states')->get();
     	$city = DB::table('cities')->get();
     	$township = DB::table('townships')->get();
-
+       /*array_unshift( ,"all"); 
+       dd($state);*/
         return view('frontend.homes.index',compact('event','state','city','township'));
 
 
     }
      
 }
-

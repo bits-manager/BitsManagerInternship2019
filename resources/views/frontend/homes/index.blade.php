@@ -10,6 +10,7 @@
 }
 
 </style>
+
 <!-- Home -->
 
 	<div class="home">
@@ -42,11 +43,61 @@
 	
 
 	 
-
+@include("frontend.partials.homesearch")
 
 	<!-- Home Search -->
 
-	 @include('frontend.partials.homesearch')
+<!-- <div ng-app="myApp" ng-controller="myCtrl">
+	<div class="home_search">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="home_search_container">
+						<div class="home_search_content">
+							<form action="{{route('hall_search')}}" class="search_form d-flex flex-row align-items-start justfy-content-start" method="post">
+                				@csrf
+								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
+									<div>
+										<select class="search_form_select" name="eventType_id">
+											<option >Event</option>
+											@foreach($event as $event)
+            								<option value="{{$event->id}}">{{$event->event_name}}</option>
+            								@endforeach
+										</select>
+									</div>
+									<div>
+										<select class="search_form_select" name="state_id">
+											<option>State</option>
+											@foreach($state as $state)
+            								<option value="{{$state->id}}">{{$state->state_name}}</option>
+            								@endforeach
+										</select>
+									</div>
+									<div>
+										<select class="search_form_select" name="city_id">
+											<option>City</option>
+											@foreach($city as $city)
+            								<option value="{{$city->id}}">{{$city->city_name}}</option>
+            								@endforeach
+										</select>
+									</div>
+									<div>
+										<select class="search_form_select" name="township_id">>
+											<option> Township</option>
+											@foreach($township as $township)
+            								<option value="{{$township->id}}">{{$township->township_name}}</option>
+            								@endforeach
+										</select>
+									</div>
+								</div>
+								<button class="search_form_button ml-auto">search</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>  -->
 
 
 	<!-- Recent -->
@@ -149,8 +200,8 @@
 							<div class="recent_slider_nav recent_slider_next"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
 						</div>
 					</div>
-					<div class="button recent_button"><a href="#">see more</a></div>
-				</div>
+					<!-- <div class="button recent_button"><a href="#">see more</a></div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -259,31 +310,4 @@
 		</div>
 	</div> -->
  
-
-
-				<!-- Testimonial Item -->
-				<div class="col-lg-4 testimonial_col">
-					<div class="testimonial">
-						<div class="testimonial_title">Friendly Realtors</div>
-						<div class="testimonial_text">Nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit.</div>
-						<div class="testimonial_author_image"><img src="../frontendassets/images/testimonial_2.jpg" alt=""></div>
-						<div class="testimonial_author"><a href="#">Michael Duncan</a><span>, Client</span></div>
-						<div class="rating_r rating_r_5 testimonial_rating"><i></i><i></i><i></i><i></i><i></i></div>
-					</div>
-				</div>
-
-				<!-- Testimonial Item -->
-				<div class="col-lg-4 testimonial_col">
-					<div class="testimonial">
-						<div class="testimonial_title">Very good communication</div>
-						<div class="testimonial_text">Retiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.</div>
-						<div class="testimonial_author_image"><img src="../frontendassets/images/testimonial_3.jpg" alt=""></div>
-						<div class="testimonial_author"><a href="#">Shawn Gaines</a><span>, Client</span></div>
-						<div class="rating_r rating_r_5 testimonial_rating"><i></i><i></i><i></i><i></i><i></i></div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
 @endsection
