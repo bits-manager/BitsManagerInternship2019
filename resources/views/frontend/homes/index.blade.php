@@ -1,4 +1,5 @@
 
+
 @extends('layouts.frontend-master')
 
 @section('content')
@@ -21,7 +22,7 @@
 				
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(../frontendassets/images/balloon.jpg)"></div>
+					<div class="home_slider_background" style="background-image:url(../frontendassets/images/hallshome.jpg)"></div>
 					<div class="slide_container">
 						<div class="container">
 							<div class="row">
@@ -57,7 +58,7 @@
 							<form action="{{route('hall_search')}}" class="search_form d-flex flex-row align-items-start justfy-content-start" method="post">
                 				@csrf
 								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
-									<div>
+									<div id="a">
 										<select class="search_form_select" name="eventType_id">
 											<option >Event</option>
 											@foreach($event as $event)
@@ -65,7 +66,7 @@
             								@endforeach
 										</select>
 									</div>
-									<div>
+									<div id="a">
 										<select class="search_form_select" name="state_id">
 											<option>State</option>
 											@foreach($state as $state)
@@ -73,7 +74,7 @@
             								@endforeach
 										</select>
 									</div>
-									<div>
+									<div id="a">
 										<select class="search_form_select" name="city_id">
 											<option>City</option>
 											@foreach($city as $city)
@@ -81,7 +82,7 @@
             								@endforeach
 										</select>
 									</div>
-									<div>
+									<div id="a">
 										<select class="search_form_select" name="township_id">>
 											<option> Township</option>
 											@foreach($township as $township)
@@ -90,14 +91,16 @@
 										</select>
 									</div>
 								</div>
-								<button class="search_form_button ml-auto">search</button>
+								<button class="search_form_button ml-auto" id="a">search</button>
 							</form>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
 	</div>  -->
+
 
 
 	<!-- Recent -->
@@ -113,23 +116,22 @@
 				<div class="col">
 					<div class="recent_slider_container">
 						<div class="owl-carousel owl-theme recent_slider">
-							
+						
 							<!-- Slide -->
-							<div class="owl-item">
+							<div class="owl-item" ng-repeat="x in halls">
 								<div class="recent_item">
-									<div class="recent_item_inner">
+									<div class="recent_item_inner" >
 										<div class="recent_item_image">
-											<a href="eventdetail" ><img src="../frontendassets/images/wedding3.jpg" alt="" width="600" height="350"></a>
-											<div class="centered">Wedding</div>
+											<a href="eventdetail"><img src="<% x.image %>" alt="" width="600" height="350"></a>
+											<div class="centered" ><% x.event_name %> </div>
 
 										</div>
 										
 										<div class="recent_item_body">
-											
 												<div class="recent_item_title text-center"><a href="eventdetail" >View Event Detail</a></div>
 												<div class="recent_item_title text-center">
 												<a href="hallabout" >Hall Information</a>
-											</div>
+												</div>
 										</div>
 										
 										
@@ -205,8 +207,10 @@
 			</div>
 		</div>
 	</div>
-
+</div>
+@endsection
 	<!-- Cities -->
+
 
 	<!-- <div class="cities">
 		<div class="container">
@@ -310,4 +314,3 @@
 		</div>
 	</div> -->
  
-@endsection

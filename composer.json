@@ -13,14 +13,13 @@
         "farhanwazir/laravelgooglemaps": "dev-master",
         "fideloper/proxy": "^4.0",
         "guzzlehttp/guzzle": "^6.3",
+        "jorenvanhocht/laravel-share": "^2.0",
         "kryptonit3/counter": "5.2.*",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
         "spatie/laravel-permission": "^2.37",
-
-        "watson/active": "^3.1",
         "swiftmailer/swiftmailer": "^6.0",
-
+        "watson/active": "^3.1",
         "wildbit/swiftmailer-postmark": "^3.0"
     },
     "require-dev": {

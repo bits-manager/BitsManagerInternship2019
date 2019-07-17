@@ -101,19 +101,19 @@ $scope.selectChange = function(){
         }).then(function mySuccess(response) {
            $scope.cities = response.data.data.city;
            $scope.selectedCity = $scope.cities[0].id;
-           
+           console.log("$scope.selectedCity");
            $scope.townships=response.data.data.township;
            $scope.selectedTownship = $scope.townships[0].id;
           }, function myError(response) {
 
             $scope.cities = [];
-           $scope.townships=[];
+           $scope.townships = [];
 
         });
 
   }
   
-   $http({
+  $http({
           method : "GET",
           url : "/api/v1/get_township?state_id="+$scope.selectedState+"&city_id="+$scope.selectedCity,
         }).then(function mySuccess(response) {
@@ -140,5 +140,8 @@ $scope.selectChange = function(){
             $scope.townships = [];
         });
   }
+
+
+
 });
 </script>

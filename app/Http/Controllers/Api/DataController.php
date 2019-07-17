@@ -74,6 +74,7 @@ class DataController extends ApiController
 }
     /*public function getEventHall(Request $request)
     {
+<<<<<<< HEAD
     
       $eventType_id = $request->eventType_id;
       $state_id = $request->state_id;
@@ -91,4 +92,5 @@ class DataController extends ApiController
 
       dd($halls);    
     }*/
+
 

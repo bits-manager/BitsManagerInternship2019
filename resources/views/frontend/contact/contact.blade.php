@@ -1,33 +1,17 @@
+<style type="text/css">
+#hallhome{
+          height:200px;
+	      background-color:rgb(241, 246, 249);
+         }
+</style>
 @extends('layouts.frontend-master')
 @section('content')
-	<div class="home">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="../frontendassets/images/contact.jpg" data-speed="0.8"></div>
-		<div class="home_container">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<div class="home_content d-flex flex-row align-items-end justify-content-start">
-							<div class="home_title">Contact</div>
-							<div class="breadcrumbs ml-auto">
-								<ul>
-									<li><a href="index.htmo">Home</a></li>
-									<li>Contact</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
-
-	
-
- @include('frontend.partials.homesearch')
 
 
 <div class="contact">
+
+              
 		<div class="container">
 			<div class="row">
 

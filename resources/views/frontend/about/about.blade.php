@@ -1,30 +1,6 @@
 @extends('layouts.frontend-master')
 
 @section('content')
-
-<!-- Home -->
-
-	<div class="home">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="/frontendassets/images/about.jpg" data-speed="0.8"></div>
-		<div class="home_container">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<div class="home_content d-flex flex-row align-items-end justify-content-start">
-							<div class="home_title">About</div>
-							<div class="breadcrumbs ml-auto">
-								<ul>
-									<li><a href="homes">Home</a></li>
-									<li>About us</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	 
 	<!-- About -->
 
@@ -35,66 +11,64 @@
 				<!-- About Content -->
 				<div class="col-lg-6">
 					<div class="about_content">
-						<div class="section_title">A few words about us</div>
-						<div class="section_subtitle">Search your dream home</div>
+						<div class="section_title">About us</div>
+						
 						<div class="about_text">
-							<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Donec in tempus leo. Aenean ultricies mauris sed quam lacinia lobortis. Cras ut vestibulum enim, in gravida nulla. Curabitur ornare nisl at sagittis cursus. Sed mattis, eros non vulputate luctus, erat dui dapibus augue, eu fringilla tortor ante id mi. Sed a enim libero. Vestibulum pharetra aliquam convallis. </p>
+						 <p style="font-size: 18px">The user can search halls on a single place. Hall's owner 
+						 can advertise their halls , user can contact hall's owner to rent halls and
+						 can known hall's locations.</p>
 						</div>
 					</div>
 				</div>
 
 				<!-- About Image -->
 				<div class="col-lg-6">
-					<div class="about_image"><img src="/frontendassets/images/about_image.jpg" alt=""></div>
+					<div class="about_image"><img src="/frontendassets/images/abouthall.jpg" alt=""></div>
 				</div>
 			</div>
 			<div class="row milestones_row">
 
-				<!-- Milestone -->
-				<div class="col-lg-3 milestone_col">
-					<div class="milestone d-flex flex-row align-items-center justify-content-start">
-						<div class="milestone_icon d-flex flex-column align-items-center justify-content-center"><img src="/frontendassets/images/milestones_1.png" alt=""></div>
-						<div class="milestone_content">
-							<div class="milestone_counter" data-end-value="651">0</div>
-							<div class="milestone_text">Properties Sold</div>
-						</div>
-					</div>
-				</div>
+			 <div class="contactus">
+              		<div class="container">
+              			<div class="contactus_text"><h4 style="font-size: 26px;color: blue;margin-top: -60px;margin-bottom:20px;">Advantages</h4></div>
+              		    <div class="row">
+                            
+              			    <div class="col-lg-2">
+              					<div class="contactus_image"><img src="/frontendassets/images/times.jpg" alt="" style="width: 100px;height: 100px;"></div>
+              			
+              				</div>
+              			
+              				<div class="col-lg-2">
+              					<div class="contactus_image"><img src="/frontendassets/images/search.jpg" alt="" style="width: 100px;height: 100px;"></div>
+              				</div>
+              
+              				<div class="col-lg-2">
+              				    <div class="contactus_image"><img src="/frontendassets/images/phone.jpg" alt="" style="width: 100px;height: 100px;"></div>
+              			    </div>
+              			    <div class="col-lg-2">
+              				    <div class="contactus_image"><img src="/frontendassets/images/save.jpg" alt="" style="width: 100px;height: 100px;"></div>
+              			    </div>
+              				</div>
 
-				<!-- Milestone -->
-				<div class="col-lg-3 milestone_col">
-					<div class="milestone d-flex flex-row align-items-center justify-content-start">
-						<div class="milestone_icon d-flex flex-column align-items-center justify-content-center"><img src="/frontendassets/images/milestones_2.png" alt=""></div>
-						<div class="milestone_content">
-							<div class="milestone_counter" data-end-value="1256">0</div>
-							<div class="milestone_text">Happy Clients</div>
-						</div>
-					</div>
-				</div>
 
-				<!-- Milestone -->
-				<div class="col-lg-3 milestone_col">
-					<div class="milestone d-flex flex-row align-items-center justify-content-start">
-						<div class="milestone_icon d-flex flex-column align-items-center justify-content-center"><img src="/frontendassets/images/milestones_3.png" alt=""></div>
-						<div class="milestone_content">
-							<div class="milestone_counter" data-end-value="124">0</div>
-							<div class="milestone_text">Buildings Sold</div>
-						</div>
-						
-					</div>
-				</div>
-
-				<!-- Milestone -->
-				<div class="col-lg-3 milestone_col">
-					<div class="milestone d-flex flex-row align-items-center justify-content-start">
-						<div class="milestone_icon d-flex flex-column align-items-center justify-content-center"><img src="/frontendassets/images/milestones_4.png" alt=""></div>
-						<div class="milestone_content">
-							<div class="milestone_counter" data-end-value="25">0</div>
-							<div class="milestone_text">Awards Won</div>
-						</div>
-					</div>
-				</div>
-
+              			   <div class="row">
+              			   	<div class="col-lg-2">
+              				     <div class="contactus_text"><h4 style="font-size: 16px;color: blue;margin-top:5px;margin-bottom:20px;">Save Time</h4></div>
+              				</div>
+              				<div class="col-lg-2">
+              				     <div class="contactus_text"><h4 style="font-size: 16px;color: blue;margin-top:5px;margin-bottom:20px;">Easy to Search</h4></div>
+              				</div>
+              				<div class="col-lg-2">
+              				     <div class="contactus_text"><h4 style="font-size: 16px;color: blue;margin-top:5px;margin-bottom:20px;">Easy to Contact</h4></div>
+              				</div>
+              				<div class="col-lg-2">
+              				     <div class="contactus_text"><h4 style="font-size: 16px;color: blue;margin-top:5px;margin-bottom:20px;">Save Cost</h4></div>
+              				</div>
+              			   </div>
+              			</div>
+              		</div>
+              	</div>	
+				
 			</div>
 		</div>
 	</div>
@@ -102,11 +76,11 @@
 	<!-- Realtors -->
 
 	<div class="realtors">
+		 
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<div class="section_title">The Realtors</div>
-					<div class="section_subtitle">Search your dream home</div>
+					<div class="section_title">The Realtors</div>		
 				</div>
 			</div>
 			<div class="row realtors_row">
@@ -115,10 +89,9 @@
 				<div class="col-lg-2 col-md-6">
 					<div class="realtor_outer">
 						<div class="realtor">
-							<div class="realtor_image"><img src="/frontendassets/images/hninwai.jpg" alt=""></div>
+							<div class="realtor_image"><img src="/frontendassets/images/hninwai.jpg" alt="" width="165" height="215"></div>
 							<div class="realtor_body">
 								<div class="realtor_title">Hnin Wai Wai</div>
-								<div class="realtor_subtitle">Senior Realtor</div>
 							</div>
 							<div class="realtor_link"><a href="#">+</a></div>
 						</div>
@@ -132,10 +105,9 @@
 				<div class="col-lg-2 col-md-6">
 					<div class="realtor_outer">
 						<div class="realtor">
-							<div class="realtor_image"><img src="/frontendassets/images/htayhtay.jpeg" alt=""></div>
+							<div class="realtor_image"><img src="/frontendassets/images/htayhtay.jpeg" alt=""  width="165" height="215"></div>
 							<div class="realtor_body">
 								<div class="realtor_title">Htay Htay Aung</div>
-								<div class="realtor_subtitle">Senior Realtor</div>
 							</div>
 							<div class="realtor_link"><a href="#">+</a></div>
 						</div>
@@ -149,10 +121,9 @@
 				<div class="col-lg-2  col-md-6">
 					<div class="realtor_outer">
 						<div class="realtor">
-							<div class="realtor_image"><img src="/frontendassets/images/waimi.jpg" alt=""></div>
+							<div class="realtor_image"><img src="/frontendassets/images/waimi.jpg" alt="" width="165" height="215"></div>
 							<div class="realtor_body">
 								<div class="realtor_title">Wai Mi Aung</div>
-								<div class="realtor_subtitle">Senior Realtor</div>
 							</div>
 							<div class="realtor_link"><a href="#">+</a></div>
 						</div>
@@ -165,10 +136,9 @@
 				<div class="col-lg-2  col-md-6">
 					<div class="realtor_outer">
 						<div class="realtor">
-							<div class="realtor_image"><img src="/frontendassets/images/khaing.jpg" alt=""></div>
+							<div class="realtor_image"><img src="/frontendassets/images/khaing.jpg" alt="" width="165" height="215"></div>
 							<div class="realtor_body">
 								<div class="realtor_title">Khaing Zin Tun</div>
-								<div class="realtor_subtitle">Senior Realtor</div>
 							</div>
 							<div class="realtor_link"><a href="#">+</a></div>
 						</div>
@@ -181,10 +151,9 @@
 				<div class="col-lg-2  col-md-6">
 					<div class="realtor_outer">
 						<div class="realtor">
-							<div class="realtor_image"><img src="/frontendassets/images/hmn.jpg" alt=""></div>
+							<div class="realtor_image"><img src="/frontendassets/images/hmn.jpg" alt="" width="165" height="215"></div>
 							<div class="realtor_body">
 								<div class="realtor_title">Htet Myat Noe</div>
-								<div class="realtor_subtitle">Senior Realtor</div>
 							</div>
 							<div class="realtor_link"><a href="#">+</a></div>
 						</div>
@@ -197,10 +166,9 @@
 				<div class="col-lg-2  col-md-6">
 					<div class="realtor_outer">
 						<div class="realtor">
-							<div class="realtor_image"><img src="/frontendassets/images/hninthu.jpg" alt=""></div>
+							<div class="realtor_image"><img src="/frontendassets/images/hninthu.jpg" alt="" width="165" height="215"></div>
 							<div class="realtor_body">
 								<div class="realtor_title">Hnin Thu</div>
-								<div class="realtor_subtitle">Senior Realtor</div>
 							</div>
 							<div class="realtor_link"><a href="#">+</a></div>
 						</div>
@@ -212,5 +180,33 @@
 
 			</div>
 		</div>
+		 <div class="contactus">
+              		<div class="container">
+              			<div class="contactus_text"><h4 style="font-size: 26px;color: blue;margin-top: -60px;margin-bottom:20px;">Supported By</h4></div>
+              		    <div class="row">
+                            <div class="col-lg-1">
+              					
+              				</div>
+              			
+              				<div class="col-lg-2">
+              					<div class="contactus_image" style="margin-left: 100px;"><img src="/frontendassets/images/abouthall.jpg" alt=""></div>
+              				</div>
+              
+              				<div class="col-lg-8">
+              				<div class="contactus_text" style="margin-left: 100px;">
+              							
+<h4 style="font-size: 18px;color: blue;">
+ Bits  Manager  Co.,Ltd</h4>
+<h6><pre style="font-size: 16px;color: blue;">
+(IT Solutions Development)
+No.(A.15)S,77 Street,31*32,MDY 
+<a href="http://www.bits-manager.com">http://www.bits-manager.com</a>
+09-444200295,09-790798567 </pre></h6>
+              					</div>
+              				
+              				</div>
+              			</div>
+              		</div>
+              	</div>
 	</div>
 @endsection
