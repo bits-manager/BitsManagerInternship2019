@@ -136,6 +136,16 @@ $http({
 
   }
 
+  $http({
+          method : "GET",
+          url : "/api/v1/get_event_hall?eventType_id=2&state_id=1&city_id=1&township_id=2",
+        }).then(function mySuccess(response) {
+           $scope.halls = response.data.data;
+          }, function myError(response) {
+
+            $scope.townships = [];
+
+        });
 
 });
 
