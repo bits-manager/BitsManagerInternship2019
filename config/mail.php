@@ -30,7 +30,7 @@
     |
     */
 
-   'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+ 'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
 
     /*
     |--------------------------------------------------------------------------
@@ -43,7 +43,9 @@
     |
     */
 
+
     'port' => env('MAIL_PORT',465),
+
 
     /*
     |--------------------------------------------------------------------------
@@ -57,8 +59,10 @@
     */
 
     'from' => [
+
         'address' => env('MAIL_FROM_ADDRESS', 'hninwaiwai51986@gmail.com'),
         'name' => env('MAIL_FROM_NAME', 'hnin'),
+
     ],
     
 
@@ -86,9 +90,11 @@
     |
     */
 
+
     'username' => env('hninwaiwai51986@gmail.com'),
 
-    'password' => env('nawrajkochori'),
+
+    'password' => env('htet123456'),
 
     /*
     |--------------------------------------------------------------------------
@@ -102,6 +108,7 @@
     */
 
     'sendmail' => '/usr/sbin/sendmail -bs',
+
 
 
     'pretend' => false,

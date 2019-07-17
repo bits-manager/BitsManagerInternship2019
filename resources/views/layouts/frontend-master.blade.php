@@ -32,16 +32,25 @@
 		   <div class="main-content">
             @yield('content')
            </div>
-           @include('frontend.partials.footer')
+         @include('frontend.partials.footer')
+ 
     </div>
 <script src="/frontendassets/js/jquery-3.2.1.min.js"></script>
+
+
+
 <script src="/frontendassets/plugins/greensock/TweenMax.min.js"></script>
 <script src="/frontendassets/plugins/greensock/TimelineMax.min.js"></script>
 <script src="/frontendassets/plugins/scrollmagic/ScrollMagic.min.js"></script>
 <script src="/frontendassets/plugins/greensock/animation.gsap.min.js"></script>
 <script src="/frontendassets/plugins/greensock/ScrollToPlugin.min.js"></script>
 <script src="/frontendassets/js/about.js"></script>
+
+
+
+
 <script src="/frontendassets/js/properties.js"></script>
+
 <script src="/frontendassets/styles/bootstrap4/popper.js"></script>
 <script src="/frontendassets/styles/bootstrap4/bootstrap.min.js"></script>
 <script src="/frontendassets/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
@@ -50,7 +59,7 @@
 <script src="/frontendassets/js/custom.js"></script>
 <script src="/frontendassets/plugins/rangeslider.js-2.3.0/rangeslider.min.js"></script>
 <script src="/frontendassets/plugins/parallax-js-master/parallax.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAek8mUtwgSQKv_6DPa6RVToBMspOi74ak"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
 <script src="/frontendassets/js/contact.js"></script>
 </body>
 </html>

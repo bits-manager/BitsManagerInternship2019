@@ -290,7 +290,7 @@ section
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: rgba(255,255,255,0.33);
+	background: #fff;
 	z-index: 200;
     -webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -300,7 +300,7 @@ section
 }
 .header_content
 {
-	height: 101px;
+	height: 60px;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -309,7 +309,7 @@ section
 }
 .header.scrolled
 {
-	background: rgba(255,255,255,0.33);
+	background: #fff;
 }
 .header.scrolled .header_content
 {
@@ -317,7 +317,7 @@ section
 }
 .logo
 {
-	width: 110px;
+	width: 30px;
 }
 .logo img
 {
@@ -689,7 +689,7 @@ section
 {
 	width: 100%;
 	background: #FFFFFF;
-	padding-top: 119px;
+	padding-top: 80px;
 	padding-bottom: 105px;
 }
 .contact .section_title

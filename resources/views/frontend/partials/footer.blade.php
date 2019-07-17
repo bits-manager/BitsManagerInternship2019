@@ -51,6 +51,10 @@
 				</div>
 			</div>
 		</div> -->
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="{{ asset('js/share.js') }}">
+        	Share::page('http://www.bits-manager.com')->facebook();
+        </script>
 		<div class="footer_bar">
 			<div class="container">
 				<div class="row">
@@ -60,7 +64,7 @@
                               Copyright &copy;2019 All rights reserved 
                                 
                             </div>
-							<div class="footer_phone ml-auto"><span>Join us on: </span><a href="#"><img src="../frontendassets/images/facebook.png" class="logo" alt=""></a>
+							<div class="footer_phone ml-auto"><span>Share on:</span><a href="https://www.facebook.com/sharer/sharer.php?u=http://www.bits-manager.com" ><img src="../frontendassets/images/facebook.png" class="logo" alt=""></a>
 							</div>
 						</div>
 					</div>

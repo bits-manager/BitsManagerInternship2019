@@ -18,13 +18,12 @@
 			<div class="row">
 				<div class="col">
 					
-
 					<div class="header_content d-flex flex-row align-items-center justify-content-start">
 
-						 <div class="logo">
-							<a href="#"><img src="../frontendassets/images/halllogo.jpg" alt=""></a>
-						</div> 
+						 <div>
+							<a href="#"><img src="../frontendassets/images/hallmyanmar.jpg" alt="" style="width: 200px"></a>
 
+						</div> 
 						<nav class="main_nav">
 							<ul>
 								<li><a href="homes"><i class="fa fa-home"></i> Home</a>

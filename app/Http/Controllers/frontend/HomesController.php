@@ -18,6 +18,7 @@ class HomesController extends Controller
     	$township = DB::table('townships')->get();
 
     	$count = \Counter::showAndCount('frontend.homes');
+
         //dd($count);
         return view('frontend.homes.index',compact('event','state','city','township'));
     }
