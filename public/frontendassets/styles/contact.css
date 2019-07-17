@@ -290,9 +290,8 @@ section
 	top: 0;
 	left: 0;
 	width: 100%;
-	background:#fff;
+	background: rgba(255,255,255,0.33);
 	z-index: 200;
-	
     -webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -301,7 +300,7 @@ section
 }
 .header_content
 {
-	height: 60px;
+	height: 101px;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -310,15 +309,15 @@ section
 }
 .header.scrolled
 {
-	background: #fff;
+	background: rgba(255,255,255,0.33);
 }
 .header.scrolled .header_content
 {
-	height: 60px;
+	height: 80px;
 }
 .logo
 {
-	width: 35px;
+	width: 110px;
 }
 .logo img
 {
@@ -1029,7 +1028,7 @@ section
 {
 	font-size: 14px;
 	font-weight: 500;
-	color: #000;
+	color: #828282;
 }
 .footer_nav
 {
@@ -1060,8 +1059,8 @@ section
 }
 .footer_phone
 {
-	font-size: 12px;
-	color: #000;
+	font-size: 14px;
+	color: #828282;
 	font-weight: 500;
 }
 .footer_phone span

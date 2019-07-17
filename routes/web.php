@@ -80,8 +80,9 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
             'index' => 'contact'
         ]
     ]);
+Route::get('googlemap', 'ContactController@map');
 
-
+Route::get('googlemap/direction', 'ContactController@direction');
 
     Route::resource('address', 'AddressController', [
         'names' => [

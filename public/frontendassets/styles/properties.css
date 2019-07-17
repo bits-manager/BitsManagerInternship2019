@@ -344,17 +344,12 @@ section
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
 	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
 }
-.main_nav ul li.active a,
 .main_nav ul li a:hover
 {
-	color: #2cd983;
 }
 .phone_num
 {
-	height: 43px;
-    border-radius: 22px;
     background: linear-gradient(to right, #487fee, #32fa95);
     padding: 2px;
     overflow: hidden;
