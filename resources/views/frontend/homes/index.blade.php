@@ -118,7 +118,8 @@
 								<div class="recent_item">
 									<div class="recent_item_inner" >
 										<div class="recent_item_image">
-											<a href="eventdetail"><img src="<% x.image %>" alt="" width="600" height="350"></a>
+											<a href="eventdetail"><img src="../image
+												/<% x.image %>" alt=""></a>
 											<div class="centered" ><% x.event_name %> </div>
 
 										</div>
@@ -284,7 +285,7 @@ $http({
 
   $http({
           method : "GET",
-          url : "/api/v1/get_event_hall?eventType_id=7&state_id=1&city_id=1&township_id=2",
+          url : "/api/v1/get_event_hall?eventType_id=8&state_id=1&city_id=1&township_id=2",
         }).then(function mySuccess(response) {
            $scope.halls = response.data.data;
            console.log("hall Information"+$scope.halls);
