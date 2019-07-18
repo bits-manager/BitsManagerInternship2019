@@ -73,9 +73,8 @@ class DataController extends ApiController
       
         try {
           $townships =$this->townshipRepo->gettownship($request->state_id,$request->city_id);
-            if(count($townships)>0){
-              return $this->respondSuccess('success',$townships); 
-              }   
+            if(count($townships)>0)
+              return $this->respondSuccess('success',$townships);    
         } catch (\Exception $e) {
             \Log::error($e->getMessage());
         }
@@ -110,3 +109,4 @@ class DataController extends ApiController
     }
 
 }
+

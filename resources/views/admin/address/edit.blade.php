@@ -95,5 +95,6 @@
       </div>
       </form>
   </div>
-</div>
+</div></div></div>
+<script src="{{ asset('js/app.js') }}?{{ uniqid() }}"></script>
 @endsection
