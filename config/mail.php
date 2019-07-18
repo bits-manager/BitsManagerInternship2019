@@ -30,7 +30,7 @@
     |
     */
 
-   'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+   'host' => env('MAIL_HOST', 'smtp.googlemail.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -57,7 +57,7 @@
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hninwaiwai51986@gmail.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'nithupoudel554@gmail.com'),
         'name' => env('MAIL_FROM_NAME', 'hnin'),
     ],
     
@@ -86,7 +86,7 @@
     |
     */
 
-    'username' => env('hninwaiwai51986@gmail.com'),
+    'username' => env('nithupoudel554@gmail.com'),
 
     'password' => env('nawrajkochori'),
 

@@ -20,40 +20,40 @@ return [
         'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
     ],
 
-    'postmark' => [
-        'token' => env('POSTMARK_TOKEN'),
-    ],
+    // 'postmark' => [
+    //     'token' => env('POSTMARK_TOKEN'),
+    // ],
 
-    'ses' => [
-        'key' => env('AWS_ACCESS_KEY_ID'),
-        'secret' => env('AWS_SECRET_ACCESS_KEY'),
-        'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
-         'options' => [
-        'ConfigurationSetName' => 'MyConfigurationSet',
-        'Tags' => [
-            [
-                'Name' => 'foo',
-                'Value' => 'bar',
-            ],
-         ],
-      ],
-    ],
+    // 'ses' => [
+    //     'key' => env('AWS_ACCESS_KEY_ID'),
+    //     'secret' => env('AWS_SECRET_ACCESS_KEY'),
+    //     'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
+    //      'options' => [
+    //     'ConfigurationSetName' => 'MyConfigurationSet',
+    //     'Tags' => [
+    //         [
+    //             'Name' => 'foo',
+    //             'Value' => 'bar',
+    //         ],
+    //      ],
+    //   ],
+    // ],
 
-    'sparkpost' => [
-        'secret' => env('SPARKPOST_SECRET'),
-         'options' => [
-        'endpoint' => 'https://api.eu.sparkpost.com/api/v1/transmissions',
-          ],
-    ],
+    // 'sparkpost' => [
+    //     'secret' => env('SPARKPOST_SECRET'),
+    //      'options' => [
+    //     'endpoint' => 'https://api.eu.sparkpost.com/api/v1/transmissions',
+    //       ],
+    // ],
 
-    'stripe' => [
-        'model' => App\User::class,
-        'key' => env('STRIPE_KEY'),
-        'secret' => env('STRIPE_SECRET'),
-        'webhook' => [
-            'secret' => env('STRIPE_WEBHOOK_SECRET'),
-            'tolerance' => env('STRIPE_WEBHOOK_TOLERANCE', 300),
-        ],
-    ],
+    // 'stripe' => [
+    //     'model' => App\User::class,
+    //     'key' => env('STRIPE_KEY'),
+    //     'secret' => env('STRIPE_SECRET'),
+    //     'webhook' => [
+    //         'secret' => env('STRIPE_WEBHOOK_SECRET'),
+    //         'tolerance' => env('STRIPE_WEBHOOK_TOLERANCE', 300),
+    //     ],
+    // ],
 
 ];
