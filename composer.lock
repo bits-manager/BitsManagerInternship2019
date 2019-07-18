@@ -5,8 +5,13 @@
         "This file is @generated automatically"
     ],
 
+<<<<<<< HEAD
+    
+    "content-hash": "8578a97b0dbabb3d680471f2214bb5cf",
+=======
     "content-hash": "0d9a4c1502bb123a686bfc090c7e7df1",
 
+>>>>>>> 968ab8a9afda1d489b8068e6689b979ea4e67f00
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -14,12 +19,30 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
+<<<<<<< HEAD
+<<<<<<< HEAD
+                "reference": "9feac27d183fa08f210f38c8cb6d449cf2411d29"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/9feac27d183fa08f210f38c8cb6d449cf2411d29",
+                "reference":"9feac27d183fa08f210f38c8cb6d449cf2411d29",
+=======
+                "reference": "cf0c0968f93748cbe35d6a78e7babc7b7460945f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/cf0c0968f93748cbe35d6a78e7babc7b7460945f",
+                "reference": "cf0c0968f93748cbe35d6a78e7babc7b7460945f",
+>>>>>>> 968ab8a9afda1d489b8068e6689b979ea4e67f00
+=======
                 "reference": "ccd3d13ae49a45bdf6a394d701f207c276dbf05a"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ccd3d13ae49a45bdf6a394d701f207c276dbf05a",
                 "reference": "ccd3d13ae49a45bdf6a394d701f207c276dbf05a",
+>>>>>>> 5400964914d0a516644f45e0524344ac73f56a1c
                 "shasum": ""
             },
             "require": {
@@ -89,7 +112,17 @@
                 "s3",
                 "sdk"
             ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+            "time": "2019-07-02T18:21:12+00:00"
+            
+ 
+=======
+            "time": "2019-07-11T15:05:32+00:00"
+>>>>>>> 968ab8a9afda1d489b8068e6689b979ea4e67f00
+=======
             "time": "2019-07-12T18:07:41+00:00"
+>>>>>>> 5400964914d0a516644f45e0524344ac73f56a1c
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

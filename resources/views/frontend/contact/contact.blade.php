@@ -7,8 +7,6 @@
 @extends('layouts.frontend-master')
 @section('content')
 
-
-
 <div class="contact">
 
               
@@ -20,22 +18,23 @@
 					<div class="contact_info">
 						<div class="section_title">Get in touch with us</div>
 						<div class="section_subtitle">Say hello</div>
-						<div class="contact_info_text"><p>Donec ullamcorper nulla non metus auctor fringi lla. Curabitur blandit tempus porttitor.Sed lectus urna, ultricies sit amet risus eget.</p></div>
+						<div class="contact_info_text"><p>Customer easy to join admin address,email and can be call phone and also can  search in map .</p></div>
 						<div class="contact_info_content">
-							<ul class="contact_info_list">
+							<ul class="contact_info_list">	
 								<li>
-									<div>Address:</div>
-									<div>1481 Creekside Lane Avila Beach, CA 93424</div>
+									<div><strong>Address :</strong> {{$address->address}}</div>
+									
 								</li>
 								<li>
-									<div>Phone:</div>
-									<div>+53 345 7953 32453</div>
+									<div><strong>Phone :</strong> {{$address->phone}}</div>
+									
 								</li>
 								<li>
-									<div>Email:</div>
-									<div>yourmail@gmail.com</div>
+									<div><strong>Email :</strong> {{$address->email}}</div>
+									
 								</li>
-							</ul>
+								
+							</ul>    
 						</div>
 					</div>
 				</div>
