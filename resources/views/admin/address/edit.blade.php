@@ -5,13 +5,13 @@
 <section class="section">
   <div class="section-header">
 
-    <h1>Edit Address list</h1>
+    <h1>Manage Address</h1>
   </div>
  <div class="card">
       <div class="card-header">
-        <h4>Address List</h4>
+        <h4>Edit Form</h4>
         <div class="card-header-action">
-          <a href="{{ route('admin.address')}}" class="btn btn-primary">List<i class="fas fa-plus"></i></a></div>
+          <a href="{{ route('admin.address')}}" class="btn btn-primary">AddressList</a></div>
       </div>
   <div class="section-body">
    <div class="card">

@@ -6,7 +6,7 @@
 
 <section class="section">
   <div class="section-header">
-    <h1>Manage Cities</h1>
+    <h1>Manage Townships</h1>
   </div>
  <div class="card">
       <!-- card header -->
@@ -41,7 +41,7 @@
 
   
 
-        <div style="width:100%;height:100%;overflow-x: scroll;overflow-y:hidden";>
+        <div style="width:100%;height:100%;overflow-x: scroll;overflow-y:hidden;">
   
             <table class="table table-striped table-bordered" >
                  <thead>

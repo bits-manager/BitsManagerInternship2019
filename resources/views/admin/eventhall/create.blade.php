@@ -18,7 +18,7 @@
         <!-- card title -->
         <h4>Hall_Event Form</h4>
         <div class="card-header-action">
-          <a href="{{ route('admin.eventhall')}}" class="btn btn-primary">List <i class="fas fa-plus"></i></a>
+          <a href="{{ route('admin.eventhall')}}" class="btn btn-primary">HallEventList</a>
         </div>
       </div>
       <!-- card body -->

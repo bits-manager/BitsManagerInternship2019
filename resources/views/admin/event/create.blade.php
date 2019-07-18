@@ -3,15 +3,17 @@
 @section('content')
 <section class="section">
   <div class="section-header">
-    <h1>Event Form</h1>
+    <h1>Manage Events</h1>
   </div>
   <div class="section-body">
 
     <div class="card">
       <!-- card header -->
       <div class="card-header">
-        <h4>Add New Event</h4>
-
+        <h4>Add a New Event</h4>
+        <div class="card-header-action" >
+        <a href="{{route('admin.event')}}" class="btn btn-primary">EventList</a>
+        </div>
       </div>
   <div class="card-body">
     

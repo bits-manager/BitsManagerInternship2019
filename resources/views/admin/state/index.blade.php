@@ -63,8 +63,8 @@
              <div class="modal-footer">
                  <center>
                      <input type="hidden" name="state_id" id="state_id" >
-                     <button type="submit" name="" class="btn btn-danger" data-dismiss="modal" onclick="formSubmit()">Yes, Delete</button>
-                     <button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
+                     <button type="submit" name="" class="btn btn-danger" data-dismiss="modal" onclick="formSubmit()">OK</button>
+                     <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
                  </center>
              </div>
          </div>

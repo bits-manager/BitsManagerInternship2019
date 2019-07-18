@@ -23,11 +23,43 @@ class DataController extends ApiController
 
       try {
 
-        $cities = $this->cityRepo->getcities($request->state_id);
-              
+        $cities = $this->cityRepo->getcity($request->state_id);  
           if(count($cities)>0){
             return $this->respondSuccess('success',$cities);
+          }
+          
+      } catch (\Exception $e) {
+        \Log::error($e->getMessage());
+      }
+      return $this->respondError('error');
+    }
 
+
+    public function getAll(Request $request)
+    {
+
+    	try{
+    		$cities = $this->cityRepo->getcity($request->state_id);
+        $city=$cities[0]->id;
+        $townships=$this->townshipRepo->gettownship($request->state_id,$city);
+          if(count($cities)>0 || count($townships)>0){
+            return $this->respondSuccess('success',['city'=>$cities,'township'=>$townships]);
+          } 	
+    	} catch (\Exception $e) {
+    		\Log::error($e->getMessage());
+    	}
+      return $this->respondError('error');
+    }
+
+
+    public function getAllEdit(Request $request)
+    {
+
+      try{
+        $cities = $this->cityRepo->getcity($request->state_id);
+        $townships=$this->townshipRepo->gettownship($request->state_id,$request->city_id);   
+          if(count($cities)>0 || count($townships)>0){
+            return $this->respondSuccess('success',['city'=>$cities,'township'=>$townships]);
           }   
       } catch (\Exception $e) {
         \Log::error($e->getMessage());
@@ -35,32 +67,15 @@ class DataController extends ApiController
       return $this->respondError('error');
     }
 
-    public function getCities(Request $request)
-    {
-
-    	try{
-
-    		$cities = $this->cityRepo->getcities($request->state_id);
-        $city=$cities[0]->id;
-        $townships=$this->townshipRepo->gettownships($request->state_id,$city);      
-		      if(count($cities)>0 || count($townships)>0){
-            return $this->respondSuccess('success',['city'=>$cities,'township'=>$townships]);
-
-        } 	
-    	} catch (\Exception $e) {
-    		\Log::error($e->getMessage());
-    	}
-      return $this->respondError('error');
-    }
 
    public function getTownship(Request $request)
     {
       
         try {
-            $townships =$this->townshipRepo->gettownships($request->state_id,$request->city_id);
-
-              if(count($townships)>0)
-                return $this->respondSuccess('success',$townships);    
+          $townships =$this->townshipRepo->gettownship($request->state_id,$request->city_id);
+            if(count($townships)>0){
+              return $this->respondSuccess('success',$townships); 
+              }   
         } catch (\Exception $e) {
             \Log::error($e->getMessage());
         }
@@ -69,6 +84,7 @@ class DataController extends ApiController
 
     public function getEventHall(Request $request)
     {
+
       try{
           $eventType_id= $request->eventType_id;
           $state_id= $request->state_id;
@@ -90,6 +106,7 @@ class DataController extends ApiController
             \Log::error($e->getMessage());
         }
         return $this->respondError('error');
+
     }
 
 }
