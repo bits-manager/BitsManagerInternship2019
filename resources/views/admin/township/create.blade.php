@@ -50,37 +50,41 @@ Manage Townships
                  </div><br />
                @endif
                   <form method="post" action="{{ route('admin.townships.store') }}">
+
                      <div class="form-group row mb-4">
 
                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">State Name</label>
                       <div class="col-sm-12 col-md-7">
                     <select ng-model="selectedState" id="state" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control">
-                    </select>
-                      </div>
-                     </div>
-                   <div class="form-group row mb-4">
 
-                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">City Name</label>
-                      <div class="col-sm-12 col-md-7">
-                        <select ng-model="selectedCity" id="city" name="city_id" value="selectedCity"  ng-options="city.id as city.city_name for city in cities" class="form-control" >
                     </select>
-                      </div>
-                   </div> 
-                     <div class="form-group row mb-4">
-                         @csrf
-                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Township Name:</label>
-                      <div class="col-sm-12 col-md-7">
-                        <input type="text" class="form-control" id="township_name" placeholder="Enter Township Name" name="township_name">
-                      </div>
+
+                    </div>
                     </div>
 
-                  <div class="form-group row mb-4">
-                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
-                     <div class="col-sm-12 col-md-7">
-                     <button type="submit" class="btn btn-primary">Save</button>
-                       <input type="button" value="Cancel" class="btn btn-primary" onclick="clearText()"/>
-                     </div>
-                 </div>
+                    <div class="form-group row mb-4">
+                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">City Name</label>
+                    <div class="col-sm-12 col-md-7">     
+                      <select ng-model="selectedCity" id="city" name="city_id" value="selectedCity" ng-options="city.id as city.city_name for city in cities" class="form-control" >
+                    </select>
+                    </div>
+                    </div> 
+
+                    <div class="form-group row mb-4">
+                        @csrf
+                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Township Name:</label>
+                    <div class="col-sm-12 col-md-7">
+                    <input type="text" class="form-control" id="township_name" placeholder="Enter Township Name" name="township_name">
+                    </div>
+                    </div>
+
+                    <div class="form-group row mb-4">
+                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                    <div class="col-sm-12 col-md-7">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <input type="button" value="Cancel" class="btn btn-primary" onclick="clearText()"/>
+                    </div>
+                    </div>
                   </form>
              </div>
           <!-- card footer -->
@@ -90,6 +94,7 @@ Manage Townships
  </div>
 </section>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script>
 var states={!! json_encode($statedata) !!};
@@ -101,6 +106,7 @@ app.config(function($interpolateProvider){
 });
 
 app.controller('myCtrl', function($scope, $http) {
+ 
 
 $scope.states= states;
 $scope.cities = cities;
@@ -113,6 +119,8 @@ $http({
         }).then(function mySuccess(response) {
 
            $scope.cities = response.data.data;
+           console.log($scope.cities);
+           
           }, function myError(response) {
 
             $scope.cities = [];
@@ -125,20 +133,15 @@ $http({
           method : "GET",
           url : "/api/v1/get_city?state_id="+$scope.selectedState,
         }).then(function mySuccess(response) {
-           console.log(response.data.data);
            $scope.cities = response.data.data;
            $scope.selectedCity = $scope.cities[0].id;
-          }, function myError(response) {
+          },function myError(response) {
 
             $scope.cities = [];
 
         });
-
-  }
-
-
+      }
 });
-
 </script>
 
 <script type="application/javascript">

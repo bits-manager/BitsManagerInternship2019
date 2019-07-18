@@ -13,6 +13,6 @@ class StatesTableSeeder extends Seeder
     {
         \DB::table('states')->insert([
             'state_name' => 'Mandalay',
-        ]);//
+        ]);
     }
 }

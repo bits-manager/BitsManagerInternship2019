@@ -28,6 +28,7 @@
 <body>
 	<div class="super_container">
 		 @include('frontend.partials.header')
+
 		 @include('frontend.partials.menu')
 		   <div class="main-content">
             @yield('content')

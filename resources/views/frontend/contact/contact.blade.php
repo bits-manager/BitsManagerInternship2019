@@ -7,7 +7,7 @@
 @extends('layouts.frontend-master')
 @section('content')
 
-	
+
 
 <div class="contact">
 

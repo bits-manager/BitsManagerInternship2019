@@ -218,13 +218,13 @@ $scope.selectChange = function(){
         }).then(function mySuccess(response) {
            $scope.cities = response.data.data.city;
            $scope.selectedCity = $scope.cities[0].id;
-           
+           console.log("$scope.selectedCity");
            $scope.townships=response.data.data.township;
            $scope.selectedTownship = $scope.townships[0].id;
           }, function myError(response) {
 
             $scope.cities = [];
-           $scope.townships=[];
+           $scope.townships = [];
 
         });
 
@@ -294,12 +294,4 @@ $scope.selectChange = function(){
                 });
             });
 </script>
-@endsection
-
-
-
-
-
-
-
- 
+@endsection 
