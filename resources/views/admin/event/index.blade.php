@@ -36,6 +36,7 @@
     </thead>
     <tbody>
         @foreach($event as $event)
+
             <td><img src="{{URL::to('/')}}/image/{{$event->image}}" class="img-thumbnail" width="100"/></td>
             <td>{{$event->event_name}}</td>
             <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$event->id}})" 

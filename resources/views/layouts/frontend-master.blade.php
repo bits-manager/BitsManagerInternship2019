@@ -32,6 +32,8 @@
 		   <div class="main-content">
             @yield('content')
            </div>
+         @include('frontend.partials.footer')
+ 
     </div>
 <script src="/frontendassets/js/jquery-3.2.1.min.js"></script>
 

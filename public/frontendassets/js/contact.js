@@ -45,7 +45,11 @@ $(document).ready(function()
 	});
 
 	initMenu();
+<<<<<<< HEAD
 	initMap();
+=======
+	
+>>>>>>> 968ab8a9afda1d489b8068e6689b979ea4e67f00
 
 	/* 
 
@@ -124,6 +128,7 @@ $(document).ready(function()
 
 	*/
 
+<<<<<<< HEAD
 	function initMap() {
         var myLatLng = {lat: 21.974760, lng: 96.088175};
 
@@ -139,5 +144,9 @@ $(document).ready(function()
         });
       }
 
+=======
+
+	
+>>>>>>> 968ab8a9afda1d489b8068e6689b979ea4e67f00
 
 });

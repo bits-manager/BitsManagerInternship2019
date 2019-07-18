@@ -1,4 +1,4 @@
-@extends('layouts.hall-master')
+@extends('layouts.admin-master')
 
 @section('content')
 
@@ -46,7 +46,7 @@
         @foreach($data as $hall)
         
         <tr>
-            <td><img src="{{URL::to('/')}}/images/{{$hall->image}}" class="img-thumbnail"/></td>
+            <td><img src="{{URL::to('/')}}/image/{{$hall->image}}" class="img-thumbnail" width="100"/></td>
             <td>{{$hall->hall_name}}</td>
             <td>{{$hall->state_name}}</td>
             <td>{{$hall->city_name}}</td>

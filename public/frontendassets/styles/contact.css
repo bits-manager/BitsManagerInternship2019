@@ -292,7 +292,6 @@ section
 	width: 100%;
 	background: rgba(255,255,255,0.33);
 	z-index: 200;
-	
     -webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -318,7 +317,7 @@ section
 }
 .logo
 {
-	width: 110px;
+	width: 30px;
 }
 .logo img
 {
@@ -690,7 +689,7 @@ section
 {
 	width: 100%;
 	background: #FFFFFF;
-	padding-top: 119px;
+	padding-top: 80px;
 	padding-bottom: 105px;
 }
 .contact .section_title
