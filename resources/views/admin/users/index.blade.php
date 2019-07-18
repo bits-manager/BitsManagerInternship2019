@@ -1,4 +1,4 @@
-@extends('layouts.admin-master')
+@extends('layouts.user-master')
 
 @section('title')
 Manage Users
@@ -13,4 +13,5 @@ Manage Users
       <users-component></users-component>
   </div>
 </section>
+
 @endsection

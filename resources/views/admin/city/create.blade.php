@@ -94,7 +94,8 @@ Manage Users
           </div> 
         </form>
   </div>
-</div>
+</div></div></div>
+<script src="{{ asset('js/app.js') }}?{{ uniqid() }}"></script>
 <script>
   function clearText(){
     document.getElementById('city_name').value="";

@@ -93,5 +93,6 @@
   document.getElementById('email').value="";
    }
   </script>
+  <script src="{{ asset('js/app.js') }}?{{ uniqid() }}"></script>
 </section>
 @endsection

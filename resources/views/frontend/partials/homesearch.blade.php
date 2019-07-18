@@ -83,7 +83,7 @@ $scope.event=$scope.events[0].id;
 
 $http({
           method : "GET",
-          url : "/api/v1/get_cities?state_id="+$scope.selectedState,
+          url : "/api/v1/get_all?state_id="+$scope.selectedState,
         }).then(function mySuccess(response) {
            $scope.cities = response.data.data.city;
           $scope.townships=response.data.data.township;
@@ -97,7 +97,7 @@ $scope.selectChange = function(){
 
     $http({
           method : "GET",
-          url : "/api/v1/get_cities?state_id="+$scope.selectedState,
+          url : "/api/v1/get_all?state_id="+$scope.selectedState,
         }).then(function mySuccess(response) {
            $scope.cities = response.data.data.city;
            $scope.selectedCity = $scope.cities[0].id;
