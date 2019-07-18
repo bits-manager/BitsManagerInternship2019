@@ -75,7 +75,13 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
         ]
     ]);
 
+ 
+
+    
+
+
     Route::resource('contact','ContactController', [
+
         'names' => [
             'index' => 'contact'
         ]
@@ -103,6 +109,9 @@ Route::get('googlemap/direction', 'ContactController@direction');
     
 
  });
+
+
+
 
 
 

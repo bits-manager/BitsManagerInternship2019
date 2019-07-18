@@ -16,6 +16,6 @@ class EventTypeHallsTableSeeder extends Seeder
             'hall_id'=> 1,
             'eventType_id'=>1,
         ]); 
-        //
+        
     }
 }

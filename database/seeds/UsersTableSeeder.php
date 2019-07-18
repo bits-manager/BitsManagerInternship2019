@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 use Illuminate\Database\Seeder;
 use App\User;
@@ -51,3 +51,4 @@ class UsersTableSeeder extends Seeder
         $generalUser->assignRole($userRole);
     }
 }
+ 

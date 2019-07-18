@@ -35,7 +35,7 @@ class HallController extends Controller
 
           $statedata = [];
           $statedata =$this->stateRepo->getAll();
-
+         
           $citydata = [];
           $citydata =$this->cityRepo->getAll();
 

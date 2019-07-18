@@ -13,9 +13,9 @@
         <!-- card title -->
         <h4>Edit Form</h4>
         <div class="card-header-action">
-          <a href="{{ route('admin.city')}}" class="btn btn-primary">List<i class="fas fa-plus"></i></a></div>
+          <a href="{{ route('admin.city')}}" class="btn btn-primary">List</a></div>
       </div>
-      <div class="card-body">
+     
      @if(Session::has('toasts'))
   @foreach(Session::get('toasts') as $toast)
     <div class="alert alert-{{ $toast['level'] }}">
@@ -44,10 +44,12 @@
 
       <form method="Patch" action="{{ route('admin.city.update',['id'=>$edit_states->id])}}">
 
-            <div class="form-group">
+           <div class="card-body">
+          <div class="form-group row mb-4">
               @csrf
-              <label for="name">State Name:</label>
-              <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
+              <label class = "col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name">State Name:</label>
+               <div class="col-sm-12 col-md-7">
+              <select name="state_id" class="form-control">
                 @foreach($statedata as $state)
                 <option value="{{$state->id}}" {{ $state->id === $edit_states->state_id ? 'selected' : '' }} >
                   {{$state->state_name}}
@@ -55,15 +57,21 @@
                 @endforeach
               </select>
           </div> 
+        </div>
           
-          <div class="form-group">
+          <div class="form-group row mb-4">
              @csrf
-              <label for="name">City Name:</label>
+              <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name">City Name:</label>
+              <div class ="col-sm-12 col-md-7">
               <input type="text" class="form-control" name="city_name" value="{{$edit_states->city_name}}"/>
           </div>
-          <div class="form-group">
+        </div>
+          <div class="form-group row mb-4">
+            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name"></label>
+              <div class ="col-sm-12 col-md-7">
               <button type="submit" class="btn btn-primary">Update City</button>
         </div>
+      </div>
       </form>
   </div>
 </div>

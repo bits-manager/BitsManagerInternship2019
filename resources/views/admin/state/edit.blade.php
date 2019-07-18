@@ -18,7 +18,7 @@ Manage State
         <div class="card-header">
          <H4>Edit State</H4> 
           <div class="card-header-action">
-          <a href="{{ route('admin.city')}}" class="btn btn-primary">List<i class="fas fa-plus"></i></a></div></div>
+          <a href="{{ route('admin.state')}}" class="btn btn-primary">List<i class="fas fa-plus"></i></a></div></div>
         <div class="card-body">
 
 

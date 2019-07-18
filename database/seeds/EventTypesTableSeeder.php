@@ -14,6 +14,6 @@ class EventTypesTableSeeder extends Seeder
     	\DB::table('event_types')->insert([
             'event_name' => 'Birthday',
         ]);
-        //
+        
     }
 }

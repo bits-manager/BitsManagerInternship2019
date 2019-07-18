@@ -37,7 +37,12 @@
       {{ session()->get('success') }}  
     </div><br />
   @endif
-  <table class="table table-striped table-bordered" >
+
+   <div style="width:100%;height:100%;overflow-x: scroll;overflow-y:hidden";>
+  <table class="table table-striped">
+
+ 
+
     <thead>
         <tr>
           
@@ -53,16 +58,20 @@
             <td>{{$city->state_name}}</td>
             <td>{{$city->city_name}}</td>
 
-            <td><div class="btn-group"><div><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$city->id}})" 
-              data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a></div><div>
+            <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$city->id}})" 
+              data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a>
               <a href="{{ route('admin.city.edit',$city->id)}}" class="btn btn-primary"><i class='fas fa-edit'></i></a>  
-            </td></div></div>
+            </td>
+
+            
 </tr>
 @endforeach
             
         
     </tbody>
-  </table></section>
+  </table>
+</div>
+</section>
 
 
 <div id="DeleteModal" class="modal fade " role="dialog">

@@ -70,10 +70,11 @@ class DataController extends ApiController
     public function getEventHall(Request $request)
     {
       try{
-          $eventType_id = $request->eventType_id;
-          $state_id = $request->state_id;
-          $city_id = $request->city_id;
-          $township_id = $request->township_id;
+          $eventType_id= $request->eventType_id;
+          $state_id= $request->state_id;
+          $city_id= $request->city_id;
+          $township_id= $request->township_id;
+          
           $halls = DB::table('event_type_halls')
                     ->join('halls', 'event_type_halls.hall_id', '=', 'halls.id')
                     ->join('event_types', 'event_types.id', '=', 'event_type_halls.eventType_id')
@@ -83,6 +84,7 @@ class DataController extends ApiController
                     ->where('halls.township_id', '=',$township_id)    
                     ->select('event_type_halls.eventType_id','event_type_halls.hall_id','halls.hall_name','event_types.event_name','event_types.image')
                     ->get();
+          
           return $this->respondSuccess('success',$halls); 
          }catch (\Exception $e) {
             \Log::error($e->getMessage());
