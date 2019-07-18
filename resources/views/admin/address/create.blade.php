@@ -2,7 +2,7 @@
 @section('content')
 <section class="section">
   <div class="section-header">
-    <h1>Address Form</h1>
+    <h1> Manage Address</h1>
   </div>
   <div class="section-body">
 
@@ -10,7 +10,9 @@
       <!-- card header -->
       <div class="card-header">
         <h4>Add New Address</h4>
-
+        <div class="card-header-action" >
+        <a href="{{route('admin.address')}}" class="btn btn-primary">AddressList</a>
+        </div>
       </div>
   <div class="card-body">
     

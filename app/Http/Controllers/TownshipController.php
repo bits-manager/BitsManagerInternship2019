@@ -90,6 +90,10 @@ class TownshipController extends Controller
     public function show($townships_id,Request $request)
     {
         $data=$request->all();
+        $state_id= explode(':',$data['state_id']);
+        $city_id= explode(':',$data['city_id']);
+        $data['state_id'] = $state_id[1];
+        $data['city_id'] = $city_id[1];
         $data=array_except($data,['$townships_id']);
         $this->townshipRepo->update($data,$townships_id);
         return back()->with('info','Township is successfully update!');

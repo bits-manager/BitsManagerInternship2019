@@ -6,7 +6,7 @@
 <div ng-app="myApp" ng-controller="myCtrl">
 <section class="section">
   <div class="section-header">
-    <h1>Edit Hall</h1>
+    <h1>Manage Halls</h1>
   </div>
  <div class="card">
       <!-- card header -->
@@ -185,10 +185,11 @@ $scope.selectedTownship = $scope.edit_halls.township_id;
 
 $http({
           method : "GET",
-          url : "/api/v1/get_cities?state_id="+$scope.selectedState,
+          url : "/api/v1/get_alledit?state_id="+$scope.selectedState+"&city_id="+$scope.selectedCity,
         }).then(function mySuccess(response) {
            $scope.cities = response.data.data.city;
           $scope.townships=response.data.data.township;
+
           }, function myError(response) {
             $scope.cities = [];
            $scope.townships=[];
@@ -199,7 +200,7 @@ $scope.selectChange = function(){
 
     $http({
           method : "GET",
-          url : "/api/v1/get_cities?state_id="+$scope.selectedState,
+          url : "/api/v1/get_all?state_id="+$scope.selectedState,
         }).then(function mySuccess(response) {
            $scope.cities = response.data.data.city;
            $scope.selectedCity = $scope.cities[0].id;

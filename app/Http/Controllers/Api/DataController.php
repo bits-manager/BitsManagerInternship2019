@@ -23,11 +23,9 @@ class DataController extends ApiController
 
       try {
 
-        $cities = $this->cityRepo->getcities($request->state_id);
-              
+        $cities = $this->cityRepo->getcity($request->state_id);  
           if(count($cities)>0){
             return $this->respondSuccess('success',$cities);
-
           }   
       } catch (\Exception $e) {
         \Log::error($e->getMessage());
@@ -35,20 +33,35 @@ class DataController extends ApiController
       return $this->respondError('error');
     }
 
-    public function getCities(Request $request)
+
+    public function getAll(Request $request)
     {
 
     	try{
-    		$cities = $this->cityRepo->getcities($request->state_id);
+    		$cities = $this->cityRepo->getcity($request->state_id);
         $city=$cities[0]->id;
-        $townships=$this->townshipRepo->gettownships($request->state_id,$city);      
-		      if(count($cities)>0 || count($townships)>0){
+        $townships=$this->townshipRepo->gettownship($request->state_id,$city);
+          if(count($cities)>0 || count($townships)>0){
             return $this->respondSuccess('success',['city'=>$cities,'township'=>$townships]);
-
-        } 	
+          } 	
     	} catch (\Exception $e) {
     		\Log::error($e->getMessage());
     	}
+      return $this->respondError('error');
+    }
+
+    public function getAllEdit(Request $request)
+    {
+
+      try{
+        $cities = $this->cityRepo->getcity($request->state_id);
+        $townships=$this->townshipRepo->gettownship($request->state_id,$request->city_id);   
+          if(count($cities)>0 || count($townships)>0){
+            return $this->respondSuccess('success',['city'=>$cities,'township'=>$townships]);
+          }   
+      } catch (\Exception $e) {
+        \Log::error($e->getMessage());
+      }
       return $this->respondError('error');
     }
 
@@ -56,10 +69,9 @@ class DataController extends ApiController
     {
       
         try {
-          $townships =$this->townshipRepo->gettownships($request->state_id,$request->city_id);
-
-              if(count($townships)>0)
-                return $this->respondSuccess('success',$townships);    
+          $townships =$this->townshipRepo->gettownship($request->state_id,$request->city_id);
+            if(count($townships)>0){}
+              return $this->respondSuccess('success',$townships);    
         } catch (\Exception $e) {
             \Log::error($e->getMessage());
         }

@@ -9,7 +9,7 @@
 
 <section class="section">
   <div class="section-header">
-    <h1>Manage Hall Events</h1>
+    <h1>Manage Hall_Events</h1>
   </div>
  <div class="card">
       <!-- card header -->
@@ -17,7 +17,7 @@
         <!-- card title -->
         <h4>Edit Form</h4>
         <div class="card-header-action">
-          <a href="{{ route('admin.eventhall')}}" class="btn btn-primary">List <i class="fas fa-plus"></i></a>
+          <a href="{{ route('admin.eventhall')}}" class="btn btn-primary">HallEventList</a>
         </div>
       </div>
       <div class="card-body">

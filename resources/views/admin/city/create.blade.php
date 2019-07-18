@@ -15,7 +15,10 @@ Manage Users
       <div class="card-header">
 
         <!-- card title -->
-        <h4>City Form</h4>
+        <h4>Add a New City</h4>
+        <div class="card-header-action" >
+        <a href="{{route('admin.city')}}" class="btn btn-primary">CityList</a>
+        </div>
       </div>
       <!-- card body -->
       <div class="card-body">
@@ -80,5 +83,6 @@ Manage Users
     document.getElementById('city_name').value="";
   }
 </script>
+
 @endsection
 

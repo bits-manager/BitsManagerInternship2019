@@ -15,7 +15,10 @@ Manage Townships
       <!-- card header -->
       <div class="card-header">
         <!-- card title -->
-        <h4>Township form</h4>
+        <h4>Add a new Township</h4>
+        <div class="card-header-action" >
+        <a href="{{route('admin.townships')}}" class="btn btn-primary">TownshipList</a>
+        </div>
       </div>
       <!-- card body -->
             <div class="card-body"> 
@@ -51,7 +54,7 @@ Manage Townships
 
                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">State Name</label>
                       <div class="col-sm-12 col-md-7">
-                    <select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control">
+                    <select ng-model="selectedState" id="state" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control">
                     </select>
                       </div>
                      </div>
@@ -59,7 +62,7 @@ Manage Townships
 
                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">City Name</label>
                       <div class="col-sm-12 col-md-7">
-                        <select ng-model="selectedCity" name="city_id" value="selectedCity"  ng-options="city.id as city.city_name for city in cities" class="form-control" >
+                        <select ng-model="selectedCity" id="city" name="city_id" value="selectedCity"  ng-options="city.id as city.city_name for city in cities" class="form-control" >
                     </select>
                       </div>
                    </div> 
@@ -136,5 +139,13 @@ $http({
 
 });
 
+</script>
+
+<script type="application/javascript">
+  function clearText(){
+    document.getElementById('township_name').value="";
+    document.getElementById('state').value="";
+    document.getElementById('city').value="";
+  }
 </script>
 @endsection
