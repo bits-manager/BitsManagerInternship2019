@@ -76,7 +76,14 @@
       <div class="form-group row mb-4">
        <lable class="col-form-label text-md-right col-12 col-md-3 col-lg-3" from="">Status</lable>
          <div class="col-sm-12 col-md-7">
-            <input type="checkbox" class="" name="status" value="1" >
+      
+          @if($edit_address->status == 1)
+            <input type="checkbox" name="status" value="1"{{isset($address['status'])&&$address['status']=='1' ? 'checked' : ''}}  checked>
+          @else
+            <input type="checkbox" name="status" value="0"{{isset($address['status'])&&$address['status']=='0' ? '' : 'notchecked'}} >
+                    
+          @endif
+             
         </div> 
       </div> 
 

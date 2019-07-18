@@ -75,10 +75,6 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
         ]
     ]);
 
- 
-
-    
-
 
     Route::resource('contact','ContactController', [
 
@@ -106,7 +102,7 @@ Route::get('googlemap/direction', 'ContactController@direction');
     
     Route::post('hall_update', 'HallController@update')->name('hall_update.update');
 
-    
+
 
  });
 

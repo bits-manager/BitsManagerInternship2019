@@ -1,4 +1,4 @@
-@extends('layouts.admin-master')
+ @extends('layouts.admin-master')
 
 @section('title')
 Manage Townships
@@ -55,12 +55,11 @@ Manage Townships
 
                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">State Name</label>
                       <div class="col-sm-12 col-md-7">
-                    <select ng-model="selectedState" id="state" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control">
 
+                    <select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control">
                     </select>
-
-                    </div>
-                    </div>
+                  </div>
+                </div>
 
                     <div class="form-group row mb-4">
                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">City Name</label>

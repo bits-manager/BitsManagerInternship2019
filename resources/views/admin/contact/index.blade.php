@@ -21,11 +21,11 @@
     <thead>
         <tr>
           
-          <td> Name</td>
-          <td>Email</td>
-          <td>Subject</td>
-          <td>Message</td>
-          <td colspan="2"><p class="text-dark">Action</p></td>
+          <th> Name</th>
+          <th>Email</th>
+          <th>Subject</th>
+          <th>Message</th>
+          <th colspan="2">Action</th>
           
         </tr>
     </thead>
