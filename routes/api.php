@@ -21,9 +21,9 @@ Route::group(['prefix' => 'v1'], function() {
 
   
   Route::get('/get_city','Api\DataController@getCity');
-  Route::get('/get_cities','Api\DataController@getCities');
+  Route::get('/get_all','Api\DataController@getAll');
   Route::get('/get_township','Api\DataController@getTownship');
+  Route::get('/get_alledit','Api\DataController@getAllEdit');
   Route::get('/get_event_hall','Api\DataController@getEventHall');
-  
 });
 

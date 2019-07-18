@@ -35,7 +35,7 @@ class HallController extends Controller
 
           $statedata = [];
           $statedata =$this->stateRepo->getAll();
-
+         
           $citydata = [];
           $citydata =$this->cityRepo->getAll();
 
@@ -54,10 +54,9 @@ class HallController extends Controller
           'open_time' => 'required',
           'close_time' => 'required',
           'address' => 'required',
-          'image' => 'required|image',
+          'image' => 'required|dimensions:max_width=600,max_height=350',
+        ]);
 
-
-      ]);
           $image = $request->file('image');
           $new_name=rand() . '.' . $image->getClientOriginalExtension();
           $image->move(public_path('image'),$new_name);
@@ -75,9 +74,11 @@ class HallController extends Controller
           $state_id= explode(':',$form_data['state_id']);
           $city_id= explode(':',$form_data['city_id']);
           $township_id=explode(':',$form_data['township_id']);
+
           $form_data['state_id'] = $state_id[1];
           $form_data['city_id'] = $city_id[1];
           $form_data['township_id'] = $township_id[1];
+
           $this->hallRepo->create($form_data);
           return back()->with('info','Hall is sucessfully save!');
           return redirect()->back()->withInput();
@@ -109,15 +110,10 @@ class HallController extends Controller
     {
       $hall_id=$request->id;
       $image_name=$request->hidden_image;
-      $image_path = public_path().'/image/'.$image_name;
-      unlink($image_path);
-      $this->hallRepo->delete($image_name);
       $image=$request->file('image');
-      if($image!=''){
-          $image_name=rand().'.'.$image->getClientOriginalExtension();
-          $image->move(public_path('image'),$image_name);
-        }
-        $form_data=array(
+
+      if($image==''){
+          $form_data=array(
             'hall_name'=>$request->hall_name,
             'phone_no'=>$request->phone_no,
             'open_time'=>$request->open_time,
@@ -127,10 +123,36 @@ class HallController extends Controller
             'township_id'=>$request->township_id,
             'address'=>$request->address,
             'image'=>$image_name
+          );
+      }
+      if($image!=''){
+          $imagenew=rand().'.'.$image->getClientOriginalExtension();
+          $image->move(public_path('image'),$imagenew);
+          $image_path = public_path().'/image/'.$image_name;
+          unlink($image_path);
+          $this->hallRepo->delete($image_name);
+          $form_data=array(
+            'hall_name'=>$request->hall_name,
+            'phone_no'=>$request->phone_no,
+            'open_time'=>$request->open_time,
+            'close_time'=>$request->close_time,
+            'state_id'=>$request->state_id,
+            'city_id'=>$request->city_id,
+            'township_id'=>$request->township_id,
+            'address'=>$request->address,
+            'image'=>$imagenew
             );
-        $form_data=array_except($form_data,['$hall_id']);
+        }
+          $state_id= explode(':',$form_data['state_id']);
+          $city_id= explode(':',$form_data['city_id']);
+          $township_id=explode(':',$form_data['township_id']);
 
-        $this->hallRepo->update($form_data,$hall_id);
+          $form_data['state_id'] = $state_id[1];
+          $form_data['city_id'] = $city_id[1];
+          $form_data['township_id'] = $township_id[1];
+
+          $form_data=array_except($form_data,['$hall_id']);
+          $this->hallRepo->update($form_data,$hall_id);
 
         return back()->with('info','Hall is successfully update!');
         return redirect()->back()->withInput();

@@ -15,6 +15,6 @@ class TownshipsTableSeeder extends Seeder
             'township_name' => 'Pyigyitagon',
             'city_id'=>1,
             'state_id'=>1,
-        ]);////
+        ]);
     }
 }

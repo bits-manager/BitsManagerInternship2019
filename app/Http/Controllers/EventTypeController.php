@@ -40,31 +40,41 @@ class EventTypeController extends Controller
           return back()->with('info','Event is sucessfully save!');
           return redirect()->back()->withInput();
        }
+
       public function index()
     	   {
     	    	$event=$this->eventRepo->getAll();
     	    	return view('admin.event.index',compact('event'));
     	   }
+
       public function edit($id)
            {
                $edit_event=$this->eventRepo->getById($id);
                return view('admin.event.edit',compact('edit_event'));
 	       }
-         public function update(Request $request)
+
+      public function update(Request $request)
            { 
               $event_id=$request->id;
               $image_name=$request->hidden_image;
-              $image_path = public_path().'/image/'.$image_name;
-              unlink($image_path);
               $image=$request->file('image');
-              if($image!=''){
-                $image_name=rand().'.'.$image->getClientOriginalExtension();
-                $image->move(public_path('image'),$image_name);
-                }
-              $form_data=array(
-                'event_name'=>$request->event_name,
-               'image'=>$image_name
+              if($image==''){
+                  $form_data=array(
+                    'event_name'=>$request->event_name,
+                    'image'=>$image_name,
                   );
+              }
+              if($image!=''){
+                $imagenew=rand().'.'.$image->getClientOriginalExtension();
+                $image->move(public_path('image'),$imagenew);
+                $image_path = public_path().'/image/'.$image_name;
+                unlink($image_path);
+                $this->eventRepo->delete($image_name);
+                $form_data=array(
+                'event_name'=>$request->event_name,
+                'image'=>$imagenew,
+                );
+            }
               $form_data=array_except($form_data,['$event_id']);
               $this->eventRepo->update($form_data,$event_id);
         
@@ -77,7 +87,7 @@ class EventTypeController extends Controller
         $data=$this->eventRepo->getById($event_id);
         $image_name=$data->image;
         $image_path = public_path().'/image/'.$image_name;
-         unlink($image_path);;
+        unlink($image_path);
         $this->eventRepo->delete($event_id,$image_name);
         return back()->with('info','info is sucessfully delete!');
          return redirect()->back()->withInput();

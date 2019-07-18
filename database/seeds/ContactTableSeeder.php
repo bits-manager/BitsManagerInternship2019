@@ -10,12 +10,7 @@ class ContactTableSeeder extends Seeder
      * @return void
      */
     public function run()
-    {    DB::table('contacts')->insert([
-            'contact_name' => Str::random(10),
-            'email' => Str::random(10).'@gmail.com',
-            'subject' => Str::random(10),
-            'message' => Str::random(10),
-        ]);
-        
+    {
+        //
     }
 }

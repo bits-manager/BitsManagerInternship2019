@@ -15,10 +15,16 @@ Manage Users
       <div class="card-header">
 
         <!-- card title -->
-        <h4>City Form</h4>
+
+        <h4>Add a New City</h4>
+        <div class="card-header-action" >
+        <a href="{{route('admin.city')}}" class="btn btn-primary">CityList</a>
+        </div>
+
       </div>
+      
       <!-- card body -->
-      <div class="card-body">
+     
 
     @if(Session::has('toasts'))
   @foreach(Session::get('toasts') as $toast)
@@ -36,6 +42,14 @@ Manage Users
       <strong>{{$message}}</strong>
       </div>
     @endif  
+
+@if($message = Session::get('error'))
+      <div class = "alert alert-danger alert-block">
+      <button type = "button" class="close" data-dismiss = "alert">x</button>
+      <strong>{{$message}}</strong>
+      </div>
+    @endif 
+
     @if ($errors->any())
       <div class="alert alert-danger">
         <ul>
@@ -46,11 +60,12 @@ Manage Users
       </div><br />
     @endif
       <form  method="post" action="{{route('admin.city.store')}}">
-          
-          <div class="form-group">
+           <div class="card-body">
+          <div class="form-group row mb-4">
               @csrf
-              <label for="name">State Name:</label>
-              <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
+              <label class = "col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name">State Name:</label>
+              <div class="col-sm-12 col-md-7">
+              <select name="state_id" class="form-control">
                 @foreach($statedata as $state)
                 <option value ="{{$state->id}}">
                   {{$state->state_name}}
@@ -58,21 +73,26 @@ Manage Users
                 @endforeach
               </select>
           </div> 
-           
+           </div>
           
-          <div class="form-group">
+          <div class="form-group row mb-4">
               @csrf
-              <label for="name">City Name:</label>
-               <input type="text" class="form-control" id="city_name" name="city_name" placeholder="Enter City"/>
+              <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name">City Name:</label>
+              <div class ="col-sm-12 col-md-7">
+               <textarea class="form-control" rows="5" id="city_name" name="city_name" placeholder="Enter City"/></textarea>
+             </div>
           </div>
        
           
-         
+            <div class="form-group row mb-4">
+              <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name"></label>
+            <div class ="col-sm-12 col-md-3">
+
             <button type="submit" class="btn btn-primary">Save</button>
             <input type="button" value="Cancel" class="btn btn-primary" onclick="clearText()"/>
-             
-        
-      </form>
+         </div>
+          </div> 
+        </form>
   </div>
 </div>
 <script>
@@ -80,5 +100,6 @@ Manage Users
     document.getElementById('city_name').value="";
   }
 </script>
+
 @endsection
 

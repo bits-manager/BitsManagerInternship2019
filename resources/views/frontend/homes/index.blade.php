@@ -1,8 +1,4 @@
-<style>
-	#a{
-		width: 25%;
-	}
-</style>
+
 
 @extends('layouts.frontend-master')
 
@@ -44,6 +40,11 @@
 		</div>
 	</div>
 
+
+	
+
+	 
+@include("frontend.partials.homesearch")
 
 	<!-- Home Search -->
 
@@ -97,7 +98,10 @@
 				</div>
 			</div>
 		</div>
+
 	</div> 
+
+
 
 	<!-- Recent -->
 
@@ -112,23 +116,22 @@
 				<div class="col">
 					<div class="recent_slider_container">
 						<div class="owl-carousel owl-theme recent_slider">
-							
+						
 							<!-- Slide -->
-							<div class="owl-item">
+							<div class="owl-item" ng-repeat="x in halls">
 								<div class="recent_item">
-									<div class="recent_item_inner">
+									<div class="recent_item_inner" >
 										<div class="recent_item_image">
-											<a href="eventdetail" ><img src="../frontendassets/images/wedding3.jpg" alt="" width="600" height="350"></a>
-											<div class="centered">Wedding</div>
+											<a href="eventdetail"><img src="../frontendassets/images/wedding3.jpg" alt="" width="600" height="350"></a>
+											<div class="centered" >Wedding </div>
 
 										</div>
 										
 										<div class="recent_item_body">
-											
 												<div class="recent_item_title text-center"><a href="eventdetail" >View Event Detail</a></div>
 												<div class="recent_item_title text-center">
 												<a href="hallabout" >Hall Information</a>
-											</div>
+												</div>
 										</div>
 										
 										
@@ -204,8 +207,10 @@
 			</div>
 		</div>
 	</div>
-
+</div>
+@endsection
 	<!-- Cities -->
+
 
 	<!-- <div class="cities">
 		<div class="container">
@@ -308,54 +313,4 @@
 			</div>
 		</div>
 	</div> -->
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-<script>
-var states={!! json_encode($state) !!};
-var cities={!! json_encode($city) !!};
-var townships={!! json_encode($township) !!};
-
-var app = angular.module('myApp', []);
-app.config(function($interpolateProvider){
-  $interpolateProvider.startSymbol('<%').endSymbol('%>');
-});
-
-app.controller('myCtrl', function($scope, $http) {
-
-$scope.states= states;
-$scope.cities = cities;
-$scope.townships = townships;
-$scope.selectedState = $scope.states[0].id;
-$scope.selectedCity = $scope.cities[0].id;
-$scope.selectedTownship = $scope.townships[0].id;
-
-$http({
-          method : "GET",
-          url : "/api/v1/get_event_hall?eventType_id="+2,
-        }).then(function mySuccess(response) {
-           $scope.cities = response.data.data;
-          }, function myError(response) {
-
-            $scope.cities = [];
-
-        });
-
-  $scope.selectChange = function(){
-
-    $http({
-          method : "GET",
-          url : "/api/v1/get_city?state_id="+$scope.selectedState,
-        }).then(function mySuccess(response) {
-           console.log(response.data.data);
-           $scope.cities = response.data.data;
-           $scope.selectedCity = $scope.cities[0].id;
-          }, function myError(response) {
-
-            $scope.cities = [];
-
-        });
-
-  }
-
-</script>
-	
-@endsection
+ 
