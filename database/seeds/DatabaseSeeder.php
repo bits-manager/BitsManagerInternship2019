@@ -22,4 +22,5 @@ class DatabaseSeeder extends Seeder
         $this->call(ContactTableSeeder::class);
         $this->call(AddressTableSeeder::class);
     }   
+
 }

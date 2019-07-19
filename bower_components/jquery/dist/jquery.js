@@ -1983,10 +1983,10 @@ Expr = Sizzle.selectors = {
 			return rinputs.test( elem.nodeName );
 		},
 
-		"button": function( elem ) {
+		/*"button": function( elem ) {
 			var name = elem.nodeName.toLowerCase();
 			return name === "input" && elem.type === "button" || name === "button";
-		},
+		},*/
 
 		"text": function( elem ) {
 			var attr;

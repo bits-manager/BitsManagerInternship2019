@@ -21,6 +21,6 @@ class AddressTableSeeder extends Seeder
 
             
           ]);  
-        //
+        
     }
 }
