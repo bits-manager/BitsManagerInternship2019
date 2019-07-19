@@ -15,8 +15,10 @@ Manage States
     <div class="card">
       <!-- card header -->
       <div class="card-header">
-        <h4>Add a New State</h4></div>
-     
+        <h4>Add a New State</h4>
+        <div class="card-header-action" >
+        <a href="{{route('admin.state')}}" class="btn btn-primary">StateList</a>
+        </div></div>
 	    <!-- card body -->
 	    <div class="card-body">
 
@@ -72,8 +74,9 @@ Manage States
   function clearText(){
     document.getElementById('state_name').value="";
 
-  }</script>
-
+  }
+</script>
+<script src="{{ asset('js/app.js') }}?{{ uniqid() }}"></script>
 
 </section>
 @endsection

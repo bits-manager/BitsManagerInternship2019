@@ -15,4 +15,6 @@ class  EventTypeRepository extends BaseRepository {
 	{
 		$this->model = $model;
 	}
+
+	
    }

@@ -1,4 +1,4 @@
-@extends('layouts.admin-master')
+@extends('layouts.user-master')
 
 @section('title')
 Create User
@@ -10,7 +10,9 @@ Create User
     <h1>Add User</h1>
   </div>
   <div class="section-body">
-       <adduser-component></adduser-component>
+      <adduser-component></adduser-component>
   </div>
 </section>
-@endsection
+
+@en
+dsection

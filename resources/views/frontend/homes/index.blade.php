@@ -1,4 +1,8 @@
-
+<style>
+	#a{
+		width: 25%;
+	}
+</style>
 
 @extends('layouts.frontend-master')
 
@@ -22,7 +26,7 @@
 				
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(../frontendassets/images/balloon.jpg)"></div>
+					<div class="home_slider_background" style="background-image:url(../frontendassets/images/hallshome.jpg)"></div>
 					<div class="slide_container">
 						<div class="container">
 							<div class="row">
@@ -49,52 +53,49 @@
 			<div class="row">
 				<div class="col">
 					<div class="home_search_container">
-						<div class="home_search_content">
-							<form action="{{route('hall_search')}}" class="search_form d-flex flex-row align-items-start justfy-content-start" method="post">
-                				@csrf
+							<form action="" class="search_form d-flex flex-row align-items-start justfy-content-start"> 
+								@csrf
 								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
 									<div>
-										<select class="search_form_select" name="eventType_id">
-											<option >Event</option>
-											@foreach($event as $event)
-            								<option value="{{$event->id}}">{{$event->event_name}}</option>
-            								@endforeach
+										 <select ng-model="event" name="event_id" value="event"  ng-options="event.id as event.event_name for event in events" class="form-control">
+										 
 										</select>
+										
 									</div>
+
+											
+										
+									
 									<div>
-										<select class="search_form_select" name="state_id">
-											<option>State</option>
-											@foreach($state as $state)
-            								<option value="{{$state->id}}">{{$state->state_name}}</option>
-            								@endforeach
+										<select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control" >
 										</select>
 									</div>
+
 									<div>
-										<select class="search_form_select" name="city_id">
-											<option>City</option>
-											@foreach($city as $city)
-            								<option value="{{$city->id}}">{{$city->city_name}}</option>
-            								@endforeach
-										</select>
+										 <select ng-model="selectedCity" name="city_id" value="selectedCity"  ng-change="select()" ng-options="city.id as city.city_name for city in cities" class="form-control" >
+										 </select>
 									</div>
+									
 									<div>
-										<select class="search_form_select" name="township_id">>
-											<option> Township</option>
-											@foreach($township as $township)
-            								<option value="{{$township->id}}">{{$township->township_name}}</option>
-            								@endforeach
+										<select ng-model="selectedTownship" name="township_id" value="selectedTownship"  ng-options="township.id as township.township_name for township in townships" class="form-control">
+											
 										</select>
+
+										
 									</div>
+
 								</div>
-								<button class="search_form_button ml-auto">search</button>
+								<button  id="a" class="search_form_button ml-auto" 
+								ng-click="clickChange()"> search </button>
 							</form>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div> 
+	
 
+	
 	<!-- Recent -->
 
 	<div class="recent">
@@ -103,28 +104,30 @@
 				<div class="col">
 					<div class="section_title">Find Your Need</div>
 				</div>
+
 			</div>
 			<div class="row recent_row">
 				<div class="col">
 					<div class="recent_slider_container">
 						<div class="owl-carousel owl-theme recent_slider">
-							
+						
 							<!-- Slide -->
-							<div class="owl-item">
+							<div class="owl-item" ng-repeat="x in halls">
+
 								<div class="recent_item">
-									<div class="recent_item_inner">
+									<div class="recent_item_inner" >
 										<div class="recent_item_image">
-											<a href="eventdetail" ><img src="../frontendassets/images/wedding3.jpg" alt="" width="600" height="350"></a>
-											<div class="centered">Wedding</div>
+											<a href="eventdetail"><img src="../image
+												/<% x.image %>" alt="" ></a>
+											<div class="centered" ><% x.event_name %> </div>
 
 										</div>
 										
 										<div class="recent_item_body">
-											
 												<div class="recent_item_title text-center"><a href="eventdetail" >View Event Detail</a></div>
 												<div class="recent_item_title text-center">
 												<a href="hallabout" >Hall Information</a>
-											</div>
+												</div>
 										</div>
 										
 										
@@ -195,119 +198,19 @@
 							<div class="recent_slider_nav recent_slider_next"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
 						</div>
 					</div>
-					<!-- <div class="button recent_button"><a href="#">see more</a></div>
-				</div> -->
+				</div>
 			</div>
 		</div>
 	</div>
+</div>
 
 	<!-- Cities -->
-
-	<!-- <div class="cities">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="section_title">Find properties in these cities</div>
-					<div class="section_subtitle">Search your dream home</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="cities_container d-flex flex-row flex-wrap align-items-start justify-content-between">
-
-			
-			<div class="city">
-				<img src="../frontendassets/images/city_1.jpg" alt="https://unsplash.com/@dnevozhai">
-				<div class="city_overlay">
-					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
-						<div class="city_title">Ibiza Town</div>
-						<div class="city_subtitle">Rentals from $450/month</div>
-					</a>	
-				</div>
-			</div>
-
-		
-			<div class="city">
-				<img src="../frontendassets/images/city_2.jpg" alt="https://unsplash.com/@lachlanjdempsey">
-				<div class="city_overlay">
-					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
-						<div class="city_title">Ibiza Town</div>
-						<div class="city_subtitle">Rentals from $450/month</div>
-					</a>	
-				</div>
-			</div>
-
-			
-			<div class="city">
-				<img src="../frontendassets/images/city_3.jpg" alt="https://unsplash.com/@hellolightbulb">
-				<div class="city_overlay">
-					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
-						<div class="city_title">Ibiza Town</div>
-						<div class="city_subtitle">Rentals from $450/month</div>
-					</a>	
-				</div>
-			</div>
-
-			
-			<div class="city">
-				<img src="../frontendassets/images/city_4.jpg" alt="https://unsplash.com/@justinbissonbeck">
-				<div class="city_overlay">
-					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
-						<div class="city_title">Ibiza Town</div>
-						<div class="city_subtitle">Rentals from $450/month</div>
-					</a>	
-				</div>
-			</div>
-
-			
-			<div class="city">
-				<img src="../frontendassets/images/city_5.jpg" alt="https://unsplash.com/@claudiotrigueros">
-				<div class="city_overlay">
-					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
-						<div class="city_title">Ibiza Town</div>
-						<div class="city_subtitle">Rentals from $450/month</div>
-					</a>	
-				</div>
-			</div>
-
-			
-			<div class="city">
-				<img src="../frontendassets/images/city_6.jpg" alt="https://unsplash.com/@andersjilden">
-				<div class="city_overlay">
-					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
-						<div class="city_title">Ibiza Town</div>
-						<div class="city_subtitle">Rentals from $450/month</div>
-					</a>	
-				</div>
-			</div>
-
-		
-			<div class="city">
-				<img src="../frontendassets/images/city_7.jpg" alt="https://unsplash.com/@sawyerbengtson">
-				<div class="city_overlay">
-					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
-						<div class="city_title">Ibiza Town</div>
-						<div class="city_subtitle">Rentals from $450/month</div>
-					</a>	
-				</div>
-			</div>
-
-			
-			<div class="city">
-				<img src="../frontendassets/images/city_8.jpg" alt="https://unsplash.com/@mathewwaters">
-				<div class="city_overlay">
-					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
-						<div class="city_title">Ibiza Town</div>
-						<div class="city_subtitle">Rentals from $450/month</div>
-					</a>	
-				</div>
-			</div>
-		</div>
-	</div> -->
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script>
-var states={!! json_encode($state) !!};
-var cities={!! json_encode($city) !!};
+
+var states = {!! json_encode($state) !!};
+var cities = {!! json_encode($city) !!};
+var events= {!! json_encode($event) !!};
 var townships={!! json_encode($township) !!};
 
 var app = angular.module('myApp', []);
@@ -317,41 +220,113 @@ app.config(function($interpolateProvider){
 
 app.controller('myCtrl', function($scope, $http) {
 
-$scope.states= states;
+
+$scope.states = states;
 $scope.cities = cities;
-$scope.townships = townships;
+$scope.events = events;
+$scope.townships=townships;
+
 $scope.selectedState = $scope.states[0].id;
 $scope.selectedCity = $scope.cities[0].id;
 $scope.selectedTownship = $scope.townships[0].id;
+$scope.event=$scope.events[0].id;
 
-$http({
-          method : "GET",
-          url : "/api/v1/get_event_hall?eventType_id="+2,
-        }).then(function mySuccess(response) {
-           $scope.cities = response.data.data;
-          }, function myError(response) {
+$scope.selectState = $scope.states[0].id;
+$scope.selectCity = $scope.cities[0].id;
+$scope.selectTownship = $scope.townships[0].id;
+$scope.selectEvent=$scope.events[0].id;
 
-            $scope.cities = [];
+	$http({
+	          method : "GET",
+	          url : "/api/v1/get_all?state_id="+$scope.selectedState,
+	        }).then(function mySuccess(response) {
+	           $scope.cities = response.data.data.city;
+	          $scope.townships=response.data.data.township;
+	          }, function myError(response) {
+	            $scope.cities = [];
+	           $scope.townships=[];
 
-        });
+	        });
 
-  $scope.selectChange = function(){
+	$scope.selectChange = function(){
+
+	    $http({
+	          method : "GET",
+	          url : "/api/v1/get_all?state_id="+$scope.selectedState,
+	        }).then(function mySuccess(response) {
+	           $scope.cities = response.data.data.city;
+	           $scope.selectedCity = $scope.cities[0].id;
+	           console.log("$scope.selectedCity");
+	           $scope.townships=response.data.data.township;
+	           $scope.selectedTownship = $scope.townships[0].id;
+	          }, function myError(response) {
+
+	            $scope.cities = [];
+	           $scope.townships = [];
+
+	        });
+
+	  }
+  
+	  $http({
+	          method : "GET",
+	          url : "/api/v1/get_township?state_id="+$scope.selectedState+"&city_id="+$scope.selectedCity,
+	        }).then(function mySuccess(response) {
+	           $scope.townships = response.data.data;
+	          }, function myError(response) {
+
+	            $scope.townships = [];
+
+	        });
+
+  
+
+	 $scope.select = function(){
+
+	    $http({
+	          method : "GET",
+	          url : "/api/v1/get_township?state_id="+$scope.selectedState+"&city_id="+$scope.selectedCity,
+	          
+	        }).then(function mySuccess(response) {
+	           $scope.townships = response.data.data;
+	           $scope.selectedTownship = $scope.townships[0].id;
+	          }, function myError(response) {
+
+	            $scope.townships = [];
+	        });
+	  }
 
     $http({
-          method : "GET",
-          url : "/api/v1/get_city?state_id="+$scope.selectedState,
-        }).then(function mySuccess(response) {
-           console.log(response.data.data);
-           $scope.cities = response.data.data;
-           $scope.selectedCity = $scope.cities[0].id;
-          }, function myError(response) {
+	          method : "GET",
+	          url : "/api/v1/get_event_hall?eventType_id="+$scope.event+"&state_id="+$scope.selectedState+"&city_id="+$scope.selectedCity+"&township_id="+$scope.selectedTownship,
+	        }).then(function mySuccess(response) {
+	           $scope.halls = response.data.data;
+	           console.log("hall Information"+$scope.halls);
+	          }, function myError(response) {
 
-            $scope.cities = [];
+	            $scope.halls = [];
 
-        });
+	        });
 
-  }
+	$scope.clickChange = function(){
 
+		$http({
+	          method : "GET",
+	          url : "/api/v1/get_event_hall?eventType_id="+$scope.event+"&state_id="+$scope.selectedState+"&city_id="+$scope.selectedCity+"&township_id="+$scope.selectedTownship,
+	        }).then(function mySuccess(response) {
+	           $scope.halls = response.data.data;
+	           console.log("hall Information"+$scope.halls);
+	          }, function myError(response) {
+
+	            $scope.halls = [];
+
+	        });
+	}
+
+
+});
 </script>
+	
+ 
 	
 @endsection

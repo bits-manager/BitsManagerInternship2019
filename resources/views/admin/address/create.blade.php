@@ -2,7 +2,7 @@
 @section('content')
 <section class="section">
   <div class="section-header">
-    <h1>Address Form</h1>
+    <h1> Manage Address</h1>
   </div>
   <div class="section-body">
 
@@ -10,7 +10,9 @@
       <!-- card header -->
       <div class="card-header">
         <h4>Add New Address</h4>
-
+        <div class="card-header-action" >
+        <a href="{{route('admin.address')}}" class="btn btn-primary">AddressList</a>
+        </div>
       </div>
   <div class="card-body">
     
@@ -66,7 +68,9 @@
 <div class="form-group row mb-4">
   <lable class="col-form-label text-md-right col-12 col-md-3 col-lg-3" from="">Status</lable>
   <div class="col-sm-12 col-md-7">
-  <input type="checkbox" name="status" value="1">
+   <input type="checkbox" name="status" value="1" 
+
+{{isset($address['status'])&&$address['status']=='1' ? 'checked' : ''}}> 
  </div> 
 </div>  
 
@@ -89,7 +93,9 @@
   document.getElementById('address').value="";
   document.getElementById('phone').value="";
   document.getElementById('email').value="";
+    document.getElementById('status').value="";
    }
   </script>
+  <script src="{{ asset('js/app.js') }}?{{ uniqid() }}"></script>
 </section>
 @endsection

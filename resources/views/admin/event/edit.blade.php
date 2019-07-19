@@ -1,17 +1,17 @@
-@extends('layouts.admin-master')
+@extends('layouts.user-master')
 
 @section('content')
 
 <section class="section">
   <div class="section-header">
 
-    <h1>Edit Event list</h1>
+    <h1>Manage Events</h1>
   </div>
  <div class="card">
-      <div class="card-header">
-        <h4>Event List</h4>
+    <div class="card-header">
+      <h4>Update Event</h4>
         <div class="card-header-action">
-          <a href="{{ route('admin.event')}}" class="btn btn-primary">List<i class="fas fa-plus"></i></a></div></div>
+        <a href="{{ route('admin.event')}}" class="btn btn-primary">EventList</a></div></div>
   <div class="section-body">
    <div class="card">
     <div class="card-body">
@@ -71,4 +71,7 @@
       </form>
   </div>
 </div>
+</div></div>
+
+</section>
 @endsection

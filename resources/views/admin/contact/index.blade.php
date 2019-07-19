@@ -21,11 +21,11 @@
     <thead>
         <tr>
           
-          <td> Name</td>
-          <td>Email</td>
-          <td>Subject</td>
-          <td>Message</td>
-          <td colspan="2"><p class="text-dark">Action</p></td>
+          <th> Name</th>
+          <th>Email</th>
+          <th>Subject</th>
+          <th>Message</th>
+          <th colspan="2">Action</th>
           
         </tr>
     </thead>
@@ -72,8 +72,8 @@
               <div class="modal-footer">
                  <center>
                      <input type="hidden" name="contact_id" id="contact_id" >
-                     <button type="submit" name="" class="btn btn-danger" data-dismiss="modal" onclick="formSubmit()">Yes, Delete</button>
-                     <button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
+                     <button type="submit" name="" class="btn btn-danger" data-dismiss="modal" onclick="formSubmit()">OK</button>
+                     <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
 
                  </center>
              </div>

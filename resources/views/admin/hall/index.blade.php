@@ -1,9 +1,9 @@
-@extends('layouts.hall-master')
+@extends('layouts.admin-master')
 
 @section('content')
 
 <section class="section">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
   <div class="section-header">
     <h1>Manage Halls</h1>
   </div>
@@ -15,7 +15,7 @@
         
         <h4>Hall List</h4>
         <div class="card-header-action" >
-        <a href="{{route('admin.hall.create')}}" class="btn btn-primary">Add Hall<i class="fas fa-plus"></i></a>
+        <a href="{{route('admin.hall.create')}}" class="btn btn-primary">Add<i class="fas fa-plus"></i></a>
         </div>
       </div>
       <div class="card-body"> 
@@ -25,8 +25,8 @@
           </div><br />
         @endif
       
-        <div class="table-responsive" >
-        <table class="table table-striped">
+        <div style="width:100%;height:100%;overflow-x:scroll;overflow-y:hidden;">
+        <table class="table table-striped table-bordered">
         <thead>
         <tr>
           <th>Hall  Image</th>
@@ -46,7 +46,7 @@
         @foreach($data as $hall)
         
         <tr>
-            <td><img src="{{URL::to('/')}}/images/{{$hall->image}}" class="img-thumbnail"/></td>
+            <td><img src="{{URL::to('/')}}/image/{{$hall->image}}" class="img-thumbnail" width="100"/></td>
             <td>{{$hall->hall_name}}</td>
             <td>{{$hall->state_name}}</td>
             <td>{{$hall->city_name}}</td>

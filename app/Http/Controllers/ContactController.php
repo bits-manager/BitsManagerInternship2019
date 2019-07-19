@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Http\Controllers\Controller;
+
+
 use Illuminate\Http\Request;
 use App\Mail\ContactForMail;
 use App\MyLibs\Repositories\ContactRepository;
@@ -78,7 +82,4 @@ class ContactController extends Controller
       
 
 
-}
-
-
-  
+} 

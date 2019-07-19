@@ -19,7 +19,7 @@ Route::name('frontend.')->prefix('frontend')->group(function() {
 
     Route::get('contact', 'frontend\ContactController@index')->name('contact');
 
-    Route::get('admin/dashboard', 'DashboardController@index')->middleware('auth')->name('admin.dashboard');
+    Route::get('frontend/admin/dashboard', 'DashboardController@index')->middleware('auth')->name('admin.dashboard');
 
     Route::get('about', 'frontend\AboutController@index')->name('about');
       Route::get('language', 'frontend\LanguageController@index')->name('language');
@@ -77,7 +77,9 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
         ]
     ]);
 
+
     Route::resource('contact','ContactController', [
+
         'names' => [
             'index' => 'contact'
         ]
@@ -102,9 +104,12 @@ Route::get('googlemap/direction', 'ContactController@direction');
     
     Route::post('hall_update', 'HallController@update')->name('hall_update.update');
 
-    
+
 
  });
+
+
+
 
 
 
