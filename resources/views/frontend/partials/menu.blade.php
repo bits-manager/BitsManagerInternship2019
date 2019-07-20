@@ -8,15 +8,14 @@
 			<div class="logo menu_logo">
 				<a href="#">
 					<div class="logo_container d-flex flex-row align-items-start justify-content-start">
-						<div class="logo_image"><div><img src="../frontendassets/images/hallmyanmar.jpg" alt=""></div></div>
+						<div class="logo_image"><div><img src="../frontendassets/images/logo.png" alt=""></div></div>
 					</div>
 				</a>
 			</div>
 			<ul>
-				<li class="active"><a href="homes" ><i class="fa fa-home"></i> {{trans('sentence.home')}}</a></li>
-                <li><a href="about">{{trans('sentence.contact')}}</a></li>
-				             
-                        <li class="nav-item dropdown">
+				<li class="active"><a href="homes" ><i class="fa fa-home"></i>{{trans('sentence.home')}}</a></li>
+                <li><a href="about">{{trans('sentence.about')}}</a></li>
+				 <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{trans('sentence.language')}}<span class="caret"></span>
                             </a>
@@ -30,7 +29,7 @@
                         </li>
 				<li><a href="contact" >{{trans('sentence.contact')}}</a></li>
 				                <li class="upper-links dropdown show-on-hover"><a class="links dropdown-toggle" 
-									data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o"></i> {{trans('sentence.account')}}</a>
+									data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o"></i> Account</a>
 								  <ul class="dropdown-menu" role="menu" id="ul">
 
 								  	@if(Auth::check())
