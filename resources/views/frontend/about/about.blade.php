@@ -11,8 +11,10 @@
 				<!-- About Content -->
 				<div class="col-lg-6">
 					<div class="about_content">
+
 						<div class="section_title">About us</div>
 						
+
 						<div class="about_text">
 						 <p style="font-size: 18px">The user can search halls on a single place. Hall's owner 
 						 can advertise their halls , user can contact hall's owner to rent halls and
@@ -80,6 +82,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
+
 					<div class="section_title">The Realtors</div>		
 				</div>
 			</div>
