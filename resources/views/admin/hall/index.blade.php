@@ -25,8 +25,8 @@
           </div><br />
         @endif
       
-        <div style="width:100%;height:100%;overflow-x:scroll;overflow-y:hidden;">
-        <table class="table table-striped table-bordered">
+        <!-- <div style="width:100%;height:100%;overflow-x:scroll;overflow-y:hidden;"> -->
+        <table class="table table-striped table-bordered table-responsive">
         <thead>
         <tr>
           <th>Hall  Image</th>
@@ -37,7 +37,6 @@
           <th>Phone No</th>
           <th>Open Time</th>
           <th>Close Time</th>
-          
           <th>Address</th>
           <th colspan="2">Action</th>
         </tr>
@@ -61,7 +60,7 @@
         </tr>
         @endforeach
         </tbody>
-        </table></div></div></div></section> 
+        </table></div></div></section> 
 <div id="DeleteModal" class="modal fade " role="dialog">
    <div class="modal-dialog">
      <!-- Modal content-->

@@ -272,10 +272,10 @@ $scope.selectChange = function(){
     document.getElementById('open_time').value="";
     document.getElementById('close_time').value="";
     document.getElementById('address').value="";
-    document.getElementById('state').value="";
+    /*document.getElementById('state').value="";
     document.getElementById('city').value="";
     document.getElementById('township').value="";
-
+*/
   }
 </script>
 
