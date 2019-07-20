@@ -12,6 +12,7 @@
 	<div class="about">
 		<div class="container">
 			<div class="row">
+				
                 @foreach($hall as $hall)
 
 				<!-- About Image -->
