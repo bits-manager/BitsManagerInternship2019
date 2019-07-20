@@ -53,7 +53,7 @@
 			<div class="row">
 				<div class="col">
 					<div class="home_search_container">
-							<form action="" class="search_form d-flex flex-row align-items-start justfy-content-start"> 
+							<form class="search_form d-flex flex-row align-items-start justfy-content-start"> 
 								@csrf
 								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
 									<div>
@@ -63,9 +63,6 @@
 										
 									</div>
 
-											
-										
-									
 									<div>
 										<select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control" >
 										</select>
@@ -86,7 +83,8 @@
 
 								</div>
 								<button  id="a" class="search_form_button ml-auto" 
-								ng-click="clickChange()"> search </button>
+								ng-click="clickChange()"> search </button> 
+								
 							</form>
 						</div>
 					</div>
@@ -231,10 +229,6 @@ $scope.selectedCity = $scope.cities[0].id;
 $scope.selectedTownship = $scope.townships[0].id;
 $scope.event=$scope.events[0].id;
 
-$scope.selectState = $scope.states[0].id;
-$scope.selectCity = $scope.cities[0].id;
-$scope.selectTownship = $scope.townships[0].id;
-$scope.selectEvent=$scope.events[0].id;
 
 	$http({
 	          method : "GET",
