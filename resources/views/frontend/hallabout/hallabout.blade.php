@@ -12,16 +12,18 @@
 	<div class="about">
 		<div class="container">
 			<div class="row">
-
+                @foreach($hall as $hall)
 
 				<!-- About Image -->
 				<div class="col-lg-5">
-					<div class="about_image"><img src="/frontendassets/images/wedding1.jpg" class="rounded" alt="" width="800" height="450"></div>
+					<div class="about_image"><img src=
+						"{{URL::to('/')}}/image/{{$hall->image}}" class="rounded" alt="" width="800" height="450"></div>
 				</div>
 
 				<!-- About Content -->
 				<div class="col-lg-7">
 					<div class="about_content">
+
 						<div class="section_title" font-style="italic"><marquee>Hall Name</marquee></div>
 						<div class="col-lg-3">
 							<div class="about_text">
@@ -37,10 +39,25 @@
 							</div>
 						</div>
 
-						<div class="col-lg-4"></div>
+						<div class="section_title" font-style="italic"><marquee>{{$hall->hall_name}}</marquee></div>
+						
+							
+								<label class="label_style"><i class="fa fa-map-marker icon"></i><b>Location : </b>{{$hall->address}}</label><br>
+								<label class="label_style"><i class="fa fa-map-marker icon"></i> <b>State : </b>{{$hall->state_name}}</label><br>
+								<label class="label_style"><i class="fa fa-map-marker icon"></i><b> City : </b>{{$hall->city_name}}</label><br>
+								<label class="label_style"><i class="fa fa-map-marker icon"></i><b>Township : </b>{{$hall->township_name}}</label><br>
+								<label class="label_style"><i class="fa fa-phone icon"></i> <b>Contact : </b>{{$hall->phone_no}}
+								</label><br>
+								<label class="label_style"><i class="fa fa-clock-o icon"></i> <b>Open Time : </b>{{$hall->open_time}}</label><br>
+								<label class="label_style"><i class="fa fa-clock-o icon"></i><b> Close Time : </b>{{$hall->close_time}}</label>
+							
+						
+
+
+						
 					</div>
 				</div>
-
+             @endforeach
 			</div>
 			
 		

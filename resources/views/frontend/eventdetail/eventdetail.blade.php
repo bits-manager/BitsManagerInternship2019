@@ -23,6 +23,7 @@
 						
 						
 					 @foreach($event as $event)
+
 					   <div><img src="{{URL::to('/')}}/image/{{$event->image}}" class="img-thumbnail" width="600"/></div>
 					   <div><strong> {{$event->event_name}}</strong></div>
 					 @endforeach 

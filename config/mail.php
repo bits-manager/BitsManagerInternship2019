@@ -30,7 +30,9 @@
     |
     */
 
+
  'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+
 
     /*
     |--------------------------------------------------------------------------
@@ -92,8 +94,6 @@
 
 
     'username' => env('hninwaiwai51986@gmail.com'),
-
-
     'password' => env('htet123456'),
 
     /*

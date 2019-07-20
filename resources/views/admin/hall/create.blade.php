@@ -294,4 +294,5 @@ $scope.selectChange = function(){
                 });
             });
 </script>
+
 @endsection 

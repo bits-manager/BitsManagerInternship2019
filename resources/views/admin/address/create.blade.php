@@ -96,5 +96,6 @@
     document.getElementById('status').value="";
    }
   </script>
+  <script src="{{ asset('js/app.js') }}?{{ uniqid() }}"></script>
 </section>
 @endsection

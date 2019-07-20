@@ -74,8 +74,9 @@ Manage States
   function clearText(){
     document.getElementById('state_name').value="";
 
-  }</script>
-
+  }
+</script>
+<script src="{{ asset('js/app.js') }}?{{ uniqid() }}"></script>
 
 </section>
 @endsection

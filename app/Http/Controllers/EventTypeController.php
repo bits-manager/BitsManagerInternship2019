@@ -87,7 +87,9 @@ class EventTypeController extends Controller
         $data=$this->eventRepo->getById($event_id);
         $image_name=$data->image;
         $image_path = public_path().'/image/'.$image_name;
+
         unlink($image_path);
+
         $this->eventRepo->delete($event_id,$image_name);
         return back()->with('info','info is sucessfully delete!');
          return redirect()->back()->withInput();

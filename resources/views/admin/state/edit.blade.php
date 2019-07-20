@@ -59,5 +59,7 @@ Manage State
       </form>
   </div>
 </div>
-</div></section>
+</div>
+<script src="{{ asset('js/app.js') }}?{{ uniqid() }}"></script>
+</section>
 @endsection

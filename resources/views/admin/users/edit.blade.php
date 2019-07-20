@@ -1,4 +1,4 @@
-@extends('layouts.admin-master')
+@extends('layouts.user-master')
 
 @section('title')
 Edit Profile ({{ $user->name }})
@@ -13,4 +13,5 @@ Edit Profile ({{ $user->name }})
       <profile-component user='{!! $user->toJson() !!}'></profile-component>
   </div>
 </section>
+
 @endsection
