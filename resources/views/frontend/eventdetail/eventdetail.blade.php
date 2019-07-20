@@ -16,26 +16,27 @@
 <div class="about">
 		<div class="container">
 			<div class="row">
-
-
-				<!-- About Image -->
-				<div class="col-lg-6">
-  
-  					
-	      					<div class="item active">
-	        					<img src="/frontendassets/images/wedding3.jpg" alt="" style="width:100%;">
-	        				</div>
-					
-				</div>
-
+				
 				<!-- About Content -->
 				<div class="col-lg-6">
 					<div class="about_content">
-						<div class="section_title  section_title_service" >Service</div>
-						 
-						<div><strong>Description :</strong></div>
-						 
+						
+						
+					 @foreach($event as $event)
+					   <div><img src="{{URL::to('/')}}/image/{{$event->image}}" class="img-thumbnail" width="600"/></div>
+					   <div><strong> {{$event->event_name}}</strong></div>
+					 @endforeach 
 					</div>
+				</div>
+				<!-- About Content -->
+                <div class="col-lg-6">
+					<div class="about_content">
+					
+                     <div class="section_title  section_title_service" >Service</div><br>
+                     
+                      <div><strong>Description :{{$data}}</strong></div>
+                      
+                     </div>
 				</div>
 
 			</div>

@@ -33,7 +33,7 @@ class EventTypeController extends Controller
           $image->move(public_path('image'),$new_name);
           $form_data=array(
             'event_name'=>$request->event_name,
-            'image'=>$new_name
+            'image'=>$new_name,
             );
          
          $this->eventRepo->create($form_data);

@@ -25,13 +25,15 @@
 						<div class="section_title" font-style="italic"><marquee>Hall Name</marquee></div>
 						<div class="col-lg-3">
 							<div class="about_text">
-								<label class="label_style"><i class="fa fa-map-marker icon"></i>  Location		:</label><br>
+							
+								<label class="label_style"><i class="fa fa-map-marker icon"></i>  Location		:{{$hall}}</label><br>
 								<label class="label_style"><i class="fa fa-map-marker icon"></i> State		:</label><br>
 								<label class="label_style"><i class="fa fa-map-marker icon"></i> City		:</label><br>
 								<label class="label_style"><i class="fa fa-map-marker icon"></i>       Township		:</label><br>
 								<label class="label_style"><i class="fa fa-phone icon"></i>       Contact		:</label><br>
 								<label class="label_style"><i class="fa fa-clock-o icon"></i> Open Time 		:</label><br>
 								<label class="label_style"><i class="fa fa-clock-o icon"></i> Close Time 		:</label>
+								
 							</div>
 						</div>
 
