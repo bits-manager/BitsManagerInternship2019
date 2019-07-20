@@ -85,6 +85,7 @@ class DataController extends ApiController
     {
 
       try{
+
           $eventType_id= $request->eventType_id;
           $state_id= $request->state_id;
           $city_id= $request->city_id;
