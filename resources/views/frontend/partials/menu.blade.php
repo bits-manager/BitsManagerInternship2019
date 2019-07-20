@@ -11,13 +11,13 @@
 				</a>
 			</div>
 			<ul>
-				<li><a href="homes"><i class="fa fa-home"></i>{{trans('sentence.home')}}</a>
+				<li><a href="homes"><i class="fa fa-home"></i>Home</a>
 								</li>
-								<li><a href="about">{{trans('sentence.about')}}</a></li>
+								<li><a href="about">About us</a></li>
 
 
-									<li><a href="contact">{{trans('sentence.contact')}}</a></li>
-                                    @php $locale = session()->get('locale'); @endphp
+									<li><a href="contact">Contact</a></li>
+                                    
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{trans('sentence.language')}}<span class="caret"></span>
