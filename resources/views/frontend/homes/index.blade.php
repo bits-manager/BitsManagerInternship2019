@@ -27,17 +27,7 @@
 				<!-- Slide -->
 				<div class="owl-item">
 					<div class="home_slider_background" style="background-image:url(../frontendassets/images/hallshome.jpg)"></div>
-					<div class="slide_container">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<div class="slide_content">
-										
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 
 			</div>
@@ -106,17 +96,17 @@
 			</div>
 			<div class="row recent_row">
 				<div class="col">
-					<div class="recent_slider_container">
+					
 						<div class="owl-carousel owl-theme recent_slider">
 						
 							<!-- Slide -->
-							<div class="owl-item" ng-repeat="x in halls">
+							<div ng-repeat="x in halls">
 
 								<div class="recent_item">
 									<div class="recent_item_inner" >
 										<div class="recent_item_image">
 											<a href="eventdetail"><img src="../image
-												/<% x.image %>" alt="" ></a>
+												/<% x.image %>" alt="" width="300" height="350"></a>
 											<div class="centered" ><% x.event_name %> </div>
 
 										</div>
@@ -124,7 +114,8 @@
 										<div class="recent_item_body">
 												<div class="recent_item_title text-center"><a href="eventdetail" >View Event Detail</a></div>
 												<div class="recent_item_title text-center">
-												<a href="hallabout?hall_id=<%x.hall_id%>" >Hall Information</a>
+												<a href=
+												"hallabout?hall_id=<%x.hall_id%>" >Hall Information</a>
 												</div>
 										</div>
 										
@@ -133,8 +124,8 @@
 								</div>
 							</div>
 
-							<!-- Slide -->
-							<div class="owl-item">
+							
+							 <!-- <div class="owl-item">
 								<div class="recent_item">
 									<div class="recent_item_inner">
 										<div class="recent_item_image">
@@ -152,7 +143,7 @@
 								</div>
 							</div>
 
-							<!-- Slide -->
+							
 							<div class="owl-item">
 								<div class="recent_item">
 									<div class="recent_item_inner">
@@ -171,7 +162,7 @@
 								</div>
 							</div>
 
-							<!-- Slide -->
+							
 							<div class="owl-item">
 								<div class="recent_item">
 									<div class="recent_item_inner">
@@ -187,15 +178,15 @@
 										
 									</div>
 								</div>
-							</div>
-
+							</div> -->
+ 
 						</div>
 
-						<div class="recent_slider_nav_container d-flex flex-row align-items-start justify-content-start">
+						<!-- <div class="recent_slider_nav_container d-flex flex-row align-items-start justify-content-start">
 							<div class="recent_slider_nav recent_slider_prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
 							<div class="recent_slider_nav recent_slider_next"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-						</div>
-					</div>
+						</div> -->
+					
 				</div>
 			</div>
 		</div>

@@ -102,6 +102,7 @@ class DataController extends ApiController
                     ->get();
           
           return $this->respondSuccess('success',$halls); 
+          
          }catch (\Exception $e) {
             \Log::error($e->getMessage());
         }

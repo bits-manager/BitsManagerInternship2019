@@ -12,9 +12,8 @@ class HallaboutController extends Controller
     {
 
        $hall_id= $request->hall_id;
-       
        $hall=DB::table('halls')
-       	->join('states','states.id','=','halls.state_id')
+       	      ->join('states','states.id','=','halls.state_id')
            		->join('cities','cities.id','=','halls.city_id')
            		->join('townships','townships.id','=','halls.township_id')
            		->join('event_type_halls','event_type_halls.id','=','halls.township_id')

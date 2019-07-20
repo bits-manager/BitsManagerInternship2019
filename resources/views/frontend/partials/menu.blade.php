@@ -13,6 +13,7 @@
 				</a>
 			</div>
 			<ul>
+
 				<li class="active"><a href="homes" ><i class="fa fa-home"></i>{{trans('sentence.home')}}</a></li>
                 <li><a href="about">{{trans('sentence.about')}}</a></li>
 				 <li class="nav-item dropdown">
@@ -28,8 +29,10 @@
                             </div>
                         </li>
 				<li><a href="contact" >{{trans('sentence.contact')}}</a></li>
+
 				                <li class="upper-links dropdown show-on-hover"><a class="links dropdown-toggle" 
 									data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o"></i> Account</a>
+
 								  <ul class="dropdown-menu" role="menu" id="ul">
 
 								  	@if(Auth::check())
