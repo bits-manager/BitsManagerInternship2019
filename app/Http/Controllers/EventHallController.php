@@ -34,10 +34,10 @@ class EventHallController extends Controller
     {
     	
         
-    	/*$validatedData=$request->validate([
-      'event_name' => 'required|unique:event_type_halls|max:255',
+    	$validatedData=$request->validate([
+      'description' => 'required',
         
-	     ]);*/
+	     ]);
          
 
     	$data = $request->all();
