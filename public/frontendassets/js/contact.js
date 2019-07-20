@@ -45,11 +45,7 @@ $(document).ready(function()
 	});
 
 	initMenu();
-<<<<<<< HEAD
-	initMap();
-=======
-	
->>>>>>> 968ab8a9afda1d489b8068e6689b979ea4e67f00
+
 
 	/* 
 
@@ -128,25 +124,6 @@ $(document).ready(function()
 
 	*/
 
-<<<<<<< HEAD
-	function initMap() {
-        var myLatLng = {lat: 21.974760, lng: 96.088175};
 
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: myLatLng
-        });
-
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          title: 'Hello World!'
-        });
-      }
-
-=======
-
-	
->>>>>>> 968ab8a9afda1d489b8068e6689b979ea4e67f00
 
 });

@@ -26,13 +26,29 @@
 						</div> 
 						<nav class="main_nav">
 							<ul>
-								<li><a href="homes"><i class="fa fa-home"></i> Home</a>
+								<li><a href="homes"><i class="fa fa-home"></i>{{trans('sentence.home')}}</a>
 								</li>
-								<li><a href="about">About us</a></li>
-								<li><a href="properties">Properties</a></li>
-								<li><a href="contact">Contact</a></li>
+								<li><a href="about">{{trans('sentence.about')}}</a></li>
+
+
+									<li><a href="contact">{{trans('sentence.contact')}}</a></li>
+                                  
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{trans('sentence.language')}}<span class="caret"></span>
+                            </a>
+                           
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="lang/en"><img src="{{asset('assets/img/us.png')}}" width="30px" height="20x"> English</a>
+                                
+                                 <a class="dropdown-item" href="lang/my"><img src="{{asset('assets/img/my.png')}}" width="30px" height="20x"> Myanmar</a>
+                                
+                            </div>
+                        </li>
+                  
+								
 								<li class="upper-links dropdown show-on-hover"><a class="links dropdown-toggle" 
-									data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o"></i> Account</a>
+									data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o"></i> {{trans('sentence.account')}}</a>
 								  <ul class="dropdown-menu" role="menu" id="ul">
 
 								  	@if(Auth::check())
