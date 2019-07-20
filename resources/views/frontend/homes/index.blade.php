@@ -27,17 +27,7 @@
 				<!-- Slide -->
 				<div class="owl-item">
 					<div class="home_slider_background" style="background-image:url(../frontendassets/images/hallshome.jpg)"></div>
-					<div class="slide_container">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<div class="slide_content">
-										
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 
 			</div>
@@ -116,7 +106,7 @@
 									<div class="recent_item_inner" >
 										<div class="recent_item_image">
 											<a href="eventdetail"><img src="../image
-												/<% x.image %>" alt="" ></a>
+												/<% x.image %>" alt="" width="300" height="350"></a>
 											<div class="centered" ><% x.event_name %> </div>
 
 										</div>
@@ -133,8 +123,8 @@
 								</div>
 							</div>
 
-							<!-- Slide -->
-							<div class="owl-item">
+							
+							 <!-- <div class="owl-item">
 								<div class="recent_item">
 									<div class="recent_item_inner">
 										<div class="recent_item_image">
@@ -152,7 +142,7 @@
 								</div>
 							</div>
 
-							<!-- Slide -->
+							
 							<div class="owl-item">
 								<div class="recent_item">
 									<div class="recent_item_inner">
@@ -171,7 +161,7 @@
 								</div>
 							</div>
 
-							<!-- Slide -->
+							
 							<div class="owl-item">
 								<div class="recent_item">
 									<div class="recent_item_inner">
@@ -187,8 +177,8 @@
 										
 									</div>
 								</div>
-							</div>
-
+							</div> -->
+ 
 						</div>
 
 						<div class="recent_slider_nav_container d-flex flex-row align-items-start justify-content-start">
