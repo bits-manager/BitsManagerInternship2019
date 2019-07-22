@@ -38,7 +38,7 @@ class EventHallController extends Controller
     	$validatedData=$request->validate([
       'description' => 'required',
       
-          'image' => 'required|dimensions:max_width=600,max_height=350',
+          'image' => 'required',
         ]);
           $image = $request->file('image');
           $new_name=rand() . '.' . $image->getClientOriginalExtension();
