@@ -20,8 +20,6 @@
     @if(Session::has('toasts'))
     @foreach(Session::get('toasts') as $toast)
     <div class="alert alert-{{ $toast['level'] }}">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-
       {{ $toast['message'] }}
     </div>
     @endforeach
@@ -29,7 +27,6 @@
 
      @if($message=Session::get('info'))
     <div class="alert alert-info alert-block">
-    <button type ="button" class="close" data-dismiss="alert">x</button>
     <strong>{{$message}}</strong>
     </div>
     @endif 
@@ -44,7 +41,8 @@
         </ul>
       </div><br />
     @endif
-    <form method="post" enctype="multipart/form-data" action="{{ route('admin.event_update.update',['id'=>$edit_event->id])}}">
+    
+      <form method="put" action="{{ route('admin.event.update', ['id'=>$edit_event->id]) }}">
  
      <div class="form-group row mb-4">
             @csrf
@@ -53,14 +51,7 @@
          <input type="text" class="form-control" name="event_name" value="{{$edit_event->event_name}}"/>
        </div></div>
        
-     <div class="form-group row mb-4">
-          @csrf
-          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name">Event Image:</label>
-          <div class="col-sm-12 col-md-7">
-          <input type="file" name="image"/>
-          <img src="{{URL::to('/')}}/image/{{$edit_event->image}}" class="img-thumbnail" width="100"/>
-          <input type="hidden" name="hidden_image" value="{{$edit_event->image}}"/>
-        </div></div>
+    
 
        <div class="form-group row mb-4">
          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>

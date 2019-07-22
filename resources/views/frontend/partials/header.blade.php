@@ -32,7 +32,7 @@
 
 
 									<li><a href="contact">{{trans('sentence.contact')}}</a></li>
-                                    @php $locale = session()->get('locale'); @endphp
+                                  
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{trans('sentence.language')}}<span class="caret"></span>
