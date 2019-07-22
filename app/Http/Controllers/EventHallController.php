@@ -41,9 +41,16 @@ class EventHallController extends Controller
          
 
     	$data = $request->all();
-        /*dd($data);
-        $data['description'] = $data['editordata'];*/
-       // dd($data['editordata']);
+      /*$description= explode('>',$data['description']);
+      $description= explode('<',$description[1]);
+      $description=$description[0];
+      $newdata=array(
+                    'hall_id' =>$data->hall_id,
+                    'eventType_id' =>$data->eventType_id
+                    'description'=>$description
+                  );
+
+        dd($newdata);*/
         $this->eventhallRepo->create($data);
        
         

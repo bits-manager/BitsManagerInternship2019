@@ -14,5 +14,4 @@ Create User
   </div>
 </section>
 
-@en
-dsection
+@endsection
