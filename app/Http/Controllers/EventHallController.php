@@ -39,31 +39,20 @@ class EventHallController extends Controller
       'description' => 'required',
       'image' => 'required', 
       ]);
-    	/*$data = $request->all();
-      $description= explode('>',$data['description']);
-      $description= explode('<',$description[1]);
-      $description=$description[0];
-      $newdata=array(
-                    'hall_id' =>$data->hall_id,
-                    'eventType_id' =>$data->eventType_id
-                    'description'=>$description
-                  );
-
-        dd($newdata);*/
-       
-       
+    	     
+          /*$data = $request->all();
+          $description= explode('>',$data['description']);
+          $description= explode('<',$description[1]);
+          $description=$description[0];*/
           $image = $request->file('image');
           $new_name=rand() . '.' . $image->getClientOriginalExtension();
           $image->move(public_path('image'),$new_name);
           $form_data=array(
-            'hall_name'=>$request->hall_name,
             'hall_id'=>$request->hall_id,
             'eventType_id'=>$request->eventType_id,
              'description' => $request->description,
-            'event_name'=>$request->event_name,
             'image'=>$new_name
             );
-         
        $this->eventhallRepo->create($form_data);
 
        return back()->with('info','Hall_Event is successfully save!');
@@ -97,13 +86,15 @@ class EventHallController extends Controller
     }
  public function update(Request $request)
            { 
+            
              $eventhall_id=$request->id;
               $image_name=$request->hidden_image;
               $image=$request->file('image');
               if($image==''){
                   $form_data=array(
-                   'hall_name'=>$request->hall_name,
-                    'event_name'=>$request->event_name,
+                   'hall_id'=>$request->hall_id,
+                    'eventType_id'=>$request->eventType_id,
+                    'description'=>$request->description,
                     'image'=>$image_name,
                   );
               }
@@ -114,9 +105,10 @@ class EventHallController extends Controller
                 unlink($image_path);
                 $this->eventhallRepo->delete($image_name);
                 $form_data=array(
-                 'hall_name'=>$request->hall_name,
-                 'event_name'=>$request->event_name,
-                 'image'=>$imagenew,
+                    'hall_id'=>$request->hall_id,
+                    'eventType_id'=>$request->eventType_id,
+                    'description'=>$request->description,
+                    'image'=>$imagenew,
                 );
             }
               $form_data=array_except($form_data,['$eventhall_id']);
