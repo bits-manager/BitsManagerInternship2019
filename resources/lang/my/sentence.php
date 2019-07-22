@@ -3,7 +3,7 @@
 // sentence.php
 
 return [
-  'home' => 'မျက်နှာစာ',
+'home' => 'မျက်နှာစာ',
   'about' => 'အကြောင်းအရာ',
   'contact'=>'ဆက်သွယ်ရန်',
   'language'=>'ဘာသာစကား',

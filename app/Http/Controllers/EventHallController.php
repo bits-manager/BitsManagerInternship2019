@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use App\MyLibs\Models;
 use App\MyLibs\Repositories\HallRepository;
 use App\MyLibs\Repositories\EventTypeRepository;
 use App\MyLibs\Repositories\EventHallRepository;
@@ -15,7 +16,7 @@ class EventHallController extends Controller
 {
     public function __construct(EventHallRepository $eventhallRepo ,HallRepository $hallRepo ,EventTypeRepository $eventTypeRepo)
 	{
-		$this->eventhallRepo=$eventhallRepo;
+		    $this->eventhallRepo=$eventhallRepo;
         $this->hallRepo=$hallRepo;
         $this->eventTypeRepo=$eventTypeRepo;
 
@@ -36,28 +37,37 @@ class EventHallController extends Controller
         
     	$validatedData=$request->validate([
       'description' => 'required',
-        
-	     ]);
-         
-
-    	$data = $request->all();
-        /*dd($data);
+      
+          'image' => 'required|dimensions:max_width=600,max_height=350',
+        ]);
+          $image = $request->file('image');
+          $new_name=rand() . '.' . $image->getClientOriginalExtension();
+          $image->move(public_path('image'),$new_name);
+          $form_data=array(
+            'hall_name'=>$request->hall_name,
+            'hall_id'=>$request->hall_id,
+            'eventType_id'=>$request->eventType_id,
+             'description' => $request->description,
+            'event_name'=>$request->event_name,
+            'image'=>$new_name
+            );
+         /*dd($data);
         $data['description'] = $data['editordata'];*/
        // dd($data['editordata']);
-        $this->eventhallRepo->create($data);
-       
-        
+       $this->eventhallRepo->create($form_data);
        return back()->with('info','Hall_Event is successfully save!');
        return redirect()->back()->withInput();
     
     }
+
+
     public function index(Request $request)
     {
     	
         $data = DB::table('event_type_halls')
        ->join('halls', 'halls.id', '=', 'event_type_halls.hall_id')
        ->join('event_types', 'event_types.id', '=', 'event_type_halls.eventType_id')
-       ->select('event_type_halls.id','halls.hall_name', 'event_types.event_name','event_type_halls.description')
+       ->select('event_type_halls.id','halls.hall_name','event_type_halls.image' ,'event_types.event_name','event_type_halls.description')
        ->get();
         
         return view('admin.eventhall.index',compact('data'));
@@ -74,25 +84,51 @@ class EventHallController extends Controller
          return view('admin.eventhall.edit', compact('edit_hallevents','halldata','eventdata'));
          
     }
-    public function show($eventhall_id,Request $request)
-    {
-    	
-      
-           $data=$request->all();
-          
-           $data=array_except($data,['$eventhall_id']);
-            $this->eventhallRepo->update($data,$eventhall_id);
+ public function update(Request $request)
+           { 
+             $eventhall_id=$request->id;
+              $image_name=$request->hidden_image;
+              $image=$request->file('image');
+              if($image==''){
+                  $form_data=array(
+                   'hall_name'=>$request->hall_name,
+                    'event_name'=>$request->event_name,
+                    'image'=>$image_name,
+                  );
+              }
+              if($image!=''){
+                $imagenew=rand().'.'.$image->getClientOriginalExtension();
+                $image->move(public_path('image'),$imagenew);
+                $image_path = public_path().'/image/'.$image_name;
+                unlink($image_path);
+                $this->eventhallRepo->delete($image_name);
+                $form_data=array(
+                 'hall_name'=>$request->hall_name,
+                 'event_name'=>$request->event_name,
+                 'image'=>$imagenew,
+                );
+            }
+              $form_data=array_except($form_data,['$eventhall_id']);
+            $this->eventhallRepo->update($form_data,$eventhall_id);
            
         
         return back()->with('info','Hall_Event is successfully update!');
         return redirect()->back()->withInput();
-    }
+           }
+
+
+
     public function destroy($eventhall_id)
     {
-        
-        $this->eventhallRepo->delete($eventhall_id);
+       $data=$this->eventhallRepo->getById($eventhall_id);
+        $image_name=$data->image;
+        $image_path = public_path().'/image/'.$image_name;
 
-      return back()->with('info','Hall_Event is successfully delete!');
+        unlink($image_path);
+
+        $this->eventhallRepo->delete($eventhall_id,$image_name);
+        
+        return back()->with('info','Hall_Event is successfully delete!');
              return redirect()->back()->withInput();
  }
 }

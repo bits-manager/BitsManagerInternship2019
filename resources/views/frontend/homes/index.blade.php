@@ -108,7 +108,8 @@
 										<div class="recent_item_body">
 												<div class="recent_item_title text-center"><a href="eventdetail?eventType_id=<%eventType_id%>" >View Event Detail</a></div>
 												<div class="recent_item_title text-center">
-												<a href="hallabout">Hall Information</a>
+												<a href=
+												"hallabout?hall_id=<%x.hall_id%>" >Hall Information</a>
 												</div>
 										</div>
 										
