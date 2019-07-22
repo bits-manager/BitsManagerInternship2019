@@ -25,7 +25,7 @@
 <table class="table table-striped">
     <thead>
         <tr>
-          <th>Hall  Image</th>
+        
           <th><p class="text-dark">Event Name</p></th>
           <th colspan="2"><p class="text-dark">Action</p></th>
         </tr>
@@ -33,7 +33,7 @@
     <tbody>
         @foreach($event as $event)
 
-            <td><img src="{{URL::to('/')}}/image/{{$event->image}}" class="img-thumbnail" width="50"/></td>
+           
             <td>{{$event->event_name}}</td>
             <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$event->id}})" 
               data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a>

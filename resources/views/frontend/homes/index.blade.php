@@ -94,13 +94,13 @@
 				</div>
 
 			</div>
-			<div class="row recent_row">
-				<div class="col">
+			<div class="row recent_row" >
+				<div class="col-sm-4" ng-repeat="x in halls">
 					
-						<div class="owl-carousel owl-theme recent_slider">
+						
 						
 							<!-- Slide -->
-							<div ng-repeat="x in halls">
+							<div >
 
 								<div class="recent_item">
 									<div class="recent_item_inner" >
@@ -180,7 +180,7 @@
 								</div>
 							</div> -->
  
-						</div>
+						
 
 						<!-- <div class="recent_slider_nav_container d-flex flex-row align-items-start justify-content-start">
 							<div class="recent_slider_nav recent_slider_prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>

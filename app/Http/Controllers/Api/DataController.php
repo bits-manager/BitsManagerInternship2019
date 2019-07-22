@@ -85,7 +85,7 @@ class DataController extends ApiController
     {
 
       try{
-
+          
           $eventType_id= $request->eventType_id;
           $state_id= $request->state_id;
           $city_id= $request->city_id;
@@ -98,7 +98,7 @@ class DataController extends ApiController
                     ->where('halls.state_id', '=',$state_id)
                     ->where('halls.city_id', '=',$city_id)
                     ->where('halls.township_id', '=',$township_id)    
-                    ->select('event_type_halls.eventType_id','event_type_halls.hall_id','halls.hall_name','event_types.event_name','event_types.image')
+                    ->select('event_type_halls.eventType_id','event_type_halls.hall_id','halls.hall_name','event_types.event_name','event_type_halls.image')
                     ->get();
           
           return $this->respondSuccess('success',$halls); 

@@ -28,8 +28,6 @@ Route::name('frontend.')->prefix('frontend')->group(function() {
       
 });
 
- Route::post('/hall_search',[ 'frontend\uses'=>'ExampleController@index', 'as'=> 'hall_search' ]);
-
 Route::get('home', function() {
     return redirect(route('admin.dashboard'));
 });
@@ -50,13 +48,14 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
             'index' => 'event'
         ]
     ]);
-     Route::post('event_update', 'EventTypeController@update')->name('event_update.update');
+    
 
     Route::resource('eventhall', 'EventHallController', [
         'names' => [
             'index' => 'eventhall'
         ]
     ]);
+     Route::post('event_update', 'EventHallController@update')->name('eventhall_update.update');
 
    Route::resource('state', 'StateController', [
         'names' => [
