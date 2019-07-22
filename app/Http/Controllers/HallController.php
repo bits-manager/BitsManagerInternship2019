@@ -49,7 +49,7 @@ class HallController extends Controller
     public function store(Request $request)
        {
           $validatedData=$request->validate([
-          'hall_name' => 'required|unique:halls|max:255',
+          'hall_name' => 'required',
           'phone_no' => 'required|unique:halls',
           'open_time' => 'required',
           'close_time' => 'required',
