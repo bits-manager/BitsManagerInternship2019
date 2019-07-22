@@ -21,7 +21,7 @@
      @if(Session::has('toasts'))
   @foreach(Session::get('toasts') as $toast)
     <div class="alert alert-{{ $toast['level'] }}">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      
 
       {{ $toast['message'] }}
     </div>
@@ -30,7 +30,7 @@
 
     @if($message = Session::get('info'))
     <div class = "alert alert-info alert-block">
-      <button type = "button" class="close" data-dismiss = "alert">x</button>
+      
       <strong>{{$message}}</strong>
       </div>
       @endif 

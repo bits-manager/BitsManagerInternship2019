@@ -28,8 +28,6 @@ Manage Halls
         @if(Session::has('toasts'))
         @foreach(Session::get('toasts') as $toast)
         <div class="alert alert-{{ $toast['level'] }}">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-
             {{ $toast['message'] }}
         </div>
         @endforeach
@@ -37,7 +35,6 @@ Manage Halls
 
     @if($message=Session::get('info'))
     <div class="alert alert-info alert-block">
-    <button type ="button" class="close" data-dismiss="alert">x</button>
     <strong>{{$message}}</strong>
   </div>
   @endif
@@ -272,10 +269,10 @@ $scope.selectChange = function(){
     document.getElementById('open_time').value="";
     document.getElementById('close_time').value="";
     document.getElementById('address').value="";
-    document.getElementById('state').value="";
+    /*document.getElementById('state').value="";
     document.getElementById('city').value="";
     document.getElementById('township').value="";
-
+*/
   }
 </script>
 

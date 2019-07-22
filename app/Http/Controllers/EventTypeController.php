@@ -27,6 +27,7 @@ class EventTypeController extends Controller
 
          $validatedData = $request->validate([
          'event_name' => 'required|max:255',
+
          ]);
           
     

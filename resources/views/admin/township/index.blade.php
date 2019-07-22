@@ -1,6 +1,6 @@
 <!-- index.blade.php -->
 
-@extends('layouts.admin-master')
+@extends('layouts.user-master')
 
 @section('content')
 
@@ -130,6 +130,5 @@
          $("#deleteForm").submit();
      }
   </script>
-<script src="{{ asset('js/app.js') }}?{{ uniqid() }}"></script>
 
 @endsection
