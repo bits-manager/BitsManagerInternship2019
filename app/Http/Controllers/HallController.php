@@ -54,7 +54,7 @@ class HallController extends Controller
           'open_time' => 'required',
           'close_time' => 'required',
           'address' => 'required',
-          'image' => 'required|dimensions:max_width=600,max_height=350',
+          'image' => 'required',
         ]);
 
           $image = $request->file('image');

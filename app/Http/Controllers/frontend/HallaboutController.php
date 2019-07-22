@@ -10,7 +10,7 @@ class HallaboutController extends Controller
 {
     public function index(Request $request)
     {
-      dd($request->all());
+      
        $hall=DB::table('halls')
        	      ->join('states','states.id','=','halls.state_id')
            		->join('cities','cities.id','=','halls.city_id')

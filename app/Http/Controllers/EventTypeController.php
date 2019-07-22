@@ -26,7 +26,7 @@ class EventTypeController extends Controller
        {
          $validatedData = $request->validate([
          'event_name' => 'required|max:255',
-          'image' => 'required|dimensions:max_width=600,max_height=350',]);
+          'image' => 'required',]);
 
           $image = $request->file('image');
           $new_name=rand() . '.' . $image->getClientOriginalExtension();
