@@ -50,7 +50,8 @@
         </ul>
       </div><br />
       @endif
-      <form  method="post" action="{{route('admin.eventhall.store')}}">
+     
+         <form  method="post" action="{{route('admin.eventhall.store')}}" enctype="multipart/form-data">
           
           <div class="form-group row mb-4">
               @csrf
@@ -79,7 +80,12 @@
               </select>
               </div>
           </div> 
-         
+         <div class="form-group row mb-4">
+  @csrf
+  <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name">Image:</label>
+  <div class="col-sm-12 col-md-7">
+  <input type="file" name="image"/>
+  </div></div>
           
          <div class="form-group row mb-4">
               @csrf

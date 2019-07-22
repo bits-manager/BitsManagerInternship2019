@@ -50,13 +50,14 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
             'index' => 'event'
         ]
     ]);
-     Route::post('event_update', 'EventTypeController@update')->name('event_update.update');
+    
 
     Route::resource('eventhall', 'EventHallController', [
         'names' => [
             'index' => 'eventhall'
         ]
     ]);
+     Route::post('event_update', 'EventHallController@update')->name('eventhall_update.update');
 
    Route::resource('state', 'StateController', [
         'names' => [

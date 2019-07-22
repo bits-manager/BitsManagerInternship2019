@@ -15,11 +15,13 @@ class CreateEventTypeHallsTable extends Migration
     {
         Schema::create('event_type_halls', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('image')->nullable();
             $table->longText('description');
             $table->unsignedBigInteger('hall_id');
             $table->unsignedBigInteger('eventType_id');
             $table->foreign('hall_id')->references('id')->on('halls')->onDelete('cascade');
             $table->foreign('eventType_id')->references('id')->on('event_types')->onDelete('cascade');
+
             $table->timestamps();
         });
     }
