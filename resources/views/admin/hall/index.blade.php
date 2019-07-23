@@ -26,7 +26,7 @@
         @endif
       
         <!-- <div style="width:100%;height:100%;overflow-x:scroll;overflow-y:hidden;"> -->
-        <table class="table table-striped table-bordered table-responsive">
+        <table class="table table-striped table-responsive">
         <thead>
         <tr>
           <th>Hall  Image</th>
@@ -45,7 +45,7 @@
         @foreach($data as $hall)
         
         <tr>
-            <td><img src="{{URL::to('/')}}/image/{{$hall->hall_image}}" class="img-thumbnail" width="100"/></td>
+            <td><img src="{{URL::to('/')}}/images/{{$hall->hall_image}}" class="img-thumbnail" width="100"/></td>
             <td>{{$hall->hall_name}}</td>
             <td>{{$hall->state_name}}</td>
             <td>{{$hall->city_name}}</td>

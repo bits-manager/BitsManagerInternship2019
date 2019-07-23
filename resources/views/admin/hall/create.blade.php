@@ -166,7 +166,7 @@ Manage Halls
         </label>
         <div class="col-sm-12 col-md-7">
         <button type="submit" class="btn btn-primary">Save</button>
-        <input type="button" value="Cancel" class="btn btn-primary" onclick="clearText()"/>
+        <input type="button" value="Cancel" class="btn btn-danger" onclick="clearText()"/>
       </div></div>
       </form>
   </div>
@@ -216,7 +216,6 @@ $scope.selectChange = function(){
         }).then(function mySuccess(response) {
            $scope.cities = response.data.data.city;
            $scope.selectedCity = $scope.cities[0].id;
-           console.log("$scope.selectedCity");
            $scope.townships=response.data.data.township;
            $scope.selectedTownship = $scope.townships[0].id;
           }, function myError(response) {
