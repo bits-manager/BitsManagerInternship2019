@@ -8,13 +8,11 @@
 </style>
 	
 	<!-- About -->
+@foreach($hall as $hall)
 
 	<div class="about">
 		<div class="container">
 			<div class="row">
-				
-                @foreach($hall as $hall)
-
 				<!-- About Image -->
 				<div class="col-lg-5">
 					<div class="about_image"><img src=
@@ -24,7 +22,7 @@
 				<!-- About Content -->
 				<div class="col-lg-7">
 					<div class="about_content">
-						<div class="section_title" font-style="italic"><marquee>{{$hall->hall_name}}{{$hall->id}}</marquee></div>
+						<div class="section_title" font-style="italic"><marquee>{{$hall->hall_name}}</marquee></div>
 						
 							
 								<label class="label_style"><i class="fa fa-map-marker icon"></i><b>Location : </b>{{$hall->address}}</label><br>
@@ -41,7 +39,6 @@
 						
 					</div>
 				</div>
-             @endforeach
 			</div>
 			
 		
@@ -65,10 +62,13 @@
 							<!-- Slide -->
 							<div class="owl-item">
 								<div class="recent_item">
+								
 									<div class="recent_item_inner">
 										<div class="recent_item_image">
-											<a href="eventdetail" ><img src="../frontendassets/images/wedding3.jpg" alt="" width="600" height="350"></a>
-											<div class="centered">Wedding</div>
+											<a href="eventdetail" ><img src=
+												"{{URL::to('/')}}/image/
+												{{$hall->hall_image}}" class="rounded" alt=""  width="600" height="350"></a>
+											<div class="centered">{{$hall->event_name}}</div>
 
 										</div>
 										
@@ -80,42 +80,7 @@
 										
 										
 									</div>
-								</div>
-							</div>
-
-							<!-- Slide -->
-							<div class="owl-item">
-								<div class="recent_item">
-									<div class="recent_item_inner">
-										<div class="recent_item_image">
-											<a href="eventdetail"><img src="../frontendassets/images/party1.jpg" alt="" width="600" height="350"></a>
-											<div class="centered">Party</div>
-										</div>
-										<div class="recent_item_body">
-											<div class="recent_item_title text-center"><a href="eventdetail" >View Event Detail</a></div>
-											
-											
-										</div>
-										
-									</div>
-								</div>
-							</div>
-
-							<!-- Slide -->
-							<div class="owl-item">
-								<div class="recent_item">
-									<div class="recent_item_inner">
-										<div class="recent_item_image">
-											<a href="eventdetail" ><img src="../frontendassets/images/seminar.jpg" alt="" width="600" height="350"></a>
-											<div class="centered">Seminar</div>
-										</div>
-										<div class="recent_item_body">
-											<div class="recent_item_title text-center"><a href="eventdetail" >View Event Detail</a></div>
-											
-											
-										</div>
-										
-									</div>
+								 
 								</div>
 							</div>
 
@@ -143,11 +108,11 @@
 							<div class="recent_slider_nav recent_slider_next"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
 						</div>
 					</div>
-					<!-- <div class="button recent_button"><a href="#">see more</a></div>
-				</div> -->
+					
+				</div> 
 			</div>
 		</div>
 	</div>
 	
-		
+ @endforeach		
 @endsection
