@@ -180,7 +180,7 @@ return [
     ],
 
 
-    'Counter' => Kryptonit3\Counter\Facades\CounterFacade::class,
+    
 
 
     /*
@@ -231,6 +231,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Counter' => Kryptonit3\Counter\Facades\CounterFacade::class,
 
     ],
 
