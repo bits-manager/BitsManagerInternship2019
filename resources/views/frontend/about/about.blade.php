@@ -35,7 +35,7 @@
               			<div class="contactus_text"><h4 style="font-size: 26px;color: blue;margin-top: -60px;margin-bottom:20px;">Advantages</h4></div>
               		    <div class="row">
                             
-              			    <div class="col-lg-2">
+              			    <div class="col-lg-3">
               					<div class="contactus_image"><img src="/frontendassets/images/times.jpg" alt="" style="width: 100px;height: 100px;"></div>
               			
               				</div>
