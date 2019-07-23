@@ -12,16 +12,9 @@ class HallaboutController extends Controller
 {
     public function index(Request $request)
     {
-
-<<<<<<< HEAD
-
-     
-
-      
-
-=======
+        
        $hall_id= $request->hall_id;
->>>>>>> f46775730a46674027c41747be960c2217471064
+
        $hall=DB::table('halls')
        	      ->join('states','states.id','=','halls.state_id')
            		->join('cities','cities.id','=','halls.city_id')

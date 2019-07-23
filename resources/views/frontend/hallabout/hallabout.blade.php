@@ -24,7 +24,7 @@
 				<!-- About Content -->
 				<div class="col-lg-7">
 					<div class="about_content">
-<<<<<<< HEAD
+
 
 						<div class="section_title" font-style="italic"><marquee>Hall Name</marquee></div>
 						<div class="col-lg-3">
@@ -41,10 +41,9 @@
 							</div>
 						</div>
 
-						<div class="section_title" font-style="italic"><marquee>{{$hall->hall_name}}</marquee></div>
-=======
+						
 						<div class="section_title" font-style="italic"><marquee>{{$hall->hall_name}}{{$hall->id}}</marquee></div>
->>>>>>> f46775730a46674027c41747be960c2217471064
+
 						
 							
 								<label class="label_style"><i class="fa fa-map-marker icon"></i><b>Location : </b>{{$hall->address}}</label><br>

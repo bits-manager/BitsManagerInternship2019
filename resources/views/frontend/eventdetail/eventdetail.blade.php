@@ -20,13 +20,10 @@
 				<!-- About Content -->
 				<div class="col-lg-6">
 					<div class="about_content">
-						
-						
-					 @foreach($event as $event)
- 
-					   <div><img src="{{URL::to('/')}}/image/{{$event->image}}" class="img-thumbnail" width="600"/><div class="centered">{{$event->event_name}}</div></div>
-					   
-					 @endforeach 
+						@foreach($data as $eventhall)
+                          <img src="{{URL::to('/')}}/image/{{$eventhall->image}}" class="img-thumbnail" width="500"/>
+                         @endforeach
+                        
 					</div>
 				</div>
 				<!-- About Content -->
@@ -34,9 +31,8 @@
 					<div class="about_content">
 					
                      <div class="section_title  section_title_service" >Service</div><br>
-                     
-                      <div><strong>Description :{{$data}}</strong></div>
-                      
+                       
+                         {{$eventhall->description}}
                      </div>
 				</div>
 
