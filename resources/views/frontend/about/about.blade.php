@@ -36,10 +36,12 @@
               		    <div class="row">
                             
               			    <div class="col-lg-3">
+
               			     <div class="advan">
               					<div class="contactus_image"><img src="/frontendassets/images/times.jpg" alt="" style="width: 100px;height: 100px;margin-left:80px;margin-top: 10px; "></div>
               					<div class="recent_item_title text-center" style="padding-bottom: 20px;color:blue;">Save Time</div>
               			      </div>
+
               				</div>
               			
               				<div class="col-lg-3">
