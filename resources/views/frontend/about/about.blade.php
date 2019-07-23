@@ -35,20 +35,32 @@
               			<div class="contactus_text"><h4 style="font-size: 26px;color: blue;margin-top: -60px;margin-bottom:20px;">Advantages</h4></div>
               		    <div class="row">
                             
-              			    <div class="col-lg-2">
-              					<div class="contactus_image"><img src="/frontendassets/images/times.jpg" alt="" style="width: 100px;height: 100px;"></div>
-              			
+              			    <div class="col-lg-3">
+              			     <div class="advan">
+              					<div class="contactus_image"><img src="/frontendassets/images/times.jpg" alt="" style="width: 100px;height: 100px;margin-left:80px;margin-top: 10px; "></div>
+              					<div class="recent_item_title text-center" style="padding-bottom: 20px;color:blue;">Save Time</div>
+              			      </div>
               				</div>
               			
-              				<div class="col-lg-2">
-              					<div class="contactus_image"><img src="/frontendassets/images/search.jpg" alt="" style="width: 100px;height: 100px;"></div>
+              				<div class="col-lg-3">
+              				  <div class="advan">
+              					<div class="contactus_image"><img src="/frontendassets/images/search.jpg" alt="" style="width: 100px;height: 100px;margin-left:80px;margin-top: 10px;"></div>
+              					<div class="recent_item_title text-center" style="padding-bottom: 20px;color:blue;">Easy to Search</h4></div>
+              				  </div>
               				</div>
               
-              				<div class="col-lg-2">
-              				    <div class="contactus_image"><img src="/frontendassets/images/phone.jpg" alt="" style="width: 100px;height: 100px;"></div>
+              				<div class="col-lg-3">
+              				  <div class="advan">
+              				    <div class="contactus_image"><img src="/frontendassets/images/phone.jpg" alt="" style="width: 100px;height: 100px;margin-left:80px;margin-top: 10px;"></div>
+              				     <div class="recent_item_title text-center" style="padding-bottom: 20px;color:blue;">Easy to Contact</h4></div>
+              				  </div>   
               			    </div>
-              			    <div class="col-lg-2">
-              				    <div class="contactus_image"><img src="/frontendassets/images/save.jpg" alt="" style="width: 100px;height: 100px;"></div>
+
+              			    <div class="col-lg-3">
+              			       <div class="advan">
+              				    <div class="contactus_image"><img src="/frontendassets/images/save.jpg" alt="" style="width: 100px;height: 100px;margin-top: 10px;margin-left:80px;"></div>
+              				    <div class="recent_item_title text-center" style="padding-bottom: 20px;color:blue;">Save Cost</h4></div>
+              				  </div>
               			    </div>
               				</div>
 
