@@ -37,9 +37,23 @@ class EventHallController extends Controller
         
     	$validatedData=$request->validate([
       'description' => 'required',
-      
-          'image' => 'required',
-        ]);
+
+      'image' => 'required', 
+      ]);
+    	/*$data = $request->all();
+      $description= explode('>',$data['description']);
+      $description= explode('<',$description[1]);
+      $description=$description[0];
+      $newdata=array(
+                    'hall_id' =>$data->hall_id,
+                    'eventType_id' =>$data->eventType_id
+                    'description'=>$description
+                  );
+
+        dd($newdata);*/
+       
+       
+
           $image = $request->file('image');
           $new_name=rand() . '.' . $image->getClientOriginalExtension();
           $image->move(public_path('image'),$new_name);
@@ -51,10 +65,9 @@ class EventHallController extends Controller
             'event_name'=>$request->event_name,
             'image'=>$new_name
             );
-         /*dd($data);
-        $data['description'] = $data['editordata'];*/
-       // dd($data['editordata']);
+         
        $this->eventhallRepo->create($form_data);
+
        return back()->with('info','Hall_Event is successfully save!');
        return redirect()->back()->withInput();
     
