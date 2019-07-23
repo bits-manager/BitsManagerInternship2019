@@ -23,5 +23,7 @@ class TownshipRepository extends BaseRepository {
 
 		return $res;
 	}
+
+	
 }
 

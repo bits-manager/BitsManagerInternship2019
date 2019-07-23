@@ -46,25 +46,25 @@
 							<form class="search_form d-flex flex-row align-items-start justfy-content-start"> 
 								@csrf
 								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
-									<div>
-										 <select ng-model="event" name="event_id" value="event"  ng-options="event.id as event.event_name for event in events" class="form-control">
+									<div id="a">
+										 <select ng-model="event" name="event_id" value="event"  ng-options="event.id as event.event_name for event in events" class="search_form_select">
 										 
 										</select>
 										
 									</div>
 
-									<div>
-										<select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control" >
+									<div id="a">
+										<select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="search_form_select" >
 										</select>
 									</div>
 
-									<div>
-										 <select ng-model="selectedCity" name="city_id" value="selectedCity"  ng-change="select()" ng-options="city.id as city.city_name for city in cities" class="form-control" >
+									<div id="a">
+										 <select ng-model="selectedCity" name="city_id" value="selectedCity"  ng-change="select()" ng-options="city.id as city.city_name for city in cities" class="search_form_select" >
 										 </select>
 									</div>
 									
-									<div>
-										<select ng-model="selectedTownship" name="township_id" value="selectedTownship"  ng-options="township.id as township.township_name for township in townships" class="form-control">
+									<div id="a">
+										<select ng-model="selectedTownship" name="township_id" value="selectedTownship"  ng-options="township.id as township.township_name for township in townships" class="search_form_select">
 											
 										</select>
 
@@ -123,77 +123,12 @@
 									</div>
 								</div>
 							</div>
-
-							
-							 <!-- <div class="owl-item">
-								<div class="recent_item">
-									<div class="recent_item_inner">
-										<div class="recent_item_image">
-											<a href="eventdetail"><img src="../frontendassets/images/party1.jpg" alt="" width="600" height="350"></a>
-											<div class="centered">Party</div>
-										</div>
-										<div class="recent_item_body">
-											<div class="recent_item_title text-center"><a href="eventdetail" >View Event Detail</a></div>
-											<div class="recent_item_title text-center">
-											<a href="hallabout" >Hall Information</a></div>
-											
-										</div>
-										
-									</div>
-								</div>
-							</div>
-
-							
-							<div class="owl-item">
-								<div class="recent_item">
-									<div class="recent_item_inner">
-										<div class="recent_item_image">
-											<a href="eventdetail" ><img src="../frontendassets/images/seminar.jpg" alt="" width="600" height="350"></a>
-											<div class="centered">Seminar</div>
-										</div>
-										<div class="recent_item_body">
-											<div class="recent_item_title text-center"><a href="eventdetail" >View Event Detail</a></div>
-											<div class="recent_item_title text-center">
-											<a href="hallabout" >Hall Information</a></div>
-											
-										</div>
-										
-									</div>
-								</div>
-							</div>
-
-							
-							<div class="owl-item">
-								<div class="recent_item">
-									<div class="recent_item_inner">
-										<div class="recent_item_image">
-											<a href="eventdetail" ><img src="../frontendassets/images/birthday.jpg" alt="" width="600" height="350"></a>
-											<div class="centered">Birthday</div>
-										</div>
-										<div class="recent_item_body">
-											<div class="recent_item_title text-center"><a href="eventdetail" >View Event Detail</a></div>
-											<div class="recent_item_title text-center">
-											<a href="hallabout" >Hall Information</a></div>
-										</div>
-										
-									</div>
-								</div>
-							</div> -->
- 
-						
-
-						<!-- <div class="recent_slider_nav_container d-flex flex-row align-items-start justify-content-start">
-							<div class="recent_slider_nav recent_slider_prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
-							<div class="recent_slider_nav recent_slider_next"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-						</div> -->
-					
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-	<!-- Cities -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script>
 
