@@ -35,6 +35,7 @@
 	</div>
 
 
+
 	<!-- Home Search -->
 
 <div ng-app="myApp" ng-controller="myCtrl">
@@ -84,6 +85,7 @@
 	
 
 	
+
 	<!-- Recent -->
 
 	<div class="recent">
@@ -156,18 +158,7 @@ $scope.selectedTownship = $scope.townships[0].id;
 $scope.event=$scope.events[0].id;
 
 
-	$http({
-	          method : "GET",
-	          url : "/api/v1/get_all?state_id="+$scope.selectedState,
-	        }).then(function mySuccess(response) {
-	           $scope.cities = response.data.data.city;
-	          $scope.townships=response.data.data.township;
-	          }, function myError(response) {
-	            $scope.cities = [];
-	           $scope.townships=[];
-
-	        });
-
+	
 	$scope.selectChange = function(){
 
 	    $http({
@@ -188,16 +179,7 @@ $scope.event=$scope.events[0].id;
 
 	  }
   
-	  $http({
-	          method : "GET",
-	          url : "/api/v1/get_township?state_id="+$scope.selectedState+"&city_id="+$scope.selectedCity,
-	        }).then(function mySuccess(response) {
-	           $scope.townships = response.data.data;
-	          }, function myError(response) {
 
-	            $scope.townships = [];
-
-	        });
 
   
 
