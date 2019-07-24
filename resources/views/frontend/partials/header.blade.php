@@ -21,7 +21,7 @@
 					<div class="header_content d-flex flex-row align-items-center justify-content-start">
 
 						 <div>
-							<a href="#"><img src="../frontendassets/images/hallmyanmar.jpg" alt="" style="width: 200px"></a>
+							<a href="#"><img src="../frontendassets/images/hallmyanmar.png" alt="" style="width: 200px"></a>
 
 						</div> 
 						<nav class="main_nav">
