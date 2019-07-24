@@ -123,77 +123,41 @@
 									</div>
 								</div>
 							</div>
-
-							
-							 <!-- <div class="owl-item">
-								<div class="recent_item">
-									<div class="recent_item_inner">
-										<div class="recent_item_image">
-											<a href="eventdetail"><img src="../frontendassets/images/party1.jpg" alt="" width="600" height="350"></a>
-											<div class="centered">Party</div>
-										</div>
-										<div class="recent_item_body">
-											<div class="recent_item_title text-center"><a href="eventdetail" >View Event Detail</a></div>
-											<div class="recent_item_title text-center">
-											<a href="hallabout" >Hall Information</a></div>
-											
-										</div>
-										
-									</div>
-								</div>
-							</div>
-
-							
-							<div class="owl-item">
-								<div class="recent_item">
-									<div class="recent_item_inner">
-										<div class="recent_item_image">
-											<a href="eventdetail" ><img src="../frontendassets/images/seminar.jpg" alt="" width="600" height="350"></a>
-											<div class="centered">Seminar</div>
-										</div>
-										<div class="recent_item_body">
-											<div class="recent_item_title text-center"><a href="eventdetail" >View Event Detail</a></div>
-											<div class="recent_item_title text-center">
-											<a href="hallabout" >Hall Information</a></div>
-											
-										</div>
-										
-									</div>
-								</div>
-							</div>
-
-							
-							<div class="owl-item">
-								<div class="recent_item">
-									<div class="recent_item_inner">
-										<div class="recent_item_image">
-											<a href="eventdetail" ><img src="../frontendassets/images/birthday.jpg" alt="" width="600" height="350"></a>
-											<div class="centered">Birthday</div>
-										</div>
-										<div class="recent_item_body">
-											<div class="recent_item_title text-center"><a href="eventdetail" >View Event Detail</a></div>
-											<div class="recent_item_title text-center">
-											<a href="hallabout" >Hall Information</a></div>
-										</div>
-										
-									</div>
-								</div>
-							</div> -->
- 
-						
-
-						<!-- <div class="recent_slider_nav_container d-flex flex-row align-items-start justify-content-start">
-							<div class="recent_slider_nav recent_slider_prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
-							<div class="recent_slider_nav recent_slider_next"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-						</div> -->
-					
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-	<!-- Cities -->
+<!-- Cities -->
+
+	<div class="cities">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title">Popular halls in these cities</div>
+					<div class="section_subtitle">Search your dream hall</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="cities_container d-flex flex-row flex-wrap align-items-start justify-content-between">
+         @foreach($popularhalls as $popularhalls)
+			<!-- City -->
+			<div class="city">
+				<img src="../frontendassets/images/city_1.jpg" alt="https://unsplash.com/@dnevozhai">
+				<div class="city_overlay">
+					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
+						<div class="city_title">{{$popularhalls->hall_name}}</div>
+						<div class="city_subtitle">{{$popularhalls->address}}</div>
+					</a>	
+				</div>
+			</div>
+
+		@endforeach
+		</div>
+	</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script>
 

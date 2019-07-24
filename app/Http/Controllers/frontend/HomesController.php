@@ -18,11 +18,15 @@ class HomesController extends Controller
     	$state = DB::table('states')->get();
     	$city = DB::table('cities')->get();
     	$township = DB::table('townships')->get();
-    	$count = \Counter::showAndCount('frontend.homes');
-        //dd($count);
-        return view('frontend.homes.index',compact('event','state','city','township'));
+        $popularhalls= DB::table('halls')
+        ->join('states','states.id','=','halls.state_id')
+        ->whereIn('states.state_name',['Mandalay','Yangon'])
+       
+        ->limit(4)
+        ->get();
+        return view('frontend.homes.index',compact('event','state','city','township','popularhalls'));
 
 
     }
-     
+    
 }
