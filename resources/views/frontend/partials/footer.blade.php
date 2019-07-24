@@ -5,17 +5,17 @@
 		<div class="footer_main">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-3">
+					<div class="col-lg-4">
 						<div class="footer_logo"><a href="#"><img src="../frontendassets/images/hallmyanmar.jpg" alt=""></a></div>
 					</div>
-					<div class="col-lg-9 d-flex flex-column align-items-start justify-content-end">
+					<div class="col-lg-8 d-flex flex-column align-items-start justify-content-end">
 						<div class="footer_title">Latest Properties</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-3 footer_col">
 						<div class="footer_about">
-							<div class="footer_about_text">Donec in tempus leo. Aenean ultricies mauris sed quam lacinia lobortis. Cras ut vestibulum enim, in gravida nulla. Curab itur ornare nisl at sagittis cursus.</div>
+							<div class="footer_about_text">Our Hall Myanmar Website is very good</div>
 						</div>
 					</div>
 					<div class="col-lg-3 footer_col">

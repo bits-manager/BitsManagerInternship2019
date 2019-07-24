@@ -22,7 +22,7 @@
         @if(session()->get('success'))
           <div class="alert alert-success">
           {{ session()->get('success') }}  
-          </div><br />
+          </div><br/>
         @endif
       
         <!-- <div style="width:100%;height:100%;overflow-x:scroll;overflow-y:hidden;"> -->
