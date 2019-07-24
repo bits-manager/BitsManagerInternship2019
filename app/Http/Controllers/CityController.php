@@ -30,15 +30,17 @@ class CityController extends Controller
     {
 
       $data = $request->all();
+
       $cities=explode(',', $data['city_name']);
 
       foreach ($cities as $key => $value)
       {
         $city['state_id'] =$data['state_id'];
+        
         $state = DB::table('states')
                 ->where('states.id','=',$city['state_id'])
                 ->value('state_name');
-                
+             
         $ans = DB::table('cities')->where('cities.state_id','=',$city['state_id'])  
                                   ->where('cities.city_name','=',$value)->first() ;
         if(!is_null($ans))  
