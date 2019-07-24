@@ -33,6 +33,10 @@
 			</div>
 		</div>
 	</div>
+
+
+
+
 	<!-- Home Search -->
 <div ng-app="myApp" ng-controller="myCtrl">
 	<div class="home_search">
@@ -43,25 +47,25 @@
 							<form class="search_form d-flex flex-row align-items-start justfy-content-start"> 
 								@csrf
 								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
-									<div>
-										 <select ng-model="event" name="event_id" value="event"  ng-options="event.id as event.event_name for event in events" class="form-control">
+									<div id="a">
+										 <select ng-model="event" name="event_id" value="event"  ng-options="event.id as event.event_name for event in events" class="search_form_select">
 										 
 										</select>
 										
 									</div>
 
-									<div>
-										<select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control" >
+									<div id="a">
+										<select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="search_form_select" >
 										</select>
 									</div>
 
-									<div>
-										 <select ng-model="selectedCity" name="city_id" value="selectedCity"  ng-change="select()" ng-options="city.id as city.city_name for city in cities" class="form-control" >
+									<div id="a">
+										 <select ng-model="selectedCity" name="city_id" value="selectedCity"  ng-change="select()" ng-options="city.id as city.city_name for city in cities" class="search_form_select" >
 										 </select>
 									</div>
 									
-									<div>
-										<select ng-model="selectedTownship" name="township_id" value="selectedTownship"  ng-options="township.id as township.township_name for township in townships" class="form-control">
+									<div id="a">
+										<select ng-model="selectedTownship" name="township_id" value="selectedTownship"  ng-options="township.id as township.township_name for township in townships" class="search_form_select">
 											
 										</select>
 
@@ -78,6 +82,10 @@
 				</div>
 			</div>
 		</div>
+
+
+	
+
 
 	<!-- Recent -->
 	<div class="recent">
@@ -149,18 +157,7 @@ $scope.selectedTownship = $scope.townships[0].id;
 $scope.event=$scope.events[0].id;
 
 
-	$http({
-	          method : "GET",
-	          url : "/api/v1/get_all?state_id="+$scope.selectedState,
-	        }).then(function mySuccess(response) {
-	           $scope.cities = response.data.data.city;
-	          $scope.townships=response.data.data.township;
-	          }, function myError(response) {
-	            $scope.cities = [];
-	           $scope.townships=[];
-
-	        });
-
+	
 	$scope.selectChange = function(){
 
 	    $http({
@@ -181,16 +178,7 @@ $scope.event=$scope.events[0].id;
 
 	  }
   
-	  $http({
-	          method : "GET",
-	          url : "/api/v1/get_township?state_id="+$scope.selectedState+"&city_id="+$scope.selectedCity,
-	        }).then(function mySuccess(response) {
-	           $scope.townships = response.data.data;
-	          }, function myError(response) {
 
-	            $scope.townships = [];
-
-	        });
 
   
 
@@ -208,6 +196,7 @@ $scope.event=$scope.events[0].id;
 	            $scope.townships = [];
 	        });
 	  }
+
 
     $http({
 	          method : "GET",

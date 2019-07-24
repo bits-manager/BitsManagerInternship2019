@@ -1,11 +1,12 @@
+
 <!-- Footer -->
 
-	<!-- <footer class="footer">
+	 <footer class="footer">
 		<div class="footer_main">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-3">
-						<div class="footer_logo"><a href="#"><img src="../frontendassets/images/logo_large.png" alt=""></a></div>
+						<div class="footer_logo"><a href="#"><img src="../frontendassets/images/hallmyanmar.png" alt=""></a></div>
 					</div>
 					<div class="col-lg-9 d-flex flex-column align-items-start justify-content-end">
 						<div class="footer_title">Latest Properties</div>
@@ -50,7 +51,9 @@
 					</div>
 				</div>
 			</div>
-		</div> -->
+
+		</div>		
+
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <script src="{{ asset('js/share.js') }}">
         	Share::page('http://www.bits-manager.com')->facebook();

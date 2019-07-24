@@ -57,10 +57,10 @@ class EventHallController extends Controller
 
 
     	     
-          /*$data = $request->all();
-          $description= explode('>',$data['description']);
-          $description= explode('<',$description[1]);
-          $description=$description[0];*/
+          $data = $request->all();
+          $description= explode('<p>',$data['description']);
+          $description= explode('</p>',$description[1]);
+          $description=$description[0];
 
 
           $image = $request->file('image');
@@ -69,9 +69,10 @@ class EventHallController extends Controller
           $form_data=array(
             'hall_id'=>$request->hall_id,
             'eventType_id'=>$request->eventType_id,
-             'description' => $request->description,
+             'description' =>$description,
             'image'=>$new_name
             );
+
        $this->eventhallRepo->create($form_data);
 
        return back()->with('info','Hall_Event is successfully save!');
@@ -130,6 +131,7 @@ class EventHallController extends Controller
                     'image'=>$imagenew,
                 );
             }
+            
               $form_data=array_except($form_data,['$eventhall_id']);
             $this->eventhallRepo->update($form_data,$eventhall_id);
            

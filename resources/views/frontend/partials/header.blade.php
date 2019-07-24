@@ -21,12 +21,12 @@
 					<div class="header_content d-flex flex-row align-items-center justify-content-start">
 
 						 <div>
-							<a href="#"><img src="../frontendassets/images/hallmyanmar.jpg" alt="" style="width: 200px"></a>
+							<a href="#"><img src="../frontendassets/images/hallmyanmar.png" alt="" style="width: 200px"></a>
 
 						</div> 
 						<nav class="main_nav">
 							<ul>
-								<li><a href="homes"><i class="fa fa-home"></i>{{trans('sentence.home')}}</a>
+								<li><a href="homes">{{trans('sentence.home')}}</a>
 								</li>
 								<li><a href="about">{{trans('sentence.about')}}</a></li>
 
@@ -48,19 +48,19 @@
                   
 								
 								<li class="upper-links dropdown show-on-hover"><a class="links dropdown-toggle" 
-									data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o"></i> {{trans('sentence.account')}}</a>
+									data-toggle="dropdown" href="#"> {{trans('sentence.account')}}</a>
 								  <ul class="dropdown-menu" role="menu" id="ul">
 
 								  	@if(Auth::check())
 								  	
                                     <li>Hi, {{ Auth::user()->name }}</li>
                                         <li><a href="{{route('admin.dashboard')}}" class="dropdown-item has-icon text-primary" >
-                                          <i class="fa fa-user"></i> Dashboard</a></li>
+                                           Dashboard</a></li>
                                         <div class="dropdown-divider"></div>
                                         <li><a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger"></i> Logout
                                         </a></li>
                                     @else
-                                        <li ><a href="{{route('admin.dashboard')}}" style="color: #000"><i class="fa fa-user"></i> Login</a></li>
+                                        <li ><a href="{{route('admin.dashboard')}}" style="color: #000"> Login</a></li>
                                     @endif 
           						  </ul> 
 								</li>
