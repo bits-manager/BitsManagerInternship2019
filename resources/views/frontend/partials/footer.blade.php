@@ -6,7 +6,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-3">
-						<div class="footer_logo"><a href="#"><img src="../frontendassets/images/hallmyanmar.jpg" alt=""></a></div>
+						<div class="footer_logo"><a href="#"><img src="../frontendassets/images/hallmyanmar.png" alt=""></a></div>
 					</div>
 					<div class="col-lg-9 d-flex flex-column align-items-start justify-content-end">
 						<div class="footer_title">Latest Properties</div>
@@ -67,7 +67,7 @@
                               Copyright &copy;2019 All rights reserved 
                                 
                             </div>
-							<div class="footer_phone ml-auto">Share on   <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.bits-manager.com" ><img src="../frontendassets/images/facebook.png" class="logo" alt=""></a>
+							<div class="footer_phone ml-auto"><b><i>Share on<i></b> <i class="fa fa-hand-o-right" style="font-size:20px;color:blue"></i>  <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.bits-manager.com" ><img src="../frontendassets/images/facebook.png" class="logo" alt=""></a>
 							</div>
 						</div>
 					</div>
