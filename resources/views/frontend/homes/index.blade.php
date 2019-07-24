@@ -199,6 +199,7 @@ $scope.event=$scope.events[0].id;
 	        });
 	  }
 
+
     $http({
 	          method : "GET",
 	          url : "/api/v1/get_event_hall?eventType_id="+$scope.event+"&state_id="+$scope.selectedState+"&city_id="+$scope.selectedCity+"&township_id="+$scope.selectedTownship,
