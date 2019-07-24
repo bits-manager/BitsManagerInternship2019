@@ -11,6 +11,7 @@ class HallaboutController extends Controller
     public function index(Request $request)
     {
        $hall_id= $request->hall_id;
+
        $hall=DB::table('halls')
        	      ->join('states','states.id','=','halls.state_id')
            		->join('cities','cities.id','=','halls.city_id')
