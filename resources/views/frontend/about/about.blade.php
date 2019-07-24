@@ -191,12 +191,13 @@
               		<div class="container">
               			<div class="contactus_text"><h4 style="font-size: 26px;color: blue;margin-top: -60px;margin-bottom:20px;">Supported By</h4></div>
               		    <div class="row">
-                         
+
               				<div class="col-lg-3">
               					<div class="contactus_image" style=""><img src="/frontendassets/images/abouthall.jpg" alt=""></div>
               				</div>
               
               				<div class="col-lg-8">
+
 
               				<div class="contactus_text" style="">
 
@@ -211,6 +212,7 @@
 <i class="fa fa-volume-control-phone"></i>  09-444200295,09-790798567 </h6><br>
 
               				
+
               					</div>
               				
               				</div>
