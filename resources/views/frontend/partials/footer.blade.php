@@ -15,12 +15,12 @@
 				<div class="row">
 					<div class="col-lg-3 footer_col">
 						<div class="footer_about">
-							<div class="footer_about_text">Our Hall Myanmar Website is very good</div>
+							<div class="footer_about_text">Hall Myanmar Website</div>
 						</div>
 					</div>
 					<div class="col-lg-3 footer_col">
 						<div class="footer_latest d-flex flex-row align-items-start justify-content-start">
-							<div><div class="footer_latest_image"><img src="../frontendassets/images/footer_latest_1.jpg" alt=""></div></div>
+							<div><div class="footer_latest_image"><img src="../frontendassets/images/footerimg1.jpg" alt=""></div></div>
 							<div class="footer_latest_content">
 								<div class="footer_latest_location">Miami</div>
 								<div class="footer_latest_name"><a href="#">Sea view property</a></div>

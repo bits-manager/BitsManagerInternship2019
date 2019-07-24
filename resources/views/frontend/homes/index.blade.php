@@ -105,7 +105,7 @@
 								<div class="recent_item">
 									<div class="recent_item_inner" >
 										<div class="recent_item_image">
-											<a href="eventdetail"><img src="../image
+											<a href="eventdetail"><img src="../images
 												/<% x.image %>" alt="" width="300" height="350"></a>
 											<div class="centered" ><% x.event_name %> </div>
 
