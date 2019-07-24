@@ -18,22 +18,21 @@ Manage State
         <div class="card-header">
          <H4>Edit State</H4> 
           <div class="card-header-action">
-          <a href="{{ route('admin.state')}}" class="btn btn-primary">List<i class="fas fa-plus"></i></a></div></div>
+
+          <a href="{{ route('admin.city')}}" class="btn btn-primary">StateList</a></div></div>
+
         <div class="card-body">
 
 
  @if(Session::has('toasts'))
   @foreach(Session::get('toasts') as $toast)
     <div class="alert alert-{{ $toast['level'] }}">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-
       {{ $toast['message'] }}
     </div>
   @endforeach
 @endif
      @if($message = Session::get('info'))
     <div class="alert alert-info alert-block">
-      <button type="button" class="close" data-dismiss="alert">x</button>
       <strong>{{$message}}</strong>
     </div>
     @endif  
@@ -57,5 +56,7 @@ Manage State
       </form>
   </div>
 </div>
-</div></section>
+</div>
+<script src="{{ asset('js/app.js') }}?{{ uniqid() }}"></script>
+</section>
 @endsection

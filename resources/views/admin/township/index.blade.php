@@ -1,12 +1,12 @@
 <!-- index.blade.php -->
 
-@extends('layouts.admin-master')
+@extends('layouts.user-master')
 
 @section('content')
 
 <section class="section">
   <div class="section-header">
-    <h1>Manage Cities</h1>
+    <h1>Manage Townships</h1>
   </div>
  <div class="card">
       <!-- card header -->
@@ -41,18 +41,18 @@
 
   
 
-        <div style="width:100%;height:100%;overflow-x: scroll;overflow-y:hidden";>
+        <div style="width:100%;height:100%;overflow-x: scroll;overflow-y:hidden;">
   
             <table class="table table-striped table-bordered" >
                  <thead>
       
                             <tr>
           
-                                      <td>State Name</td>
-                                      <td>City Name</td>
-                                    <td>Township Name</td>
+                                      <th>State Name</th>
+                                      <th>City Name</th>
+                                    <th>Township Name</th>
          
-                                    <td colspan="3">Action</td>
+                                    <th colspan="3">Action</th>
           
                               </tr>
     
@@ -130,6 +130,5 @@
          $("#deleteForm").submit();
      }
   </script>
-<script src="{{ asset('js/app.js') }}?{{ uniqid() }}"></script>
 
 @endsection

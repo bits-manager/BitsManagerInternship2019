@@ -28,6 +28,12 @@ class ContactForMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('frontend.emails.contact.contact-form');
+         return $this->from('mail@example.com', 'Mailtrap')
+            ->subject('Mailtrap Confirmation')
+            ->markdown('frontend.emails.contact.contact-form')
+            ->with([
+                'name' => 'New Mailtrap User',
+                'link' => 'https://mailtrap.io/inboxes'
+            ]);
     }
 }

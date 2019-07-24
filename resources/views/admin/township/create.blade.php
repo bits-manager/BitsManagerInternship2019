@@ -1,4 +1,4 @@
-@extends('layouts.admin-master')
+ @extends('layouts.admin-master')
 
 @section('title')
 Manage Townships
@@ -15,7 +15,10 @@ Manage Townships
       <!-- card header -->
       <div class="card-header">
         <!-- card title -->
-        <h4>Township form</h4>
+        <h4>Add a new Township</h4>
+        <div class="card-header-action" >
+        <a href="{{route('admin.townships')}}" class="btn btn-primary">TownshipList</a>
+        </div>
       </div>
       <!-- card body -->
             <div class="card-body"> 
@@ -23,7 +26,6 @@ Manage Townships
                  @if(Session::has('toasts'))
                    @foreach(Session::get('toasts') as $toast)
                   <div class="alert alert-{{ $toast['level'] }}">
-                   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 
                     {{ $toast['message'] }}
                   </div>
@@ -31,7 +33,6 @@ Manage Townships
                  @endif
                 @if($message = Session::get('info'))
                   <div class="alert alert-info alert-block">
-                    <button type="button" class="close" data-dismiss="alert">x</button>
                     <strong>{{$message}}</strong>
                   </div>
                 @endif  
@@ -47,41 +48,23 @@ Manage Townships
                  </div><br />
                @endif
                   <form method="post" action="{{ route('admin.townships.store') }}">
-                    <div class="form-group row mb-4">
-                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">State Name</label>
-                    <div class="col-sm-12 col-md-7">
-                         
-                          <!-- <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
 
-                            
-                             @foreach($statedata as $state)
-                            <option value="{{$state->id}}">{{$state->state_name}}</option>
-                             @endforeach
-                         </select> -->
-                    <select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control" >
+                     <div class="form-group row mb-4">
+
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">State Name</label>
+                      <div class="col-sm-12 col-md-7">
+
+                    <select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control">
                     </select>
-
-                    </div>
-                    </div>
+                  </div>
+                </div>
 
                     <div class="form-group row mb-4">
                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">City Name</label>
-                    <div class="col-sm-12 col-md-7">
 
-                          
-                         <!--  <select name="city_id" id="city" class="form-control input-log dynamic" data-dependent="city">
-                           
-=======
-                      </div>
-                     </div>
-                   <div class="form-group row mb-4">
->>>>>>> 7500b5a34e45466e91d1ffe66dd273e06a169ab0
+                    <div class="col-sm-12 col-md-7">     
+                      <select ng-model="selectedCity" id="city" name="city_id" value="selectedCity" ng-options="city.id as city.city_name for city in cities" class="form-control" >
 
-                             @foreach($citydata as $cities)
-                            <option value="{{$cities->id}}">{{$cities->city_name}}</option>
-                             @endforeach
-                         </select> -->
-                    <select ng-model="selectedCity" name="city_id" value="selectedCity" ng-options="city.id as city.city_name for city in cities" class="form-control" >
                     </select>
                     </div>
                     </div> 
@@ -158,5 +141,13 @@ $http({
         });
       }
 });
+</script>
+
+<script type="application/javascript">
+  function clearText(){
+    document.getElementById('township_name').value="";
+    document.getElementById('state').value="";
+    document.getElementById('city').value="";
+  }
 </script>
 @endsection

@@ -6,19 +6,22 @@
 <div ng-app="myApp" ng-controller="myCtrl">
 <section class="section">
   <div class="section-header">
-    <h1>Manage City Name</h1>
+    <h1>Manage Townships</h1>
   </div>
  <div class="card">
       <!-- card header -->
       <div class="card-header">
         <!-- card title -->
-        <h4>Edit Form</h4>
+        <h4>Update Township</h4>
+        <div class="card-header-action" >
+        <a href="{{route('admin.townships')}}" class="btn btn-primary">TownshipList</a>
+        </div>
       </div>
       <div class="card-body">
      @if(Session::has('toasts'))
   @foreach(Session::get('toasts') as $toast)
     <div class="alert alert-{{ $toast['level'] }}">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      
 
       {{ $toast['message'] }}
     </div>
@@ -27,7 +30,7 @@
 
     @if($message = Session::get('info'))
     <div class = "alert alert-info alert-block">
-      <button type = "button" class="close" data-dismiss = "alert">x</button>
+      
       <strong>{{$message}}</strong>
       </div>
       @endif 
@@ -47,19 +50,6 @@
 
                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">State Name</label>
               <div class="col-sm-12 col-md-7">
-               <!-- <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
-
-                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select State :</label>
-              <div class="col-sm-12 col-md-7"> -->
-              <!--  <select name="state_id" id="state" class="form-control input-log dynamic" data-dependent="state">
-                
-
-               @foreach($statedata as $state)
-                <option value="{{$state->id}} {{$state->id === $edit_townships->state_id ? 'selected' : '' }}">
-                  {{$state->state_name}}
-                </option>
-                @endforeach
-               </select> -->
                <select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control" >
                </select>
               </div>
@@ -69,17 +59,6 @@
 
               <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">City Name</label>
             <div class="col-sm-12 col-md-7">
-             <!-- <select name="city_id" id="city" class="form-control input-log dynamic" data-dependent="city">
-              <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Select City :</label>
-            <div class="col-sm-12 col-md-7"> -->
-            <!--  <select name="city_id" id="city" class="form-control input-log dynamic" data-dependent="city">
-               
-                 @foreach($citydata as $cities)
-                <option value="{{$cities->id}}" {{ $cities->id === $edit_townships->city_id ? 'selected' : '' }} >
-                  {{$cities->city_name}}
-                 @endforeach
-               </option>
-             </select> -->
               <select ng-model="selectedCity" name="city_id" value="selectedCity"  ng-options="city.id as city.city_name for city in cities" class="form-control" >
               </select>
            </div> 
@@ -125,8 +104,8 @@ $scope.states= states;
 $scope.cities = cities;
 $scope.edit_townships = edit_townships;
 console.log($scope.edit_townships);
-$scope.selectedState = $scope.edit_townships.states[0].id;
-$scope.selectedCity = $scope.edit_townships.cities[0].id;
+$scope.selectedState = $scope.edit_townships.state_id;
+$scope.selectedCity = $scope.edit_townships.city_id;
 
 $http({
           method : "GET",
@@ -161,5 +140,6 @@ $http({
 });
 
 </script>
+<script src="{{ asset('js/app.js') }}?{{ uniqid() }}"></script>
 @endsection
 

@@ -2,14 +2,14 @@
 
 
 @section('title')
-Manage States
+Manage Halls
 @endsection 
 
 @section('content')
 <div ng-app="myApp" ng-controller="myCtrl">
 <section class="section">
   <div class="section-header">
-    <h1>Manage State name</h1>
+    <h1>Manage Halls</h1>
   </div>
   <div class="section-body">
     <div class="card">
@@ -28,8 +28,6 @@ Manage States
         @if(Session::has('toasts'))
         @foreach(Session::get('toasts') as $toast)
         <div class="alert alert-{{ $toast['level'] }}">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-
             {{ $toast['message'] }}
         </div>
         @endforeach
@@ -37,7 +35,7 @@ Manage States
 
     @if($message=Session::get('info'))
     <div class="alert alert-info alert-block">
-    <button type ="button" class="close" data-dismiss="alert">x</button>
+    
     <strong>{{$message}}</strong>
   </div>
   @endif
@@ -72,24 +70,24 @@ Manage States
               </select>
           </div></div>  --> 
               <div class="col-sm-12 col-md-7">
-              <select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control">
+              <select ng-model="selectedState" id="state" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="form-control">
               </select>
           </div></div>
-
           <div class="form-group row mb-4">
               @csrf
               <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name">City Name:</label>
               <!-- <div class="col-sm-12 col-md-7">
               <select class="form-control" name="city_id">
                 @foreach($citydata as $city)
-                <option value ="{{$city->id}}">
+                <option value ="{{$city->id}}">>
+
                   {{$city->city_name}}
                 </option>
                 @endforeach
               </select>
           </div></div> -->
       <div class="col-sm-12 col-md-7">
-        <select ng-model="selectedCity" name="city_id" ng-change="select()" value="selectedCity" ng-options="city.id as city.city_name for city in cities" class="form-control">
+        <select ng-model="selectedCity" id="city" name="city_id" ng-change="select()" value="selectedCity" ng-options="city.id as city.city_name for city in cities" class="form-control">
         </select>
       </div></div>
 
@@ -106,7 +104,7 @@ Manage States
               </select>
           </div> </div> -->
             <div class="col-sm-12 col-md-7">
-            <select ng-model="selectedTownship" name="township_id" value="selectedTownship" ng-options="township.id as township.township_name for township in townships" class="form-control">
+            <select ng-model="selectedTownship" id="township" name="township_id" value="selectedTownship" ng-options="township.id as township.township_name for township in townships" class="form-control">
             </select>
           </div></div>
  
@@ -158,9 +156,9 @@ Manage States
           @csrf
           <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name">Hall Image:</label>
           <div class="col-sm-12 col-md-7">
-            <input type="file" name="image"/>
+            <input type="file" name="hall_image" id="hall_image"/>
           </div></div>
-
+ 
 
       <div class="form-group row mb-4">
       @csrf
@@ -200,7 +198,7 @@ $scope.selectedTownship = $scope.townships[0].id;
 
 $http({
           method : "GET",
-          url : "/api/v1/get_cities?state_id="+$scope.selectedState,
+          url : "/api/v1/get_all?state_id="+$scope.selectedState,
         }).then(function mySuccess(response) {
            $scope.cities = response.data.data.city;
           $scope.townships=response.data.data.township;
@@ -214,7 +212,7 @@ $scope.selectChange = function(){
 
     $http({
           method : "GET",
-          url : "/api/v1/get_cities?state_id="+$scope.selectedState,
+          url : "/api/v1/get_all?state_id="+$scope.selectedState,
         }).then(function mySuccess(response) {
            $scope.cities = response.data.data.city;
            $scope.selectedCity = $scope.cities[0].id;
@@ -272,7 +270,10 @@ $scope.selectChange = function(){
     document.getElementById('open_time').value="";
     document.getElementById('close_time').value="";
     document.getElementById('address').value="";
-
+    /*document.getElementById('state').value="";
+    document.getElementById('city').value="";
+    document.getElementById('township').value="";
+*/
   }
 </script>
 
@@ -291,4 +292,5 @@ $scope.selectChange = function(){
                 });
             });
 </script>
+
 @endsection 

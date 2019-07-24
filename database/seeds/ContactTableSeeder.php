@@ -11,6 +11,6 @@ class ContactTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        
     }
 }

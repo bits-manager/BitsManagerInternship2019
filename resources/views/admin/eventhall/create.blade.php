@@ -18,7 +18,7 @@
         <!-- card title -->
         <h4>Hall_Event Form</h4>
         <div class="card-header-action">
-          <a href="{{ route('admin.eventhall')}}" class="btn btn-primary">List <i class="fas fa-plus"></i></a>
+          <a href="{{ route('admin.eventhall')}}" class="btn btn-primary">HallEventList</a>
         </div>
       </div>
       <!-- card body -->
@@ -27,8 +27,6 @@
       @if(Session::has('toasts'))
       @foreach(Session::get('toasts') as $toast)
       <div class="alert alert-{{ $toast['level'] }}">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-
       {{ $toast['message'] }}
       </div>
       @endforeach
@@ -36,7 +34,6 @@
 
       @if($message = Session::get('info'))
       <div class = "alert alert-info alert-block">
-      <button type = "button" class="close" data-dismiss = "alert">x</button>
       <strong>{{$message}}</strong>
       </div>
       @endif  
@@ -50,13 +47,14 @@
         </ul>
       </div><br />
       @endif
-      <form  method="post" action="{{route('admin.eventhall.store')}}" class="was-validated">
+     
+         <form  method="post" action="{{route('admin.eventhall.store')}}" enctype="multipart/form-data">
           
           <div class="form-group row mb-4">
               @csrf
               <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name">Hall Name:</label>
               <div class="col-sm-12 col-md-7">
-              <select class="form-control" name="hall_id">
+              <select class="form-control" id="hallname" name="hall_id">
                 @foreach($halldata as $hall)
                 <option value ="{{$hall->id}}">
                   {{$hall->hall_name}}
@@ -70,7 +68,7 @@
               @csrf
               <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name">Event Name:</label>
               <div class="col-sm-12 col-md-7">
-              <select class="form-control" name="eventType_id">
+              <select class="form-control" id="eventname" name="eventType_id">
                 @foreach($eventdata as $event)
                 <option value ="{{$event->id}}">
                   {{$event->event_name}}
@@ -79,14 +77,19 @@
               </select>
               </div>
           </div> 
-         
+         <div class="form-group row mb-4">
+  @csrf
+  <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name">Image:</label>
+  <div class="col-sm-12 col-md-7">
+  <input type="file" name="image"/>
+  </div></div>
           
          <div class="form-group row mb-4">
               @csrf
               <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name">Description:</label>
               <div class="col-sm-12 col-md-7">
-              <textarea class="form-control" id="description" name="description" cols="30" rows="10" required></textarea>
-              <div class="invalid-feedback">Please fill out this field.</div>
+              <textarea class="form-control" id="description" name="description"></textarea>
+              
               </div>
         </div>
 
@@ -111,10 +114,18 @@
 
 <script> 
     $('#description').summernote({
-        placeholder: 'Hello',
+        placeholder:'Hello',
         tabsize: 2,
         height: 100
       });
+</script>
+<script type="application/javascript">
+  function clearText(){
+    document.getElementById('hallname').value="";
+    document.getElementById('eventname').value="";
+    $('#description').summernote('code', '');
+    
+  }
 </script>
 @endsection
 

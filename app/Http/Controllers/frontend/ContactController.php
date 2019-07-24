@@ -17,7 +17,10 @@ class ContactController extends Controller
     	$state = DB::table('states')->get();
     	$city = DB::table('cities')->get();
     	$township = DB::table('townships')->get();
-      	return view('frontend.contact.contact',compact('contact','event','state','city','township'));
+    	$contact = DB::table('contacts')->get();
+        $address= DB::table('addresses')->where('status',1)->first();
+          
+      	return view('frontend.contact.contact',compact('address','contact','event','state','city','township'));
         
     }
 

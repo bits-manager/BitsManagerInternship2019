@@ -30,7 +30,9 @@
     |
     */
 
+
  'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+
 
     /*
     |--------------------------------------------------------------------------
@@ -44,7 +46,7 @@
     */
 
 
-    'port' => env('MAIL_PORT',465),
+    'port' => env('MAIL_PORT',2525),
 
 
     /*
@@ -77,7 +79,7 @@
     |
     */
 
-    'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
+    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
 
     /*
     |--------------------------------------------------------------------------
@@ -91,10 +93,8 @@
     */
 
 
-    'username' => env('hninwaiwai51986@gmail.com'),
-
-
-    'password' => env('htet123456'),
+    'username' => env('a9435231e745ac'),
+    'password' => env('f1ecd78826f4b7'),
 
     /*
     |--------------------------------------------------------------------------

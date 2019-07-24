@@ -15,11 +15,11 @@ Manage Users
       <div class="card-header">
 
         <!-- card title -->
-        <h4>City Form</h4>
 
-        <div class="card-header-action">
-          <a href="{{ route('admin.city')}}" class="btn btn-primary">List</a></div>
-
+        <h4>Add a New City</h4>
+        <div class="card-header-action" >
+        <a href="{{route('admin.city')}}" class="btn btn-primary">CityList</a>
+        </div>
 
       </div>
       
@@ -29,8 +29,6 @@ Manage Users
     @if(Session::has('toasts'))
   @foreach(Session::get('toasts') as $toast)
     <div class="alert alert-{{ $toast['level'] }}">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-
       {{ $toast['message'] }}
     </div>
   @endforeach
@@ -38,14 +36,12 @@ Manage Users
 
     @if($message = Session::get('info'))
       <div class = "alert alert-info alert-block">
-      <button type = "button" class="close" data-dismiss = "alert">x</button>
       <strong>{{$message}}</strong>
       </div>
     @endif  
 
 @if($message = Session::get('error'))
       <div class = "alert alert-danger alert-block">
-      <button type = "button" class="close" data-dismiss = "alert">x</button>
       <strong>{{$message}}</strong>
       </div>
     @endif 
@@ -94,11 +90,13 @@ Manage Users
           </div> 
         </form>
   </div>
-</div>
+</div></div></div>
+<script src="{{ asset('js/app.js') }}?{{ uniqid() }}"></script>
 <script>
   function clearText(){
     document.getElementById('city_name').value="";
   }
 </script>
+
 @endsection
 

@@ -5,7 +5,7 @@
 <section class="section">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <div class="section-header">
-    <h1>Manage Event</h1>
+    <h1>Manage Events</h1>
   </div>
 <div class="card">
       <!-- card header -->
@@ -25,19 +25,15 @@
 <table class="table table-striped">
     <thead>
         <tr>
-          <th>Hall  Image</th>
-     
+        
           <th><p class="text-dark">Event Name</p></th>
-          
-
           <th colspan="2"><p class="text-dark">Action</p></th>
-
         </tr>
     </thead>
     <tbody>
         @foreach($event as $event)
 
-            <td><img src="{{URL::to('/')}}/image/{{$event->image}}" class="img-thumbnail" width="100"/></td>
+           
             <td>{{$event->event_name}}</td>
             <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$event->id}})" 
               data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a>
@@ -71,8 +67,8 @@
              <div class="modal-footer">
                  <center>
                      <input type="hidden" name="event_id" id="event_id" >
-                     <button type="submit" name="" class="btn btn-danger" data-dismiss="modal" onclick="formSubmit()">Yes, Delete</button>
-                     <button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
+                     <button type="submit" name="" class="btn btn-danger" data-dismiss="modal" onclick="formSubmit()">OK</button>
+                     <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
 
                  </center>
              </div>

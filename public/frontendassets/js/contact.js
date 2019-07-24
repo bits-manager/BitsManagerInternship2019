@@ -45,7 +45,7 @@ $(document).ready(function()
 	});
 
 	initMenu();
-	
+
 
 	/* 
 
@@ -125,6 +125,5 @@ $(document).ready(function()
 	*/
 
 
-	
 
 });

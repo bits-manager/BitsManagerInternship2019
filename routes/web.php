@@ -22,11 +22,11 @@ Route::name('frontend.')->prefix('frontend')->group(function() {
     Route::get('frontend/admin/dashboard', 'DashboardController@index')->middleware('auth')->name('admin.dashboard');
 
     Route::get('about', 'frontend\AboutController@index')->name('about');
-    Route::get('properties', 'frontend\PropertiesController@index')->name('properties');
+      Route::get('language', 'frontend\LanguageController@index')->name('language');
+    
+    Route::get('lang/{locale}', 'frontend\LanguageController@lang');
       
 });
-
- Route::post('/hall_search',[ 'uses'=>'ExampleController@index', 'as'=> 'hall_search' ]);
 
 Route::get('home', function() {
     return redirect(route('admin.dashboard'));
@@ -48,13 +48,14 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
             'index' => 'event'
         ]
     ]);
-     Route::post('event_update', 'EventTypeController@update')->name('event_update.update');
+    
 
     Route::resource('eventhall', 'EventHallController', [
         'names' => [
             'index' => 'eventhall'
         ]
     ]);
+     Route::post('event_update', 'EventHallController@update')->name('eventhall_update.update');
 
    Route::resource('state', 'StateController', [
         'names' => [
@@ -74,10 +75,6 @@ Route::name('admin.')->prefix('admin')->middleware('auth')->group(function() {
             'index' => 'city'
         ]
     ]);
-
- 
-
-    
 
 
     Route::resource('contact','ContactController', [
@@ -106,7 +103,7 @@ Route::get('googlemap/direction', 'ContactController@direction');
     
     Route::post('hall_update', 'HallController@update')->name('hall_update.update');
 
-    
+
 
  });
 

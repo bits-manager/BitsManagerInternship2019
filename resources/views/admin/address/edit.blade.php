@@ -5,13 +5,13 @@
 <section class="section">
   <div class="section-header">
 
-    <h1>Edit Address list</h1>
+    <h1>Manage Address</h1>
   </div>
  <div class="card">
       <div class="card-header">
-        <h4>Address List</h4>
+        <h4>Edit Form</h4>
         <div class="card-header-action">
-          <a href="{{ route('admin.address')}}" class="btn btn-primary">List<i class="fas fa-plus"></i></a></div>
+          <a href="{{ route('admin.address')}}" class="btn btn-primary">AddressList</a></div>
       </div>
   <div class="section-body">
    <div class="card">
@@ -76,7 +76,14 @@
       <div class="form-group row mb-4">
        <lable class="col-form-label text-md-right col-12 col-md-3 col-lg-3" from="">Status</lable>
          <div class="col-sm-12 col-md-7">
-            <input type="checkbox" class="" name="status" value="1" >
+      
+          @if($edit_address->status == 1)
+            <input type="checkbox" name="status" value="1"{{isset($address['status'])&&$address['status']=='1' ? 'checked' : ''}}  checked>
+          @else
+            <input type="checkbox" name="status" value="0"{{isset($address['status'])&&$address['status']=='0' ? '' : 'notchecked'}} >
+                    
+          @endif
+             
         </div> 
       </div> 
 
@@ -88,5 +95,6 @@
       </div>
       </form>
   </div>
-</div>
+</div></div></div>
+<script src="{{ asset('js/app.js') }}?{{ uniqid() }}"></script>
 @endsection

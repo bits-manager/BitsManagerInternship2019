@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
 <title>Bluesky</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Bluesky template project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- language -->
+<meta name="csrf-token" content="{{ csrf_token() }}">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 <link rel="stylesheet" type="text/css" href="/frontendassets/styles/bootstrap4/bootstrap.min.css">
 <link href="/frontendassets/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
@@ -27,9 +34,10 @@
 </head>
 <body>
 	<div class="super_container">
+    
 		 @include('frontend.partials.header')
+         @include('frontend.partials.menu')
 
-		 @include('frontend.partials.menu')
 		   <div class="main-content">
             @yield('content')
            </div>
@@ -60,7 +68,8 @@
 <script src="/frontendassets/js/custom.js"></script>
 <script src="/frontendassets/plugins/rangeslider.js-2.3.0/rangeslider.min.js"></script>
 <script src="/frontendassets/plugins/parallax-js-master/parallax.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
-<script src="/frontendassets/js/contact.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAek8mUtwgSQKv_6DPa6RVToBMspOi74ak"></script><script src="/frontendassets/js/contact.js"></script>
+
 </body>
 </html>

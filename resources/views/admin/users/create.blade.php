@@ -1,4 +1,4 @@
-@extends('layouts.admin-master')
+@extends('layouts.user-master')
 
 @section('title')
 Create User
@@ -8,9 +8,14 @@ Create User
 <section class="section">
   <div class="section-header">
     <h1>Add User</h1>
+        
   </div>
   <div class="section-body">
-       <adduser-component></adduser-component>
+  	<div class="card-header-action" >
+        <a href="{{route('admin.users')}}" class="btn btn-primary">UserList</a>
+        </div>
+      <adduser-component></adduser-component>
   </div>
 </section>
+
 @endsection

@@ -14,8 +14,13 @@ Dashboard
      <div class="card">
 	    <!-- card header -->
 	    <div class="card-header">
+	    <div class="col-sm-6">
 	      <!-- card title -->
-	      <h4>Viewers</h4>
+	      <h4>Viewers <i class='fas fa-eye'></i></h4>
+		</div>
+		<div class="col-sm-6" style="color: #000000;">
+		{{Counter::showAndCount('frontend.homes')}}
+		</div>
 	    </div>
 	    <!-- card body -->
 	    <div class="card-body">

@@ -15,7 +15,7 @@ class CreateHallsTable extends Migration
     {
         Schema::create('halls', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('image')->nullable();
+            $table->string('hall_image')->nullable();
             $table->string('hall_name');
             $table->string('address');
             $table->string('phone_no');

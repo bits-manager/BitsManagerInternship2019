@@ -6,7 +6,7 @@
 <div ng-app="myApp" ng-controller="myCtrl">
 <section class="section">
   <div class="section-header">
-    <h1>Edit Hall</h1>
+    <h1>Manage Halls</h1>
   </div>
  <div class="card">
       <!-- card header -->
@@ -21,8 +21,6 @@
      @if(Session::has('toasts'))
   @foreach(Session::get('toasts') as $toast)
     <div class="alert alert-{{ $toast['level'] }}">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-
       {{ $toast['message'] }}
     </div>
   @endforeach
@@ -30,7 +28,6 @@
 
     @if($message = Session::get('info'))
     <div class = "alert alert-info alert-block">
-      <button type = "button" class="close" data-dismiss = "alert">x</button>
       <strong>{{$message}}</strong>
       </div>
       @endif 
@@ -146,13 +143,12 @@
           @csrf
           <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name">Hall Image:</label>
           <div class="col-sm-12 col-md-7">
-          <input type="file" name="image"/>
-          <img src="{{URL::to('/')}}/image/{{$edit_halls->image}}" class="img-thumbnail" width="100"/>
-          <input type="hidden" name="hidden_image" value="{{$edit_halls->image}}"/>
+          <input type="file" name="hall_image"/>
+          <img src="{{URL::to('/')}}/image/{{$edit_halls->hall_image}}" class="img-thumbnail" width="100"/>
+          <input type="hidden" name="hidden_image" value="{{$edit_halls->hall_image}}"/>
         </div></div>
 
-          
-
+        
           <div class="form-group row mb-4">
               @csrf
             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
@@ -171,7 +167,7 @@ var edit_halls={!! json_encode($edit_halls) !!};
 var app = angular.module('myApp', []);
 app.config(function($interpolateProvider){
   $interpolateProvider.startSymbol('<%').endSymbol('%>');
-});
+}); 
 
 app.controller('myCtrl', function($scope, $http) {
 
@@ -180,15 +176,17 @@ $scope.cities = cities;
 $scope.townships=townships;
 $scope.edit_halls=edit_halls;
 
-$scope.selectedState = $scope.edit_halls.states[0].id;
-$scope.selectedCity = $scope.edit_halls.cities[0].id;
-$scope.selectedTownship = $scope.edit_halls.townships[0].id;
+$scope.selectedState = $scope.edit_halls.state_id;
+$scope.selectedCity = $scope.edit_halls.city_id;
+$scope.selectedTownship = $scope.edit_halls.township_id;
+
 $http({
           method : "GET",
-          url : "/api/v1/get_cities?state_id="+$scope.selectedState,
+          url : "/api/v1/get_alledit?state_id="+$scope.selectedState+"&city_id="+$scope.selectedCity,
         }).then(function mySuccess(response) {
            $scope.cities = response.data.data.city;
           $scope.townships=response.data.data.township;
+
           }, function myError(response) {
             $scope.cities = [];
            $scope.townships=[];
@@ -199,7 +197,7 @@ $scope.selectChange = function(){
 
     $http({
           method : "GET",
-          url : "/api/v1/get_cities?state_id="+$scope.selectedState,
+          url : "/api/v1/get_all?state_id="+$scope.selectedState,
         }).then(function mySuccess(response) {
            $scope.cities = response.data.data.city;
            $scope.selectedCity = $scope.cities[0].id;
@@ -215,7 +213,7 @@ $scope.selectChange = function(){
 
   }
   
-  $http({
+ $http({
           method : "GET",
           url : "/api/v1/get_township?state_id="+$scope.selectedState+"&city_id="+$scope.selectedCity,
         }).then(function mySuccess(response) {
