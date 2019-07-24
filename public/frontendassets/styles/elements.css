@@ -291,7 +291,7 @@ section
 	top: 0;
 	left: 0;
 	width: 100%;
-	background:#fff;
+	background:#3f6fce;
 	z-index: 200;
 	
     -webkit-transition: all 200ms ease;
@@ -311,11 +311,11 @@ section
 }
 .header.scrolled
 {
-	background:#fff;
+	background:#3f6fce;
 }
 .header.scrolled .header_content
 {
-	height: 80px;
+	height: 60px;
 }
 .logo
 {
@@ -341,7 +341,7 @@ section
 {
 	font-size: 16px;
 	font-weight: 500;
-	color: #283747;
+	color: #FFFFFF;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -608,7 +608,7 @@ section
 	height: 90px;
 	border-radius: 45px;
 	padding: 10px;
-	background: rgba(255,255,255,0.33);
+	background: #FFFFFF;
 }
 .home_search_content
 {
@@ -974,14 +974,28 @@ section
 /*********************************
 7.4 Elements - Milestones
 *********************************/
-
+.advan
+{
+	width: 100%;
+	background: #FFFFFF;
+	z-index: 2;
+	margin-bottom: 58px;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+	box-shadow: 0px 13px 27px rgba(0,0,0,0.28);
+}
 .milestones
 {
 	margin-top: 85px;
 }
 .milestones_row
 {
+	height:150px;
 	margin-top: 60px;
+	
 }
 .milestone
 {
