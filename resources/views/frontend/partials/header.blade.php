@@ -21,7 +21,7 @@
 					<div class="header_content d-flex flex-row align-items-center justify-content-start">
 
 						 <div>
-							<a href="#"><img src="../frontendassets/images/hallmyanmar.jpg" alt="" style="width: 200px"></a>
+							<a href="#"><img src="../frontendassets/images/hallmyanmar.png" alt="" style="width: 200px"></a>
 
 						</div> 
 						<nav class="main_nav">
@@ -39,9 +39,9 @@
                             </a>
                            
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="lang/en"><img src="{{asset('assets/img/us.png')}}" width="30px" height="20x"> English</a>
+                                <a class="dropdown-item has-icon text-primary"  href="lang/en"><img src="{{asset('assets/img/us.png')}}" width="30px" height="20x"> English</a>
                                 
-                                 <a class="dropdown-item" href="lang/my"><img src="{{asset('assets/img/my.png')}}" width="30px" height="20x"> Myanmar</a>
+                                 <a class="dropdown-item has-icon text-primary"  href="lang/my"><img src="{{asset('assets/img/my.png')}}" width="30px" height="20x"> Myanmar</a>
                                 
                             </div>
                         </li>

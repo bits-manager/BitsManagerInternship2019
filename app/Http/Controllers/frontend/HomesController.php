@@ -18,8 +18,8 @@ class HomesController extends Controller
 
         $popularhalls= DB::table('halls')
         ->join('states','states.id','=','halls.state_id')
-        ->whereIn('states.state_name',['Mandalay'])
-       ->whereIn('states.state_name',['Mandalay','Yangon'])
+        ->whereIn('states.state_name',['Mandalay','Yangon'])
+       
         ->limit(6)
         ->get();
         

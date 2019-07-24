@@ -18,7 +18,9 @@ class HallaboutController extends Controller
        	      ->join('states','states.id','=','halls.state_id')
            		->join('cities','cities.id','=','halls.city_id')
            		->join('townships','townships.id','=','halls.township_id')
-           		->where('halls.id', '=',$hall_id)
+
+          		->where('halls.id', '=',$hall_id)
+
 
 
 

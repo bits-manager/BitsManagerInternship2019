@@ -44,6 +44,7 @@
 			<div class="row">
 				<div class="col">
 					<div class="home_search_container">
+						<div class = "home_search_content">
 							<form class="search_form d-flex flex-row align-items-start justfy-content-start"> 
 								@csrf
 								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
@@ -83,7 +84,7 @@
 			</div>
 		</div>
 	
-
+</div>
 	
 
 	<!-- Recent -->
@@ -228,6 +229,7 @@ $scope.event=$scope.events[0].id;
 	            $scope.townships = [];
 	        });
 	  }
+
 
     $http({
 	          method : "GET",
