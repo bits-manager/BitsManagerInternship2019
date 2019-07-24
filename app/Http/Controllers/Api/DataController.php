@@ -104,17 +104,47 @@ public function getTownship(Request $request)
           $state_id= $request->state_id;
           $city_id= $request->city_id;
           $township_id= $request->township_id;
-          
-          $halls = DB::table('event_type_halls')
-                    ->join('halls', 'event_type_halls.hall_id', '=', 'halls.id')
-                    ->join('event_types', 'event_types.id', '=', 'event_type_halls.eventType_id')
-                    ->where('event_type_halls.eventType_id', '=',$eventType_id)
-                    ->where('halls.state_id', '=',$state_id)
-                    ->where('halls.city_id', '=',$city_id)
-                    ->where('halls.township_id', '=',$township_id)    
-                    ->select('event_type_halls.eventType_id','event_type_halls.hall_id','halls.hall_name','event_types.event_name','event_type_halls.image')
-                    ->get();
-          
+
+              if($eventType_id=='all' && $state_id=='all'){
+                $halls = DB::table('event_type_halls')
+                        ->join('halls', 'event_type_halls.hall_id', '=', 'halls.id')
+                        ->join('event_types', 'event_types.id', '=', 'event_type_halls.eventType_id')    
+                        ->select('event_type_halls.eventType_id','event_type_halls.hall_id','halls.hall_name','event_types.event_name','event_type_halls.image')
+                        ->get();
+              
+
+              }else if($eventType_id!='all' && $state_id=='all'){
+
+                $halls = DB::table('event_type_halls')
+                          ->join('halls', 'event_type_halls.hall_id', '=', 'halls.id')
+                          ->join('event_types', 'event_types.id', '=', 'event_type_halls.eventType_id')
+                          ->where('event_type_halls.eventType_id', '=',$eventType_id)  
+                          ->select('event_type_halls.eventType_id','event_type_halls.hall_id','halls.hall_name','event_types.event_name','event_type_halls.image')
+                          ->get();
+
+              }else if ($eventType_id=='all' && $state_id!='all') {
+
+                $halls = DB::table('event_type_halls')
+                          ->join('halls', 'event_type_halls.hall_id', '=', 'halls.id')
+                          ->join('event_types', 'event_types.id', '=', 'event_type_halls.eventType_id')
+                          ->where('halls.state_id', '=',$state_id)
+                          ->where('halls.city_id', '=',$city_id)
+                          ->where('halls.township_id', '=',$township_id)    
+                          ->select('event_type_halls.eventType_id','event_type_halls.hall_id','halls.hall_name','event_types.event_name','event_type_halls.image')
+                          ->get();
+              
+              } else {
+                $halls = DB::table('event_type_halls')
+                          ->join('halls', 'event_type_halls.hall_id', '=', 'halls.id')
+                          ->join('event_types', 'event_types.id', '=', 'event_type_halls.eventType_id')
+                          ->where('event_type_halls.eventType_id', '=',$eventType_id)
+                          ->where('halls.state_id', '=',$state_id)
+                          ->where('halls.city_id', '=',$city_id)
+                          ->where('halls.township_id', '=',$township_id)    
+                          ->select('event_type_halls.eventType_id','event_type_halls.hall_id','halls.hall_name','event_types.event_name','event_type_halls.image')
+                          ->get();
+              }
+
           return $this->respondSuccess('success',$halls); 
           
          }catch (\Exception $e) {
