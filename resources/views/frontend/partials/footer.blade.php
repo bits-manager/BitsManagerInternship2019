@@ -1,6 +1,6 @@
 <!-- Footer -->
 
-	<!-- <footer class="footer">
+	 <footer class="footer">
 		<div class="footer_main">
 			<div class="container">
 				<div class="row">
@@ -50,7 +50,7 @@
 					</div>
 				</div>
 			</div>
-		</div> -->
+		</div>		
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <script src="{{ asset('js/share.js') }}">
         	Share::page('http://www.bits-manager.com')->facebook();

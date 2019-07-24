@@ -37,14 +37,25 @@ class DataController extends ApiController
       return $this->respondError('error');
     }
 
-    public function getCities(Request $request)
+    public function getAll(Request $request)
     {
+
 
     	try{
 
+        if($request->state_id=='all'){
+         $cities=array(["id"=>"all","city_name"=>"All"]);
+         $townships= array(["id"=>"all","township_name"=>"All"]); 
+         
+        }else{
+
+
+
     		$cities = $this->cityRepo->getcities($request->state_id);
+       
         $city=$cities[0]->id;
-        $townships=$this->townshipRepo->gettownships($request->state_id,$city);      
+        $townships=$this->townshipRepo->gettownships($request->state_id,$city);  
+      }    
 		      if(count($cities)>0 || count($townships)>0){
             return $this->respondSuccess('success',['city'=>$cities,'township'=>$townships]);
 
@@ -55,10 +66,7 @@ class DataController extends ApiController
       return $this->respondError('error');
     }
 
-   
-
-
-   public function getTownship(Request $request)
+public function getTownship(Request $request)
     {
       
         try {
@@ -72,25 +80,5 @@ class DataController extends ApiController
       return $this->respondError('error');
     }
 }
-    /*public function getEventHall(Request $request)
-    {
-<<<<<<< HEAD
     
-      $eventType_id = $request->eventType_id;
-      $state_id = $request->state_id;
-      $city_id = $request->city_id;
-      $township_id = $request->township_id;
-      $halls = DB::table('event_type_halls')
-                ->join('halls', 'event_type_halls.hall_id', '=', 'halls.id')
-                ->join('event_types', 'event_types.id', '=', 'event_type_halls.eventType_id')
-                ->where('event_type_halls.eventType_id', '=',$eventType_id)
-                ->where('halls.state_id', '=',$state_id)
-                ->where('halls.city_id', '=',$city_id)
-                ->where('halls.township_id', '=',$township_id)    
-                ->select('event_type_halls.eventType_id','event_type_halls.hall_id','halls.hall_name','event_types.image')
-                ->get();
-
-      dd($halls);    
-    }*/
-
 

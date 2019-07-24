@@ -10,6 +10,7 @@
 			<div class="row">
 				<div class="col">
 					<div class="home_search_container">
+            
 							<form action="#" class="search_form d-flex flex-row align-items-start justfy-content-start"> 
 								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
 
@@ -58,7 +59,6 @@ var states = {!! json_encode($state) !!};
 var cities = {!! json_encode($city) !!};
 var events= {!! json_encode($event) !!};
 var townships={!! json_encode($township) !!};
-
 var app = angular.module('myApp', []);
 app.config(function($interpolateProvider){
   $interpolateProvider.startSymbol('<%').endSymbol('%>');
@@ -76,29 +76,15 @@ $scope.selectedState = $scope.states[0].id;
 $scope.selectedCity = $scope.cities[0].id;
 $scope.selectedTownship = $scope.townships[0].id;
 $scope.event=$scope.events[0].id;
-//$scope.event = $scope.events[0].id;
 
-//console.log($scope.selectedEvent);
-
-
-$http({
-          method : "GET",
-          url : "/api/v1/get_cities?state_id="+$scope.selectedState,
-        }).then(function mySuccess(response) {
-           $scope.cities = response.data.data.city;
-          $scope.townships=response.data.data.township;
-          }, function myError(response) {
-            $scope.cities = [];
-           $scope.townships=[];
-
-        });
 
 $scope.selectChange = function(){
 
     $http({
           method : "GET",
-          url : "/api/v1/get_cities?state_id="+$scope.selectedState,
+          url : "/api/v1/get_all?state_id="+$scope.selectedState,
         }).then(function mySuccess(response) {
+         
            $scope.cities = response.data.data.city;
            $scope.selectedCity = $scope.cities[0].id;
            console.log("$scope.selectedCity");
@@ -113,17 +99,7 @@ $scope.selectChange = function(){
 
   }
   
-  $http({
-          method : "GET",
-          url : "/api/v1/get_township?state_id="+$scope.selectedState+"&city_id="+$scope.selectedCity,
-        }).then(function mySuccess(response) {
-           $scope.townships = response.data.data;
-          }, function myError(response) {
-
-            $scope.townships = [];
-
-        });
-
+  
   
 
  $scope.select = function(){
