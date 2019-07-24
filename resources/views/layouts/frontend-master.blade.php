@@ -7,6 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Bluesky template project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <!-- language -->
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,7 +19,7 @@
 
 <link rel="stylesheet" type="text/css" href="/frontendassets/styles/about.css">
 <link rel="stylesheet" type="text/css" href="/frontendassets/styles/about_responsive.css">
-<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+
 <link rel="stylesheet" type="text/css" href="/frontendassets/styles/properties.css">
 <link rel="stylesheet" type="text/css" href="/frontendassets/styles/properties_responsive.css">
  

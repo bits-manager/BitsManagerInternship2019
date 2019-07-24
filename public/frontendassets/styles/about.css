@@ -292,7 +292,7 @@ section
 	top: 0;
 	left: 0;
 	width: 100%;
-	background:#fff;
+	background:#3f6fce;
 	z-index: 200;
 	
     -webkit-transition: all 200ms ease;
@@ -312,7 +312,7 @@ section
 }
 .header.scrolled
 {
-	background: #fff;
+	background: #3f6fce;
 }
 .header.scrolled .header_content
 {
@@ -342,7 +342,7 @@ section
 {
 	font-size: 16px;
 	font-weight: 500;
-	color: #283747;
+	color: #FFFFFF;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -750,7 +750,9 @@ section
 }
 .milestones_row
 {
+	height:150px;
 	margin-top: 91px;
+	
 }
 .milestone
 {
@@ -759,7 +761,7 @@ section
 .milestone_icon
 {
 	display: inline-block;
-	height: 74px;
+	height: 54px;
 	width: 73px;
 }
 .milestone_icon img
@@ -797,6 +799,19 @@ section
 	padding-top: 20px;
 	padding-bottom: 150px;
 }
+.advan
+{
+	width: 100%;
+	background: #FFFFFF;
+	z-index: 2;
+	margin-bottom: 58px;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+	box-shadow: 0px 13px 27px rgba(0,0,0,0.28);
+}
 .realtors_row
 {
 	margin-top: 63px;
@@ -812,6 +827,10 @@ section
 	-ms-transition: all 200ms ease;
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
+}
+.advan_outer:hover .advan
+{
+	box-shadow: 0px 13px 27px rgba(0,0,0,0.28);
 }
 .realtor_outer:hover .realtor
 {

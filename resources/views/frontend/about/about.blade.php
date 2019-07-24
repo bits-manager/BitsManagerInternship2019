@@ -28,50 +28,54 @@
 					<div class="about_image"><img src="/frontendassets/images/abouthall.jpg" alt=""></div>
 				</div>
 			</div>
-			<div class="row milestones_row">
+			
 
-			 <div class="contactus">
+			 <div class="row milestones_row">
               		<div class="container">
-              			<div class="contactus_text"><h4 style="font-size: 26px;color: blue;margin-top: -60px;margin-bottom:20px;">Advantages</h4></div>
+              			<div class="contactus_text"><h4 style="font-size: 26px;color: black;margin-top: 0px;padding-bottom: 20px;">Advantages</h4></div>
               		    <div class="row">
                             
               			    <div class="col-lg-3">
-              					<div class="contactus_image"><img src="/frontendassets/images/times.jpg" alt="" style="width: 100px;height: 100px;"></div>
-              			
+              			     <div class="advan_outer">
+              			       <div class="advan">
+              					<div class="contactus_image"><img src="/frontendassets/images/times.jpg" alt="" style="width: 100px;height: 100px;margin-left:80px;margin-top: 10px; "></div>
+              					<div class="recent_item_title text-center" style="padding-bottom: 20px;color:blue;">Save Time</div>
+              			      </div>
+                             </div>
               				</div>
               			
-              				<div class="col-lg-2">
-              					<div class="contactus_image"><img src="/frontendassets/images/search.jpg" alt="" style="width: 100px;height: 100px;"></div>
+              				<div class="col-lg-3">
+              				 <div class="advan_outer">
+              				  <div class="advan">
+              					<div class="contactus_image"><img src="/frontendassets/images/search.jpg" alt="" style="width: 100px;height: 100px;margin-left:80px;margin-top: 10px;"></div>
+              					<div class="recent_item_title text-center" style="padding-bottom: 20px;color:blue;">Easy to Search</h4></div>
+              				  </div>
+              				 </div>
               				</div>
               
-              				<div class="col-lg-2">
-              				    <div class="contactus_image"><img src="/frontendassets/images/phone.jpg" alt="" style="width: 100px;height: 100px;"></div>
+              				<div class="col-lg-3">
+              				 <div class="advan_outer">
+              				  <div class="advan">
+              				    <div class="contactus_image"><img src="/frontendassets/images/phone.jpg" alt="" style="width: 100px;height: 100px;margin-left:80px;margin-top: 10px;"></div>
+              				     <div class="recent_item_title text-center" style="padding-bottom: 20px;color:blue;">Easy to Contact</h4></div>
+              				  </div> 
+              				 </div>  
               			    </div>
-              			    <div class="col-lg-2">
-              				    <div class="contactus_image"><img src="/frontendassets/images/save.jpg" alt="" style="width: 100px;height: 100px;"></div>
+
+              			    <div class="col-lg-3">
+              			     <div class="advan_outer">
+              			       <div class="advan">
+              				    <div class="contactus_image"><img src="/frontendassets/images/save.jpg" alt="" style="width: 100px;height: 100px;margin-top: 10px;margin-left:80px;"></div>
+              				    <div class="recent_item_title text-center" style="padding-bottom: 20px;color:blue;">Save Cost</h4></div>
+              				  </div>
+              			     </div>
               			    </div>
               				</div>
-
-
-              			   <div class="row">
-              			   	<div class="col-lg-2">
-              				     <div class="contactus_text"><h4 style="font-size: 16px;color: blue;margin-top:5px;margin-bottom:20px;">Save Time</h4></div>
-              				</div>
-              				<div class="col-lg-2">
-              				     <div class="contactus_text"><h4 style="font-size: 16px;color: blue;margin-top:5px;margin-bottom:20px;">Easy to Search</h4></div>
-              				</div>
-              				<div class="col-lg-2">
-              				     <div class="contactus_text"><h4 style="font-size: 16px;color: blue;margin-top:5px;margin-bottom:20px;">Easy to Contact</h4></div>
-              				</div>
-              				<div class="col-lg-2">
-              				     <div class="contactus_text"><h4 style="font-size: 16px;color: blue;margin-top:5px;margin-bottom:20px;">Save Cost</h4></div>
-              				</div>
-              			   </div>
               			</div>
               		</div>
               	</div>	
 				
-			</div>
+			
 		</div>
 	</div>
 
@@ -193,16 +197,20 @@
               				</div>
               
               				<div class="col-lg-8">
+
               				<div class="contactus_text" style="">
 
 
-<h3 style="font-size: 18px;color: blue;">
- <i class='fas fa-map-marker-alt'></i>Bits  Manager  Co.,Ltd</h3>
+<h3 style="font-size: 22px;color: blue;">
+ <i class='fa fa-map-marker'></i> Bits  Manager  Co.,Ltd</h3>
 <h6 style="font-size: 16px;color: blue;">
-(IT Solutions Development)<br>
- <i class="fa fa-address-card"></i>No.(A.15)S,77 Street,31*32,MDY <br>
-<a href="http://www.bits-manager.com"> <i class='fa fa-wordpress'></i>http://www.bits-manager.com</a><br>
-<i class="fa fa-volume-control-phone"></i>09-444200295,09-790798567 </h6><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(IT Solutions Development)<br><br>
+<i class="fa fa-address-card"></i> No.(A.15)S,77 Street,31*32,MDY<br><br>
+<a href="http://www.bits-manager.com"> <i class='fa fa-wordpress'>
+</i>  http://www.bits-manager.com</a><br><br>
+<i class="fa fa-volume-control-phone"></i>  09-444200295,09-790798567 </h6><br>
+
+              				
               					</div>
               				
               				</div>
