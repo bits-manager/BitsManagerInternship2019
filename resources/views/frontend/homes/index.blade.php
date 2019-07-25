@@ -148,7 +148,7 @@
          @foreach($popularhalls as $popularhalls)
 			<!-- City -->
 
-			<div class="city">
+			<div class="col_md_3 city">
 				<img src="{{URL::to('/')}}/image/{{$popularhalls->hall_image}}" style="width:450px;height: 300px;">
 				<div class="city_overlay">
 					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
