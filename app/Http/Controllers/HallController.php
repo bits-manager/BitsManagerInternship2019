@@ -59,7 +59,7 @@ class HallController extends Controller
 
           $image = $request->file('hall_image');
           $new_name=rand() . '.' . $image->getClientOriginalExtension();
-          $image->move(public_path('image'),$new_name);
+          $image->move(public_path('images'),$new_name);
           $form_data=array(
             'hall_name'=>$request->hall_name,
             'phone_no'=>$request->phone_no,
@@ -125,10 +125,11 @@ class HallController extends Controller
             'hall_image'=>$image_name
           );
       }
+
       if($image!=''){
           $imagenew=rand().'.'.$image->getClientOriginalExtension();
-          $image->move(public_path('image'),$imagenew);
-          $image_path = public_path().'/image/'.$image_name;
+          $image->move(public_path('images'),$imagenew);
+          $image_path = public_path().'/images/'.$image_name;
           unlink($image_path);
           $this->hallRepo->delete($image_name);
           $form_data=array(
@@ -143,6 +144,8 @@ class HallController extends Controller
             'hall_image'=>$imagenew
             );
         }
+
+        
           $state_id= explode(':',$form_data['state_id']);
           $city_id= explode(':',$form_data['city_id']);
           $township_id=explode(':',$form_data['township_id']);
@@ -163,7 +166,7 @@ class HallController extends Controller
 
       $data=$this->hallRepo->getById($hall_id);
       $image_name=$data->hall_image;
-      $image_path = public_path().'/image/'.$image_name;
+      $image_path = public_path().'/images/'.$image_name;
       unlink($image_path);
       $this->hallRepo->delete($hall_id,$image_name);
       return back()->with('info','Hall is successfully delete!');

@@ -57,7 +57,7 @@
   @csrf
   <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
   <div class="col-sm-12 col-md-7"><button type="submit" class="btn btn-primary">Save</button>
-  <input type="button" value="Cancle" class="btn btn-primary" onclick="clearText()" /> 
+  <input type="button" value="Cancle" class="btn btn-danger" onclick="clearText()" /> 
 </div></dv>
 
   </div>

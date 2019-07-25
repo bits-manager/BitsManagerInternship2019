@@ -43,7 +43,7 @@
 
         <div style="width:100%;height:100%;overflow-x: scroll;overflow-y:hidden;">
   
-            <table class="table table-striped table-bordered" >
+            <table class="table table-striped" >
                  <thead>
       
                             <tr>
