@@ -44,8 +44,8 @@ class DataController extends ApiController
     	try{
 
         if($request->state_id=='all'){
-         $cities=array(["id"=>"all","city_name"=>"All"]);
-         $townships= array(["id"=>"all","township_name"=>"All"]); 
+         $cities=array(["id"=>"all","city_name"=>"City(All)"]);
+         $townships= array(["id"=>"all","township_name"=>"Township(All)"]); 
          
         }else{
 
