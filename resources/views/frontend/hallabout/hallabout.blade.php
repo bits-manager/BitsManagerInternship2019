@@ -17,8 +17,7 @@
 
 				<!-- About Image -->
 				<div class="col-lg-5">
-					<div class="about_image"><img src=
-						"{{URL::to('/')}}/images/{{$hall->hall_image}}" class="rounded" alt="" width="800" height="450"></div>
+					<div class="about_image"><img src="{{URL::to('/')}}/images/{{$hall->hall_image}}" class="rounded" alt="" width="800" height="450"></div>
 				</div>
 
 				<!-- About Content -->
@@ -76,7 +75,7 @@
 										</div>
 										
 										<div class="recent_item_body">
-												<div class="recent_item_title text-center"><a href="eventdetail" >View Event Detail</a></div>
+												<div class="recent_item_title text-center"><a href="eventdetail?eventType_id={{$event->eventType_id}}">View Event Detail</a></div>
 												
 										</div>
 										

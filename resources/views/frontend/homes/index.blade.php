@@ -36,8 +36,8 @@
 
 
 
-	<!-- Home Search -->
 
+	<!-- Home Search -->
 <div ng-app="myApp" ng-controller="myCtrl">
 	<div class="home_search">
 		<div class="container">
@@ -86,12 +86,18 @@
 			</div>
 		</div>
 
-	</div>
+
+
+
+
+	
+</div>
+
+	
 
 
 
 	<!-- Recent -->
-
 	<div class="recent">
 		<div class="container">
 			<div class="row">
@@ -118,10 +124,9 @@
 										</div>
 										
 										<div class="recent_item_body">
-												<div class="recent_item_title text-center"><a href="eventdetail" >View Event Detail</a></div>
+												<div class="recent_item_title text-center"><a href="eventdetail?eventType_id=<%x.eventType_id%>">View Event Detail</a></div>
 												<div class="recent_item_title text-center">
-												<a href=
-												"hallabout?hall_id=<%x.hall_id%>" >Hall Information</a>
+												<a href="hallabout?hall_id=<%x.hall_id%>" >Hall Information</a>
 												</div>
 										</div>
 										
