@@ -62,12 +62,12 @@
         </tbody>
         </table></div></div></section> 
 <div id="DeleteModal" class="modal fade " role="dialog">
-   <div class="modal-dialog">
+   <div class="modal-dialog modal-sm">
      <!-- Modal content-->
      <form action="" id="deleteForm" method="post">
          <div class="modal-content">
              <div class="modal-header bg-danger">
-              <h4 class="modal-title text-center">DELETE CONFIRMATION</h4>
+              <h6 class="modal-title text-center">DELETE CONFIRMATION</h6>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                  
              </div>
