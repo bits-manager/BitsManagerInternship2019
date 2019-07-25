@@ -44,7 +44,9 @@
 			<div class="row">
 				<div class="col">
 					<div class="home_search_container">
-						<div class = "home_search_content">
+
+						<div class="home_search_content">
+
 							<form class="search_form d-flex flex-row align-items-start justfy-content-start"> 
 								@csrf
 								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
@@ -87,10 +89,12 @@
 
 
 
+
 	
 </div>
 
 	
+
 
 
 	<!-- Recent -->
@@ -113,7 +117,7 @@
 								<div class="recent_item">
 									<div class="recent_item_inner" >
 										<div class="recent_item_image">
-											<a href="eventdetail"><img src="../image
+											<a href="eventdetail"><img src="../images
 												/<% x.image %>" alt="" width="300" height="350"></a>
 											<div class="centered" ><% x.event_name %> </div>
 
@@ -152,8 +156,9 @@
          @foreach($popularhalls as $popularhalls)
 			<!-- City -->
 
+
 			<div class="city">
-				<img src="{{URL::to('/')}}/image/{{$popularhalls->hall_image}}" style="width:450px;height: 300px;">
+				<img src="{{URL::to('/')}}/images/{{$popularhalls->hall_image}}" style="width:450px;height: 300px;">
 				<div class="city_overlay">
 					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
 						<div class="city_title">{{$popularhalls->hall_name}}</div>

@@ -65,7 +65,7 @@ class EventHallController extends Controller
 
           $image = $request->file('image');
           $new_name=rand() . '.' . $image->getClientOriginalExtension();
-          $image->move(public_path('image'),$new_name);
+          $image->move(public_path('images'),$new_name);
           $form_data=array(
             'hall_id'=>$request->hall_id,
             'eventType_id'=>$request->eventType_id,
@@ -120,8 +120,8 @@ class EventHallController extends Controller
               }
               if($image!=''){
                 $imagenew=rand().'.'.$image->getClientOriginalExtension();
-                $image->move(public_path('image'),$imagenew);
-                $image_path = public_path().'/image/'.$image_name;
+                $image->move(public_path('images'),$imagenew);
+                $image_path = public_path().'/images/'.$image_name;
                 unlink($image_path);
                 $this->eventhallRepo->delete($image_name);
                 $form_data=array(
@@ -146,11 +146,11 @@ class EventHallController extends Controller
     {
        $data=$this->eventhallRepo->getById($eventhall_id);
         $image_name=$data->image;
-        $image_path = public_path().'/image/'.$image_name;
+        $image_path = public_path().'/images/'.$image_name;
 
         unlink($image_path);
 
-        $this->eventhallRepo->delete($eventhall_id,$image_name);
+        $this->eventhallRepo->delete($eventhall_id);
         
         return back()->with('info','Hall_Event is successfully delete!');
              return redirect()->back()->withInput();

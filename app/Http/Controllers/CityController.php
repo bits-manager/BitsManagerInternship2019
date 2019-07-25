@@ -25,7 +25,7 @@ class CityController extends Controller
        return view('admin.city.create',compact('statedata'));
         
     }
-    public function store(Request $request)
+   public function store(Request $request)
 
     {
 

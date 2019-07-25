@@ -20,12 +20,16 @@ class HomesController extends Controller
         ->join('states','states.id','=','halls.state_id')
         ->whereIn('states.state_name',['Mandalay','Yangon'])
        
-        ->limit(6)
+        ->limit(8)
         ->get();
         
-
+        /*$events[]=[];
+        $state1[]=[];
+*/
     $event = DB::table('event_types')->get();
         $eventarr=array(["id"=>"all","event_name"=>"All"]);
+        $events = array();
+
         foreach ($event as $key => $value) {
             $events[]=(array)($value);
         }
@@ -34,6 +38,7 @@ class HomesController extends Controller
 
         $state = DB::table('states')->get();
          $statearr=array(["id"=>"all","state_name"=>"All"]);
+          $state1= array();
         foreach ($state as $key => $value) {
             $state1[]=(array)($value);
         }

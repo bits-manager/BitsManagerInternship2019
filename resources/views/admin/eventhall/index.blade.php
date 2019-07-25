@@ -53,7 +53,7 @@
        @foreach($data as $eventhall)
         
         <tr>
-           <td><img src="{{URL::to('/')}}/image/{{$eventhall->image}}" class="img-thumbnail" width="100"/></td>
+           <td><img src="{{URL::to('/')}}/images/{{$eventhall->image}}" class="img-thumbnail" width="100"/></td>
            <td>{{$eventhall->hall_name}}</td>
             <td>{{$eventhall->event_name}}</td>
             <td><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$eventhall->id}})" 
