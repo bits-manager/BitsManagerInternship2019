@@ -34,7 +34,7 @@
                      <div class="section_title  section_title_service" >Service</div><br>
                        {{$eventhall->description}}
                         
-                     </div>
+                     </div> 
 				</div>
 
 			</div>

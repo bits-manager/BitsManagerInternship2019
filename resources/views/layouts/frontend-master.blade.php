@@ -7,6 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Bluesky template project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <!-- language -->
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -41,8 +42,9 @@
 		   <div class="main-content">
             @yield('content')
            </div>
+        
          @include('frontend.partials.footer')
- 
+         
     </div>
 <script src="/frontendassets/js/jquery-3.2.1.min.js"></script>
 

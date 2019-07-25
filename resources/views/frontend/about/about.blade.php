@@ -191,24 +191,28 @@
               		<div class="container">
               			<div class="contactus_text"><h4 style="font-size: 26px;color: blue;margin-top: -60px;margin-bottom:20px;">Supported By</h4></div>
               		    <div class="row">
-                            <div class="col-lg-1">
-              					
-              				</div>
-              			
-              				<div class="col-lg-2">
-              					<div class="contactus_image" style="margin-left: 100px;"><img src="/frontendassets/images/abouthall.jpg" alt=""></div>
+
+              				<div class="col-lg-3">
+              					<div class="contactus_image" style=""><img src="/frontendassets/images/abouthall.jpg" alt=""></div>
               				</div>
               
               				<div class="col-lg-8">
-              				<div class="contactus_text" style="margin-left: 100px;">
-              							
-<h4 style="font-size: 22px;color: blue;">
- Bits Manager Co.,Ltd</h4>
-<h6 style="font-size: 18px;color: blue;">
-(IT Solutions Development)<br>
-No.(A.15)S,77 Street,31*32,MDY <br>
-<a href="http://www.bits-manager.com">http://www.bits-manager.com</a><br>
-09-444200295,09-790798567</h6>
+
+
+              				<div class="contactus_text" style="">
+
+
+<h3 style="font-size: 22px;color: blue;">
+ <i class='fa fa-map-marker'></i> Bits  Manager  Co.,Ltd</h3>
+<h6 style="font-size: 16px;color: blue;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(IT Solutions Development)<br><br>
+<i class="fa fa-address-card"></i> No.(A.15)S,77 Street,31*32,MDY<br><br>
+<a href="http://www.bits-manager.com"> <i class='fa fa-wordpress'>
+</i>  http://www.bits-manager.com</a><br><br>
+<i class="fa fa-volume-control-phone"></i>  09-444200295,09-790798567 </h6><br>
+
+              				
+
               					</div>
               				
               				</div>
