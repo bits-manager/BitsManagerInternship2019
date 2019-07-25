@@ -44,7 +44,9 @@
 			<div class="row">
 				<div class="col">
 					<div class="home_search_container">
+
 						<div class="home_search_content">
+
 							<form class="search_form d-flex flex-row align-items-start justfy-content-start"> 
 								@csrf
 								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
@@ -83,9 +85,10 @@
 				</div>
 			</div>
 		</div>
+
 	</div>
 
-	
+
 
 	<!-- Recent -->
 
@@ -131,6 +134,37 @@
 		</div>
 	</div>
 </div>
+
+<!-- Cities -->
+
+	<div class="cities">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title">Popular halls in these cities</div>
+					<div class="section_subtitle">Search your dream hall</div>
+				</div>
+			</div>
+		</div>
+	  
+		<div class="row cities_container d-flex flex-row flex-wrap align-items-start justify-content-between">
+         @foreach($popularhalls as $popularhalls)
+			<!-- City -->
+
+			<div class="city">
+				<img src="{{URL::to('/')}}/images/{{$popularhalls->hall_image}}" style="width:450px;height: 300px;">
+				<div class="city_overlay">
+					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
+						<div class="city_title">{{$popularhalls->hall_name}}</div>
+						<div class="city_subtitle">{{$popularhalls->address}}</div>
+					</a>	
+				</div>
+			</div>
+
+		@endforeach
+	</div>
+		</div>
+	</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script>
