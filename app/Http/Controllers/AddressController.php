@@ -23,7 +23,7 @@ class AddressController extends Controller
          $validatedData = $request->validate([
               'address' => 'required|max:255',
               'phone' => 'required|numeric|unique:addresses|min:11',
-              'email' => 'required|email|unique:addresses|max:20',
+              'email' => 'required|email|unique:addresses',
               
         ]);
         $data = $request->all();

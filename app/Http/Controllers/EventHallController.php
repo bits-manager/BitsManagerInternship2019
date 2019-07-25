@@ -37,15 +37,33 @@ class EventHallController extends Controller
         
     	$validatedData=$request->validate([
       'description' => 'required',
+      
+          'image' => 'required',
+        ]);
 
-      'image' => 'required', 
-      ]);
+    	/*$data = $request->all();
+      $description= explode('>',$data['description']);
+      $description= explode('<',$description[1]);
+      $description=$description[0];
+      $newdata=array(
+                    'hall_id' =>$data->hall_id,
+                    'eventType_id' =>$data->eventType_id
+                    'description'=>$description
+                  );
+
+        dd($newdata);*/
+       
+       
+
 
     	     
           $data = $request->all();
+          /*dd($data);
+
           $description= explode('<p>',$data['description']);
           $description= explode('</p>',$description[1]);
-          $description=$description[0];
+          $description=$description[0];*/
+
 
           $image = $request->file('image');
           $new_name=rand() . '.' . $image->getClientOriginalExtension();
@@ -53,8 +71,8 @@ class EventHallController extends Controller
           $form_data=array(
             'hall_id'=>$request->hall_id,
             'eventType_id'=>$request->eventType_id,
-             'description' =>$description,
-            'image'=>$new_name
+             'description' =>$request->description,
+            'image'=>$new_name,
             );
 
        $this->eventhallRepo->create($form_data);
@@ -106,7 +124,7 @@ class EventHallController extends Controller
                 $imagenew=rand().'.'.$image->getClientOriginalExtension();
                 $image->move(public_path('images'),$imagenew);
                 $image_path = public_path().'/images/'.$image_name;
-                unlink($image_path);
+                // unlink($image_path);
                 $this->eventhallRepo->delete($image_name);
                 $form_data=array(
                     'hall_id'=>$request->hall_id,

@@ -27,7 +27,7 @@ class HomesController extends Controller
         $state1[]=[];
 */
     $event = DB::table('event_types')->get();
-        $eventarr=array(["id"=>"all","event_name"=>"All"]);
+        $eventarr=array(["id"=>"all","event_name"=>"Event Type(All)"]);
         $events = array();
 
         foreach ($event as $key => $value) {
@@ -37,16 +37,16 @@ class HomesController extends Controller
 
 
         $state = DB::table('states')->get();
-         $statearr=array(["id"=>"all","state_name"=>"All"]);
+         $statearr=array(["id"=>"all","state_name"=>"State(All)"]);
           $state1= array();
         foreach ($state as $key => $value) {
             $state1[]=(array)($value);
         }
         $state = array_merge($statearr,$state1);
        
-        $city=array(["id"=>"all","city_name"=>"All"]);
+        $city=array(["id"=>"all","city_name"=>"City(All)"]);
        
-        $township= array(["id"=>"all","township_name"=>"All"]);
+        $township= array(["id"=>"all","township_name"=>"Township(All)"]);
 
         
     return view('frontend.homes.index',compact('event','state','city','township','popularhalls'));
