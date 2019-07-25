@@ -122,7 +122,7 @@ class EventHallController extends Controller
                 $imagenew=rand().'.'.$image->getClientOriginalExtension();
                 $image->move(public_path('images'),$imagenew);
                 $image_path = public_path().'/images/'.$image_name;
-                unlink($image_path);
+                // unlink($image_path);
                 $this->eventhallRepo->delete($image_name);
                 $form_data=array(
                     'hall_id'=>$request->hall_id,

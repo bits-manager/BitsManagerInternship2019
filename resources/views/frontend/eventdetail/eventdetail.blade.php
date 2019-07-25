@@ -21,7 +21,7 @@
 				<div class="col-lg-6">
 					<div class="about_content">
 						@foreach($data as $eventhall)
-                          <img src="{{URL::to('/')}}/image/{{$eventhall->image}}" class="img-thumbnail" width="500"/><div class="centered" >{{$eventhall->event_name}}</div>
+                          <img src="{{URL::to('/')}}/images/{{$eventhall->image}}" class="img-thumbnail" width="500"/><div class="centered" >{{$eventhall->event_name}}</div>
                           
                          @endforeach
                         
@@ -32,8 +32,7 @@
 					<div class="about_content">
 					
                      <div class="section_title  section_title_service" >Service</div><br>
-                       {{$eventhall->description}}
-                        
+                        {{$eventhall->description}}
                      </div> 
 				</div>
 

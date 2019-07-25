@@ -12,23 +12,18 @@
 	<div class="about">
 		<div class="container">
 			<div class="row">
- 				
+				
                 @foreach($hall as $hall)
 
 				<!-- About Image -->
 				<div class="col-lg-5">
-<<<<<<< HEAD
-					<div class="about_image"><img src="{{URL::to('/')}}/image/{{$hall->hall_image}}" class="rounded" alt="" width="800" height="450"></div>
-=======
-					<div class="about_image"><img src=
-						"{{URL::to('/')}}/images/{{$hall->hall_image}}" class="rounded" alt="" width="800" height="450"></div>
->>>>>>> 15ed95093f518c84f13e632fdbc744a757816f0b
+					<div class="about_image"><img src="{{URL::to('/')}}/images/{{$hall->hall_image}}" class="rounded" alt="" width="800" height="450"></div>
 				</div>
 
 				<!-- About Content -->
 				<div class="col-lg-7">
 					<div class="about_content">
-						<div class="section_title" font-style="italic"><marquee>{{$hall->hall_name}}</marquee></div>
+						<div class="section_title" style="font-style:italic;line-height: 1.2;" ><marquee>{{$hall->hall_name}}</marquee></div>
 						
 							
 								<label class="label_style"><i class="fa fa-map-marker icon"></i><b>Location : </b>{{$hall->address}}</label><br>
@@ -63,7 +58,7 @@
 
 			</div>
 			<div class="row recent_row" >
-				@foreach($event as $eventhall)
+				@foreach($event as $event)
 				<div class="col-sm-4">
 					 
 						
@@ -74,18 +69,13 @@
 								<div class="recent_item">
 									<div class="recent_item_inner" >
 										<div class="recent_item_image">
-<<<<<<< HEAD
-											<a href="eventdetail"><img src="{{URL::to('/')}}/image/{{$eventhall->image}}" alt="" width="300" height="350"></a>
-											
-=======
 											<a href="eventdetail"><img src="{{URL::to('/')}}/images/{{$event->image}}" alt="" width="300" height="350"></a>
 											<div class="centered" >{{$event->event_name}}</div>
->>>>>>> 15ed95093f518c84f13e632fdbc744a757816f0b
 
 										</div>
 										
 										<div class="recent_item_body">
-												<div class="recent_item_title text-center"><a href="eventdetail?eventType_id={{$eventhall->eventType_id}}">View Event Detail</a></div>
+												<div class="recent_item_title text-center"><a href="eventdetail?eventType_id={{$event->eventType_id}}">View Event Detail</a></div>
 												
 										</div>
 										
