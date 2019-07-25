@@ -85,7 +85,7 @@ Manage Users
             <div class ="col-sm-12 col-md-3">
 
             <button type="submit" class="btn btn-primary">Save</button>
-            <input type="button" value="Cancel" class="btn btn-primary" onclick="clearText()"/>
+            <input type="button" value="Cancel" class="btn btn-danger" onclick="clearText()"/>
          </div>
           </div> 
         </form>

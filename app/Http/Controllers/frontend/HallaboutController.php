@@ -18,21 +18,15 @@ class HallaboutController extends Controller
        	      ->join('states','states.id','=','halls.state_id')
            		->join('cities','cities.id','=','halls.city_id')
            		->join('townships','townships.id','=','halls.township_id')
-
-          		->where('halls.id', '=',$hall_id)
-
-
-
-
+           		->where('halls.id', '=',$hall_id)
            		->select('halls.id','halls.hall_image','halls.hall_name','halls.phone_no','halls.open_time','halls.close_time','states.state_name','cities.city_name','townships.township_name','halls.address')
-                ->get();
+              ->get();
                 
            $event = DB::table('event_type_halls')
                     ->join('halls', 'event_type_halls.hall_id', '=', 'halls.id')
                     ->join('event_types', 'event_types.id', '=', 'event_type_halls.eventType_id')
                     ->where('halls.id', '=',$hall_id)
-
-                     ->select('event_type_halls.eventType_id','event_types.event_name','event_type_halls.image')
+                    ->select('event_type_halls.eventType_id','event_types.event_name','event_type_halls.image')
                     ->get();
                     
                    
