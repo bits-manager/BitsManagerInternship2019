@@ -151,6 +151,7 @@
          @foreach($popularhalls as $popularhalls)
 			<!-- City -->
 
+
 			<div class="city">
 				<img src="{{URL::to('/')}}/images/{{$popularhalls->hall_image}}" style="width:450px;height: 300px;">
 				<div class="city_overlay">
