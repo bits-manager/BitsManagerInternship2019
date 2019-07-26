@@ -75,7 +75,7 @@
 										</div>
 										
 										<div class="recent_item_body">
-												<div class="recent_item_title text-center"><a href="eventdetail?eventType_id={{$event->eventType_id}}">View Event Detail</a></div>
+												<div class="recent_item_title text-center"><a href="eventdetail?id={{$event->id}}">View Event Detail</a></div>
 												
 										</div>
 										
