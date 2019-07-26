@@ -20,7 +20,8 @@
 						<div class="section_subtitle">Say hello</div>
 						<div class="contact_info_text"><p>Customer easy to join admin address,email and can be call phone and also can  search in map .</p></div>
 						<div class="contact_info_content">
-							<ul class="contact_info_list">	
+							<ul class="contact_info_list">
+							@foreach($address as $address)	
 								<li>
 									<div><strong>Address :</strong> {{$address->address}}</div>
 									
@@ -36,6 +37,7 @@
 								
 							</ul>    
 						</div>
+						 @endforeach
 					</div>
 				</div>
 
