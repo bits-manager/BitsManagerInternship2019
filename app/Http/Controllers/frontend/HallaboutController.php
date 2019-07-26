@@ -29,10 +29,8 @@ class HallaboutController extends Controller
                     ->join('halls', 'event_type_halls.hall_id', '=', 'halls.id')
                     ->join('event_types', 'event_types.id', '=', 'event_type_halls.eventType_id')
                     ->where('halls.id', '=',$hall_id)
-                    ->select('event_type_halls.eventType_id','event_types.event_name','event_type_halls.image')
+                    ->select('event_type_halls.id','event_types.event_name','event_type_halls.image')
                     ->get();
-
-              
                                      
       return view('frontend.hallabout.hallabout',compact('hall','event'));
 

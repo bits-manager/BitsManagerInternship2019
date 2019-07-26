@@ -41,17 +41,7 @@ class EventHallController extends Controller
           'image' => 'required',
         ]);
 
-    	/*$data = $request->all();
-      $description= explode('>',$data['description']);
-      $description= explode('<',$description[1]);
-      $description=$description[0];
-      $newdata=array(
-                    'hall_id' =>$data->hall_id,
-                    'eventType_id' =>$data->eventType_id
-                    'description'=>$description
-                  );
-
-        dd($newdata);*/
+    	
        
        
 
@@ -66,7 +56,7 @@ class EventHallController extends Controller
           $form_data=array(
             'hall_id'=>$request->hall_id,
             'eventType_id'=>$request->eventType_id,
-             'description' =>$description,
+             'description' =>$request->description,
             'image'=>$new_name,
             );
 
