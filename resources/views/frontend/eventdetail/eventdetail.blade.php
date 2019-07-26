@@ -18,21 +18,23 @@
 			<div class="row">
 				
 				<!-- About Content -->
-				<div class="col-lg-6">
+				<div class="col-lg-4">
 					<div class="about_content">
 						@foreach($data as $eventhall)
-                          <img src="{{URL::to('/')}}/images/{{$eventhall->image}}" class="img-thumbnail" width="500"/><div class="centered" >{{$eventhall->event_name}}</div>
+                          <img src="{{URL::to('/')}}/images/{{$eventhall->image}}" class="img-thumbnail" width="400"/>
                           
                          @endforeach
                         
 					</div>
 				</div>
 				<!-- About Content -->
-                <div class="col-lg-6">
+                <div class="col-lg-8">
 					<div class="about_content">
 					
                      <div class="section_title  section_title_service" >Service</div><br>
-                        {{$eventhall->description}}
+                        <div>Hall Name ::{{$eventhall->hall_name}}</div>
+                        <div>Event Name ::{{$eventhall->event_name}}</div>
+                      <div>description :: {!!$eventhall->description!!}</div>
                      </div> 
 				</div>
 

@@ -58,11 +58,11 @@ class EventHallController extends Controller
 
     	     
           $data = $request->all();
-          /*dd($data);
+          
 
-          $description= explode('<p>',$data['description']);
-          $description= explode('</p>',$description[1]);
-          $description=$description[0];*/
+          // $description= explode('<p>',$data['description']);
+          // $description= explode('</p>',$description[1]);
+          // $description=$description[0];
 
 
           $image = $request->file('image');

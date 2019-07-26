@@ -14,6 +14,7 @@ class EventdetailController extends Controller
        $eventType_id= $request->eventType_id;
        $data = DB::table('event_type_halls')
                ->join('event_types', 'event_types.id', '=', 'event_type_halls.eventType_id')
+               ->join('halls', 'event_type_halls.hall_id', '=', 'halls.id')
                ->where('eventType_id', '=',$eventType_id)
                ->get();
      
