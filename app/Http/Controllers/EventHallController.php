@@ -58,7 +58,8 @@ class EventHallController extends Controller
 
     	     
           $data = $request->all();
-        
+
+
           $image = $request->file('image');
           $new_name=rand() . '.' . $image->getClientOriginalExtension();
           $image->move(public_path('images'),$new_name);

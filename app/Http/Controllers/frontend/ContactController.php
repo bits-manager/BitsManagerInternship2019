@@ -19,7 +19,14 @@ class ContactController extends Controller
     	$township = DB::table('townships')->get();
     	$contact = DB::table('contacts')->get();
         $address= DB::table('addresses')->where('status',1)->first();
-              
+              $addressarr=array(["id"=>"all"]);
+        $adds = array();
+      
+        foreach($address as $address => $value) {
+            $adds[]=(array)($value);
+        }
+        $address = array_merge($addressarr,$adds);
+
       	return view('frontend.contact.contact',compact('address','contact','event','state','city','township'));
         
     }
