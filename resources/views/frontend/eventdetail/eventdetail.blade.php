@@ -32,7 +32,7 @@
 					<div class="about_content">
 					
                      <div class="section_title  section_title_service" >Service</div><br>
-                        {{$eventhall->description}}
+                        {!! $eventhall->description !!}
                      </div> 
 				</div>
 
