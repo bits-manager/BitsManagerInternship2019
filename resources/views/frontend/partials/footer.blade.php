@@ -10,27 +10,32 @@
 						<div class="footer_logo"><a href="#"><img src="../frontendassets/images/hallmyanmar.png" alt="" width=200 height=60></a></div>
 					</div>
 					<div class="col-lg-9 d-flex flex-column align-items-start justify-content-end">
-						<div class="footer_title">Latest Properties</div>
+						
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-3 footer_col">
-						<div class="footer_about">
+					<div class="col-lg-3 footer_col footer_latest_name"">
+						<ul>
+							<li><a href="homes">{{trans('sentence.home')}}</a></li>
+							<li><a href="about">{{trans('sentence.about')}}</a></li>
+							<li><a href="contact">{{trans('sentence.contact')}}</a></li>
+						</ul>
+						<!-- <div class="footer_about">
 							<div class="footer_about_text"></div>
-						</div>
+						</div> -->
 					</div>
 					<div class="col-lg-3 footer_col">
-						<div class="footer_latest d-flex flex-row align-items-start justify-content-start">
+						<!-- <div class="footer_latest d-flex flex-row align-items-start justify-content-start">
 							<div><div class="footer_latest_image"><img src="../frontendassets/images/footerimg1.jpg" alt=""></div></div>
 							<div class="footer_latest_content">
 								<div class="footer_latest_location">Miami</div>
 								<div class="footer_latest_name"><a href="#">Sea view property</a></div>
 								<div class="footer_latest_price">$ 1. 234 981</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 					<div class="col-lg-3 footer_col">
-						<div class="footer_latest d-flex flex-row align-items-start justify-content-start">
+						<!-- <div class="footer_latest d-flex flex-row align-items-start justify-content-start">
 							<div><div class="footer_latest_image"><img src="../frontendassets/images/footer_latest_2.jpg" alt=""></div></div>
 							<div class="footer_latest_content">
 								<div class="footer_latest_location">Miami</div>
@@ -38,17 +43,17 @@
 								</div>
 								<div class="footer_latest_price">$ 1. 234 981</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 					<div class="col-lg-3 footer_col">
-						<div class="footer_latest d-flex flex-row align-items-start justify-content-start">
+						<!-- <div class="footer_latest d-flex flex-row align-items-start justify-content-start">
 							<div><div class="footer_latest_image"><img src="../frontendassets/images/footer_latest_3.jpg" alt=""></div></div>
 							<div class="footer_latest_content">
 								<div class="footer_latest_location">Miami</div>
 								<div class="footer_latest_name"><a href="#">Modern House</a></div>
 								<div class="footer_latest_price">$ 1. 234 981</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
