@@ -61,8 +61,6 @@
 				@foreach($event as $event)
 				<div class="col-sm-4">
 					 
-						
-						
 							<!-- Slide -->
 							<div >
 
