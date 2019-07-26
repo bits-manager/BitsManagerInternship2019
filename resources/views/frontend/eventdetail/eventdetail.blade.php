@@ -2,9 +2,7 @@
 
 @section('content')
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
 <style>
 
 	.section_title_service{
@@ -32,9 +30,9 @@
 					<div class="about_content">
 					
                      <div class="section_title  section_title_service" >Service</div><br>
-                        <div>Hall Name ::{{$eventhall->hall_name}}</div>
-                        <div>Event Name ::{{$eventhall->event_name}}</div>
-                      <div>description :: {!!$eventhall->description!!}</div>
+                        <div><b>Hall Name ::</b>{{$eventhall->hall_name}}</div>
+                        <div><b>Event Name ::</b>{{$eventhall->event_name}}</div>
+                      <div><b>description ::</b> {!!$eventhall->description!!}</div>
                      </div> 
 				</div>
 

@@ -109,7 +109,7 @@ public function getTownship(Request $request)
                 $halls = DB::table('event_type_halls')
                         ->join('halls', 'event_type_halls.hall_id', '=', 'halls.id')
                         ->join('event_types', 'event_types.id', '=', 'event_type_halls.eventType_id')    
-                        ->select('event_type_halls.eventType_id','event_type_halls.hall_id','halls.hall_name','event_types.event_name','event_type_halls.image')
+                        ->select('event_type_halls.id','event_type_halls.hall_id','halls.hall_name','event_types.event_name','event_type_halls.image')
                         ->get();
               
 
@@ -119,7 +119,7 @@ public function getTownship(Request $request)
                           ->join('halls', 'event_type_halls.hall_id', '=', 'halls.id')
                           ->join('event_types', 'event_types.id', '=', 'event_type_halls.eventType_id')
                           ->where('event_type_halls.eventType_id', '=',$eventType_id)  
-                          ->select('event_type_halls.eventType_id','event_type_halls.hall_id','halls.hall_name','event_types.event_name','event_type_halls.image')
+                          ->select('event_type_halls.id','event_type_halls.hall_id','halls.hall_name','event_types.event_name','event_type_halls.image')
                           ->get();
 
               }else if ($eventType_id=='all' && $state_id!='all') {
@@ -130,7 +130,7 @@ public function getTownship(Request $request)
                           ->where('halls.state_id', '=',$state_id)
                           ->where('halls.city_id', '=',$city_id)
                           ->where('halls.township_id', '=',$township_id)    
-                          ->select('event_type_halls.eventType_id','event_type_halls.hall_id','halls.hall_name','event_types.event_name','event_type_halls.image')
+                          ->select('event_type_halls.id','event_type_halls.hall_id','halls.hall_name','event_types.event_name','event_type_halls.image')
                           ->get();
               
               } else {
@@ -141,7 +141,7 @@ public function getTownship(Request $request)
                           ->where('halls.state_id', '=',$state_id)
                           ->where('halls.city_id', '=',$city_id)
                           ->where('halls.township_id', '=',$township_id)    
-                          ->select('event_type_halls.eventType_id','event_type_halls.hall_id','halls.hall_name','event_types.event_name','event_type_halls.image')
+                          ->select('event_type_halls.id','event_type_halls.hall_id','halls.hall_name','event_types.event_name','event_type_halls.image')
                           ->get();
               }
 
