@@ -163,7 +163,7 @@
 			<div class="row">
 				<div class="col">
 
-					<div class="section_title">The Realtors</div>		
+					<div class="section_title">Developers</div>		
 				</div>
 			</div>
 			<div class="row realtors_row">

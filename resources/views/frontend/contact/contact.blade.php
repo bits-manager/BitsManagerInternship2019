@@ -1,24 +1,8 @@
-<style type="text/css">
-#hallhome{
-          height:200px;
-	      background-color:rgb(241, 246, 249);
-         }
 
- .show-on-hover:hover > ul.dropdown-menu {
-    display: block; 
-    padding-left: 11px; 
-}
-.a{
-	color:#000;
-}
-#ul{
-
-
-}
-
- </style>
 @extends('layouts.frontend-master')
 @section('content')
+
+
 <!-- Header -->
 	 <header class="header">
 		<div class="container">
@@ -162,9 +146,10 @@
 			</div>
 		</div>
 	</div>
-
+</div>
 	<!-- Map -->
 
 	<div class="earth3dmap-com">
 		<iframe id="iframemap" src="https://maps.google.com/maps?q=No.+%28A%2C+15%29S%2C+77th+Street+and+Between+of+31st+x%2C+32nd+Street%2C+%E1%80%99%E1%80%94%E1%80%B9%E1%80%90%E1%80%9C%E1%80%B1%E1%80%B8&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%" height="500" frameborder="0" scrolling="no"></iframe><div style="color: #333; font-size: 14px; font-family: Arial, Helvetica, sans-serif; text-align: right; padding: 10px;">Map by <a style="color: #333; text-decoration: underline; font-size: 14px; font-family: Arial, Helvetica, sans-serif; text-align: right;" href="http://earth3dmap.com/?from=embed" target="_blank" >Earth3DMap.com</a></div>
-	@endsection
+	</div>
+@endsection

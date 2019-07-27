@@ -1,4 +1,14 @@
+
+@extends('layouts.frontend-master')
+
+@section('content')
 <style>
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
 	#a{
 		width: 25%;
 	}
@@ -21,17 +31,7 @@
 	}
  </style>
 
-@extends('layouts.frontend-master')
 
-@section('content')
-<style>
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-</style>
 <!-- Header -->
 <header class="header">
 		<div class="container">
@@ -164,12 +164,6 @@
 				</div>
 			</div>
 		</div>
-
-
-
-
-
-	
 </div>
 
 	
