@@ -41,14 +41,13 @@ class EventHallController extends Controller
           'image' => 'required',
         ]);
 
+
           $data = $request->all();
           
 
           $description= explode('<p>',$data['description']);
           $description= explode('</p>',$description[1]);
           $description=$description[0];
-
-
           $image = $request->file('image');
           $new_name=rand() . '.' . $image->getClientOriginalExtension();
           $image->move(public_path('images'),$new_name);
