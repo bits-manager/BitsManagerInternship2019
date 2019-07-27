@@ -266,6 +266,7 @@ section
 }
 .section_title
 {
+	padding-top: 20px;
 	font-size: 30px;
 	font-weight: 600;
 	color: #282828;
@@ -1035,7 +1036,7 @@ section
 }
 .footer_bar_content
 {
-	height: 97px;
+	height: 60px;
 }
 .cr
 {

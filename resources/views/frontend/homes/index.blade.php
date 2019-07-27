@@ -83,7 +83,7 @@
 				
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(../frontendassets/images/mainhall2.jpg)"></div>
+					<div class="home_slider_background" style="background-image:url(../frontendassets/images/mainhall3.jpg)"></div>
 					
 				</div>
 
@@ -174,9 +174,10 @@
 										</div>
 										
 										<div class="recent_item_body">
-												<div class="recent_item_title text-center"><a href="eventdetail?id=<%x.id%>"><% x.event_name %> Detail</a></div>
-												<div class="recent_item_title text-center">
-												<a href="hallabout?hall_id=<%x.hall_id%>" ><% x.hall_name %> Information</a>
+												<div class="text-center" style="color: #515A5A;font-weight: 600;font-style: italic;"><% x.event_name %></div>
+												<div class="item_title text-center"><a href="eventdetail?id=<%x.id%>">View Detail</a></div>
+												<div class="item_title text-center">
+												<a href="hallabout?hall_id=<%x.hall_id%>">View <% x.hall_name %></a>
 												</div>
 										</div>
 										
