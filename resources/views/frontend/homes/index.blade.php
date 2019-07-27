@@ -196,7 +196,7 @@
 								<div class="recent_item">
 									<div class="recent_item_inner" >
 										<div class="recent_item_image">
-											<a href="eventdetail"><img src="../images
+											<a href="eventdetail?id=<%x.id%>"><img src="../images
 												/<% x.image %>" alt="" width="" height="350"></a>
 
 										</div>
