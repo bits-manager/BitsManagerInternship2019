@@ -2,7 +2,24 @@
 	#a{
 		width: 25%;
 	}
-</style>
+
+ 	.show-on-hover:hover > ul.dropdown-menu {
+    display: block; 
+    padding-left: 11px; 
+	}
+	.a{
+	color:#000;
+	}
+	#ul{
+
+
+	}
+	.container {
+  position: relative;
+  text-align: center;
+  color: white;
+	}
+ </style>
 
 @extends('layouts.frontend-master')
 
@@ -15,6 +32,68 @@
 }
 
 </style>
+<!-- Header -->
+<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					
+					<div class="header_content d-flex flex-row align-items-center justify-content-start">
+
+						 <div>
+							<a href="#"><img src="../frontendassets/images/hallmyanmar.png" alt="" style="width: 200px"></a>
+
+						</div> 
+						<nav class="main_nav">
+							<ul>
+								<li class="active"><a href="homes">{{trans('sentence.home')}}</a>
+								</li>
+								<li><a href="about">{{trans('sentence.about')}}</a></li>
+
+
+									<li><a href="contact">{{trans('sentence.contact')}}</a></li>
+                                  
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{trans('sentence.language')}}<span class="caret"></span>
+                            </a>
+                           
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item has-icon text-primary"  href="lang/en"><img src="{{asset('assets/img/us.png')}}" width="30px" height="20x"> English</a>
+                                
+                                 <a class="dropdown-item has-icon text-primary"  href="lang/my"><img src="{{asset('assets/img/my.png')}}" width="30px" height="20x"> Myanmar</a>
+                                
+                            </div>
+                        </li>
+                  
+								
+								<li class="upper-links dropdown show-on-hover"><a class="links dropdown-toggle" 
+									data-toggle="dropdown" href="#"> {{trans('sentence.account')}}</a>
+								  <ul class="dropdown-menu" role="menu" id="ul">
+
+								  	@if(Auth::check())
+								  	
+                                    <li>Hi, {{ Auth::user()->name }}</li>
+                                        <li><a href="{{route('admin.dashboard')}}" class="dropdown-item has-icon text-primary" >
+                                           Dashboard</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger"></i> Logout
+                                        </a></li>
+                                    @else
+                                        <li ><a href="{{route('admin.dashboard')}}" style="color: #000"> Login</a></li>
+                                    @endif 
+          						  </ul> 
+								</li>
+							</ul>
+							
+						</nav>
+						
+						<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 
 <!-- Home -->
 
@@ -26,7 +105,7 @@
 				
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(../frontendassets/images/hallshome.jpg)"></div>
+					<div class="home_slider_background" style="background-image:url(../frontendassets/images/mainhall2.jpg)"></div>
 					
 				</div>
 
@@ -117,16 +196,15 @@
 								<div class="recent_item">
 									<div class="recent_item_inner" >
 										<div class="recent_item_image">
-											<a href="eventdetail"><img src="../images
+											<a href="eventdetail?id=<%x.id%>"><img src="../images
 												/<% x.image %>" alt="" width="" height="350"></a>
-											<div class="centered" ><% x.event_name %> </div>
 
 										</div>
 										
 										<div class="recent_item_body">
-												<div class="recent_item_title text-center"><a href="eventdetail?id=<%x.id%>">View Event Detail</a></div>
+												<div class="recent_item_title text-center"><a href="eventdetail?id=<%x.id%>"><% x.event_name %> Detail</a></div>
 												<div class="recent_item_title text-center">
-												<a href="hallabout?hall_id=<%x.hall_id%>" >Hall Information</a>
+												<a href="hallabout?hall_id=<%x.hall_id%>" ><% x.hall_name %> Information</a>
 												</div>
 										</div>
 										
