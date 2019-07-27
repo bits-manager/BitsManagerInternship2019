@@ -43,7 +43,6 @@ class HomesController extends Controller
             $state1[]=(array)($value);
         }
         $state = array_merge($statearr,$state1);
-       
         $city=array(["id"=>"all","city_name"=>"City(All)"]);
        
         $township= array(["id"=>"all","township_name"=>"Township(All)"]);

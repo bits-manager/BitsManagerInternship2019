@@ -67,12 +67,12 @@
                 
                       
             </td>
-            <td><div class="btn-group">
-              <div><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$address->id}})" data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a>
-              </div><div>
+            <td>
+              <a href="javascript:;" data-toggle="modal" onclick="deleteData({{$address->id}})" data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash"></i> </a>
+              
               <a href="{{ route('admin.address.edit',$address->id)}}" class="btn btn-primary"><i class='fas fa-edit'></i></a>   
-            </div>
-          </td></div>
+            
+          </td>
         </tr>
       @endforeach
     </div>
