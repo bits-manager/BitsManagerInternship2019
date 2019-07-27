@@ -105,7 +105,7 @@
 				
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(../frontendassets/images/hallshome.jpg)"></div>
+					<div class="home_slider_background" style="background-image:url(../frontendassets/images/mainhall2.jpg)"></div>
 					
 				</div>
 

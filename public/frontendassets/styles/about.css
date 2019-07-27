@@ -791,7 +791,11 @@ section
 /*********************************
 8. Realtors
 *********************************/
-
+.advans
+{
+	padding-top: 30px;
+	height: 200px;
+}
 .realtors
 {
 	width: 100%;

@@ -106,7 +106,7 @@
 			</div>
 			
 
-			 <div class="row milestones_row">
+			 <div class="advans">
               		<div class="container">
               			<div class="contactus_text"><h4 style="font-size: 26px;color: black;margin-top: 0px;padding-bottom: 20px;">Advantages</h4></div>
               		    <div class="row">
