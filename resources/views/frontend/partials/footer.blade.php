@@ -71,9 +71,9 @@
 						<div class="footer_bar_content d-flex flex-row align-items-center justify-content-start">
 							<div class="cr">
                               Copyright &copy;2019 All rights reserved 
-                                
                             </div>
-							<div class="footer_phone ml-auto"><b><i>Share on<i></b> <i class="fa fa-hand-o-right" style="font-size:20px;color:blue"></i>  <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.bits-manager.com" ><img src="../frontendassets/images/facebook.png" class="logo" alt=""></a>
+							<div class="ml-auto" style="font-size: 14px;
+								font-weight: 500;color: #000;">Share on :<a href="https://www.facebook.com/sharer/sharer.php?u=http://www.bits-manager.com" ><img src="../frontendassets/images/facebook.png" class="logo" alt=""></a>
 							</div>
 						</div>
 					</div>

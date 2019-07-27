@@ -18,7 +18,7 @@
 						<div class="about_text">
 						 <p style="font-size: 18px">The user can search halls on a single place. Hall's owner 
 						 can advertise their halls , user can contact hall's owner to rent halls and
-						 can known hall's locations.</p>
+						 can know hall's locations.</p>
 						</div>
 					</div>
 				</div>
