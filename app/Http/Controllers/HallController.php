@@ -165,9 +165,9 @@ class HallController extends Controller
     {
 
       $data=$this->hallRepo->getById($hall_id);
-      // $image_name=$data->hall_image;
-      // $image_path = public_path().'/images/'.$image_name;
-      // unlink($image_path);
+       $image_name=$data->hall_image;
+      $image_path = public_path().'/images/'.$image_name;
+       unlink($image_path);
       $this->hallRepo->delete($hall_id);
       return back()->with('info','Hall is successfully delete!');
       return redirect()->back()->withInput();
