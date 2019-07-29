@@ -58,7 +58,7 @@
                                         <li><a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger"></i> Logout
                                         </a></li>
                                     @else
-                                        <li ><a href="{{route('admin.dashboard')}}" style="color: #000"> Login</a></li>
+                                        <li ><a href="{{route('admin.dashboard')}}" class="dropdown-item has-icon text-primary" style="color: #000"><i class="fa fa-user"></i> Login</a></li>
                                     @endif 
           						  </ul> 
 								</li>
@@ -150,6 +150,7 @@
 	<!-- Recent -->
 	<div class="recent">
 		<div class="container">
+
 			
 			<div ng-if="halls.length != 0">
 				<div class="row">
@@ -161,6 +162,7 @@
 				
 				<div class="row recent_row" >
 					<div class="col-sm-4" ng-repeat="x in halls">
+
 						
 							
 							
@@ -192,7 +194,8 @@
 				</div>
 			</div>
 			<div ng-if="halls.length == 0">
-				<div class="section_title animated shake">Sorry!<br><br> There is no halls.</div>
+				
+				<div ><img src="../frontendassets/images/tenor.gif" alt="" style="width: 150px;height: 150px;"><div class="section_title animated shake">Sorry!<br><br> There is no halls.</div></div>
 			</div>
 		</div>
 	</div>

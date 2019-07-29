@@ -24,9 +24,9 @@
           {{ session()->get('success') }}  
           </div><br/>
         @endif
-      
-        <!-- <div style="width:100%;height:100%;overflow-x:scroll;overflow-y:hidden;"> -->
-        <table class="table table-striped table-responsive">
+        <div class="table-responsive">
+        
+        <table class="table table-striped ">
         <thead>
         <tr>
           <th>Hall  Image</th>
@@ -45,7 +45,7 @@
         @foreach($data as $hall)
         
         <tr>
-            <td><img src="{{URL::to('/')}}/images/{{$hall->hall_image}}" class="img-thumbnail" width="100"/></td>
+            <td><img src="{{URL::to('/')}}/images/{{$hall->hall_image}}" class="img-thumbnail"/></td>
             <td>{{$hall->hall_name}}</td>
             <td>{{$hall->state_name}}</td>
             <td>{{$hall->city_name}}</td>
@@ -60,7 +60,7 @@
         </tr>
         @endforeach
         </tbody>
-        </table></div></div></section> 
+        </table></div></div></div></section> 
 <div id="DeleteModal" class="modal fade " role="dialog">
    <div class="modal-dialog modal-sm">
      <!-- Modal content-->
