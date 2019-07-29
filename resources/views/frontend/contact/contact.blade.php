@@ -21,7 +21,19 @@
 						<div class="contact_info_text"><p>Customer easy to join admin address,email and can be call phone and also can  search in map .</p></div>
 						<div class="contact_info_content">
 							<ul class="contact_info_list">
-							@foreach($address as $address)	
+							 	<!-- <li>
+									<div><strong>Address :</strong>1481 Creekside Lane , CA 93424</div>
+									
+								</li>
+								<li>
+									<div><strong>Phone :</strong>09423251986</div>
+									
+								</li>
+								<li>
+									<div><strong>Email :</strong>hninwaiwai@gmail</div> -->
+									
+								</li>
+
 								<li>
 									<div><strong>Address :</strong> {{$address->address}}</div>
 									
@@ -37,7 +49,7 @@
 								
 							</ul>    
 						</div>
-						 @endforeach
+						
 					</div>
 				</div>
 
@@ -75,9 +87,11 @@
 			</div>
 		</div>
 	</div>
+	</div>
 
 	<!-- Map -->
 
 	<div class="earth3dmap-com">
-		<iframe id="iframemap" src="https://maps.google.com/maps?q=No.+%28A%2C+15%29S%2C+77th+Street+and+Between+of+31st+x%2C+32nd+Street%2C+%E1%80%99%E1%80%94%E1%80%B9%E1%80%90%E1%80%9C%E1%80%B1%E1%80%B8&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%" height="500" frameborder="0" scrolling="no"></iframe><div style="color: #333; font-size: 14px; font-family: Arial, Helvetica, sans-serif; text-align: right; padding: 10px;">Map by <a style="color: #333; text-decoration: underline; font-size: 14px; font-family: Arial, Helvetica, sans-serif; text-align: right;" href="http://earth3dmap.com/?from=embed" target="_blank" >Earth3DMap.com</a></div>
+		<iframe id="iframemap" src="https://maps.google.com/maps?q=No.+%28A%2C+15%29S%2C+77th+Street+and+Between+of+31st+x%2C+32nd+Street%2C+%E1%80%99%E1%80%94%E1%80%B9%E1%80%90%E1%80%9C%E1%80%B1%E1%80%B8&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%" height="500" frameborder="0" scrolling="no"></iframe><div style="color: #333; font-size: 14px; font-family: Arial, Helvetica, sans-serif; text-align: right; padding: 10px;"><a style="color: #333; text-decoration: underline; font-size: 14px; font-family: Arial, Helvetica, sans-serif; text-align: right;" href="http://earth3dmap.com/?from=embed" target="_blank" ></a></div>
+		</div>
 	@endsection

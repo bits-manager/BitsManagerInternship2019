@@ -31,7 +31,7 @@
 				<li><a href="contact" >{{trans('sentence.contact')}}</a></li>
 
 				                <li class="upper-links dropdown show-on-hover"><a class="links dropdown-toggle" 
-									data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o"></i> Account</a>
+									data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o"></i> {{trans('sentence.account')}}</a>
 
 								  <ul class="dropdown-menu" role="menu" id="ul">
 
