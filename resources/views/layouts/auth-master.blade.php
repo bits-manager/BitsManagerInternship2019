@@ -56,6 +56,24 @@
          @include('frontend.partials.menu')
           
 
+
+ </style>
+  <style type="text/css">
+ .show-on-hover:hover > ul.dropdown-menu {
+    display: block; 
+    padding-left: 11px; 
+}
+.a{
+  color:#000;
+}
+#ul{
+
+
+}
+
+ </style>
+
+
   <header class="header">
     <div class="container">
       <div class="row">
@@ -69,12 +87,12 @@
             </div> 
             <nav class="main_nav">
               <ul>
-                <li><a href="{{ route('frontend.homes') }}">{{trans('sentence.home')}}</a>
+                <li><a href="homes">{{trans('sentence.home')}}</a>
                 </li>
-                <li><a href="{{ route('frontend.about') }}">{{trans('sentence.about')}}</a></li>
+                <li><a href="about">{{trans('sentence.about')}}</a></li>
 
 
-                  <li><a href="{{ route('frontend.contact') }}">{{trans('sentence.contact')}}</a></li>
+                  <li><a href="contact">{{trans('sentence.contact')}}</a></li>
                                   
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -82,10 +100,12 @@
                             </a>
                            
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item has-icon text-primary"
-                                  href="lang/en"><img src="{{asset('assets/img/us.png')}}" width="30px" height="20x"> English</a>
+
+                                <a class="dropdown-item has-icon text-primary"  href="frontend/lang/en"><img src="{{asset('assets/img/us.png')}}" width="30px" height="20x"> English</a>
+
+                               
                                 
-                                 <a class="dropdown-item has-icon text-primary"  href="lang/my"><img src="{{asset('assets/img/my.png')}}" width="30px" height="20x"> Myanmar</a>
+                                 <a class="dropdown-item has-icon text-primary"  href="frontend/lang/my"><img src="{{asset('assets/img/my.png')}}" width="30px" height="20x"> Myanmar</a>
                                 
                             </div>
                         </li>
@@ -105,7 +125,11 @@
                                         <li><a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger"></i> Logout
                                         </a></li>
                                     @else
+
+                                        <li ><a href="{{route('admin.dashboard')}}" style="color: #000"> Login</a></li>
+
                                         <li ><a href="{{route('admin.dashboard')}}" class="dropdown-item has-icon text-primary" style="color: #000"><i class="fa fa-user"></i> Login</a></li>
+
                                     @endif 
                         </ul> 
                 </li>
@@ -118,7 +142,6 @@
       </div>
     </div>
   </header>
-
   <div id="app">
     <section class="section">
       <div class="container mt-5">
