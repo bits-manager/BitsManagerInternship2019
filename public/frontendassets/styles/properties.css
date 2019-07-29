@@ -1009,12 +1009,12 @@ section
 }
 .footer_latest
 {
-	padding-top: 40px;
+	padding-top: 20px;
 }
 .footer_latest_image
 {
-	width: 86px;
-	height: 86px;
+	width: 250px;
+	height: 250px;
 }
 .footer_latest_image img
 {

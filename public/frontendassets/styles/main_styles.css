@@ -1269,7 +1269,7 @@ section
 {
 	width: 100%;
 	background: #3f6fce;
-	padding-top: 80px;
+	padding-top: 10px;
 	padding-bottom: 72px;
 }
 .footer_about_text
@@ -1288,12 +1288,12 @@ section
 }
 .footer_latest
 {
-	padding-top: 40px;
+	padding-top: 20px;
 }
 .footer_latest_image
 {
-	width: 86px;
-	height: 86px;
+	width: 250px;
+	height: 250px;
 }
 .footer_latest_image img
 {

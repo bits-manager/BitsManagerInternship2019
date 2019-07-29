@@ -130,6 +130,7 @@ class HallController extends Controller
           $imagenew=rand().'.'.$image->getClientOriginalExtension();
           $image->move(public_path('images'),$imagenew);
           $image_path = public_path().'/images/'.$image_name;
+
           unlink($image_path);
           $this->hallRepo->delete($image_name);
           $form_data=array(
