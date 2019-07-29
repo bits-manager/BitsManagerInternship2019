@@ -32,7 +32,7 @@
 								<li>
 									<div><strong>Email :</strong>hninwaiwai@gmail</div> -->
 									
-								</li>
+								
 
 								<li>
 									<div><strong>Address :</strong> {{$address->address}}</div>

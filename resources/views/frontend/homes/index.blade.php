@@ -124,7 +124,7 @@
 										</div>
 										
 										<div class="recent_item_body">
-												<div class="recent_item_title text-center"><a href="eventdetail?id=<%x.id%>">View Event Detail</a></div>
+												<div class="recent_item_title text-center" style="display: block;"><a href="eventdetail?id=<%x.id%>">View Event Detail</a></div>
 												<div class="recent_item_title text-center">
 												<a href="hallabout?hall_id=<%x.hall_id%>" >Hall Information</a>
 												</div>
