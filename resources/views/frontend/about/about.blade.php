@@ -1,20 +1,7 @@
 @extends('layouts.frontend-master')
 
 @section('content')
-<style type="text/css">
- .show-on-hover:hover > ul.dropdown-menu {
-    display: block; 
-    padding-left: 11px; 
-}
-.a{
-	color:#000;
-}
-#ul{
 
-
-}
-
- </style>
  	<!-- Header -->
 	 <header class="header">
 		<div class="container">
