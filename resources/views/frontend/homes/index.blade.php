@@ -1,19 +1,5 @@
 <style>
-	#a{
-		width: 25%;
-	}
 
- 	.show-on-hover:hover > ul.dropdown-menu {
-    display: block; 
-    padding-left: 11px; 
-	}
-	.a{
-	color:#000;
-	}
-	#ul{
-
-
-	}
 	.container {
   position: relative;
   text-align: center;
@@ -24,16 +10,8 @@
 @extends('layouts.frontend-master')
 
 @section('content')
-<style>
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-</style>
 <!-- Header -->
-<header class="header">
+ <header class="header">
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -93,7 +71,7 @@
 				</div>
 			</div>
 		</div>
-	</header>
+ </header>
 
 <!-- Home -->
 
@@ -105,7 +83,7 @@
 				
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(../frontendassets/images/mainhall2.jpg)"></div>
+					<div class="home_slider_background" style="background-image:url(../frontendassets/images/mainhall3.jpg)"></div>
 					
 				</div>
 
@@ -116,8 +94,8 @@
 
 
 
-	<!-- Home Search -->
-<div ng-app="myApp" ng-controller="myCtrl">
+<!-- Home Search -->
+  <div ng-app="myApp" ng-controller="myCtrl">
 	<div class="home_search">
 		<div class="container">
 			<div class="row">
@@ -129,24 +107,24 @@
 							<form class="search_form d-flex flex-row align-items-start justfy-content-start"> 
 								@csrf
 								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
-									<div id="a">
+									<div>
 										 <select ng-model="event" name="event_id" value="event"  ng-options="event.id as event.event_name for event in events" class="search_form_select">
 										 
 										</select>
 										
 									</div>
 
-									<div id="a">
+									<div>
 										<select ng-model="selectedState" name="state_id" value="selectedState" ng-change="selectChange()" ng-options="state.id as state.state_name for state in states" class="search_form_select" >
 										</select>
 									</div>
 
-									<div id="a">
+									<div>
 										 <select ng-model="selectedCity" name="city_id" value="selectedCity"  ng-change="select()" ng-options="city.id as city.city_name for city in cities" class="search_form_select" >
 										 </select>
 									</div>
 									
-									<div id="a">
+									<div>
 										<select ng-model="selectedTownship" name="township_id" value="selectedTownship"  ng-options="township.id as township.township_name for township in townships" class="search_form_select">
 											
 										</select>
@@ -155,7 +133,7 @@
 									</div>
 
 								</div>
-								<button  id="a" class="search_form_button ml-auto" 
+								<button class="search_form_button ml-auto" 
 								ng-click="clickChange()"> search </button> 
 								
 							</form>
@@ -164,13 +142,7 @@
 				</div>
 			</div>
 		</div>
-
-
-
-
-
-	
-</div>
+	</div>
 
 	
 
@@ -202,9 +174,10 @@
 										</div>
 										
 										<div class="recent_item_body">
-												<div class="recent_item_title text-center"><a href="eventdetail?id=<%x.id%>"><% x.event_name %> Detail</a></div>
-												<div class="recent_item_title text-center">
-												<a href="hallabout?hall_id=<%x.hall_id%>" ><% x.hall_name %> Information</a>
+												<div class="text-center" style="color: #515A5A;font-weight: 600;font-style: italic;"><% x.event_name %></div>
+												<div class="item_title text-center"><a href="eventdetail?id=<%x.id%>">View Detail</a></div>
+												<div class="item_title text-center">
+												<a href="hallabout?hall_id=<%x.hall_id%>">View <% x.hall_name %></a>
 												</div>
 										</div>
 										
@@ -216,7 +189,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+
 
 <!-- Cities -->
 
@@ -230,7 +203,7 @@
 			</div>
 		</div>
 	  
-		<div class="row cities_container d-flex flex-row flex-wrap align-items-start justify-content-between">
+	  <div class="row cities_container d-flex flex-row flex-wrap align-items-start justify-content-between">
          @foreach($popularhalls as $popularhalls)
 			<!-- City -->
 
@@ -246,9 +219,9 @@
 			</div>
 
 		@endforeach
+	   </div>
 	</div>
-		</div>
-	</div>
+ </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script>
