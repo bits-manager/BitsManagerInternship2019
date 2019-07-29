@@ -55,20 +55,7 @@
      
          @include('frontend.partials.menu')
           
- <style type="text/css">
- .show-on-hover:hover > ul.dropdown-menu {
-    display: block; 
-    padding-left: 11px; 
-}
-.a{
-  color:#000;
-}
-#ul{
 
-
-}
-
- </style>
   <header class="header">
     <div class="container">
       <div class="row">
@@ -104,6 +91,7 @@
                         </li>
                   
                 
+                  
                 <li class="upper-links dropdown show-on-hover"><a class="links dropdown-toggle" 
                   data-toggle="dropdown" href="#"> {{trans('sentence.account')}}</a>
                   <ul class="dropdown-menu" role="menu" id="ul">
@@ -117,12 +105,11 @@
                                         <li><a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger"></i> Logout
                                         </a></li>
                                     @else
-                                        <li ><a href="{{route('admin.dashboard')}}" style="color: #000"><i class="fa fa-user"></i> Login</a></li>
+                                        <li ><a href="{{route('admin.dashboard')}}" class="dropdown-item has-icon text-primary" style="color: #000"><i class="fa fa-user"></i> Login</a></li>
                                     @endif 
                         </ul> 
                 </li>
               </ul>
-              
             </nav>
             
             <div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
@@ -138,7 +125,9 @@
         <div class="row">
           <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
             <div class="login-brand">
-              <img src="{{ asset('assets/img/h.jpg') }}" alt="logo" width="100" class="shadow-light rounded-circle">
+
+              <img src="{{asset('assets/img/h.jpg')}}" alt="logo" width="100" class="shadow-light rounded-circle">
+
             </div>
             @if(session()->has('info'))
             <div class="alert alert-primary">
