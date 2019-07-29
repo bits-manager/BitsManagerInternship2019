@@ -145,47 +145,54 @@
 	</div>
 
 	
-
-
+	
 
 	<!-- Recent -->
 	<div class="recent">
 		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="section_title">Find Your Need</div>
+			
+			<div ng-if="halls.length != 0">
+				<div class="row">
+					<div class="col">
+						<div class="section_title">Find Your Need</div>
+					</div>
+
 				</div>
-
-			</div>
-			<div class="row recent_row" >
-				<div class="col-sm-4" ng-repeat="x in halls">
-					
+				
+				<div class="row recent_row" >
+					<div class="col-sm-4" ng-repeat="x in halls">
 						
-						
-							<!-- Slide -->
-							<div >
+							
+							
+								<!-- Slide -->
+								<div >
 
-								<div class="recent_item">
-									<div class="recent_item_inner" >
-										<div class="recent_item_image">
-											<a href="eventdetail?id=<%x.id%>"><img src="../images
-												/<% x.image %>" alt="" width="" height="350"></a>
+									<div class="recent_item">
+										<div class="recent_item_inner" >
+											<div class="recent_item_image">
+												<a href="eventdetail?id=<%x.id%>"><img src="../images
+													/<% x.image %>" alt="" width="" height="350"></a>
 
-										</div>
-										
-										<div class="recent_item_body">
-												<div class="text-center" style="color: #515A5A;font-weight: 600;font-style: italic;"><% x.event_name %></div>
-												<div class="item_title text-center"><a href="eventdetail?id=<%x.id%>">View Detail</a></div>
+											</div>
+											
+											<div class="recent_item_body">
 												<div class="item_title text-center">
-												<a href="hallabout?hall_id=<%x.hall_id%>">View <% x.hall_name %></a>
-												</div>
+													<a href="hallabout?hall_id=<%x.hall_id%>"><% x.hall_name %></a>
+													</div>
+													<div class="text-center" style="color: #515A5A;font-weight: 600;font-style: italic;"><% x.event_name %></div>
+													<div class="item_title text-center"><a href="eventdetail?id=<%x.id%>">View Detail</a></div>
+													
+											</div>
+											
+											
 										</div>
-										
-										
 									</div>
 								</div>
-							</div>
+					</div>
 				</div>
+			</div>
+			<div ng-if="halls.length == 0">
+				<div class="section_title animated shake">Sorry!<br><br> There is no halls.</div>
 			</div>
 		</div>
 	</div>
