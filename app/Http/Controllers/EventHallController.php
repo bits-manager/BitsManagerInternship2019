@@ -45,6 +45,7 @@ class EventHallController extends Controller
           $data = $request->all();
           
 
+
           $description= explode('<p>',$data['description']);
           $description= explode('</p>',$description[1]);
           $description=$description[0];

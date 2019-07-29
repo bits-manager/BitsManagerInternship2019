@@ -266,7 +266,7 @@ section
 }
 .section_title
 {
-	padding-top: 20px;
+	margin-top: 35px;
 	font-size: 20px;
 	font-weight: 600;
 	color: #282828;
@@ -662,7 +662,7 @@ section
 }
 .search_form_content > div
 {    
-    
+    width:25%;
 	height: 100%;
 	padding-left: 18px;
 	padding-right: 2px;
@@ -701,7 +701,7 @@ section
 }
 .search_form_button
 {
-	width: 193px;
+	width: 25%;
 	height: 100%;
 	border-radius: 35px;
 	border: none;
@@ -791,7 +791,11 @@ section
 /*********************************
 8. Realtors
 *********************************/
-
+.advans
+{
+	padding-top: 30px;
+	height: 200px;
+}
 .realtors
 {
 	width: 100%;
@@ -1056,7 +1060,7 @@ section
 {
 	width: 100%;
 	background: #3f6fce;
-	padding-top: 80px;
+	padding-top: 10px;
 	padding-bottom: 72px;
 }
 .footer_about_text
@@ -1079,8 +1083,8 @@ section
 }
 .footer_latest_image
 {
-	width: 86px;
-	height: 86px;
+	width: 250px;
+	height: 250px;
 }
 .footer_latest_image img
 {
@@ -1130,7 +1134,7 @@ section
 }
 .footer_bar_content
 {
-	height: 97px;
+	height: 60px;
 }
 .cr
 {
