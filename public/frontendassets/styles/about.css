@@ -556,11 +556,13 @@ section
 }
 .contactus_image
 {
+	border-radius: 5px;
 	margin-top: 10px;
 	width: 100%;
 }
 .contactus_image img
 {
+	border-radius: 5px;
 	max-width: 100%;
 }
 
@@ -633,7 +635,7 @@ section
 .home_search_container
 {
 	position: absolute;
-	top: -112px;
+	top: -200px;
 	left: 15px;
 	width: calc(100% - 30px);
 	height: 90px;

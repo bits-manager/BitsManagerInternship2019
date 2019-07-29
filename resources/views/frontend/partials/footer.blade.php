@@ -14,7 +14,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-3 footer_col">
+					<div class="col-lg-3 col-md-6 footer_col">
 						<div class="footer_latest d-flex flex-row align-items-start justify-content-start">
 							<div><div class="footer_latest_image"><img src="../frontendassets/images/sedona.jpg" alt="" width=250 height=150>
 							<div class="footer_latest_content">
@@ -32,7 +32,7 @@
 							<div class="footer_about_text"></div>
 						</div> 
 					</div>
-					<div class="col-lg-3 footer_col">
+					<div class="col-lg-3 col-md-6 footer_col">
 						<div class="footer_latest d-flex flex-row align-items-start justify-content-start">
 							<div><div class="footer_latest_image"><img src="../frontendassets/images/Hilton.jpg" alt="" width=250 height=150>
 							<div class="footer_latest_content">
@@ -42,7 +42,7 @@
 							</div></div></div>
 						</div>
 					</div>
-					<div class="col-lg-3 footer_col">
+					<div class="col-lg-3 col-md-6 footer_col">
 						<div class="footer_latest d-flex flex-row align-items-start justify-content-start">
 							<div><div class="footer_latest_image"><img src="../frontendassets/images/nanhtikethuhall.jpg" alt="" width=250 height=150>
 							<div class="footer_latest_content">
@@ -52,7 +52,7 @@
 							</div></div></div>
 						</div>
 					</div>
-					<div class="col-lg-3 footer_col">
+					<div class="col-lg-3 col-md-6 footer_col">
 						<div class="footer_latest d-flex flex-row align-items-start justify-content-start">
 							<div><div class="footer_latest_image"><img src="../frontendassets/images/Taunggyihall1.jpg" alt="" width=250 height=150>
 							<div class="footer_latest_content">

@@ -654,7 +654,7 @@ section
 .home_search_container
 {
 	position: absolute;
-	top: -171px;
+	top: -200px;
 	left: 15px;
 	width: calc(100% - 30px);
 	height: 90px;
@@ -994,13 +994,13 @@ section
 }
 .cities_container
 {
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 120px;
+	padding-right: 180px;
 	margin-top: 60px;
 }
 .city
 {
-	width: calc((100% - 81px) / 4);
+	width: calc((100% - 81px) / 3);
 	margin-bottom: 26px;
 }
 .city img
