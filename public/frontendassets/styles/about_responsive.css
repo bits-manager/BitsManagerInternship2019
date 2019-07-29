@@ -233,7 +233,9 @@
 
 @media only screen and (max-width: 768px)
 {
-	
+		.advans{
+		height: 1000px;
+	}
 }
 
 /************
@@ -255,6 +257,9 @@
 	{
 		font-size: 13px;
 	}
+	.advans{
+		height: 1000px;
+	}
 	.home
 	{
 		height: 441px;
@@ -266,6 +271,7 @@
 	.section_title
 	{
 		font-size: 24px;
+		margin-top: 10px;
 	}
 	.section_subtitle
 	{

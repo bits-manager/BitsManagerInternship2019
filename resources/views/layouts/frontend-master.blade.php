@@ -2,7 +2,7 @@
 <html lang="en">
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-<title>Bluesky</title>
+<title>Hall Myanmar</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Bluesky template project">
@@ -36,7 +36,7 @@
 <body>
 	<div class="super_container">
     
-		 @include('frontend.partials.header')
+		 
          @include('frontend.partials.menu')
 
 		   <div class="main-content">
@@ -69,7 +69,6 @@
 <script src="/frontendassets/plugins/parallax-js-master/parallax.min.js"></script>
 <script src="/frontendassets/js/custom.js"></script>
 <script src="/frontendassets/plugins/rangeslider.js-2.3.0/rangeslider.min.js"></script>
-<script src="/frontendassets/plugins/parallax-js-master/parallax.min.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAek8mUtwgSQKv_6DPa6RVToBMspOi74ak"></script><script src="/frontendassets/js/contact.js"></script>
 

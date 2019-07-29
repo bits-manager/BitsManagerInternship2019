@@ -50,13 +50,7 @@
                <input type="text" class="form-control" id="hall_name" name="hall_name" value="{{$edit_halls->hall_name}}"/>
           </div></div>
 
-          <div class="form-group row mb-4">
-              @csrf
-              <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name">Phone No:</label>
-              <div class="col-sm-12 col-md-7">
-              <input type="text" class="form-control" id="phone_no" 
-               name="phone_no" value="{{$edit_halls->phone_no}}" />
-          </div></div>
+          
 
             
 
@@ -100,6 +94,14 @@
           <div class="col-sm-12 col-md-7">
             <select ng-model="selectedTownship" name="township_id" value="selectedTownship" ng-options="township.id as township.township_name for township in townships" class="form-control">
             </select>
+          </div></div>
+          
+          <div class="form-group row mb-4">
+              @csrf
+              <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="name">Phone No:</label>
+              <div class="col-sm-12 col-md-7">
+              <input type="text" class="form-control" id="phone_no" 
+               name="phone_no" value="{{$edit_halls->phone_no}}" />
           </div></div>
 
 

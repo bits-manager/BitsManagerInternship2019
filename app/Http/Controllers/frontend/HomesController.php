@@ -20,7 +20,7 @@ class HomesController extends Controller
         ->join('states','states.id','=','halls.state_id')
         ->whereIn('states.state_name',['Mandalay','Yangon'])
        
-        ->limit(8)
+        ->limit(6)
         ->get();
         
         /*$events[]=[];

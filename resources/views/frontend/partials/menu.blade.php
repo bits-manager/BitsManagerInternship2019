@@ -14,11 +14,13 @@
 			</div>
 			<ul>
 
-				<li class="active"><a href="homes" ><i class="fa fa-home"></i>{{trans('sentence.home')}}</a></li>
-                <li><a href="about">{{trans('sentence.about')}}</a></li>
-				 <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{trans('sentence.language')}}<span class="caret"></span>
+				<li class="active"><a href="homes"> {{trans('sentence.home')}}</a></li>
+                <li><a href="about"> {{trans('sentence.about')}}</a></li>
+				
+				<li><a href="contact">{{trans('sentence.contact')}}</a></li>
+                 <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> {{trans('sentence.language')}}
+                            	<span class="caret"></span>
                             </a>
                            
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -28,10 +30,8 @@
                                 
                             </div>
                         </li>
-				<li><a href="contact" >{{trans('sentence.contact')}}</a></li>
-
 				                <li class="upper-links dropdown show-on-hover"><a class="links dropdown-toggle" 
-									data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o"></i> Account</a>
+									data-toggle="dropdown" href="#">  {{trans('sentence.account')}}</a>
 
 								  <ul class="dropdown-menu" role="menu" id="ul">
 
@@ -39,12 +39,12 @@
 								  	
                                     <li>Hi, {{ Auth::user()->name }}</li>
                                         <li><a href="{{route('admin.dashboard')}}" class="dropdown-item has-icon text-primary" >
-                                          <i class="fa fa-user"></i> Dashboard</a></li>
+                                           Dashboard</a></li>
                                         <div class="dropdown-divider"></div>
                                         <li><a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger"></i> Logout
                                         </a></li>
                                     @else
-                                        <li ><a href="{{route('admin.dashboard')}}"><i class="fa fa-user"></i> Login</a></li>
+                                        <li ><a href="{{route('admin.dashboard')}}">Login</a></li>
             					        
                                     @endif 
           						  </ul> 

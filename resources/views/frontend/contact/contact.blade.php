@@ -1,11 +1,70 @@
-<style type="text/css">
-#hallhome{
-          height:200px;
-	      background-color:rgb(241, 246, 249);
-         }
-</style>
+
 @extends('layouts.frontend-master')
 @section('content')
+
+
+<!-- Header -->
+	 <header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					
+					<div class="header_content d-flex flex-row align-items-center justify-content-start">
+
+						 <div>
+							<a href="#"><img src="../frontendassets/images/hallmyanmar.png" alt="" style="width: 200px"></a>
+
+						</div> 
+						<nav class="main_nav">
+							<ul>
+								<li><a href="homes">{{trans('sentence.home')}}</a>
+								</li>
+								<li ><a href="about">{{trans('sentence.about')}}</a></li>
+
+
+									<li class="active"><a href="contact">{{trans('sentence.contact')}}</a></li>
+                                  
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{trans('sentence.language')}}<span class="caret"></span>
+                            </a>
+                           
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item has-icon text-primary"  href="lang/en"><img src="{{asset('assets/img/us.png')}}" width="30px" height="20x"> English</a>
+                                
+                                 <a class="dropdown-item has-icon text-primary"  href="lang/my"><img src="{{asset('assets/img/my.png')}}" width="30px" height="20x"> Myanmar</a>
+                                
+                            </div>
+                        </li>
+                  
+								
+								<li class="upper-links dropdown show-on-hover"><a class="links dropdown-toggle" 
+									data-toggle="dropdown" href="#"> {{trans('sentence.account')}}</a>
+								  <ul class="dropdown-menu" role="menu" id="ul">
+
+								  	@if(Auth::check())
+								  	
+                                    <li>Hi, {{ Auth::user()->name }}</li>
+                                        <li><a href="{{route('admin.dashboard')}}" class="dropdown-item has-icon text-primary" >
+                                           Dashboard</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger"></i> Logout
+                                        </a></li>
+                                    @else
+                                        <li ><a href="{{route('admin.dashboard')}}" class="dropdown-item has-icon text-primary" style="color: #000"> Login</a></li>
+                                    @endif 
+          						  </ul> 
+								</li>
+							</ul>
+							
+						</nav>
+						
+						<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 
 <div class="contact">
 
@@ -87,9 +146,10 @@
 			</div>
 		</div>
 	</div>
-
+</div>
 	<!-- Map -->
 
 	<div class="earth3dmap-com">
-		<iframe id="iframemap" src="https://maps.google.com/maps?q=No.+%28A%2C+15%29S%2C+77th+Street+and+Between+of+31st+x%2C+32nd+Street%2C+%E1%80%99%E1%80%94%E1%80%B9%E1%80%90%E1%80%9C%E1%80%B1%E1%80%B8&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%" height="500" frameborder="0" scrolling="no"></iframe><div style="color: #333; font-size: 14px; font-family: Arial, Helvetica, sans-serif; text-align: right; padding: 10px;">Map by <a style="color: #333; text-decoration: underline; font-size: 14px; font-family: Arial, Helvetica, sans-serif; text-align: right;" href="http://earth3dmap.com/?from=embed" target="_blank" >Earth3DMap.com</a></div>
+		<iframe id="iframemap" src="https://maps.google.com/maps?q=No.+%28A%2C+15%29S%2C+77th+Street+and+Between+of+31st+x%2C+32nd+Street%2C+%E1%80%99%E1%80%94%E1%80%B9%E1%80%90%E1%80%9C%E1%80%B1%E1%80%B8&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%" height="500" frameborder="0" scrolling="no"></iframe>
+	</div>
 	@endsection
