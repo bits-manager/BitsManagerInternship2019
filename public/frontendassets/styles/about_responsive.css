@@ -233,7 +233,9 @@
 
 @media only screen and (max-width: 768px)
 {
-	
+		.advans{
+		height: 1000px;
+	}
 }
 
 /************

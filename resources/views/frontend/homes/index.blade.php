@@ -83,7 +83,7 @@
 				
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(../frontendassets/images/mainhall3.jpg)"></div>
+					<div class="home_slider_background" style="background-image:url(../frontendassets/images/mainhall.jpg)"></div>
 					
 				</div>
 
@@ -211,7 +211,7 @@
 			<div class="city">
 				<img src="{{URL::to('/')}}/images/{{$popularhalls->hall_image}}" style="width:450px;height: 300px;">
 				<div class="city_overlay">
-					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
+					<a class="d-flex flex-column align-items-center justify-content-center">
 						<div class="city_title">{{$popularhalls->hall_name}}</div>
 						<div class="city_subtitle">{{$popularhalls->address}}</div>
 					</a>	
