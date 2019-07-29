@@ -46,8 +46,7 @@
   <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 </head>
 
 <body>
@@ -96,7 +95,8 @@
                             </a>
                            
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item has-icon text-primary"  href="lang/en"><img src="{{asset('assets/img/us.png')}}" width="30px" height="20x"> English</a>
+                                <a class="dropdown-item has-icon text-primary"
+                                  href="lang/en"><img src="{{asset('assets/img/us.png')}}" width="30px" height="20x"> English</a>
                                 
                                  <a class="dropdown-item has-icon text-primary"  href="lang/my"><img src="{{asset('assets/img/my.png')}}" width="30px" height="20x"> Myanmar</a>
                                 
@@ -117,7 +117,7 @@
                                         <li><a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger"></i> Logout
                                         </a></li>
                                     @else
-                                        <li ><a href="{{route('admin.dashboard')}}" style="color: #000"> <i class="glyphicon glyphicon-user"></i> Login</a></li>
+                                        <li ><a href="{{route('admin.dashboard')}}" style="color: #000"><i class="fa fa-user"></i> Login</a></li>
                                     @endif 
                         </ul> 
                 </li>
