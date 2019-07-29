@@ -608,7 +608,7 @@ section
 .home_search_container
 {
 	position: absolute;
-	top: -112px;
+	top: -200px;
 	left: 15px;
 	width: calc(100% - 30px);
 	height: 90px;
