@@ -144,7 +144,7 @@ public function getTownship(Request $request)
                           ->select('event_type_halls.id','event_type_halls.hall_id','halls.hall_name','event_types.event_name','event_type_halls.image')
                           ->get();
               }
-
+            
           return $this->respondSuccess('success',$halls); 
           
          }catch (\Exception $e) {

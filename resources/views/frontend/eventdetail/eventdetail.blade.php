@@ -32,7 +32,11 @@
 					<div class="about_content">
 					
                      <div class="section_title  section_title_service" >Service</div><br>
-                        {{$eventhall->description}}
+
+                        <div><b>{{$eventhall->hall_name}}</b></div>
+                        <div><b>{{$eventhall->event_name}}</b></div>
+                      <div> {!!$eventhall->description!!}</div>
+
                      </div> 
 				</div>
 

@@ -58,4 +58,6 @@
 <div class="mt-5 text-muted text-center">
   Don't have an account? <a href="{{ route('register') }}">Create One</a>
 </div>
+
+
 @endsection
