@@ -292,6 +292,7 @@
 	.section_title
 	{
 		font-size: 24px;
+		margin-top: 10px;
 	}
 	.section_subtitle
 	{
@@ -299,7 +300,7 @@
 	}
 	.logo
 	{
-		width: 70px;
+		width: 30px;
 	}
 	.header_content
 	{

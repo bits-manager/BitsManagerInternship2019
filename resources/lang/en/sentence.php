@@ -7,6 +7,8 @@ return [
   'about'   =>'About us',
   'contact'=>'Contact',
   'language'=>'Language',
-  'account'=>'Account'
+  'account'=>'Account',
+   'english'=>'English',
+  'myanmar'=>'Myanmar',
   
 ];

@@ -130,7 +130,8 @@ class HallController extends Controller
           $imagenew=rand().'.'.$image->getClientOriginalExtension();
           $image->move(public_path('images'),$imagenew);
           $image_path = public_path().'/images/'.$image_name;
-          // unlink($image_path);
+
+          unlink($image_path);
           $this->hallRepo->delete($image_name);
           $form_data=array(
             'hall_name'=>$request->hall_name,
@@ -165,9 +166,9 @@ class HallController extends Controller
     {
 
       $data=$this->hallRepo->getById($hall_id);
-      // $image_name=$data->hall_image;
-      // $image_path = public_path().'/images/'.$image_name;
-      // unlink($image_path);
+      $image_name=$data->hall_image;
+      $image_path = public_path().'/images/'.$image_name;
+      unlink($image_path);
       $this->hallRepo->delete($hall_id);
       return back()->with('info','Hall is successfully delete!');
       return redirect()->back()->withInput();
