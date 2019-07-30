@@ -162,6 +162,8 @@
 							<div class="realtor_image"><img src="/frontendassets/images/hninwai.jpg" alt="" width="165" height="215"></div>
 							<div class="realtor_body">
 								<div class="realtor_title">Hnin Wai Wai</div>
+								<div class="realtor_subtitle"><b>Final Year(UCSP)</b></div>
+
 							</div>
 						
 						</div>
@@ -175,8 +177,9 @@
 						<div class="realtor">
 							<div class="realtor_image"><img src="/frontendassets/images/htay.jpg" alt=""  width="165" height="215"></div>
 							<div class="realtor_body">
-								<div class="realtor_title">Htay Htay Aung</div>
-								<div class="realtor_subtitle">Final Year(UCSP)</div>
+								<div class="realtor_title">Htay Htay Aung</div>		
+								<div class="realtor_subtitle"><b>Final Year(UCSMGY)</b></div>
+
 							</div>
 							
 						</div>
@@ -191,6 +194,8 @@
 							<div class="realtor_image"><img src="/frontendassets/images/waimi.jpg" alt="" width="165" height="215"></div>
 							<div class="realtor_body">
 								<div class="realtor_title">Wai Mi Aung</div>
+								<div class="realtor_subtitle"><b>Final Year(UCSMGY)</b></div>
+
 							</div>
 
 						</div>
@@ -204,6 +209,8 @@
 							<div class="realtor_image"><img src="/frontendassets/images/khaing.jpg" alt="" width="165" height="215"></div>
 							<div class="realtor_body">
 								<div class="realtor_title">Khaing Zin Tun</div>
+								<div class="realtor_subtitle"><b>Final Year(UCSMGY)</b></div>
+
 							</div>
 							
 						</div>
@@ -217,6 +224,8 @@
 							<div class="realtor_image"><img src="/frontendassets/images/hmn.jpg" alt="" width="165" height="215"></div>
 							<div class="realtor_body">
 								<div class="realtor_title">Htet Myat Noe</div>
+								<div class="realtor_subtitle"><b>Final Year(UCSP)</b></div>
+
 							</div>
 							
 						</div>
@@ -230,6 +239,8 @@
 							<div class="realtor_image"><img src="/frontendassets/images/hninthu.jpg" alt="" width="165" height="215"></div>
 							<div class="realtor_body">
 								<div class="realtor_title">Hnin Thu</div>
+								<div class="realtor_subtitle"><b>Final Year(UCSP)</b></div>
+
 							</div>
 						
 						</div>
