@@ -46,8 +46,7 @@
   <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
 </head>
 
 <body>
@@ -110,9 +109,9 @@
                             </a>
                            
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item has-icon text-primary"  href="lang/en"><img src="{{asset('assets/img/us.png')}}" width="30px" height="20x"> English</a>
+                                <a class="dropdown-item has-icon text-primary"  href="frontend/lang/en"><img src="{{asset('assets/img/us.png')}}" width="30px" height="20x"> English</a>
                                 
-                                 <a class="dropdown-item has-icon text-primary"  href="lang/my"><img src="{{asset('assets/img/my.png')}}" width="30px" height="20x"> Myanmar</a>
+                                 <a class="dropdown-item has-icon text-primary"  href="frontend/lang/my"><img src="{{asset('assets/img/my.png')}}" width="30px" height="20x"> Myanmar</a>
                                 
                             </div>
                         </li>
@@ -151,7 +150,7 @@
         <div class="row">
           <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
             <div class="login-brand">
-              <img src="../frontendassets/images/hallmyanmar.png" alt="logo" width="300" class="shadow-light">
+              <img src="{{asset('assets/img/h.jpg')}}" alt="logo" width="100" class="shadow-light rounded-circle">
             </div>
             @if(session()->has('info'))
             <div class="alert alert-primary">
