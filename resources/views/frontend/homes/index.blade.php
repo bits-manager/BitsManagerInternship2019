@@ -58,7 +58,7 @@
                                         <li><a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger"></i> Logout
                                         </a></li>
                                     @else
-                                        <li ><a href="{{route('admin.dashboard')}}" style="color: #000"> Login</a></li>
+                                        <li ><a href="{{route('admin.dashboard')}}" class="dropdown-item has-icon text-primary" style="color: #000"><i class="fa fa-user"></i> Login</a></li>
                                     @endif 
           						  </ul> 
 								</li>
@@ -83,7 +83,7 @@
 				
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(../frontendassets/images/mainhall3.jpg)"></div>
+					<div class="home_slider_background" style="background-image:url(../frontendassets/images/mainhall.jpg)"></div>
 					
 				</div>
 
@@ -145,47 +145,57 @@
 	</div>
 
 	
-
-
+	
 
 	<!-- Recent -->
 	<div class="recent">
 		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="section_title">Find Your Need</div>
+
+			
+			<div ng-if="halls.length != 0">
+				<div class="row">
+					<div class="col">
+						<div class="section_title">Find Your Need</div>
+					</div>
+
 				</div>
+				
+				<div class="row recent_row" >
+					<div class="col-sm-4" ng-repeat="x in halls">
 
-			</div>
-			<div class="row recent_row" >
-				<div class="col-sm-4" ng-repeat="x in halls">
-					
 						
-						
-							<!-- Slide -->
-							<div >
+							
+							
+								<!-- Slide -->
+								<div >
 
-								<div class="recent_item">
-									<div class="recent_item_inner" >
-										<div class="recent_item_image">
-											<a href="eventdetail?id=<%x.id%>"><img src="../images
-												/<% x.image %>" alt="" width="" height="350"></a>
+									<div class="recent_item">
+										<div class="recent_item_inner" >
+											<div class="recent_item_image">
+												<a href="eventdetail?id=<%x.id%>"><img src="../images
+													/<% x.image %>" alt="" width="" height="350"></a>
 
-										</div>
-										
-										<div class="recent_item_body">
-												<div class="text-center" style="color: #515A5A;font-weight: 600;font-style: italic;"><% x.event_name %></div>
-												<div class="item_title text-center"><a href="eventdetail?id=<%x.id%>">View Detail</a></div>
+											</div>
+											
+											<div class="recent_item_body">
 												<div class="item_title text-center">
-												<a href="hallabout?hall_id=<%x.hall_id%>">View <% x.hall_name %></a>
-												</div>
+													<a href="hallabout?hall_id=<%x.hall_id%>"><% x.hall_name %></a>
+													</div>
+													<div class="text-center" style="color: #515A5A;font-weight: 600;font-style: italic;"><% x.event_name %></div>
+													<div class="item_title text-center"><a href="eventdetail?id=<%x.id%>">View Detail</a></div>
+													
+											</div>
+											
+											
 										</div>
-										
-										
 									</div>
 								</div>
-							</div>
+					</div>
 				</div>
+			</div>
+			<div ng-if="halls.length == 0">
+				
+				<div ><img src="../frontendassets/images/tenor.gif" alt="" style="width: 150px;height: 150px;"><div class="section_title animated shake">Sorry!<br><br> There is no halls.</div></div>
 			</div>
 		</div>
 	</div>
@@ -211,7 +221,7 @@
 			<div class="city">
 				<img src="{{URL::to('/')}}/images/{{$popularhalls->hall_image}}" style="width:450px;height: 300px;">
 				<div class="city_overlay">
-					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
+					<a class="d-flex flex-column align-items-center justify-content-center">
 						<div class="city_title">{{$popularhalls->hall_name}}</div>
 						<div class="city_subtitle">{{$popularhalls->address}}</div>
 					</a>	
