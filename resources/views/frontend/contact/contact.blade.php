@@ -91,8 +91,8 @@
 								<li>
 									<div><strong>Email :</strong>hninwaiwai@gmail</div> -->
 									
-								</li>
-
+								
+                                @if(!is_null($address))
 								<li>
 									<div><strong>Address :</strong> {{$address->address}}</div>
 									
@@ -105,7 +105,7 @@
 									<div><strong>Email :</strong> {{$address->email}}</div>
 									
 								</li>
-								
+								@endif
 							</ul>    
 						</div>
 						

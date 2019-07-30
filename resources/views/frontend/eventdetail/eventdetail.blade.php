@@ -89,12 +89,14 @@
 					</div>
 				</div>
 				<!-- About Content -->
+
                 <div class="col-lg-6">
 
 					<div class="about_content">
 					
 
                      <div class="section_title  section_title_service" >Service</div><br>
+
 
 					<div class="about_content" style="color: #000;font-weight: 350;">
 

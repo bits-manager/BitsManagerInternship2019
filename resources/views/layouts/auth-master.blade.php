@@ -87,12 +87,12 @@
             </div> 
             <nav class="main_nav">
               <ul>
-                <li><a href="homes">{{trans('sentence.home')}}</a>
+                <li><a href="{{ route('frontend.homes') }}">{{trans('sentence.home')}}</a>
                 </li>
-                <li><a href="about">{{trans('sentence.about')}}</a></li>
+                <li><a href="{{ route('frontend.about') }}">{{trans('sentence.about')}}</a></li>
 
 
-                  <li><a href="contact">{{trans('sentence.contact')}}</a></li>
+                  <li><a href="{{ route('frontend.contact') }}">{{trans('sentence.contact')}}</a></li>
                                   
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
