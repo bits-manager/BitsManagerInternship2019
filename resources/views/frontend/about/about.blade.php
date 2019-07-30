@@ -163,11 +163,9 @@
 							<div class="realtor_body">
 								<div class="realtor_title">Hnin Wai Wai</div>
 							</div>
-							<div class="realtor_link"><a href="#">+</a></div>
+						
 						</div>
-						<div class="realtor_link_background_container">
-							<div><div class="realtor_link_background"></div></div>
-						</div>
+						
 					</div>
 				</div>
 
@@ -178,12 +176,11 @@
 							<div class="realtor_image"><img src="/frontendassets/images/htay.jpg" alt=""  width="165" height="215"></div>
 							<div class="realtor_body">
 								<div class="realtor_title">Htay Htay Aung</div>
+								<div class="realtor_subtitle">Final Year(UCSP)</div>
 							</div>
-							<div class="realtor_link"><a href="#">+</a></div>
+							
 						</div>
-						<div class="realtor_link_background_container">
-							<div><div class="realtor_link_background"></div></div>
-						</div>
+						
 					</div>
 				</div>
 
@@ -195,11 +192,9 @@
 							<div class="realtor_body">
 								<div class="realtor_title">Wai Mi Aung</div>
 							</div>
-							<div class="realtor_link"><a href="#">+</a></div>
+
 						</div>
-						<div class="realtor_link_background_container">
-							<div><div class="realtor_link_background"></div></div>
-						</div>
+						
 					</div>
 				</div>
                  <!-- Realtor -->
@@ -210,11 +205,9 @@
 							<div class="realtor_body">
 								<div class="realtor_title">Khaing Zin Tun</div>
 							</div>
-							<div class="realtor_link"><a href="#">+</a></div>
+							
 						</div>
-						<div class="realtor_link_background_container">
-							<div><div class="realtor_link_background"></div></div>
-						</div>
+						
 					</div>
 				</div>
 				<!-- Realtor -->
@@ -225,11 +218,9 @@
 							<div class="realtor_body">
 								<div class="realtor_title">Htet Myat Noe</div>
 							</div>
-							<div class="realtor_link"><a href="#">+</a></div>
+							
 						</div>
-						<div class="realtor_link_background_container">
-							<div><div class="realtor_link_background"></div></div>
-						</div>
+					
 					</div>
 				</div>
 				<!-- Realtor -->
@@ -240,11 +231,9 @@
 							<div class="realtor_body">
 								<div class="realtor_title">Hnin Thu</div>
 							</div>
-							<div class="realtor_link"><a href="#">+</a></div>
+						
 						</div>
-						<div class="realtor_link_background_container">
-							<div><div class="realtor_link_background"></div></div>
-						</div>
+						
 					</div>
 				</div>
 
