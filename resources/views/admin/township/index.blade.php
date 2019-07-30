@@ -68,13 +68,13 @@
                       <td>{{$townships->township_name}}</td>
 
            
-                    <td><div class="btn-group">
+                    <td>
 
-                    <div><a href="javascript:;" data-toggle="modal" onclick="deleteData({{$townships->id}})" 
+                    <a href="javascript:;" data-toggle="modal" onclick="deleteData({{$townships->id}})" 
                      data-target="#DeleteModal" class="btn btn-danger"><i class="fa fa-trash" ></i></a>
-                   </div><div>
-                    <a href="{{ route('admin.townships.edit',$townships->id)}}" class="btn btn-primary"><i class='fas fa-edit' ></i></a></div>
-                   </td></div>
+                   
+                    <a href="{{ route('admin.townships.edit',$townships->id)}}" class="btn btn-primary"><i class='fas fa-edit' ></i></a>
+                   </td>
                       </tr>
               @endforeach
        </div> 

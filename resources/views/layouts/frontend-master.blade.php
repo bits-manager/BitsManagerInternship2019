@@ -70,7 +70,7 @@
 <script src="/frontendassets/js/custom.js"></script>
 <script src="/frontendassets/plugins/rangeslider.js-2.3.0/rangeslider.min.js"></script>
 
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAek8mUtwgSQKv_6DPa6RVToBMspOi74ak"></script><script src="/frontendassets/js/contact.js"></script>
+</script><script src="/frontendassets/js/contact.js"></script>
 
 </body>
 </html>

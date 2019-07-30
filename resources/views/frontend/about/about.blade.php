@@ -1,20 +1,7 @@
 @extends('layouts.frontend-master')
 
 @section('content')
-<style type="text/css">
- .show-on-hover:hover > ul.dropdown-menu {
-    display: block; 
-    padding-left: 11px; 
-}
-.a{
-	color:#000;
-}
-#ul{
 
-
-}
-
- </style>
  	<!-- Header -->
 	 <header class="header">
 		<div class="container">
@@ -63,7 +50,7 @@
                                         <li><a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger"></i> Logout
                                         </a></li>
                                     @else
-                                        <li ><a href="{{route('admin.dashboard')}}" class="dropdown-item has-icon text-primary" style="color: #000"> Login</a></li>
+                                        <li ><a href="{{route('admin.dashboard')}}" class="dropdown-item has-icon text-primary" style="color: #000"><i class="fa fa-user"></i> Login</a></li>
                                     @endif 
           						  </ul> 
 								</li>

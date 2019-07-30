@@ -51,7 +51,7 @@
                                         <li><a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger"></i> Logout
                                         </a></li>
                                     @else
-                                        <li ><a href="{{route('admin.dashboard')}}" class="dropdown-item has-icon text-primary" style="color: #000"> Login</a></li>
+                                        <li ><a href="{{route('admin.dashboard')}}" class="dropdown-item has-icon text-primary" style="color: #000"><i class="fa fa-user"></i> Login</a></li>
                                     @endif 
           						  </ul> 
 								</li>
@@ -92,7 +92,7 @@
 									<div><strong>Email :</strong>hninwaiwai@gmail</div> -->
 									
 								
-
+                                @if(!is_null($address))
 								<li>
 									<div><strong>Address :</strong> {{$address->address}}</div>
 									
@@ -105,7 +105,7 @@
 									<div><strong>Email :</strong> {{$address->email}}</div>
 									
 								</li>
-								
+								@endif
 							</ul>    
 						</div>
 						
@@ -146,10 +146,15 @@
 			</div>
 		</div>
 	</div>
-</div>
+
+	</div>
+
 	<!-- Map -->
 
 	<div class="earth3dmap-com">
-		<iframe id="iframemap" src="https://maps.google.com/maps?q=No.+%28A%2C+15%29S%2C+77th+Street+and+Between+of+31st+x%2C+32nd+Street%2C+%E1%80%99%E1%80%94%E1%80%B9%E1%80%90%E1%80%9C%E1%80%B1%E1%80%B8&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%" height="500" frameborder="0" scrolling="no"></iframe>
-	</div>
+		<iframe id="iframemap" src="https://maps.google.com/maps?q=No.+%28A%2C+15%29S%2C+77th+Street+and+Between+of+31st+x%2C+32nd+Street%2C+%E1%80%99%E1%80%94%E1%80%B9%E1%80%90%E1%80%9C%E1%80%B1%E1%80%B8&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%" height="500" frameborder="0" scrolling="no"></iframe><div style="color: #333; font-size: 14px; font-family: Arial, Helvetica, sans-serif; text-align: right; padding: 10px;"><a style="color: #333; text-decoration: underline; font-size: 14px; font-family: Arial, Helvetica, sans-serif; text-align: right;" href="http://earth3dmap.com/?from=embed" target="_blank" ></a></div>
+		</div>
+
+	<!-- Map -->
+
 	@endsection
