@@ -87,12 +87,12 @@
             </div> 
             <nav class="main_nav">
               <ul>
-                <li><a href="{{ route('frontend.homes') }}">{{trans('sentence.home')}}</a>
+                <li><a href="homes">{{trans('sentence.home')}}</a>
                 </li>
-                <li><a href="{{ route('frontend.about') }}">{{trans('sentence.about')}}</a></li>
+                <li><a href="about">{{trans('sentence.about')}}</a></li>
 
 
-                  <li><a href="{{ route('frontend.contact') }}">{{trans('sentence.contact')}}</a></li>
+                  <li><a href="contact">{{trans('sentence.contact')}}</a></li>
                                   
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -149,7 +149,7 @@
           <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
             <div class="login-brand">
 
-              <img src="../frontendassets/images/hallmyanmar1.jpg" alt="logo" width="300" class="shadow-light">
+              <img src="../frontendassets/images/hallmyanmar1.jpg" alt="logo" width="300" class=" rounded-circle">
 
             </div>
             @if(session()->has('info'))
